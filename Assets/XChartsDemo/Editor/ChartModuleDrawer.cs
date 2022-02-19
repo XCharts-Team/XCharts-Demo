@@ -28,89 +28,88 @@ namespace XChartsDemo
             SerializedProperty m_SubName = prop.FindPropertyRelative("m_SubName");
             SerializedProperty m_Title = prop.FindPropertyRelative("m_Title");
             SerializedProperty m_Selected = prop.FindPropertyRelative("m_Selected");
-            SerializedProperty m_Panel = prop.FindPropertyRelative("m_Panel");
-            prop.isExpanded = EditorGUI.Toggle(new Rect(pos.x - 12, pos.y + 3, 10, 10), prop.isExpanded, EditorStyles.foldout);
-            var fieldWid = EditorGUIUtility.currentViewWidth - 30 - 5 - 40 - 80 - 50 - 100 - 6 * 2 -30;
-            drawRect.width = 15;
+            SerializedProperty m_Type = prop.FindPropertyRelative("m_Type");
+            var arrowWidth = 10;
+            var boolWidth = 18;
+            var nameWidth = 120;
+            var typeWidth = 75;
+            var btnWidth = 12;
+            var adaptiveWidth = EditorGUIUtility.currentViewWidth - arrowWidth - nameWidth
+                - typeWidth - btnWidth * 4 - boolWidth - 50;
+            if (adaptiveWidth < 0)
+                adaptiveWidth = 0;
+
+            drawRect.width = arrowWidth;
+            prop.isExpanded = EditorGUI.Toggle(drawRect, prop.isExpanded, EditorStyles.foldout);
+
+            drawRect.width = boolWidth * 1.5f;
             EditorGUI.BeginChangeCheck();
             var oldFlag = m_Selected.boolValue;
             EditorGUI.PropertyField(drawRect, m_Selected, GUIContent.none);
             if (EditorGUI.EndChangeCheck())
             {
-                var demo = prop.serializedObject.targetObject as PanelChart;
-                var index = GetIndex(prop);
-                var selectedIndex = demo.GetSelectedModule();
-                if (selectedIndex != index)
+                prop.serializedObject.ApplyModifiedProperties();
+                var config = prop.serializedObject.targetObject as DemoConfig;
+                var selectIndex = GetIndex(prop);
+                for (int i = 0; i < config.chartModules.Count; i++)
                 {
-                    for (int i = 0; i < demo.chartModules.Count; i++)
-                    {
-                        demo.chartModules[i].select = i == index && m_Selected.boolValue;
-                    }
-                    demo.InitModuleButton();
-                }
-                else
-                {
-                    m_Selected.boolValue = oldFlag;
+                    config.chartModules[i].select = i == selectIndex;
                 }
             }
-            drawRect.x += 17;
-            drawRect.width = 80;
+            drawRect.x += drawRect.width;
+            drawRect.width = nameWidth;
             EditorGUI.PropertyField(drawRect, m_Name, GUIContent.none);
-            drawRect.x += 82;
-            drawRect.width = 50;
-            EditorGUI.PropertyField(drawRect, m_SubName, GUIContent.none);
-            drawRect.x += 52;
-            drawRect.width = fieldWid;
-            EditorGUI.PropertyField(drawRect, m_Title, GUIContent.none);
-            drawRect.x += fieldWid + 2;
-            drawRect.width = 100;
-            EditorGUI.PropertyField(drawRect, m_Panel, GUIContent.none);
-            drawRect.x += 62;
-            drawRect.width = 40;
-            var btnWidth = 12;
-            drawRect.x += 42;
+
+            if (adaptiveWidth > 0)
+            {
+                drawRect.x += drawRect.width;
+                drawRect.width = adaptiveWidth;
+                EditorGUI.PropertyField(drawRect, m_SubName, GUIContent.none);
+            }
+
+            drawRect.x += drawRect.width;
+            drawRect.width = typeWidth;
+            EditorGUI.PropertyField(drawRect, m_Type, GUIContent.none);
+
+            drawRect.x += drawRect.width + 10;
             drawRect.width = btnWidth;
             if (GUI.Button(drawRect, Styles.iconUp, Styles.invisibleButton))
             {
-                var demo = prop.serializedObject.targetObject as PanelChart;
+                var config = prop.serializedObject.targetObject as DemoConfig;
                 var index = GetIndex(prop);
                 if (index >= 0)
                 {
-                    Swap(demo.chartModules, index, index - 1);
-                    demo.InitModuleButton();
+                    Swap(config.chartModules, index, index - 1);
                 }
             }
             drawRect.x += btnWidth + 1;
             if (GUI.Button(drawRect, Styles.iconDown, Styles.invisibleButton))
             {
-                var demo = prop.serializedObject.targetObject as PanelChart;
+                var config = prop.serializedObject.targetObject as DemoConfig;
                 var index = GetIndex(prop);
                 if (index >= 0)
                 {
-                    Swap(demo.chartModules, index, index + 1);
-                    demo.InitModuleButton();
+                    Swap(config.chartModules, index, index + 1);
                 }
             }
             drawRect.x += btnWidth + 1;
             if (GUI.Button(drawRect, Styles.iconAdd, Styles.invisibleButton))
             {
-                var demo = prop.serializedObject.targetObject as PanelChart;
+                var config = prop.serializedObject.targetObject as DemoConfig;
                 var index = GetIndex(prop);
                 if (index >= 0)
                 {
-                    demo.chartModules.Insert(index + 1, new ChartModule());
-                    demo.InitModuleButton();
+                    config.chartModules.Insert(index + 1, new ChartModule());
                 }
             }
-            drawRect.x += 16;
+            drawRect.x += btnWidth + 1;
             if (GUI.Button(drawRect, Styles.iconRemove, Styles.invisibleButton))
             {
-                var demo = prop.serializedObject.targetObject as PanelChart;
+                var config = prop.serializedObject.targetObject as DemoConfig;
                 var index = GetIndex(prop);
                 if (index >= 0)
                 {
-                    demo.chartModules.RemoveAt(index);
-                    demo.InitModuleButton();
+                    config.chartModules.RemoveAt(index);
                 }
             }
 
@@ -138,49 +137,49 @@ namespace XChartsDemo
                     drawRect.width = btnWidth;
                     if (GUI.Button(drawRect, Styles.iconUp, Styles.invisibleButton))
                     {
-                        var demo = prop.serializedObject.targetObject as PanelChart;
+                        var config = prop.serializedObject.targetObject as DemoConfig;
                         var index = GetIndex(prop);
                         if (index >= 0)
                         {
                             var chartIndex = GetIndex(element);
-                            Swap(demo.chartModules[index].chartPrefabs, chartIndex, chartIndex - 1);
-                            demo.InitChartList(demo.chartModules[index]);
+                            Swap(config.chartModules[index].chartPrefabs, chartIndex, chartIndex - 1);
+                            // config.InitChartList(config.chartModules[index]);
                         }
                     }
                     drawRect.x += btnWidth + 1;
                     if (GUI.Button(drawRect, Styles.iconDown, Styles.invisibleButton))
                     {
-                        var demo = prop.serializedObject.targetObject as PanelChart;
+                        var config = prop.serializedObject.targetObject as DemoConfig;
                         var index = GetIndex(prop);
                         if (index >= 0)
                         {
                             var chartIndex = GetIndex(element);
-                            Swap(demo.chartModules[index].chartPrefabs, chartIndex, chartIndex + 1);
-                            demo.InitChartList(demo.chartModules[index]);
+                            Swap(config.chartModules[index].chartPrefabs, chartIndex, chartIndex + 1);
+                            // config.InitChartList(config.chartModules[index]);
                         }
                     }
                     drawRect.x += btnWidth + 1;
                     if (GUI.Button(drawRect, Styles.iconAdd, Styles.invisibleButton))
                     {
-                        var demo = prop.serializedObject.targetObject as PanelChart;
+                        var config = prop.serializedObject.targetObject as DemoConfig;
                         var index = GetIndex(prop);
                         if (index >= 0)
                         {
                             var chartIndex = GetIndex(element);
-                            demo.chartModules[index].chartPrefabs.Insert(chartIndex + 1, null);
-                            demo.InitChartList(demo.chartModules[index]);
+                            config.chartModules[index].chartPrefabs.Insert(chartIndex + 1, null);
+                            // config.InitChartList(config.chartModules[index]);
                         }
                     }
                     drawRect.x += 16;
                     if (GUI.Button(drawRect, Styles.iconRemove, Styles.invisibleButton))
                     {
-                        var demo = prop.serializedObject.targetObject as PanelChart;
+                        var config = prop.serializedObject.targetObject as DemoConfig;
                         var index = GetIndex(prop);
                         if (index >= 0)
                         {
                             var chartIndex = GetIndex(element);
-                            demo.chartModules[index].chartPrefabs.RemoveAt(chartIndex);
-                            demo.InitChartList(demo.chartModules[index]);
+                            config.chartModules[index].chartPrefabs.RemoveAt(chartIndex);
+                            // config.InitChartList(config.chartModules[index]);
                         }
                     }
                     drawRect.x = pos.x;

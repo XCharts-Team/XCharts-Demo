@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using XCharts;
 
 namespace XChartsDemo
 {
@@ -48,10 +49,9 @@ namespace XChartsDemo
             if (prefab == null) return;
             bindPrefab = prefab;
             if (chartParent == null) return;
+            ChartHelper.DestroyAllChildren(chartParent);
             var names = prefab.name.Split('_');
-            var chart = UIUtil.Instantiate(prefab, chartParent);
-            name = prefab.name;
-            chart.name = prefab.name;
+            var chart = UIUtil.Instantiate(prefab, chartParent, prefab.name);
             if (names.Length == 3)
             {
                 UIUtil.SetText(gameObject, names[1], "desc/Text");

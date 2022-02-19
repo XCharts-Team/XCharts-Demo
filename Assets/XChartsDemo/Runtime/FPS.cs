@@ -18,8 +18,6 @@ namespace XChartsDemo
         private static readonly float MAXCACHE = 20;
         private int m_FrameCount = 0;
         private float m_LastTime = 0f;
-        private float m_LastCheckShowTime = 0f;
-        private int m_LastRefreshCount = 0;
         private Text m_Text;
         private RectTransform m_ImageRect;
         private List<float> m_FpsList = new List<float>();
