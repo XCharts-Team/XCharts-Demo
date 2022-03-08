@@ -1,6 +1,6 @@
 ﻿
 using UnityEngine;
-using XCharts;
+using XCharts.Runtime;
 
 namespace XChartsDemo
 {
@@ -12,7 +12,7 @@ namespace XChartsDemo
         {
             var chart = GetComponent<BaseChart>();
             if (chart == null) return;
-            chart.onUpdateAxisPointer = delegate (Axis axis, double value)
+            chart.onAxisPointerValueChanged = delegate (Axis axis, double value)
             {
                 if (axis is XAxis)
                 {

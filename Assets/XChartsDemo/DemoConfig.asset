@@ -23,7 +23,7 @@ MonoBehaviour:
   - m_Name: LineChart
     m_SubName: "\u6298\u7EBF\u56FE"
     m_Type: 0
-    m_Selected: 0
+    m_Selected: 1
     m_Buildin: 0
     m_ChartPrefabs:
     - {fileID: 1067674712461128, guid: e852d17191a2a48c9a20337aefdcc91f, type: 3}
@@ -108,15 +108,6 @@ MonoBehaviour:
     - {fileID: 2033037911680573203, guid: a8cb2e3f84bc04e959c4288a850efed2, type: 3}
     - {fileID: 1926644383331449950, guid: 06cf308f571e5441bbb48f32fee41115, type: 3}
     - {fileID: 2518352557161524448, guid: 01c816ec4d1b2492abf6a3cc074b1b49, type: 3}
-  - m_Name: LiquidChart
-    m_SubName: "\u6C34\u4F4D\u56FE"
-    m_Type: 0
-    m_Selected: 0
-    m_Buildin: 0
-    m_ChartPrefabs:
-    - {fileID: 6090024806874310694, guid: e804a2f5e9c2d44d1ae414614a3a7158, type: 3}
-    - {fileID: 7338897536342736495, guid: 074e3e235c55847e7af3f4abef59b84a, type: 3}
-    - {fileID: 5424491434408582357, guid: 388fe86003bec4ab7ba11cae8b86b5cf, type: 3}
   - m_Name: PolarChart
     m_SubName: "\u6781\u5750\u6807"
     m_Type: 0
@@ -142,6 +133,15 @@ MonoBehaviour:
     - {fileID: 2889810492663269154, guid: 91f7453d4603e446f869656b1a6a7ee0, type: 3}
     - {fileID: 6539151528672169992, guid: c4fcba20c83b641e6a5cef5c61862d2c, type: 3}
     - {fileID: 7441657132361983745, guid: 4d2b8fee4422b417f8499049c6754202, type: 3}
+  - m_Name: SimplifiedChart
+    m_SubName: "\u9AD8\u6027\u80FD\u7B80\u5316\u56FE"
+    m_Type: 0
+    m_Selected: 0
+    m_Buildin: 0
+    m_ChartPrefabs:
+    - {fileID: 4231040502478112207, guid: d1da8ab65c1d94997ad922acda492930, type: 3}
+    - {fileID: 7534273198054985764, guid: e8bccd86e70f1482fb2d88ddfc032b6d, type: 3}
+    - {fileID: 7026715857719413339, guid: 6aca8b55d204d43e4b2ed3f1be49c124, type: 3}
   - m_Name: Bar3DChart
     m_SubName: "3D\u67F1\u56FE"
     m_Type: 1
@@ -176,7 +176,7 @@ MonoBehaviour:
   - m_Name: GaugeChart
     m_SubName: "\u4EEA\u8868\u76D8"
     m_Type: 1
-    m_Selected: 1
+    m_Selected: 0
     m_Buildin: 0
     m_ChartPrefabs:
     - {fileID: 2466414204219200354, guid: 3af3ade0730b1430885a199d27c722ba, type: 3}
@@ -189,3 +189,45 @@ MonoBehaviour:
     - {fileID: 1453351945230073282, guid: b567e7907a91f485aaa57e6d0582fe6d, type: 3}
     - {fileID: 179557858331874970, guid: f615d7195a7dc4d0cb71d44076feca1d, type: 3}
     - {fileID: 1156547480387676265, guid: 1adfe511cec2e453d9c83ce0b636fba6, type: 3}
+  - m_Name: LiquidChart
+    m_SubName: "\u6C34\u4F4D\u56FE"
+    m_Type: 1
+    m_Selected: 0
+    m_Buildin: 0
+    m_ChartPrefabs:
+    - {fileID: 6090024806874310694, guid: e804a2f5e9c2d44d1ae414614a3a7158, type: 3}
+    - {fileID: 7338897536342736495, guid: 074e3e235c55847e7af3f4abef59b84a, type: 3}
+    - {fileID: 5424491434408582357, guid: 388fe86003bec4ab7ba11cae8b86b5cf, type: 3}
+  - m_Name: PictorialBarChart
+    m_SubName: "\u8C61\u5F62\u67F1\u56FE"
+    m_Type: 1
+    m_Selected: 0
+    m_Buildin: 0
+    m_ChartPrefabs:
+    - {fileID: 573272344795459822, guid: 9dbb8a80e4a364fcaae179dfdff440a3, type: 3}
+    - {fileID: 6665695275692824539, guid: bdfc31787c13040758f37631b17f8af2, type: 3}
+    - {fileID: 6754546574326301299, guid: cd2fa67296a6c4144bb50aac0533cd9c, type: 3}
+    - {fileID: 8175553613013307892, guid: 5d136b153fe6948b6b9a0ff1d1ca01b0, type: 3}
+  - m_Name: GanttChart
+    m_SubName: "\u7518\u7279\u56FE"
+    m_Type: 1
+    m_Selected: 0
+    m_Buildin: 0
+    m_ChartPrefabs:
+    - {fileID: 8107795597284177242, guid: bf8ab0972a33d458c8f84d2c98b9a32c, type: 3}
+    - {fileID: 3792790492001233956, guid: 3495f4535b2ff45178fc4302fcda32bb, type: 3}
+    - {fileID: 3179382028606834504, guid: 79dcbf40ff5a74f1e8cb057dd5328e44, type: 3}
+    - {fileID: 4917480790249377294, guid: d76a2a6735d80405cb99b4a63784a16c, type: 3}
+    - {fileID: 8442728962083893860, guid: a68370b3b4c684f879a39d27f92c1c7a, type: 3}
+    - {fileID: 3690202946724964463, guid: 6f8878433145e478eb1de5d55d49111a, type: 3}
+    - {fileID: 4805274043820845138, guid: 7b11efaeed6854a6ca7c89552f5b23a5, type: 3}
+  - m_Name: TreemapChart
+    m_SubName: "\u77E9\u5F62\u6811\u56FE"
+    m_Type: 1
+    m_Selected: 0
+    m_Buildin: 0
+    m_ChartPrefabs:
+    - {fileID: 5235331476094088126, guid: 82208fc7362e34adeb8186be80090296, type: 3}
+    - {fileID: 6413080300300642412, guid: fe51c221a07834209bd4795f3aeedb12, type: 3}
+    - {fileID: 6834456237028515950, guid: cd7fbf79a611449339e2d50b09d252a7, type: 3}
+    - {fileID: 3522610808822889004, guid: 30ba8ac285c184efea429c9790930409, type: 3}

@@ -1,6 +1,5 @@
 
 using UnityEngine;
-using XCharts;
 
 namespace XChartsDemo
 {

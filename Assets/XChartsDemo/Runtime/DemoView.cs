@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using XCharts;
+using XCharts.Runtime;
 
 
 namespace XChartsDemo

@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
-using XCharts;
+using XCharts.Runtime;
 
 namespace XChartsDemo
 {

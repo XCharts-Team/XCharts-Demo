@@ -2,32 +2,40 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using XCharts;
+using XCharts.Runtime;
 
 namespace XChartsDemo
 {
     [DisallowMultipleComponent]
     [ExecuteInEditMode]
-    public class ChartThumb : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+    public class ChartThumb : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler//, IPointerClickHandler, IPointerDownHandler,IPointerUpHandler
     {
         Transform chartParent;
         private float m_Scale = 0.23f;
         private float m_ScaleSpeed = 1f;
         private float m_TargetScale = 0.23f;
+        private Button m_Button;
 
-        public bool isBind = false;
+        public bool isBindPrefab = false;
+        public bool isBindAction = false;
         public GameObject bindPrefab;
+        public UnityAction bindAction;
 
         private void Awake()
         {
             chartParent = transform.Find("mark/chart");
+            m_Button = transform.Find("btn").GetComponent<Button>();
         }
 
         private void OnEnable()
         {
-            if (!isBind)
+            if (!isBindPrefab)
             {
                 BindPrefab(bindPrefab);
+            }
+            if (!isBindAction)
+            {
+                AddBtnListener(bindAction);
             }
         }
 
@@ -57,14 +65,18 @@ namespace XChartsDemo
                 UIUtil.SetText(gameObject, names[1], "desc/Text");
                 UIUtil.SetText(gameObject, names[2], "desc/Text2");
             }
-            isBind = true;
+            isBindPrefab = true;
         }
 
         public void AddBtnListener(UnityAction action)
         {
-            var btn = transform.Find("btn").GetComponent<Button>();
-            btn.onClick.AddListener(action);
+            if (action == null) return;
+            bindAction = action;
+            if (m_Button == null) return;
+            m_Button.onClick.RemoveAllListeners();
+            m_Button.onClick.AddListener(action);
             OnPointerExit(null);
+            isBindAction = true;
         }
 
         public void OnPointerEnter(PointerEventData eventData)

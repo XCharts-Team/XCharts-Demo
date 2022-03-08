@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using XCharts;
+using XCharts.Runtime;
 
 namespace XChartsDemo
 {
@@ -52,7 +52,7 @@ namespace XChartsDemo
             m_DetailChartRoot = transform.Find("chart_detail/chart").gameObject;
             InitThemeButton();
             InitModuleButton();
-            InitChartList();
+            InitChartList(true);
             InitSize();
         }
 
@@ -82,7 +82,7 @@ namespace XChartsDemo
             var charts = transform.GetComponentsInChildren<BaseChart>();
             foreach (var chart in charts)
             {
-                chart.RemoveChartObject();
+                chart.RemoveAndReinitChartObject();
             }
         }
 
@@ -116,7 +116,7 @@ namespace XChartsDemo
             selectedModuleIndex = -1;
             m_ChartType = type;
             InitModuleButton();
-            InitChartList();
+            InitChartList(false);
             foreach (var module in config.chartModules)
             {
                 if (type == module.type)
@@ -127,7 +127,7 @@ namespace XChartsDemo
             }
         }
 
-        
+
 
         public void InitModuleButton()
         {
@@ -175,7 +175,8 @@ namespace XChartsDemo
             {
                 var module = config.chartModules[i];
                 module.index = i;
-                if (module.select)
+                module.runtimeSelected = module.select;
+                if (module.runtimeSelected)
                 {
                     ClickModule(module);
                     break;
@@ -183,7 +184,7 @@ namespace XChartsDemo
             }
         }
 
-        public void InitChartList()
+        public void InitChartList(bool firstInit)
         {
             foreach (var module in config.chartModules)
             {
@@ -196,24 +197,27 @@ namespace XChartsDemo
                         module.panel = panelTrans.gameObject;
                     UIUtil.ResetRectTransform(module.panel.transform);
                 }
-                module.panel.SetActive(module.select);
-                InitChartList(module);
+                if (firstInit)
+                    module.initedCount = 0;
+                module.panel.SetActive(module.runtimeSelected);
+                InitChartList(module, firstInit);
             }
         }
 
-        public void InitChartList(ChartModule module)
+        public void InitChartList(ChartModule module, bool firstInit)
         {
             if (!Application.isPlaying)
             {
-                UIUtil.SetActiveAllChildren(module.panel, false);
-                //ChartHelper.DestroyAllChildren(module.panel.transform);
+                if (firstInit) ChartHelper.DestroyAllChildren(module.panel.transform);
+                else UIUtil.SetActiveAllChildren(module.panel, false);
+
                 foreach (var prefab in module.chartPrefabs)
                     InitChartThumb(module, prefab);
             }
             else if (!module.inited)
             {
-                UIUtil.SetActiveAllChildren(module.panel, false);
-                //ChartHelper.DestroyAllChildren(module.panel.transform);
+                if (firstInit) ChartHelper.DestroyAllChildren(module.panel.transform);
+                else UIUtil.SetActiveAllChildren(module.panel, false);
             }
         }
 
@@ -256,10 +260,10 @@ namespace XChartsDemo
             var lastIndex = selectedModuleIndex;
             if (selectedModuleIndex >= 0)
             {
-                config.chartModules[selectedModuleIndex].select = false;
+                config.chartModules[selectedModuleIndex].runtimeSelected = false;
             }
             selectedModuleIndex = selectedModule.index;
-            selectedModule.select = true;
+            selectedModule.runtimeSelected = true;
             m_DetailRoot.SetActive(false);
             foreach (var module in config.chartModules)
             {

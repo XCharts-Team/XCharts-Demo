@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
-using XCharts;
+using XCharts.Runtime;
 using System.Text;
 using System.Collections.Generic;
 
@@ -21,6 +21,8 @@ namespace XChartsDemo
         private Text m_Text;
         private RectTransform m_ImageRect;
         private List<float> m_FpsList = new List<float>();
+        private BaseChart m_Chart;
+        private RectTransform m_ChartRect;
 
         public float fps { get; private set; }
         public float avgFps { get; private set; }
@@ -29,6 +31,9 @@ namespace XChartsDemo
         {
             m_Text = gameObject.GetComponentInChildren<Text>();
             m_ImageRect = gameObject.GetComponent<Image>().GetComponent<RectTransform>();
+            m_Chart = gameObject.GetComponentInChildren<BaseChart>();
+            m_Chart.SetMaxCache(200);
+            m_ChartRect = m_Chart.GetComponent<RectTransform>();
         }
 
         private void Update()
@@ -48,9 +53,15 @@ namespace XChartsDemo
                 if (m_Text != null)
                 {
                     s_Sb.Length = 0;
-                    s_Sb.AppendFormat("FPS帧率 : {0:f0} / {1:f0}", fps, avgFps);
+                    s_Sb.AppendFormat("CUR FPS : {0:f0}\n", fps);
+                    s_Sb.AppendFormat("AVG FPS : {0:f0}", avgFps);
                     m_Text.text = s_Sb.ToString();
-                    m_ImageRect.sizeDelta = new Vector2(m_Text.preferredWidth + 8, m_Text.preferredHeight + 8);
+                    var width = m_Text.preferredWidth;
+                    width  = (int)width - (int)width % 50 + 50;
+                    m_ImageRect.sizeDelta = new Vector2(width + 8, m_Text.preferredHeight + 8);
+                    m_Chart.AddData(0, fps);
+                    m_Chart.AddXAxisData(string.Empty);
+                    m_ChartRect.anchoredPosition = new Vector2(width + 8, 0);
                 }
             }
         }

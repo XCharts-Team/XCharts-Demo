@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using XCharts;
 
 namespace XChartsDemo
 {
@@ -33,6 +32,7 @@ namespace XChartsDemo
         public int index { get; internal set; }
         internal int initedCount { get; set; }
         internal bool inited { get { return initedCount >= chartPrefabs.Count; } }
+        internal bool runtimeSelected { get; set; }
     }
 
     [CreateAssetMenu(menuName = "CreateDemoConfig")]
@@ -54,14 +54,5 @@ namespace XChartsDemo
         public Color buttonHighlightColor { get { return m_ButtonHighlightColor; } }
         public bool darkMode { get { return m_DarkMode; } }
         public List<ChartModule> chartModules { get { return m_ChartModules; } }
-
-        public int GetSelectedModule()
-        {
-            for (int i = 0; i < m_ChartModules.Count; i++)
-            {
-                if (m_ChartModules[i].select) return i;
-            }
-            return -1;
-        }
     }
 }
