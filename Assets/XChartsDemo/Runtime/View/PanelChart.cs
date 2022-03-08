@@ -82,7 +82,7 @@ namespace XChartsDemo
             var charts = transform.GetComponentsInChildren<BaseChart>();
             foreach (var chart in charts)
             {
-                chart.RemoveAndReinitChartObject();
+                chart.RebuildChartObject();
             }
         }
 
