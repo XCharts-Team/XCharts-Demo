@@ -38,6 +38,7 @@ namespace XChartsDemo
     [CreateAssetMenu(menuName = "CreateDemoConfig")]
     public class DemoConfig : ScriptableObject
     {
+#pragma warning disable 0649
         [SerializeField] private float m_LeftWidth = 150;
         [SerializeField] private float m_ButtonHeight = 60;
         [SerializeField] private Color m_ButtonNormalColor;
@@ -46,6 +47,7 @@ namespace XChartsDemo
         [SerializeField] private bool m_DarkMode = false;
         [SerializeField] public int selectedModuleIndex = -1;
         [SerializeField] private List<ChartModule> m_ChartModules = new List<ChartModule>();
+#pragma warning restore 0649
 
         public float leftWidth { get { return m_LeftWidth; } }
         public float buttonHeight { get { return m_ButtonHeight; } }
