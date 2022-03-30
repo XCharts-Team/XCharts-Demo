@@ -1,0 +1,26 @@
+# 配置项手册
+
+[XCharts主页](https://github.com/XCharts-Team/XCharts)</br>
+[XChartsAPI接口](XChartsAPI-ZH.md)</br>
+[XCharts问答](XChartsFAQ-ZH.md)
+
+## Serie 系列
+
+- [Treemap](#Treemap)
+
+## `Treemap`
+
+Inherits or Implemented: [Serie](#Serie)
+
+|field|default|comment|
+|--|--|--|
+| `leafDepth` |0 |  |
+| `visualDimension` |0 | 用于计算占比的数据维数。 |
+| `drillDownIcon` | | 当节点可以下钻时的提示符，只能是字符。默认为▶ |
+| `customGoUpLevelButton` | | 自定义返回上一层按钮，自定义的按钮需要自己处理点击事件，调用GoUpALevel()接口。 |
+| `upperLabel` | | 父节点标签。show为true时表示显示父节点标签，margin参数设置子节点和父节点的间距。 |
+| `levelStyle` | |  |
+
+[XCharts主页](https://github.com/XCharts-Team/XCharts)</br>
+[XChartsAPI接口](XChartsAPI-ZH.md)</br>
+[XCharts问答](XChartsFAQ-ZH.md)

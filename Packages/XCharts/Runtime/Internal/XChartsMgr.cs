@@ -20,8 +20,8 @@ namespace XCharts.Runtime
     [ExecuteInEditMode]
     public static class XChartsMgr
     {
-        public static readonly string version = "3.0.0";
-        public static readonly int versionDate = 20220325;
+        public static readonly string version = "3.0.0-preview6";
+        public static readonly int versionDate = 20220330;
         public static string fullVersion { get { return version + "-" + versionDate; } }
 
         internal static List<BaseChart> chartList = new List<BaseChart>();
@@ -136,24 +136,20 @@ namespace XCharts.Runtime
             packagePath = Path.GetFullPath("Assets/..");
             if (Directory.Exists(packagePath))
             {
-                // Search default location for development package
-                if (File.Exists(packagePath + "/Assets/Packages/com.monitor1394.xcharts/package.json"))
+                if (File.Exists(packagePath + "/Assets/Packages/XCharts/package.json"))
                 {
-                    return packagePath + "/Assets/Packages/com.monitor1394.xcharts";
+                    return packagePath + "/Assets/Packages/XCharts";
                 }
 
-                // Search for default location of normal XCharts AssetStore package
                 if (File.Exists(packagePath + "/Assets/XCharts/package.json"))
                 {
                     return packagePath + "/Assets/XCharts";
                 }
 
-                // Search for potential alternative locations in the user project
                 string[] matchingPaths = Directory.GetDirectories(packagePath, "XCharts", SearchOption.AllDirectories);
                 string path = ValidateLocation(matchingPaths, packagePath);
                 if (path != null) return Path.Combine(packagePath, path);
             }
-
             return null;
         }
 
@@ -168,7 +164,6 @@ namespace XCharts.Runtime
                     return folderPath;
                 }
             }
-
             return null;
         }
 

@@ -43,6 +43,12 @@
 
 ## master
 
+* (2022.03.26) 发布`v3.0.0-preivew5`版本
+* (2022.03.21) 发布`v3.0.0-preivew4`版本
+* (2022.03.09) 发布`v3.0.0-preivew3`版本
+* (2022.01.08) 发布`v3.0.0-preivew2`版本
+* (2022.01.07) 发布`v3.0.0-preivew1`版本
+
 ## v2.7.0
 
 * (2022.03.20) 发布`v2.7.0`版本
@@ -269,7 +275,7 @@
 ## v1.6.0
 
 * (2020.08.24) 发布`v1.6.0`版本
-* (2020.08.23) 重构代码，将与绘制相关的`Color`改为`Color32`，减少隐式转换（更新后会导致自定义的颜色丢失，可参考[问答29](https://github.com/XCharts-Team/XCharts/blob/master/Assets/XCharts/Documentation/XChartsFQA-ZH.md)进行升级）
+* (2020.08.23) 重构代码，将与绘制相关的`Color`改为`Color32`，减少隐式转换（更新后会导致自定义的颜色丢失，可参考[问答29](https://github.com/XCharts-Team/XCharts/blob/master/Assets/XCharts/Documentation/XChartsFAQ-ZH.md)进行升级）
 * (2020.08.15) 优化`PieChart`绘制表现效果#85
 * (2020.08.11) 增加`LiquidChart`数据变更动画#83
 * (2020.08.11) 优化`PieChart`文本堆叠和引线效果#85
