@@ -210,6 +210,7 @@ namespace XChartsDemo
             {
                 if (firstInit) ChartHelper.DestroyAllChildren(module.panel.transform);
                 else UIUtil.SetActiveAllChildren(module.panel, false);
+                module.panel.SetActive(module.select);
 
                 foreach (var prefab in module.chartPrefabs)
                     InitChartThumb(module, prefab);

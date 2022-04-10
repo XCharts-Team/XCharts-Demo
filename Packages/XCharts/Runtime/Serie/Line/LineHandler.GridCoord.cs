@@ -93,13 +93,14 @@ namespace XCharts.Runtime
             {
                 serie.context.pointerItemDataIndex = -1;
                 serie.context.pointerEnter = false;
-                foreach (var serieData in serie.data)
+                for (int i = 0; i < serie.dataCount; i++)
                 {
+                    var serieData = serie.data[i];
+                    serieData.index = i;
                     var dist = Vector3.Distance(chart.pointerPos, serieData.context.position);
                     var symbol = SerieHelper.GetSerieSymbol(serie, serieData);
                     var symbolSize = symbol.GetSize(serieData.data, themeSymbolSize);
                     var symbolSelectedSize = symbol.GetSelectedSize(serieData.data, themeSymbolSelectedSize);
-
                     if (dist <= symbolSelectedSize)
                     {
                         serie.context.pointerItemDataIndex = serieData.index;
@@ -347,7 +348,7 @@ namespace XCharts.Runtime
             serie.animation.InitProgress(serie.context.dataPoints, isY);
 
             VisualMapHelper.AutoSetLineMinMax(visualMap, serie, isY, axis, relativedAxis);
-            LineHelper.UpdateSerieDrawPoints(serie, chart.settings, chart.theme, lineWidth, isY);
+            LineHelper.UpdateSerieDrawPoints(serie, chart.settings, chart.theme, visualMap, lineWidth, isY);
             LineHelper.DrawSerieLineArea(vh, serie, lastSerie, chart.theme, isY, axis, relativedAxis, m_SerieGrid);
             LineHelper.DrawSerieLine(vh, chart.theme, serie, visualMap, m_SerieGrid, axis, relativedAxis, lineWidth);
 
