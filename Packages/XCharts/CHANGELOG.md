@@ -50,6 +50,9 @@
 
 ## master
 
+* (2022.04.17) 修复`Bar`在数值为负数时动画无效的问题
+* (2022.04.17) 增加`ItemStyle`的`BorderGap`支持设置边框间距
+* (2022.04.16) 优化`Bar`的`Border`和`Capsule`胶囊柱图
 * (2022.04.15) 增加`Liquid`对`Round Rect`圆角矩形水位图的支持
 * (2022.04.14) 增加`Line`对`EndLabel`的支持
 * (2022.04.13) 增加`VisualMap`的`workOnLine`和`workOnArea`支持折线和区域映射功能 (#191)
