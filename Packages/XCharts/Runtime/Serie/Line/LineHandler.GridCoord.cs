@@ -16,6 +16,22 @@ namespace XCharts.Runtime
         private GridCoord m_SerieGrid;
         private float m_LastLineWidth = 0f;
 
+        public override Vector3 GetSerieDataLabelOffset(SerieData serieData, LabelStyle label)
+        {
+            var invert = label.autoOffset
+                && SerieHelper.IsDownPoint(serie, serieData.index)
+                && (serie.areaStyle == null || !serie.areaStyle.show);
+            if (invert)
+            {
+                var offset = label.GetOffset(serie.context.insideRadius);
+                return new Vector3(offset.x, -offset.y, offset.z);
+            }
+            else
+            {
+                return label.GetOffset(serie.context.insideRadius);
+            }
+        }
+
         private void UpdateSerieGridContext()
         {
             if (m_SerieGrid == null)
@@ -26,25 +42,17 @@ namespace XCharts.Runtime
             {
                 if (m_LastCheckContextFlag != needCheck)
                 {
-                    var needAnimation1 = false;
                     m_LastCheckContextFlag = needCheck;
                     serie.context.pointerItemDataIndex = -1;
                     serie.context.pointerEnter = false;
-                    serie.interact.SetValue(ref needAnimation1, lineWidth, false);
                     foreach (var serieData in serie.data)
                     {
-                        var symbol = SerieHelper.GetSerieSymbol(serie, serieData);
-                        var symbolSize = symbol.GetSize(serieData.data, chart.theme.serie.lineSymbolSize);
-                        serieData.context.highlight = false;
-                        serieData.interact.SetValue(ref needAnimation1, symbolSize);
+                        serieData.interact.Reset();
                     }
-                    if (needAnimation1)
-                    {
-                        if (SeriesHelper.IsStack(chart.series))
-                            chart.RefreshTopPainter();
-                        else
-                            chart.RefreshPainter(serie);
-                    }
+                    if (SeriesHelper.IsStack(chart.series))
+                        chart.RefreshTopPainter();
+                    else
+                        chart.RefreshPainter(serie);
                 }
                 return;
             }

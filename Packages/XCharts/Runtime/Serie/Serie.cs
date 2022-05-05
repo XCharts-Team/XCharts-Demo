@@ -230,7 +230,7 @@ namespace XCharts.Runtime
         [SerializeField] private bool m_InsertDataToHead;
 
         [SerializeField] private LineStyle m_LineStyle = new LineStyle();
-        [SerializeField] private SymbolStyle m_Symbol = new SymbolStyle();
+        [SerializeField] private SerieSymbol m_Symbol = new SerieSymbol();
         [SerializeField] private AnimationStyle m_Animation = new AnimationStyle();
         [SerializeField] private ItemStyle m_ItemStyle = new ItemStyle();
         [SerializeField] private List<SerieData> m_Data = new List<SerieData>();
@@ -396,7 +396,7 @@ namespace XCharts.Runtime
         /// the symbol of serie data item.
         /// |标记的图形。
         /// </summary>
-        public SymbolStyle symbol
+        public SerieSymbol symbol
         {
             get { return m_Symbol; }
             set { if (PropertyUtil.SetClass(ref m_Symbol, value, true)) SetVerticesDirty(); }
@@ -821,12 +821,14 @@ namespace XCharts.Runtime
                 return m_VertsDirty ||
                     symbol.vertsDirty ||
                     lineStyle.vertsDirty ||
-                    (lineArrow != null && lineArrow.vertsDirty) ||
                     itemStyle.vertsDirty ||
+                    (lineArrow != null && lineArrow.vertsDirty) ||
                     (areaStyle != null && areaStyle.vertsDirty) ||
                     (label != null && label.vertsDirty) ||
+                    (labelLine != null && labelLine.vertsDirty) ||
                     (emphasis != null && emphasis.vertsDirty) ||
-                    (titleStyle != null && titleStyle.vertsDirty);
+                    (titleStyle != null && titleStyle.vertsDirty) ||
+                    AnySerieDataVerticesDirty();
             }
         }
 
@@ -835,17 +837,20 @@ namespace XCharts.Runtime
             get
             {
                 return m_ComponentDirty
-                    || (titleStyle != null && titleStyle.componentDirty);
+                    || symbol.componentDirty
+                    || (titleStyle != null && titleStyle.componentDirty)
+                    || (label != null && label.componentDirty)
+                    || (labelLine != null && labelLine.componentDirty);
             }
         }
         public override void ClearVerticesDirty()
         {
             base.ClearVerticesDirty();
+            foreach (var serieData in m_Data)
+                serieData.ClearVerticesDirty();
             symbol.ClearVerticesDirty();
             lineStyle.ClearVerticesDirty();
             itemStyle.ClearVerticesDirty();
-            if (iconStyle != null)
-                iconStyle.ClearVerticesDirty();
             if (areaStyle != null)
                 areaStyle.ClearVerticesDirty();
             if (label != null)
@@ -861,11 +866,11 @@ namespace XCharts.Runtime
         public override void ClearComponentDirty()
         {
             base.ClearComponentDirty();
+            foreach (var serieData in m_Data)
+                serieData.ClearComponentDirty();
             symbol.ClearComponentDirty();
             lineStyle.ClearComponentDirty();
             itemStyle.ClearComponentDirty();
-            if (iconStyle != null)
-                iconStyle.ClearComponentDirty();
             if (areaStyle != null)
                 areaStyle.ClearComponentDirty();
             if (label != null)
@@ -883,6 +888,24 @@ namespace XCharts.Runtime
             base.SetAllDirty();
             labelDirty = true;
             titleDirty = true;
+        }
+
+        private bool AnySerieDataVerticesDirty()
+        {
+            if (this is ISimplifiedSerie)
+                return false;
+            foreach (var serieData in m_Data)
+                if (serieData.vertsDirty) return true;
+            return false;
+        }
+
+        private bool AnySerieDataComponentDirty()
+        {
+            if (this is ISimplifiedSerie)
+                return false;
+            foreach (var serieData in m_Data)
+                if (serieData.componentDirty) return true;
+            return false;
         }
         /// <summary>
         /// Whether the serie is highlighted.
@@ -1034,6 +1057,12 @@ namespace XCharts.Runtime
                 }
                 return total;
             }
+        }
+
+        public void ResetInteract()
+        {
+            foreach (var serieData in m_Data)
+                serieData.interact.Reset();
         }
 
         /// <summary>
@@ -1402,7 +1431,7 @@ namespace XCharts.Runtime
             }
         }
 
-        public virtual double GetDataTotal(int dimension)
+        public virtual double GetDataTotal(int dimension, SerieData serieData = null)
         {
             if (m_Max > 0) return m_Max;
 
@@ -1557,7 +1586,8 @@ namespace XCharts.Runtime
 
         public bool IsIgnoreValue(SerieData serieData, int dimension = 1)
         {
-            if (serieData.ignore) return true;
+            if (serieData.baseInfo != null && serieData.baseInfo.ignore)
+                return true;
             return IsIgnoreValue(serieData.GetData(dimension));
         }
 
@@ -1633,36 +1663,6 @@ namespace XCharts.Runtime
                     return true;
             }
             return false;
-        }
-
-        /// <summary>
-        /// 设置指定index的数据图标的尺寸
-        /// </summary>
-        /// <param name="dataIndex"></param>
-        /// <param name="width"></param>
-        /// <param name="height"></param>
-        public void SetDataIconSize(int dataIndex, float width, float height)
-        {
-            if (dataIndex >= 0 && dataIndex < m_Data.Count)
-            {
-                var data = m_Data[dataIndex];
-                data.iconStyle.width = width;
-                data.iconStyle.height = height;
-            }
-        }
-
-        /// <summary>
-        /// 设置指定index的数据图标的颜色
-        /// </summary>
-        /// <param name="dataIndex"></param>
-        /// <param name="color"></param>
-        public void SetDataIconColor(int dataIndex, Color color)
-        {
-            if (dataIndex >= 0 && dataIndex < m_Data.Count)
-            {
-                var data = m_Data[dataIndex];
-                data.iconStyle.color = color;
-            }
         }
 
         /// <summary>

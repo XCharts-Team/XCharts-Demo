@@ -7296,17 +7296,73 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_DebugMode: 0
   m_EnableTextMeshPro: 0
+  m_DebugInfo:
+    m_Show: 0
+    m_ShowDebugInfo: 0
+    m_ShowAllChartObject: 0
+    m_FoldSeries: 0
+    m_LabelStyle:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
+      m_Rotate: 0
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0.1254902, g: 0.1254902, b: 0.1254902, a: 0.6666667}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_FontSize: 18
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
   m_ChartName: 
   m_Theme:
+    m_Show: 1
     m_SharedTheme: {fileID: 11400000, guid: e1dc23a10de1e4c5dbfbaf74c4dfd218, type: 2}
+    m_TransparentBackground: 0
     m_EnableCustomTheme: 0
+    m_CustomFont: {fileID: 0}
     m_CustomBackgroundColor:
       serializedVersion: 2
       rgba: 0
     m_CustomColorPalette: []
   m_Settings:
+    m_Show: 1
     m_MaxPainter: 10
     m_ReversePainter: 0
     m_BasePainterMaterial: {fileID: 0}
@@ -7322,21 +7378,6 @@ MonoBehaviour:
     - 0.25
     - 0.25
     - 0.25
-  m_DebugInfo:
-    m_Show: 0
-    m_TextStyle:
-      m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
-      m_Rotate: 0
-      m_ExtraWidth: 0
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-      m_BackgroundColor: {r: 0.1254902, g: 0.1254902, b: 0.1254902, a: 0.6666667}
-      m_FontSize: 18
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 4
   m_AngleAxes: []
   m_Backgrounds: []
   m_DataZooms: []
@@ -7350,33 +7391,103 @@ MonoBehaviour:
   m_Titles:
   - m_Show: 1
     m_Text: ParallelChart
-    m_TextStyle:
-      m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
-      m_Rotate: 0
-      m_ExtraWidth: 0
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 1
     m_SubText: 
-    m_SubTextStyle:
-      m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
+    m_LabelStyle:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
       m_Rotate: 0
-      m_ExtraWidth: 0
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 1
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
+    m_SubLabelStyle:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
+      m_Rotate: 0
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
     m_ItemGap: 0
     m_Location:
       m_Align: 2
@@ -7400,7 +7511,8 @@ MonoBehaviour:
     m_PaddingTopBottom: 10
     m_IgnoreDataShow: 0
     m_IgnoreDataDefaultContent: '-'
-    m_AlwayShow: 0
+    m_ShowContent: 1
+    m_AlwayShowContent: 0
     m_Offset: {x: 18, y: -25}
     m_BackgroundImage: {fileID: 0}
     m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
@@ -7429,70 +7541,244 @@ MonoBehaviour:
       m_Width: 0
       m_Length: 0
       m_Opacity: 1
-    m_LabelTextStyle:
-      m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
+    m_IndicatorLabelStyle:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
       m_Rotate: 0
-      m_ExtraWidth: 0
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 4
-    m_TitleTextStyle:
-      m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
+    m_TitleLabelStyle:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
       m_Rotate: 0
-      m_ExtraWidth: 0
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 3
-    m_ColumnsTextStyle:
-    - m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 3
+    m_ContentLabelStyles:
+    - m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
       m_Rotate: 0
-      m_ExtraWidth: 5
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 3
-    - m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 0
+        m_Right: 5
+        m_Left: 0
+        m_Bottom: 0
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 3
+    - m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
       m_Rotate: 0
-      m_ExtraWidth: 20
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 3
-    - m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 0
+        m_Right: 25
+        m_Left: 0
+        m_Bottom: 0
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 3
+    - m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
       m_Rotate: 0
-      m_ExtraWidth: 5
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 5
-  m_Vessels: []
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 0
+        m_Right: 0
+        m_Left: 0
+        m_Bottom: 0
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 5
   m_VisualMaps: []
   m_XAxes: []
   m_YAxes: []
@@ -7526,16 +7812,6 @@ MonoBehaviour:
     m_Inverse: 0
     m_Clockwise: 1
     m_InsertDataToHead: 0
-    m_IconStyle:
-      m_Show: 0
-      m_Layer: 0
-      m_Align: 1
-      m_Sprite: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-      m_Width: 20
-      m_Height: 20
-      m_Offset: {x: 0, y: 0, z: 0}
-      m_AutoHideWhenLabelEmpty: 0
     m_Icons: []
     m_Data:
     - x1
@@ -7573,21 +7849,54 @@ MonoBehaviour:
     m_AxisName:
       m_Show: 0
       m_Name: axisName
-      m_Formatter: 
-      m_Location: 2
-      m_TextStyle:
-        m_Font: {fileID: 0}
-        m_AutoWrap: 0
-        m_AutoAlign: 1
+      m_LabelStyle:
+        m_Show: 1
+        m_Position: 10
+        m_AutoOffset: 0
+        m_Offset: {x: 0, y: 0, z: 0}
         m_Rotate: 0
-        m_ExtraWidth: 0
-        m_Offset: {x: 0, y: 0}
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_LineSpacing: 1
-        m_Alignment: 4
+        m_Distance: 0
+        m_Formatter: 
+        m_NumericFormatter: 
+        m_Width: 0
+        m_Height: 0
+        m_Icon:
+          m_Show: 0
+          m_Layer: 0
+          m_Align: 1
+          m_Sprite: {fileID: 0}
+          m_Type: 0
+          m_Color: {r: 1, g: 1, b: 1, a: 1}
+          m_Width: 20
+          m_Height: 20
+          m_Offset: {x: 0, y: 0, z: 0}
+          m_AutoHideWhenLabelEmpty: 0
+        m_Background:
+          m_Show: 1
+          m_Sprite: {fileID: 0}
+          m_Type: 0
+          m_AutoColor: 0
+          m_Color: {r: 0, g: 0, b: 0, a: 0}
+          m_Width: 0
+          m_Height: 0
+        m_TextPadding:
+          m_Show: 1
+          m_Top: 2
+          m_Right: 4
+          m_Left: 4
+          m_Bottom: 2
+        m_TextStyle:
+          m_Show: 1
+          m_Font: {fileID: 0}
+          m_AutoWrap: 0
+          m_AutoAlign: 1
+          m_Rotate: 0
+          m_AutoColor: 0
+          m_Color: {r: 0, g: 0, b: 0, a: 0}
+          m_FontSize: 0
+          m_FontStyle: 0
+          m_LineSpacing: 1
+          m_Alignment: 4
     m_AxisTick:
       m_Show: 1
       m_LineStyle:
@@ -7609,17 +7918,61 @@ MonoBehaviour:
       m_Inside: 0
       m_ShowStartTick: 1
       m_ShowEndTick: 1
+      m_Distance: 0
+      m_SplitNumber: 0
+      m_AutoColor: 0
     m_AxisLabel:
       m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
+      m_Rotate: 0
+      m_Distance: 8
       m_Formatter: 
-      m_Interval: 0
-      m_Inside: 0
-      m_Margin: 8
       m_NumericFormatter: 
-      m_ShowAsPositiveNumber: 0
-      m_OnZero: 0
       m_Width: 0
       m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
+      m_Interval: 0
+      m_Inside: 0
+      m_ShowAsPositiveNumber: 0
+      m_OnZero: 0
       m_ShowStartLabel: 1
       m_ShowEndLabel: 1
       m_TextLimit:
@@ -7627,19 +7980,6 @@ MonoBehaviour:
         m_MaxWidth: 0
         m_Gap: 1
         m_Suffix: ...
-      m_TextStyle:
-        m_Font: {fileID: 0}
-        m_AutoWrap: 0
-        m_AutoAlign: 1
-        m_Rotate: 0
-        m_ExtraWidth: 0
-        m_Offset: {x: 0, y: 0}
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_LineSpacing: 1
-        m_Alignment: 4
     m_SplitLine:
       m_Show: 0
       m_LineStyle:
@@ -7658,6 +7998,8 @@ MonoBehaviour:
         m_Length: 0
         m_Opacity: 1
       m_Interval: 0
+      m_Distance: 0
+      m_AutoColor: 0
     m_SplitArea:
       m_Show: 0
       m_Color: []
@@ -7681,16 +8023,6 @@ MonoBehaviour:
     m_Inverse: 0
     m_Clockwise: 1
     m_InsertDataToHead: 0
-    m_IconStyle:
-      m_Show: 0
-      m_Layer: 0
-      m_Align: 1
-      m_Sprite: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-      m_Width: 20
-      m_Height: 20
-      m_Offset: {x: 0, y: 0, z: 0}
-      m_AutoHideWhenLabelEmpty: 0
     m_Icons: []
     m_Data:
     - x1
@@ -7728,21 +8060,54 @@ MonoBehaviour:
     m_AxisName:
       m_Show: 0
       m_Name: axisName
-      m_Formatter: 
-      m_Location: 2
-      m_TextStyle:
-        m_Font: {fileID: 0}
-        m_AutoWrap: 0
-        m_AutoAlign: 1
+      m_LabelStyle:
+        m_Show: 1
+        m_Position: 10
+        m_AutoOffset: 0
+        m_Offset: {x: 0, y: 0, z: 0}
         m_Rotate: 0
-        m_ExtraWidth: 0
-        m_Offset: {x: 0, y: 0}
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_LineSpacing: 1
-        m_Alignment: 4
+        m_Distance: 0
+        m_Formatter: 
+        m_NumericFormatter: 
+        m_Width: 0
+        m_Height: 0
+        m_Icon:
+          m_Show: 0
+          m_Layer: 0
+          m_Align: 1
+          m_Sprite: {fileID: 0}
+          m_Type: 0
+          m_Color: {r: 1, g: 1, b: 1, a: 1}
+          m_Width: 20
+          m_Height: 20
+          m_Offset: {x: 0, y: 0, z: 0}
+          m_AutoHideWhenLabelEmpty: 0
+        m_Background:
+          m_Show: 1
+          m_Sprite: {fileID: 0}
+          m_Type: 0
+          m_AutoColor: 0
+          m_Color: {r: 0, g: 0, b: 0, a: 0}
+          m_Width: 0
+          m_Height: 0
+        m_TextPadding:
+          m_Show: 1
+          m_Top: 2
+          m_Right: 4
+          m_Left: 4
+          m_Bottom: 2
+        m_TextStyle:
+          m_Show: 1
+          m_Font: {fileID: 0}
+          m_AutoWrap: 0
+          m_AutoAlign: 1
+          m_Rotate: 0
+          m_AutoColor: 0
+          m_Color: {r: 0, g: 0, b: 0, a: 0}
+          m_FontSize: 0
+          m_FontStyle: 0
+          m_LineSpacing: 1
+          m_Alignment: 4
     m_AxisTick:
       m_Show: 1
       m_LineStyle:
@@ -7764,17 +8129,61 @@ MonoBehaviour:
       m_Inside: 0
       m_ShowStartTick: 1
       m_ShowEndTick: 1
+      m_Distance: 0
+      m_SplitNumber: 0
+      m_AutoColor: 0
     m_AxisLabel:
       m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
+      m_Rotate: 0
+      m_Distance: 8
       m_Formatter: 
-      m_Interval: 0
-      m_Inside: 0
-      m_Margin: 8
       m_NumericFormatter: 
-      m_ShowAsPositiveNumber: 0
-      m_OnZero: 0
       m_Width: 0
       m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
+      m_Interval: 0
+      m_Inside: 0
+      m_ShowAsPositiveNumber: 0
+      m_OnZero: 0
       m_ShowStartLabel: 1
       m_ShowEndLabel: 1
       m_TextLimit:
@@ -7782,19 +8191,6 @@ MonoBehaviour:
         m_MaxWidth: 0
         m_Gap: 1
         m_Suffix: ...
-      m_TextStyle:
-        m_Font: {fileID: 0}
-        m_AutoWrap: 0
-        m_AutoAlign: 1
-        m_Rotate: 0
-        m_ExtraWidth: 0
-        m_Offset: {x: 0, y: 0}
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_LineSpacing: 1
-        m_Alignment: 4
     m_SplitLine:
       m_Show: 0
       m_LineStyle:
@@ -7813,6 +8209,8 @@ MonoBehaviour:
         m_Length: 0
         m_Opacity: 1
       m_Interval: 0
+      m_Distance: 0
+      m_AutoColor: 0
     m_SplitArea:
       m_Show: 0
       m_Color: []
@@ -7836,16 +8234,6 @@ MonoBehaviour:
     m_Inverse: 0
     m_Clockwise: 1
     m_InsertDataToHead: 0
-    m_IconStyle:
-      m_Show: 0
-      m_Layer: 0
-      m_Align: 1
-      m_Sprite: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-      m_Width: 20
-      m_Height: 20
-      m_Offset: {x: 0, y: 0, z: 0}
-      m_AutoHideWhenLabelEmpty: 0
     m_Icons: []
     m_Data:
     - x1
@@ -7883,21 +8271,54 @@ MonoBehaviour:
     m_AxisName:
       m_Show: 0
       m_Name: axisName
-      m_Formatter: 
-      m_Location: 2
-      m_TextStyle:
-        m_Font: {fileID: 0}
-        m_AutoWrap: 0
-        m_AutoAlign: 1
+      m_LabelStyle:
+        m_Show: 1
+        m_Position: 10
+        m_AutoOffset: 0
+        m_Offset: {x: 0, y: 0, z: 0}
         m_Rotate: 0
-        m_ExtraWidth: 0
-        m_Offset: {x: 0, y: 0}
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_LineSpacing: 1
-        m_Alignment: 4
+        m_Distance: 0
+        m_Formatter: 
+        m_NumericFormatter: 
+        m_Width: 0
+        m_Height: 0
+        m_Icon:
+          m_Show: 0
+          m_Layer: 0
+          m_Align: 1
+          m_Sprite: {fileID: 0}
+          m_Type: 0
+          m_Color: {r: 1, g: 1, b: 1, a: 1}
+          m_Width: 20
+          m_Height: 20
+          m_Offset: {x: 0, y: 0, z: 0}
+          m_AutoHideWhenLabelEmpty: 0
+        m_Background:
+          m_Show: 1
+          m_Sprite: {fileID: 0}
+          m_Type: 0
+          m_AutoColor: 0
+          m_Color: {r: 0, g: 0, b: 0, a: 0}
+          m_Width: 0
+          m_Height: 0
+        m_TextPadding:
+          m_Show: 1
+          m_Top: 2
+          m_Right: 4
+          m_Left: 4
+          m_Bottom: 2
+        m_TextStyle:
+          m_Show: 1
+          m_Font: {fileID: 0}
+          m_AutoWrap: 0
+          m_AutoAlign: 1
+          m_Rotate: 0
+          m_AutoColor: 0
+          m_Color: {r: 0, g: 0, b: 0, a: 0}
+          m_FontSize: 0
+          m_FontStyle: 0
+          m_LineSpacing: 1
+          m_Alignment: 4
     m_AxisTick:
       m_Show: 1
       m_LineStyle:
@@ -7919,17 +8340,61 @@ MonoBehaviour:
       m_Inside: 0
       m_ShowStartTick: 1
       m_ShowEndTick: 1
+      m_Distance: 0
+      m_SplitNumber: 0
+      m_AutoColor: 0
     m_AxisLabel:
       m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
+      m_Rotate: 0
+      m_Distance: 8
       m_Formatter: 
-      m_Interval: 0
-      m_Inside: 0
-      m_Margin: 8
       m_NumericFormatter: 
-      m_ShowAsPositiveNumber: 0
-      m_OnZero: 0
       m_Width: 0
       m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
+      m_Interval: 0
+      m_Inside: 0
+      m_ShowAsPositiveNumber: 0
+      m_OnZero: 0
       m_ShowStartLabel: 1
       m_ShowEndLabel: 1
       m_TextLimit:
@@ -7937,19 +8402,6 @@ MonoBehaviour:
         m_MaxWidth: 0
         m_Gap: 1
         m_Suffix: ...
-      m_TextStyle:
-        m_Font: {fileID: 0}
-        m_AutoWrap: 0
-        m_AutoAlign: 1
-        m_Rotate: 0
-        m_ExtraWidth: 0
-        m_Offset: {x: 0, y: 0}
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_LineSpacing: 1
-        m_Alignment: 4
     m_SplitLine:
       m_Show: 0
       m_LineStyle:
@@ -7968,6 +8420,8 @@ MonoBehaviour:
         m_Length: 0
         m_Opacity: 1
       m_Interval: 0
+      m_Distance: 0
+      m_AutoColor: 0
     m_SplitArea:
       m_Show: 0
       m_Color: []
@@ -7991,16 +8445,6 @@ MonoBehaviour:
     m_Inverse: 0
     m_Clockwise: 1
     m_InsertDataToHead: 0
-    m_IconStyle:
-      m_Show: 0
-      m_Layer: 0
-      m_Align: 1
-      m_Sprite: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-      m_Width: 20
-      m_Height: 20
-      m_Offset: {x: 0, y: 0, z: 0}
-      m_AutoHideWhenLabelEmpty: 0
     m_Icons: []
     m_Data:
     - x1
@@ -8038,21 +8482,54 @@ MonoBehaviour:
     m_AxisName:
       m_Show: 0
       m_Name: axisName
-      m_Formatter: 
-      m_Location: 2
-      m_TextStyle:
-        m_Font: {fileID: 0}
-        m_AutoWrap: 0
-        m_AutoAlign: 1
+      m_LabelStyle:
+        m_Show: 1
+        m_Position: 10
+        m_AutoOffset: 0
+        m_Offset: {x: 0, y: 0, z: 0}
         m_Rotate: 0
-        m_ExtraWidth: 0
-        m_Offset: {x: 0, y: 0}
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_LineSpacing: 1
-        m_Alignment: 4
+        m_Distance: 0
+        m_Formatter: 
+        m_NumericFormatter: 
+        m_Width: 0
+        m_Height: 0
+        m_Icon:
+          m_Show: 0
+          m_Layer: 0
+          m_Align: 1
+          m_Sprite: {fileID: 0}
+          m_Type: 0
+          m_Color: {r: 1, g: 1, b: 1, a: 1}
+          m_Width: 20
+          m_Height: 20
+          m_Offset: {x: 0, y: 0, z: 0}
+          m_AutoHideWhenLabelEmpty: 0
+        m_Background:
+          m_Show: 1
+          m_Sprite: {fileID: 0}
+          m_Type: 0
+          m_AutoColor: 0
+          m_Color: {r: 0, g: 0, b: 0, a: 0}
+          m_Width: 0
+          m_Height: 0
+        m_TextPadding:
+          m_Show: 1
+          m_Top: 2
+          m_Right: 4
+          m_Left: 4
+          m_Bottom: 2
+        m_TextStyle:
+          m_Show: 1
+          m_Font: {fileID: 0}
+          m_AutoWrap: 0
+          m_AutoAlign: 1
+          m_Rotate: 0
+          m_AutoColor: 0
+          m_Color: {r: 0, g: 0, b: 0, a: 0}
+          m_FontSize: 0
+          m_FontStyle: 0
+          m_LineSpacing: 1
+          m_Alignment: 4
     m_AxisTick:
       m_Show: 1
       m_LineStyle:
@@ -8074,17 +8551,61 @@ MonoBehaviour:
       m_Inside: 0
       m_ShowStartTick: 1
       m_ShowEndTick: 1
+      m_Distance: 0
+      m_SplitNumber: 0
+      m_AutoColor: 0
     m_AxisLabel:
       m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
+      m_Rotate: 0
+      m_Distance: 8
       m_Formatter: 
-      m_Interval: 0
-      m_Inside: 0
-      m_Margin: 8
       m_NumericFormatter: 
-      m_ShowAsPositiveNumber: 0
-      m_OnZero: 0
       m_Width: 0
       m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
+      m_Interval: 0
+      m_Inside: 0
+      m_ShowAsPositiveNumber: 0
+      m_OnZero: 0
       m_ShowStartLabel: 1
       m_ShowEndLabel: 1
       m_TextLimit:
@@ -8092,19 +8613,6 @@ MonoBehaviour:
         m_MaxWidth: 0
         m_Gap: 1
         m_Suffix: ...
-      m_TextStyle:
-        m_Font: {fileID: 0}
-        m_AutoWrap: 0
-        m_AutoAlign: 1
-        m_Rotate: 0
-        m_ExtraWidth: 0
-        m_Offset: {x: 0, y: 0}
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_LineSpacing: 1
-        m_Alignment: 4
     m_SplitLine:
       m_Show: 0
       m_LineStyle:
@@ -8123,6 +8631,8 @@ MonoBehaviour:
         m_Length: 0
         m_Opacity: 1
       m_Interval: 0
+      m_Distance: 0
+      m_AutoColor: 0
     m_SplitArea:
       m_Show: 0
       m_Color: []
@@ -8131,7 +8641,6 @@ MonoBehaviour:
   m_SerieEffectScatters: []
   m_SerieHeatmaps: []
   m_SerieLines: []
-  m_SerieLiquids: []
   m_SeriePies: []
   m_SerieRadars: []
   m_SerieRings: []
@@ -8142,7 +8651,7 @@ MonoBehaviour:
     m_EndLabels: []
     m_LineArrows: []
     m_AreaStyles: []
-    m_IconStyles: []
+    m_TitleStyles: []
     m_Emphases: []
     m_Index: 0
     m_Show: 1
@@ -8168,7 +8677,6 @@ MonoBehaviour:
     m_BarPercentStack: 0
     m_BarWidth: 0.6
     m_BarGap: 0.3
-    m_BarCategoryGap: 0.2
     m_BarZebraWidth: 4
     m_BarZebraGap: 2
     m_Min: 0
@@ -8180,11 +8688,10 @@ MonoBehaviour:
     m_MinAngle: 0
     m_Clockwise: 1
     m_RoundCap: 0
-    m_RingGap: 10
     m_SplitNumber: 0
     m_ClickOffset: 1
     m_RoseType: 0
-    m_Space: 0
+    m_Gap: 0
     m_Center:
     - 0.5
     - 0.48
@@ -8281,8 +8788,8 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       m_CenterGap: 0
-      m_BorderType: 0
       m_BorderWidth: 0
+      m_BorderGap: 0
       m_BorderColor:
         serializedVersion: 2
         rgba: 0
@@ -8301,1922 +8808,1707 @@ MonoBehaviour:
       - 0
       - 0
       - 0
-    m_TitleStyle:
-      m_Show: 0
-      m_TextStyle:
-        m_Font: {fileID: 0}
-        m_AutoWrap: 0
-        m_AutoAlign: 1
-        m_Rotate: 0
-        m_ExtraWidth: 0
-        m_Offset: {x: 0, y: 0}
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_LineSpacing: 1
-        m_Alignment: 4
     m_Data:
-    - m_Name: data0
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data0
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 46.80658721923828
       - 79.07816314697266
       - 741.5771484375
       - 3
-      m_Children: 
-    - m_Name: data1
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data1
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 5.923712253570557
       - 25.042158126831055
       - 676.4545288085938
       - 0
-      m_Children: 
-    - m_Name: data2
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data2
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 44.467472076416016
       - 42.59652328491211
       - 203.51112365722656
       - 0
-      m_Children: 
-    - m_Name: data3
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data3
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 19.00690460205078
       - 62.50712966918945
       - 811.2711791992188
       - 2
-      m_Children: 
-    - m_Name: data4
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data4
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 21.90254020690918
       - 57.381099700927734
       - 673.6195068359375
       - 2
-      m_Children: 
-    - m_Name: data5
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data5
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 20.26592254638672
       - 17.021190643310547
       - 618.8560180664062
       - 2
-      m_Children: 
-    - m_Name: data6
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data6
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 33.385013580322266
       - 82.38752746582031
       - 788.06103515625
       - 0
-      m_Children: 
-    - m_Name: data7
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data7
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 7.1317853927612305
       - 85.9469985961914
       - 700.6025390625
       - 1
-      m_Children: 
-    - m_Name: data8
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data8
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.2095341682434082
       - 25.080997467041016
       - 646.0013427734375
       - 0
-      m_Children: 
-    - m_Name: data9
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data9
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 8.222818374633789
       - 55.22209930419922
       - 797.76025390625
       - 1
-      m_Children: 
-    - m_Name: data10
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data10
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 31.903987884521484
       - 65.87562561035156
       - 178.47323608398438
       - 0
-      m_Children: 
-    - m_Name: data11
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data11
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 20.290449142456055
       - 21.941280364990234
       - 939.3638305664062
       - 1
-      m_Children: 
-    - m_Name: data12
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data12
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 44.5968017578125
       - 72.54507446289062
       - 510.76727294921875
       - 0
-      m_Children: 
-    - m_Name: data13
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data13
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 4.74848747253418
       - 23.016881942749023
       - 341.8343811035156
       - 2
-      m_Children: 
-    - m_Name: data14
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data14
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 22.535184860229492
       - 49.630767822265625
       - 900.29833984375
       - 1
-      m_Children: 
-    - m_Name: data15
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data15
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 18.524465560913086
       - 64.44634246826172
       - 434.2029724121094
       - 4
-      m_Children: 
-    - m_Name: data16
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data16
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 42.78609085083008
       - 90.60130310058594
       - 308.29901123046875
       - 4
-      m_Children: 
-    - m_Name: data17
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data17
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 45.80165100097656
       - 41.6017951965332
       - 82.25572204589844
       - 2
-      m_Children: 
-    - m_Name: data18
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data18
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 30.137405395507812
       - 90.85250854492188
       - 224.2909698486328
       - 1
-      m_Children: 
-    - m_Name: data19
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data19
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 17.410072326660156
       - 85.98797607421875
       - 277.6679382324219
       - 1
-      m_Children: 
-    - m_Name: data20
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data20
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 48.40142822265625
       - 22.534774780273438
       - 932.5804443359375
       - 4
-      m_Children: 
-    - m_Name: data21
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data21
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 17.501445770263672
       - 62.3486442565918
       - 381.615234375
       - 4
-      m_Children: 
-    - m_Name: data22
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data22
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 38.24700164794922
       - 81.44369506835938
       - 356.79644775390625
       - 1
-      m_Children: 
-    - m_Name: data23
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data23
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 17.008451461791992
       - 87.16710662841797
       - 674.02685546875
       - 1
-      m_Children: 
-    - m_Name: data24
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data24
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 37.15959167480469
       - 32.08518600463867
       - 525.3861694335938
       - 3
-      m_Children: 
-    - m_Name: data25
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data25
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2.1453559398651123
       - 97.39859008789062
       - 546.4378051757812
       - 0
-      m_Children: 
-    - m_Name: data26
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data26
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 46.70347595214844
       - 39.51069641113281
       - 635.5498046875
       - 2
-      m_Children: 
-    - m_Name: data27
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data27
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 15.141036987304688
       - 53.592689514160156
       - 342.0962829589844
       - 1
-      m_Children: 
-    - m_Name: data28
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data28
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 13.556632041931152
       - 30.96279525756836
       - 507.52813720703125
       - 0
-      m_Children: 
-    - m_Name: data29
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data29
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 33.89649200439453
       - 20.899581909179688
       - 404.0713806152344
       - 1
-      m_Children: 
-    - m_Name: data30
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data30
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 6.29710578918457
       - 51.00453567504883
       - 823.2919921875
       - 0
-      m_Children: 
-    - m_Name: data31
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data31
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 15.027615547180176
       - 73.74706268310547
       - 663.8980102539062
       - 1
-      m_Children: 
-    - m_Name: data32
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data32
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 26.93842315673828
       - 14.901924133300781
       - 91.09068298339844
       - 1
-      m_Children: 
-    - m_Name: data33
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data33
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.4237532615661621
       - 19.929336547851562
       - 203.94349670410156
       - 0
-      m_Children: 
-    - m_Name: data34
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data34
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 10.115456581115723
       - 92.53064727783203
       - 106.68385314941406
       - 0
-      m_Children: 
-    - m_Name: data35
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data35
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 25.43795394897461
       - 56.65830993652344
       - 860.1660766601562
       - 3
-      m_Children: 
-    - m_Name: data36
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data36
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 27.047433853149414
       - 25.87422752380371
       - 280.9522705078125
       - 2
-      m_Children: 
-    - m_Name: data37
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data37
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.004762411117553711
       - 72.96917724609375
       - 913.6388549804688
       - 4
-      m_Children: 
-    - m_Name: data38
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data38
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 44.82146453857422
       - 42.17585754394531
       - 66.47789764404297
       - 3
-      m_Children: 
-    - m_Name: data39
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data39
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 49.968963623046875
       - 55.602783203125
       - 30.474544525146484
       - 4
-      m_Children: 
-    - m_Name: data40
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data40
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 5.815881729125977
       - 3.596317768096924
       - 702.2533569335938
       - 0
-      m_Children: 
-    - m_Name: data41
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data41
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 29.55428123474121
       - 99.1632080078125
       - 743.9080200195312
       - 1
-      m_Children: 
-    - m_Name: data42
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data42
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 18.05082893371582
       - 83.7718276977539
       - 617.3834228515625
       - 4
-      m_Children: 
-    - m_Name: data43
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data43
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 13.979747772216797
       - 50.47927474975586
       - 997.4068603515625
       - 3
-      m_Children: 
-    - m_Name: data44
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data44
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 20.807079315185547
       - 94.18355560302734
       - 4.940629005432129
       - 3
-      m_Children: 
-    - m_Name: data45
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data45
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 32.70682144165039
       - 53.686885833740234
       - 579.383544921875
       - 2
-      m_Children: 
-    - m_Name: data46
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data46
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 43.177330017089844
       - 41.65455627441406
       - 219.17343139648438
       - 1
-      m_Children: 
-    - m_Name: data47
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data47
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 10.37179183959961
       - 48.101646423339844
       - 428.9035339355469
       - 4
-      m_Children: 
-    - m_Name: data48
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data48
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 12.063437461853027
       - 58.41620635986328
       - 91.92049407958984
       - 2
-      m_Children: 
-    - m_Name: data49
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data49
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 36.89234161376953
       - 90.90987396240234
       - 721.13427734375
       - 0
-      m_Children: 
-    - m_Name: data50
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data50
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 17.05389404296875
       - 88.44900512695312
       - 713.3866577148438
       - 4
-      m_Children: 
-    - m_Name: data51
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data51
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 18.283960342407227
       - 11.729717254638672
       - 793.0640258789062
       - 2
-      m_Children: 
-    - m_Name: data52
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data52
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 16.314348220825195
       - 61.419254302978516
       - 250.10675048828125
       - 3
-      m_Children: 
-    - m_Name: data53
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data53
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 30.931171417236328
       - 73.4014892578125
       - 403.9452819824219
       - 4
-      m_Children: 
-    - m_Name: data54
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data54
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 45.26091766357422
       - 29.957181930541992
       - 439.1865234375
       - 0
-      m_Children: 
-    - m_Name: data55
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data55
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 15.116015434265137
       - 81.9795150756836
       - 479.20770263671875
       - 1
-      m_Children: 
-    - m_Name: data56
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data56
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 33.283050537109375
       - 78.53166961669922
       - 430.7071533203125
       - 4
-      m_Children: 
-    - m_Name: data57
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data57
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 8.269012451171875
       - 33.16315841674805
       - 259.39434814453125
       - 3
-      m_Children: 
-    - m_Name: data58
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data58
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 7.37844705581665
       - 23.065208435058594
       - 982.12158203125
       - 0
-      m_Children: 
-    - m_Name: data59
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data59
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 4.16385555267334
       - 31.344240188598633
       - 415.7845458984375
       - 3
-      m_Children: 
-    - m_Name: data60
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data60
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 23.495128631591797
       - 1.105344295501709
       - 357.6137390136719
       - 2
-      m_Children: 
-    - m_Name: data61
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data61
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 42.81183624267578
       - 28.227455139160156
       - 232.21087646484375
       - 3
-      m_Children: 
-    - m_Name: data62
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data62
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 41.845130920410156
       - 81.67141723632812
       - 971.1861572265625
       - 4
-      m_Children: 
-    - m_Name: data63
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data63
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 19.758514404296875
       - 50.0587158203125
       - 873.3681640625
       - 1
-      m_Children: 
-    - m_Name: data64
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data64
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 47.70789337158203
       - 5.126297473907471
       - 588.5870971679688
       - 3
-      m_Children: 
-    - m_Name: data65
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data65
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 21.946855545043945
       - 93.38162231445312
       - 294.3692932128906
       - 1
-      m_Children: 
-    - m_Name: data66
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data66
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 42.80992126464844
       - 63.71046447753906
       - 658.5732421875
       - 4
-      m_Children: 
-    - m_Name: data67
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data67
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2.952718734741211
       - 50.06455612182617
       - 807.6196899414062
       - 1
-      m_Children: 
-    - m_Name: data68
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data68
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 43.53076934814453
       - 28.240997314453125
       - 562.7390747070312
       - 0
-      m_Children: 
-    - m_Name: data69
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data69
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 37.16664123535156
       - 20.40957260131836
       - 685.6978149414062
       - 0
-      m_Children: 
-    - m_Name: data70
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data70
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 10.048383712768555
       - 99.40933990478516
       - 687.6839599609375
       - 1
-      m_Children: 
-    - m_Name: data71
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data71
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 30.559215545654297
       - 72.68394470214844
       - 533.5806274414062
       - 4
-      m_Children: 
-    - m_Name: data72
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data72
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 22.914918899536133
       - 72.41190338134766
       - 395.55364990234375
       - 1
-      m_Children: 
-    - m_Name: data73
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data73
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 19.749662399291992
       - 12.79853630065918
       - 183.47251892089844
       - 4
-      m_Children: 
-    - m_Name: data74
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data74
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 16.73216438293457
       - 75.57334899902344
       - 519.8792724609375
       - 2
-      m_Children: 
-    - m_Name: data75
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data75
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 17.018434524536133
       - 62.415855407714844
       - 565.3428344726562
       - 0
-      m_Children: 
-    - m_Name: data76
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data76
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 33.486610412597656
       - 20.926332473754883
       - 465.60888671875
       - 2
-      m_Children: 
-    - m_Name: data77
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data77
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 37.34784698486328
       - 45.07171630859375
       - 920.233154296875
       - 1
-      m_Children: 
-    - m_Name: data78
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data78
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 11.559456825256348
       - 31.8450870513916
       - 661.1659545898438
       - 0
-      m_Children: 
-    - m_Name: data79
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data79
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 38.563899993896484
       - 43.528968811035156
       - 456.19769287109375
       - 0
-      m_Children: 
-    - m_Name: data80
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data80
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 36.52545166015625
       - 20.497417449951172
       - 926.9962158203125
       - 4
-      m_Children: 
-    - m_Name: data81
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data81
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 39.08503723144531
       - 59.418052673339844
       - 539.1069946289062
       - 0
-      m_Children: 
-    - m_Name: data82
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data82
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 33.025115966796875
       - 9.295344352722168
       - 371.4061279296875
       - 3
-      m_Children: 
-    - m_Name: data83
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data83
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 19.414636611938477
       - 58.05341720581055
       - 267.9759826660156
       - 3
-      m_Children: 
-    - m_Name: data84
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data84
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 43.59128952026367
       - 98.02515411376953
       - 610.5391235351562
       - 2
-      m_Children: 
-    - m_Name: data85
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data85
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 28.16864013671875
       - 68.60073852539062
       - 864.85302734375
       - 4
-      m_Children: 
-    - m_Name: data86
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data86
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 22.77445411682129
       - 5.146574974060059
       - 831.0045166015625
       - 2
-      m_Children: 
-    - m_Name: data87
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data87
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 18.990812301635742
       - 45.19491958618164
       - 791.4749145507812
       - 3
-      m_Children: 
-    - m_Name: data88
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data88
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 13.170782089233398
       - 68.96296691894531
       - 862.782470703125
       - 3
-      m_Children: 
-    - m_Name: data89
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data89
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 26.732393264770508
       - 89.10472106933594
       - 466.81170654296875
       - 1
-      m_Children: 
-    - m_Name: data90
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data90
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 20.494779586791992
       - 39.275794982910156
       - 37.75131607055664
       - 0
-      m_Children: 
-    - m_Name: data91
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data91
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 49.73562240600586
       - 91.92378234863281
       - 907.0235595703125
       - 4
-      m_Children: 
-    - m_Name: data92
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data92
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 27.310319900512695
       - 21.297216415405273
       - 771.300537109375
       - 1
-      m_Children: 
-    - m_Name: data93
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data93
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 1.7988085746765137
       - 92.32130432128906
       - 370.76837158203125
       - 3
-      m_Children: 
-    - m_Name: data94
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data94
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 34.617530822753906
       - 13.475715637207031
       - 589.1436767578125
       - 3
-      m_Children: 
-    - m_Name: data95
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data95
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 31.67150115966797
       - 53.98283767700195
       - 398.5111083984375
       - 4
-      m_Children: 
-    - m_Name: data96
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data96
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 41.14177322387695
       - 55.51911163330078
       - 15.386104583740234
       - 3
-      m_Children: 
-    - m_Name: data97
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data97
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 1.4137089252471924
       - 34.5944709777832
       - 633.0830078125
       - 1
-      m_Children: 
-    - m_Name: data98
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data98
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 47.676109313964844
       - 93.0649642944336
       - 323.8844299316406
       - 4
-      m_Children: 
-    - m_Name: data99
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: data99
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 19.72496223449707
       - 84.65514373779297
       - 18.944622039794922
       - 3
-      m_Children: 
   m_SerieSimplifiedLines: []
   m_SerieSimplifiedBars: []
   m_SerieSimplifiedCandlesticks: []

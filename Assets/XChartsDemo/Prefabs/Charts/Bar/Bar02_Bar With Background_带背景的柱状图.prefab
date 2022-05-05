@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 222263976309856610}
   - component: {fileID: 114264362684646338}
   m_Layer: 0
-  m_Name: "Bar2_Bar With Background_\u5E26\u80CC\u666F\u7684\u67F1\u72B6\u56FE"
+  m_Name: "Bar02_Bar With Background_\u5E26\u80CC\u666F\u7684\u67F1\u72B6\u56FE"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,17 +64,73 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_DebugMode: 0
   m_EnableTextMeshPro: 0
+  m_DebugInfo:
+    m_Show: 0
+    m_ShowDebugInfo: 0
+    m_ShowAllChartObject: 0
+    m_FoldSeries: 0
+    m_LabelStyle:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
+      m_Rotate: 0
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0.1254902, g: 0.1254902, b: 0.1254902, a: 0.6666667}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_FontSize: 18
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
   m_ChartName: 
   m_Theme:
+    m_Show: 1
     m_SharedTheme: {fileID: 11400000, guid: e1dc23a10de1e4c5dbfbaf74c4dfd218, type: 2}
+    m_TransparentBackground: 0
     m_EnableCustomTheme: 0
+    m_CustomFont: {fileID: 0}
     m_CustomBackgroundColor:
       serializedVersion: 2
       rgba: 0
     m_CustomColorPalette: []
   m_Settings:
+    m_Show: 1
     m_MaxPainter: 10
     m_ReversePainter: 0
     m_BasePainterMaterial: {fileID: 0}
@@ -90,21 +146,6 @@ MonoBehaviour:
     - 0.25
     - 0.25
     - 0.25
-  m_DebugInfo:
-    m_Show: 0
-    m_TextStyle:
-      m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
-      m_Rotate: 0
-      m_ExtraWidth: 0
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-      m_BackgroundColor: {r: 0.1254902, g: 0.1254902, b: 0.1254902, a: 0.6666667}
-      m_FontSize: 18
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 4
   m_AngleAxes: []
   m_Backgrounds: []
   m_DataZooms: []
@@ -114,7 +155,14 @@ MonoBehaviour:
     m_Right: 0.08
     m_Top: 0.2
     m_Bottom: 0.12
-    m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
+    m_BackgroundColor:
+      serializedVersion: 2
+      rgba: 0
+    m_ShowBorder: 0
+    m_BorderWidth: 0
+    m_BorderColor:
+      serializedVersion: 2
+      rgba: 0
   m_Legends:
   - m_Show: 0
     m_IconType: 0
@@ -132,19 +180,54 @@ MonoBehaviour:
     m_ItemAutoColor: 1
     m_TextAutoColor: 0
     m_Formatter: 
-    m_TextStyle:
-      m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
+    m_LabelStyle:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
       m_Rotate: 0
-      m_ExtraWidth: 0
-      m_Offset: {x: 2, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 4
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
     m_Data: []
     m_Icons: []
   m_MarkLines: []
@@ -155,33 +238,103 @@ MonoBehaviour:
   m_Titles:
   - m_Show: 1
     m_Text: BarChart
-    m_TextStyle:
-      m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
-      m_Rotate: 0
-      m_ExtraWidth: 0
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 1
     m_SubText: 
-    m_SubTextStyle:
-      m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
+    m_LabelStyle:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
       m_Rotate: 0
-      m_ExtraWidth: 0
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 1
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
+    m_SubLabelStyle:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
+      m_Rotate: 0
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
     m_ItemGap: 0
     m_Location:
       m_Align: 2
@@ -205,7 +358,8 @@ MonoBehaviour:
     m_PaddingTopBottom: 5
     m_IgnoreDataShow: 0
     m_IgnoreDataDefaultContent: '-'
-    m_AlwayShow: 0
+    m_ShowContent: 1
+    m_AlwayShowContent: 0
     m_Offset: {x: 18, y: -25}
     m_BackgroundImage: {fileID: 0}
     m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
@@ -234,70 +388,244 @@ MonoBehaviour:
       m_Width: 0
       m_Length: 0
       m_Opacity: 1
-    m_LabelTextStyle:
-      m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
+    m_IndicatorLabelStyle:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
       m_Rotate: 0
-      m_ExtraWidth: 0
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 4
-    m_TitleTextStyle:
-      m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
+    m_TitleLabelStyle:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
       m_Rotate: 0
-      m_ExtraWidth: 0
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 3
-    m_ColumnsTextStyle:
-    - m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 3
+    m_ContentLabelStyles:
+    - m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
       m_Rotate: 0
-      m_ExtraWidth: 5
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 3
-    - m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 0
+        m_Right: 5
+        m_Left: 0
+        m_Bottom: 0
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 3
+    - m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
       m_Rotate: 0
-      m_ExtraWidth: 20
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 3
-    - m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 0
+        m_Right: 25
+        m_Left: 0
+        m_Bottom: 0
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 3
+    - m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
       m_Rotate: 0
-      m_ExtraWidth: 5
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 5
-  m_Vessels: []
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 0
+        m_Right: 0
+        m_Left: 0
+        m_Bottom: 0
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 5
   m_VisualMaps: []
   m_XAxes:
   - m_Show: 1
@@ -320,16 +648,6 @@ MonoBehaviour:
     m_Inverse: 0
     m_Clockwise: 1
     m_InsertDataToHead: 0
-    m_IconStyle:
-      m_Show: 0
-      m_Layer: 0
-      m_Align: 1
-      m_Sprite: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-      m_Width: 20
-      m_Height: 20
-      m_Offset: {x: 0, y: 0, z: 0}
-      m_AutoHideWhenLabelEmpty: 0
     m_Icons: []
     m_Data:
     - x1
@@ -367,20 +685,54 @@ MonoBehaviour:
     m_AxisName:
       m_Show: 0
       m_Name: axisName
-      m_Location: 2
-      m_TextStyle:
-        m_Font: {fileID: 0}
-        m_AutoWrap: 0
-        m_AutoAlign: 1
+      m_LabelStyle:
+        m_Show: 1
+        m_Position: 10
+        m_AutoOffset: 0
+        m_Offset: {x: 0, y: 0, z: 0}
         m_Rotate: 0
-        m_ExtraWidth: 0
-        m_Offset: {x: 0, y: 0}
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_LineSpacing: 1
-        m_Alignment: 4
+        m_Distance: 0
+        m_Formatter: 
+        m_NumericFormatter: 
+        m_Width: 0
+        m_Height: 0
+        m_Icon:
+          m_Show: 0
+          m_Layer: 0
+          m_Align: 1
+          m_Sprite: {fileID: 0}
+          m_Type: 0
+          m_Color: {r: 1, g: 1, b: 1, a: 1}
+          m_Width: 20
+          m_Height: 20
+          m_Offset: {x: 0, y: 0, z: 0}
+          m_AutoHideWhenLabelEmpty: 0
+        m_Background:
+          m_Show: 1
+          m_Sprite: {fileID: 0}
+          m_Type: 0
+          m_AutoColor: 0
+          m_Color: {r: 0, g: 0, b: 0, a: 0}
+          m_Width: 0
+          m_Height: 0
+        m_TextPadding:
+          m_Show: 1
+          m_Top: 2
+          m_Right: 4
+          m_Left: 4
+          m_Bottom: 2
+        m_TextStyle:
+          m_Show: 1
+          m_Font: {fileID: 0}
+          m_AutoWrap: 0
+          m_AutoAlign: 1
+          m_Rotate: 0
+          m_AutoColor: 0
+          m_Color: {r: 0, g: 0, b: 0, a: 0}
+          m_FontSize: 0
+          m_FontStyle: 0
+          m_LineSpacing: 1
+          m_Alignment: 4
     m_AxisTick:
       m_Show: 1
       m_LineStyle:
@@ -402,17 +754,61 @@ MonoBehaviour:
       m_Inside: 0
       m_ShowStartTick: 0
       m_ShowEndTick: 1
+      m_Distance: 0
+      m_SplitNumber: 0
+      m_AutoColor: 0
     m_AxisLabel:
       m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
+      m_Rotate: 0
+      m_Distance: 8
       m_Formatter: 
-      m_Interval: 0
-      m_Inside: 0
-      m_Margin: 8
       m_NumericFormatter: 
-      m_ShowAsPositiveNumber: 0
-      m_OnZero: 0
       m_Width: 0
       m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
+      m_Interval: 0
+      m_Inside: 0
+      m_ShowAsPositiveNumber: 0
+      m_OnZero: 0
       m_ShowStartLabel: 1
       m_ShowEndLabel: 1
       m_TextLimit:
@@ -420,19 +816,6 @@ MonoBehaviour:
         m_MaxWidth: 0
         m_Gap: 1
         m_Suffix: ...
-      m_TextStyle:
-        m_Font: {fileID: 0}
-        m_AutoWrap: 0
-        m_AutoAlign: 1
-        m_Rotate: 0
-        m_ExtraWidth: 0
-        m_Offset: {x: 0, y: 0}
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_LineSpacing: 1
-        m_Alignment: 4
     m_SplitLine:
       m_Show: 0
       m_LineStyle:
@@ -451,6 +834,8 @@ MonoBehaviour:
         m_Length: 0
         m_Opacity: 1
       m_Interval: 0
+      m_Distance: 0
+      m_AutoColor: 0
     m_SplitArea:
       m_Show: 0
       m_Color: []
@@ -475,16 +860,6 @@ MonoBehaviour:
     m_Inverse: 0
     m_Clockwise: 1
     m_InsertDataToHead: 0
-    m_IconStyle:
-      m_Show: 0
-      m_Layer: 0
-      m_Align: 1
-      m_Sprite: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-      m_Width: 20
-      m_Height: 20
-      m_Offset: {x: 0, y: 0, z: 0}
-      m_AutoHideWhenLabelEmpty: 0
     m_Icons: []
     m_Data: []
     m_AxisLine:
@@ -517,20 +892,54 @@ MonoBehaviour:
     m_AxisName:
       m_Show: 0
       m_Name: axisName
-      m_Location: 2
-      m_TextStyle:
-        m_Font: {fileID: 0}
-        m_AutoWrap: 0
-        m_AutoAlign: 1
+      m_LabelStyle:
+        m_Show: 1
+        m_Position: 10
+        m_AutoOffset: 0
+        m_Offset: {x: 0, y: 0, z: 0}
         m_Rotate: 0
-        m_ExtraWidth: 0
-        m_Offset: {x: 0, y: 0}
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_LineSpacing: 1
-        m_Alignment: 4
+        m_Distance: 0
+        m_Formatter: 
+        m_NumericFormatter: 
+        m_Width: 0
+        m_Height: 0
+        m_Icon:
+          m_Show: 0
+          m_Layer: 0
+          m_Align: 1
+          m_Sprite: {fileID: 0}
+          m_Type: 0
+          m_Color: {r: 1, g: 1, b: 1, a: 1}
+          m_Width: 20
+          m_Height: 20
+          m_Offset: {x: 0, y: 0, z: 0}
+          m_AutoHideWhenLabelEmpty: 0
+        m_Background:
+          m_Show: 1
+          m_Sprite: {fileID: 0}
+          m_Type: 0
+          m_AutoColor: 0
+          m_Color: {r: 0, g: 0, b: 0, a: 0}
+          m_Width: 0
+          m_Height: 0
+        m_TextPadding:
+          m_Show: 1
+          m_Top: 2
+          m_Right: 4
+          m_Left: 4
+          m_Bottom: 2
+        m_TextStyle:
+          m_Show: 1
+          m_Font: {fileID: 0}
+          m_AutoWrap: 0
+          m_AutoAlign: 1
+          m_Rotate: 0
+          m_AutoColor: 0
+          m_Color: {r: 0, g: 0, b: 0, a: 0}
+          m_FontSize: 0
+          m_FontStyle: 0
+          m_LineSpacing: 1
+          m_Alignment: 4
     m_AxisTick:
       m_Show: 1
       m_LineStyle:
@@ -552,17 +961,61 @@ MonoBehaviour:
       m_Inside: 0
       m_ShowStartTick: 0
       m_ShowEndTick: 1
+      m_Distance: 0
+      m_SplitNumber: 0
+      m_AutoColor: 0
     m_AxisLabel:
       m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
+      m_Rotate: 0
+      m_Distance: 8
       m_Formatter: 
-      m_Interval: 0
-      m_Inside: 0
-      m_Margin: 8
       m_NumericFormatter: 
-      m_ShowAsPositiveNumber: 0
-      m_OnZero: 0
       m_Width: 0
       m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
+      m_Interval: 0
+      m_Inside: 0
+      m_ShowAsPositiveNumber: 0
+      m_OnZero: 0
       m_ShowStartLabel: 1
       m_ShowEndLabel: 1
       m_TextLimit:
@@ -570,19 +1023,6 @@ MonoBehaviour:
         m_MaxWidth: 0
         m_Gap: 1
         m_Suffix: ...
-      m_TextStyle:
-        m_Font: {fileID: 0}
-        m_AutoWrap: 0
-        m_AutoAlign: 1
-        m_Rotate: 0
-        m_ExtraWidth: 0
-        m_Offset: {x: 0, y: 0}
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_LineSpacing: 1
-        m_Alignment: 4
     m_SplitLine:
       m_Show: 1
       m_LineStyle:
@@ -601,6 +1041,8 @@ MonoBehaviour:
         m_Length: 0
         m_Opacity: 1
       m_Interval: 0
+      m_Distance: 0
+      m_AutoColor: 0
     m_SplitArea:
       m_Show: 0
       m_Color: []
@@ -613,7 +1055,7 @@ MonoBehaviour:
     m_EndLabels: []
     m_LineArrows: []
     m_AreaStyles: []
-    m_IconStyles: []
+    m_TitleStyles: []
     m_Emphases: []
     m_Index: 0
     m_Show: 1
@@ -639,7 +1081,6 @@ MonoBehaviour:
     m_BarPercentStack: 0
     m_BarWidth: 0.6
     m_BarGap: 0.3
-    m_BarCategoryGap: 0.2
     m_BarZebraWidth: 4
     m_BarZebraGap: 2
     m_Min: 0
@@ -651,11 +1092,10 @@ MonoBehaviour:
     m_MinAngle: 0
     m_Clockwise: 1
     m_RoundCap: 0
-    m_RingGap: 10
     m_SplitNumber: 0
     m_ClickOffset: 1
     m_RoseType: 0
-    m_Space: 0
+    m_Gap: 0
     m_Center:
     - 0.5
     - 0.45
@@ -674,6 +1114,7 @@ MonoBehaviour:
     m_LargeThreshold: 200
     m_AvoidLabelOverlap: 0
     m_RadarType: 0
+    m_PlaceHolder: 0
     m_DataSortType: 2
     m_Orient: 1
     m_Align: 0
@@ -751,8 +1192,8 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       m_CenterGap: 0
-      m_BorderType: 0
       m_BorderWidth: 0
+      m_BorderGap: 0
       m_BorderColor:
         serializedVersion: 2
         rgba: 0
@@ -771,102 +1212,86 @@ MonoBehaviour:
       - 0
       - 0
       - 0
-    m_TitleStyle:
-      m_Show: 0
-      m_TextStyle:
-        m_Font: {fileID: 0}
-        m_AutoWrap: 0
-        m_AutoAlign: 1
-        m_Rotate: 0
-        m_ExtraWidth: 0
-        m_Offset: {x: 0, y: 0}
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_LineSpacing: 1
-        m_Alignment: 4
     m_Data:
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0
       - 34
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 1
       - 81
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2
       - 42
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 3
       - 88
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 4
       - 62
-      m_Children: 
   m_SerieCandlesticks: []
   m_SerieEffectScatters: []
   m_SerieHeatmaps: []
   m_SerieLines: []
-  m_SerieLiquids: []
   m_SeriePies: []
   m_SerieRadars: []
   m_SerieRings: []

@@ -10,6 +10,8 @@ namespace XCharts.Runtime
         public Orient orient;
         public float x;
         public float y;
+        public float zeroX;
+        public float zeroY;
         public float width;
         public float height;
         public Vector3 position;
@@ -104,7 +106,12 @@ namespace XCharts.Runtime
                         else
                             range = dataZoom.minShowNum;
                     }
-                    filterData = data.GetRange(start, range);
+                    if (range > data.Count - start - 1)
+                        start = data.Count - range - 1;
+                    if (start >= 0)
+                        filterData = data.GetRange(start, range);
+                    else
+                        filterData = data;
                 }
                 else
                 {

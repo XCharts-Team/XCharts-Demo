@@ -195,7 +195,7 @@ namespace XCharts.Editor
             var m_Id = serieData.FindPropertyRelative("m_Id");
             var m_ParentId = serieData.FindPropertyRelative("m_ParentId");
 
-            var m_IconStyle = serieData.FindPropertyRelative("m_IconStyles");
+            var m_BaseInfo = serieData.FindPropertyRelative("m_BaseInfos");
             var m_Label = serieData.FindPropertyRelative("m_Labels");
             var m_ItemStyle = serieData.FindPropertyRelative("m_ItemStyles");
             var m_Emphasis = serieData.FindPropertyRelative("m_Emphases");
@@ -208,19 +208,19 @@ namespace XCharts.Editor
             PropertyField(m_Id);
             PropertyField(m_ParentId);
 
-            var componentNum = m_IconStyle.arraySize + m_Label.arraySize + m_ItemStyle.arraySize + m_Emphasis.arraySize
+            var componentNum = m_BaseInfo.arraySize + m_Label.arraySize + m_ItemStyle.arraySize + m_Emphasis.arraySize
                 + m_Symbol.arraySize + m_LineStyle.arraySize + m_AreaStyle.arraySize;
             var title = "Component";
             if (componentNum == 0) title += " (None)";
             m_DataComponentFoldout = ChartEditorHelper.DrawHeader(title, m_DataComponentFoldout, false, null, null,
+            new HeaderMenuInfo("Add BaseInfo", () =>
+            {
+                serie.GetSerieData(index).GetOrAddComponent<SerieDataBaseInfo>();
+            }, m_BaseInfo.arraySize == 0),
             new HeaderMenuInfo("Add ItemStyle", () =>
             {
                 serie.GetSerieData(index).GetOrAddComponent<ItemStyle>();
             }, m_ItemStyle.arraySize == 0),
-            new HeaderMenuInfo("Add IconStyle", () =>
-            {
-                serie.GetSerieData(index).GetOrAddComponent<IconStyle>();
-            }, m_IconStyle.arraySize == 0),
             new HeaderMenuInfo("Add Label", () =>
             {
                 serie.GetSerieData(index).GetOrAddComponent<LabelStyle>();
@@ -231,7 +231,7 @@ namespace XCharts.Editor
             }, m_Emphasis.arraySize == 0),
             new HeaderMenuInfo("Add Symbol", () =>
             {
-                serie.GetSerieData(index).GetOrAddComponent<SymbolStyle>();
+                serie.GetSerieData(index).GetOrAddComponent<SerieSymbol>();
             }, m_Symbol.arraySize == 0),
             new HeaderMenuInfo("Add LineStyle", () =>
             {
@@ -245,14 +245,14 @@ namespace XCharts.Editor
             {
                 serie.GetSerieData(index).GetOrAddComponent<TitleStyle>();
             }, m_TitleStyle.arraySize == 0),
+            new HeaderMenuInfo("Remove BaseInfo", () =>
+            {
+                serie.GetSerieData(index).RemoveComponent<SerieDataBaseInfo>();
+            }, m_BaseInfo.arraySize > 0),
             new HeaderMenuInfo("Remove ItemStyle", () =>
             {
                 serie.GetSerieData(index).RemoveComponent<ItemStyle>();
             }, m_ItemStyle.arraySize > 0),
-            new HeaderMenuInfo("Remove IconStyle", () =>
-            {
-                serie.GetSerieData(index).RemoveComponent<IconStyle>();
-            }, m_IconStyle.arraySize > 0),
             new HeaderMenuInfo("Remove Label", () =>
             {
                 serie.GetSerieData(index).RemoveComponent<LabelStyle>();
@@ -263,7 +263,7 @@ namespace XCharts.Editor
             }, m_Emphasis.arraySize > 0),
             new HeaderMenuInfo("Remove Symbol", () =>
             {
-                serie.GetSerieData(index).RemoveComponent<SymbolStyle>();
+                serie.GetSerieData(index).RemoveComponent<SerieSymbol>();
             }, m_Symbol.arraySize > 0),
             new HeaderMenuInfo("Remove LineStyle", () =>
             {
@@ -283,8 +283,8 @@ namespace XCharts.Editor
             }, componentNum > 0));
             if (m_DataComponentFoldout)
             {
-                if (m_IconStyle.arraySize > 0)
-                    PropertyField(m_IconStyle.GetArrayElementAtIndex(0));
+                if (m_BaseInfo.arraySize > 0)
+                    PropertyField(m_BaseInfo.GetArrayElementAtIndex(0));
                 if (m_Label.arraySize > 0)
                     PropertyField(m_Label.GetArrayElementAtIndex(0));
                 if (m_ItemStyle.arraySize > 0)

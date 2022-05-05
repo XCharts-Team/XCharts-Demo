@@ -25,7 +25,7 @@ Inherits or Implemented: [Serie](#Serie),[INeedSerieContainer](#INeedSerieContai
 
 ## `Vessel`
 
-Inherits or Implemented: [MainComponent](#MainComponent),[ISerieContainer](#ISerieContainer)
+Inherits or Implemented: [MainComponent](#MainComponent),[ISerieContainer](#ISerieContainer),[IUpdateRuntimeData](#IUpdateRuntimeData)
 
 容器组件。 一般用于LiquidChart。一个Chart中可以有多个Vessel，Serie中用vesselIndex来对应。
 

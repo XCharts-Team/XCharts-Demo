@@ -88,6 +88,9 @@ namespace XCharts.Runtime
         protected Action<PointerEventData, int, int> m_OnPointerClickPie;
         protected Action<PointerEventData, int> m_OnPointerClickBar;
         protected Action<Axis, double> m_OnAxisPointerValueChanged;
+        protected Action<Legend, int, string, bool> m_OnLegendClick;
+        protected Action<Legend, int, string> m_OnLegendEnter;
+        protected Action<Legend, int, string> m_OnLegendExit;
 
         protected CustomDrawGaugePointerFunction m_CustomDrawGaugePointerFunction;
 
@@ -211,6 +214,7 @@ namespace XCharts.Runtime
 
         public void RefreshPainter(Serie serie)
         {
+            if (serie == null) return;
             RefreshPainter(GetPainterIndexBySerie(serie));
         }
 
@@ -363,9 +367,7 @@ namespace XCharts.Runtime
             if (m_Painter == null) return;
             if (m_RefreshChart)
             {
-                m_Painter.Refresh();
-                foreach (var painter in m_PainterList) painter.Refresh();
-                if (m_PainterTop != null) m_PainterTop.Refresh();
+                CheckRefreshPainter();
                 m_RefreshChart = false;
             }
         }
@@ -400,7 +402,6 @@ namespace XCharts.Runtime
             m_ChartPivot = m_GraphPivot;
             m_ChartSizeDelta = m_GraphSizeDelta;
             m_ChartRect = m_GraphRect;
-
             SetAllComponentDirty();
             OnCoordinateChanged();
             RefreshChart();
@@ -553,6 +554,8 @@ namespace XCharts.Runtime
                 serie.context.dataPoints.Clear();
                 serie.context.dataIgnores.Clear();
                 serie.animation.context.isAllItemAnimationEnd = true;
+                if (!serie.context.pointerEnter)
+                    serie.ResetInteract();
 
                 if (m_OnDrawSerieBefore != null)
                 {

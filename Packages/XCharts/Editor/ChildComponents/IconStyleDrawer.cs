@@ -18,6 +18,7 @@ namespace XCharts.Editor
                 PropertyField(prop, "m_Layer");
                 PropertyField(prop, "m_Align");
                 PropertyField(prop, "m_Sprite");
+                PropertyField(prop, "m_Type");
                 PropertyField(prop, "m_Color");
                 PropertyField(prop, "m_Width");
                 PropertyField(prop, "m_Height");

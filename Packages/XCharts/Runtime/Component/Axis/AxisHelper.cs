@@ -403,33 +403,11 @@ namespace XCharts.Runtime
                 return true;
         }
 
-        public static void AdjustCircleLabelPos(ChartText txt, Vector3 pos, Vector3 cenPos, float txtHig, Vector3 offset)
-        {
-            var txtWidth = txt.GetPreferredWidth();
-            var sizeDelta = new Vector2(txtWidth, txt.GetPreferredHeight());
-            txt.SetSizeDelta(sizeDelta);
-            var diff = pos.x - cenPos.x;
-            if (diff < -1f) //left
-            {
-                pos = new Vector3(pos.x - txtWidth / 2, pos.y);
-            }
-            else if (diff > 1f) //right
-            {
-                pos = new Vector3(pos.x + txtWidth / 2, pos.y);
-            }
-            else
-            {
-                float y = pos.y > cenPos.y ? pos.y + txtHig / 2 : pos.y - txtHig / 2;
-                pos = new Vector3(pos.x, y);
-            }
-            txt.SetLocalPosition(pos + offset);
-        }
-
         public static void AdjustCircleLabelPos(ChartLabel txt, Vector3 pos, Vector3 cenPos, float txtHig, Vector3 offset)
         {
-            var txtWidth = txt.label.GetPreferredWidth();
-            var sizeDelta = new Vector2(txtWidth, txt.label.GetPreferredHeight());
-            txt.label.SetSizeDelta(sizeDelta);
+            var txtWidth = txt.text.GetPreferredWidth();
+            var sizeDelta = new Vector2(txtWidth, txt.text.GetPreferredHeight());
+            txt.text.SetSizeDelta(sizeDelta);
             var diff = pos.x - cenPos.x;
             if (diff < -1f) //left
             {
@@ -447,11 +425,11 @@ namespace XCharts.Runtime
             txt.SetPosition(pos + offset);
         }
 
-        public static void AdjustRadiusAxisLabelPos(ChartText txt, Vector3 pos, Vector3 cenPos, float txtHig, Vector3 offset)
+        public static void AdjustRadiusAxisLabelPos(ChartLabel txt, Vector3 pos, Vector3 cenPos, float txtHig, Vector3 offset)
         {
-            var txtWidth = txt.GetPreferredWidth();
-            var sizeDelta = new Vector2(txtWidth, txt.GetPreferredHeight());
-            txt.SetSizeDelta(sizeDelta);
+            var txtWidth = txt.text.GetPreferredWidth();
+            var sizeDelta = new Vector2(txtWidth, txt.text.GetPreferredHeight());
+            txt.text.SetSizeDelta(sizeDelta);
             var diff = pos.y - cenPos.y;
             if (diff > 20f) //left
             {
@@ -466,7 +444,7 @@ namespace XCharts.Runtime
                 float y = pos.y > cenPos.y ? pos.y + txtHig / 2 : pos.y - txtHig / 2;
                 pos = new Vector3(pos.x, y);
             }
-            txt.SetLocalPosition(pos);
+            txt.SetPosition(pos);
         }
 
         public static float GetAxisPosition(GridCoord grid, Axis axis, double value, int dataCount = 0, DataZoom dataZoom = null)
@@ -533,7 +511,7 @@ namespace XCharts.Runtime
         }
 
         /// <summary>
-        /// 获得数值value在坐标轴上对于的长度
+        /// 获得数值value在坐标轴上对应的长度
         /// </summary>
         /// <param name="grid"></param>
         /// <param name="axis"></param>
@@ -571,10 +549,10 @@ namespace XCharts.Runtime
                 var yDataHig = 0f;
                 if (axis.context.minMaxRange != 0)
                 {
-                    if (!realLength || (realLength && axis.context.minValue > 0))
-                        yDataHig = (float)((value - axis.context.minValue) / axis.context.minMaxRange * gridHeight);
+                    if (realLength)
+                        yDataHig = (float)(value * gridHeight / axis.context.minMaxRange);
                     else
-                        yDataHig = (float)(value / axis.context.minMaxRange * gridHeight);
+                        yDataHig = (float)((value - axis.context.minValue) / axis.context.minMaxRange * gridHeight);
                 }
                 return includeGridXY
                     ? gridXY + yDataHig

@@ -1623,17 +1623,73 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_DebugMode: 0
   m_EnableTextMeshPro: 0
+  m_DebugInfo:
+    m_Show: 0
+    m_ShowDebugInfo: 0
+    m_ShowAllChartObject: 0
+    m_FoldSeries: 0
+    m_LabelStyle:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
+      m_Rotate: 0
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0.1254902, g: 0.1254902, b: 0.1254902, a: 0.6666667}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_FontSize: 18
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
   m_ChartName: 
   m_Theme:
+    m_Show: 1
     m_SharedTheme: {fileID: 11400000, guid: e1dc23a10de1e4c5dbfbaf74c4dfd218, type: 2}
+    m_TransparentBackground: 0
     m_EnableCustomTheme: 0
+    m_CustomFont: {fileID: 0}
     m_CustomBackgroundColor:
       serializedVersion: 2
       rgba: 0
     m_CustomColorPalette: []
   m_Settings:
+    m_Show: 1
     m_MaxPainter: 10
     m_ReversePainter: 0
     m_BasePainterMaterial: {fileID: 0}
@@ -1649,21 +1705,6 @@ MonoBehaviour:
     - 0.25
     - 0.25
     - 0.25
-  m_DebugInfo:
-    m_Show: 0
-    m_TextStyle:
-      m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
-      m_Rotate: 0
-      m_ExtraWidth: 0
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-      m_BackgroundColor: {r: 0.1254902, g: 0.1254902, b: 0.1254902, a: 0.6666667}
-      m_FontSize: 18
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 4
   m_AngleAxes:
   - m_Show: 1
     m_Type: 0
@@ -1685,16 +1726,6 @@ MonoBehaviour:
     m_Inverse: 0
     m_Clockwise: 1
     m_InsertDataToHead: 0
-    m_IconStyle:
-      m_Show: 0
-      m_Layer: 0
-      m_Align: 1
-      m_Sprite: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-      m_Width: 20
-      m_Height: 20
-      m_Offset: {x: 0, y: 0, z: 0}
-      m_AutoHideWhenLabelEmpty: 0
     m_Icons: []
     m_Data: []
     m_AxisLine:
@@ -1727,21 +1758,54 @@ MonoBehaviour:
     m_AxisName:
       m_Show: 0
       m_Name: axisName
-      m_Formatter: 
-      m_Location: 2
-      m_TextStyle:
-        m_Font: {fileID: 0}
-        m_AutoWrap: 0
-        m_AutoAlign: 1
+      m_LabelStyle:
+        m_Show: 1
+        m_Position: 10
+        m_AutoOffset: 0
+        m_Offset: {x: 0, y: 0, z: 0}
         m_Rotate: 0
-        m_ExtraWidth: 0
-        m_Offset: {x: 0, y: 0}
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_LineSpacing: 1
-        m_Alignment: 4
+        m_Distance: 0
+        m_Formatter: 
+        m_NumericFormatter: 
+        m_Width: 0
+        m_Height: 0
+        m_Icon:
+          m_Show: 0
+          m_Layer: 0
+          m_Align: 1
+          m_Sprite: {fileID: 0}
+          m_Type: 0
+          m_Color: {r: 1, g: 1, b: 1, a: 1}
+          m_Width: 20
+          m_Height: 20
+          m_Offset: {x: 0, y: 0, z: 0}
+          m_AutoHideWhenLabelEmpty: 0
+        m_Background:
+          m_Show: 1
+          m_Sprite: {fileID: 0}
+          m_Type: 0
+          m_AutoColor: 0
+          m_Color: {r: 0, g: 0, b: 0, a: 0}
+          m_Width: 0
+          m_Height: 0
+        m_TextPadding:
+          m_Show: 1
+          m_Top: 2
+          m_Right: 4
+          m_Left: 4
+          m_Bottom: 2
+        m_TextStyle:
+          m_Show: 1
+          m_Font: {fileID: 0}
+          m_AutoWrap: 0
+          m_AutoAlign: 1
+          m_Rotate: 0
+          m_AutoColor: 0
+          m_Color: {r: 0, g: 0, b: 0, a: 0}
+          m_FontSize: 0
+          m_FontStyle: 0
+          m_LineSpacing: 1
+          m_Alignment: 4
     m_AxisTick:
       m_Show: 1
       m_LineStyle:
@@ -1763,17 +1827,61 @@ MonoBehaviour:
       m_Inside: 0
       m_ShowStartTick: 1
       m_ShowEndTick: 1
+      m_Distance: 0
+      m_SplitNumber: 0
+      m_AutoColor: 0
     m_AxisLabel:
       m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
+      m_Rotate: 0
+      m_Distance: 8
       m_Formatter: 
-      m_Interval: 0
-      m_Inside: 0
-      m_Margin: 8
       m_NumericFormatter: 
-      m_ShowAsPositiveNumber: 0
-      m_OnZero: 0
       m_Width: 0
       m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
+      m_Interval: 0
+      m_Inside: 0
+      m_ShowAsPositiveNumber: 0
+      m_OnZero: 0
       m_ShowStartLabel: 1
       m_ShowEndLabel: 1
       m_TextLimit:
@@ -1781,19 +1889,6 @@ MonoBehaviour:
         m_MaxWidth: 0
         m_Gap: 1
         m_Suffix: ...
-      m_TextStyle:
-        m_Font: {fileID: 0}
-        m_AutoWrap: 0
-        m_AutoAlign: 1
-        m_Rotate: 0
-        m_ExtraWidth: 0
-        m_Offset: {x: 0, y: 0}
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_LineSpacing: 1
-        m_Alignment: 4
     m_SplitLine:
       m_Show: 1
       m_LineStyle:
@@ -1812,6 +1907,8 @@ MonoBehaviour:
         m_Length: 0
         m_Opacity: 1
       m_Interval: 0
+      m_Distance: 0
+      m_AutoColor: 0
     m_SplitArea:
       m_Show: 0
       m_Color: []
@@ -1836,19 +1933,54 @@ MonoBehaviour:
     m_ItemAutoColor: 1
     m_TextAutoColor: 0
     m_Formatter: 
-    m_TextStyle:
-      m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
+    m_LabelStyle:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
       m_Rotate: 0
-      m_ExtraWidth: 0
-      m_Offset: {x: 2, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 4
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
     m_Data: []
     m_Icons: []
   m_MarkLines: []
@@ -1882,16 +2014,6 @@ MonoBehaviour:
     m_Inverse: 0
     m_Clockwise: 1
     m_InsertDataToHead: 0
-    m_IconStyle:
-      m_Show: 0
-      m_Layer: 0
-      m_Align: 1
-      m_Sprite: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-      m_Width: 20
-      m_Height: 20
-      m_Offset: {x: 0, y: 0, z: 0}
-      m_AutoHideWhenLabelEmpty: 0
     m_Icons: []
     m_Data: []
     m_AxisLine:
@@ -1924,21 +2046,54 @@ MonoBehaviour:
     m_AxisName:
       m_Show: 0
       m_Name: axisName
-      m_Formatter: 
-      m_Location: 2
-      m_TextStyle:
-        m_Font: {fileID: 0}
-        m_AutoWrap: 0
-        m_AutoAlign: 1
+      m_LabelStyle:
+        m_Show: 1
+        m_Position: 10
+        m_AutoOffset: 0
+        m_Offset: {x: 0, y: 0, z: 0}
         m_Rotate: 0
-        m_ExtraWidth: 0
-        m_Offset: {x: 0, y: 0}
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_LineSpacing: 1
-        m_Alignment: 4
+        m_Distance: 0
+        m_Formatter: 
+        m_NumericFormatter: 
+        m_Width: 0
+        m_Height: 0
+        m_Icon:
+          m_Show: 0
+          m_Layer: 0
+          m_Align: 1
+          m_Sprite: {fileID: 0}
+          m_Type: 0
+          m_Color: {r: 1, g: 1, b: 1, a: 1}
+          m_Width: 20
+          m_Height: 20
+          m_Offset: {x: 0, y: 0, z: 0}
+          m_AutoHideWhenLabelEmpty: 0
+        m_Background:
+          m_Show: 1
+          m_Sprite: {fileID: 0}
+          m_Type: 0
+          m_AutoColor: 0
+          m_Color: {r: 0, g: 0, b: 0, a: 0}
+          m_Width: 0
+          m_Height: 0
+        m_TextPadding:
+          m_Show: 1
+          m_Top: 2
+          m_Right: 4
+          m_Left: 4
+          m_Bottom: 2
+        m_TextStyle:
+          m_Show: 1
+          m_Font: {fileID: 0}
+          m_AutoWrap: 0
+          m_AutoAlign: 1
+          m_Rotate: 0
+          m_AutoColor: 0
+          m_Color: {r: 0, g: 0, b: 0, a: 0}
+          m_FontSize: 0
+          m_FontStyle: 0
+          m_LineSpacing: 1
+          m_Alignment: 4
     m_AxisTick:
       m_Show: 1
       m_LineStyle:
@@ -1960,17 +2115,61 @@ MonoBehaviour:
       m_Inside: 0
       m_ShowStartTick: 1
       m_ShowEndTick: 1
+      m_Distance: 0
+      m_SplitNumber: 0
+      m_AutoColor: 0
     m_AxisLabel:
       m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
+      m_Rotate: 0
+      m_Distance: 8
       m_Formatter: 
-      m_Interval: 0
-      m_Inside: 0
-      m_Margin: 8
       m_NumericFormatter: 
-      m_ShowAsPositiveNumber: 0
-      m_OnZero: 0
       m_Width: 0
       m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
+      m_Interval: 0
+      m_Inside: 0
+      m_ShowAsPositiveNumber: 0
+      m_OnZero: 0
       m_ShowStartLabel: 1
       m_ShowEndLabel: 1
       m_TextLimit:
@@ -1978,19 +2177,6 @@ MonoBehaviour:
         m_MaxWidth: 0
         m_Gap: 1
         m_Suffix: ...
-      m_TextStyle:
-        m_Font: {fileID: 0}
-        m_AutoWrap: 0
-        m_AutoAlign: 1
-        m_Rotate: 0
-        m_ExtraWidth: 0
-        m_Offset: {x: 0, y: 0}
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_LineSpacing: 1
-        m_Alignment: 4
     m_SplitLine:
       m_Show: 1
       m_LineStyle:
@@ -2009,39 +2195,111 @@ MonoBehaviour:
         m_Length: 0
         m_Opacity: 1
       m_Interval: 0
+      m_Distance: 0
+      m_AutoColor: 0
     m_SplitArea:
       m_Show: 0
       m_Color: []
   m_Titles:
   - m_Show: 1
     m_Text: Two Value-Axes in Polar
-    m_TextStyle:
-      m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
-      m_Rotate: 0
-      m_ExtraWidth: 0
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 1
     m_SubText: 
-    m_SubTextStyle:
-      m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
+    m_LabelStyle:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
       m_Rotate: 0
-      m_ExtraWidth: 0
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 1
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
+    m_SubLabelStyle:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
+      m_Rotate: 0
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
     m_ItemGap: 0
     m_Location:
       m_Align: 2
@@ -2065,7 +2323,8 @@ MonoBehaviour:
     m_PaddingTopBottom: 10
     m_IgnoreDataShow: 0
     m_IgnoreDataDefaultContent: '-'
-    m_AlwayShow: 0
+    m_ShowContent: 1
+    m_AlwayShowContent: 0
     m_Offset: {x: 18, y: -25}
     m_BackgroundImage: {fileID: 0}
     m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
@@ -2094,70 +2353,244 @@ MonoBehaviour:
       m_Width: 0
       m_Length: 0
       m_Opacity: 1
-    m_LabelTextStyle:
-      m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
+    m_IndicatorLabelStyle:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
       m_Rotate: 0
-      m_ExtraWidth: 0
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 4
-    m_TitleTextStyle:
-      m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
+    m_TitleLabelStyle:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
       m_Rotate: 0
-      m_ExtraWidth: 0
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 3
-    m_ColumnsTextStyle:
-    - m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 3
+    m_ContentLabelStyles:
+    - m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
       m_Rotate: 0
-      m_ExtraWidth: 5
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 3
-    - m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 0
+        m_Right: 5
+        m_Left: 0
+        m_Bottom: 0
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 3
+    - m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
       m_Rotate: 0
-      m_ExtraWidth: 20
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 3
-    - m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 0
+        m_Right: 25
+        m_Left: 0
+        m_Bottom: 0
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 3
+    - m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
       m_Rotate: 0
-      m_ExtraWidth: 5
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 5
-  m_Vessels: []
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 0
+        m_Right: 0
+        m_Left: 0
+        m_Bottom: 0
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 5
   m_VisualMaps: []
   m_XAxes: []
   m_YAxes: []
@@ -2174,7 +2607,7 @@ MonoBehaviour:
     m_EndLabels: []
     m_LineArrows: []
     m_AreaStyles: []
-    m_IconStyles: []
+    m_TitleStyles: []
     m_Emphases: []
     m_Index: 0
     m_Show: 1
@@ -2200,7 +2633,6 @@ MonoBehaviour:
     m_BarPercentStack: 0
     m_BarWidth: 0.6
     m_BarGap: 0.3
-    m_BarCategoryGap: 0.2
     m_BarZebraWidth: 4
     m_BarZebraGap: 2
     m_Min: 0
@@ -2212,11 +2644,10 @@ MonoBehaviour:
     m_MinAngle: 0
     m_Clockwise: 1
     m_RoundCap: 0
-    m_RingGap: 10
     m_SplitNumber: 0
     m_ClickOffset: 1
     m_RoseType: 0
-    m_Space: 0
+    m_Gap: 0
     m_Center:
     - 0.5
     - 0.48
@@ -2313,8 +2744,8 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       m_CenterGap: 0
-      m_BorderType: 0
       m_BorderWidth: 0
+      m_BorderGap: 0
       m_BorderColor:
         serializedVersion: 2
         rgba: 0
@@ -2333,6160 +2764,5422 @@ MonoBehaviour:
       - 0
       - 0
       - 0
-    m_TitleStyle:
-      m_Show: 0
-      m_TextStyle:
-        m_Font: {fileID: 0}
-        m_AutoWrap: 0
-        m_AutoAlign: 1
-        m_Rotate: 0
-        m_ExtraWidth: 0
-        m_Offset: {x: 0, y: 0}
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_LineSpacing: 1
-        m_Alignment: 4
     m_Data:
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0
       - 0
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.06975647062063217
       - 1
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.13917310535907745
       - 2
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.20791170001029968
       - 3
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.27563735842704773
       - 4
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.3420201539993286
       - 5
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.40673667192459106
       - 6
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.4694715738296509
       - 7
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5299192667007446
       - 8
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5877853035926819
       - 9
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.6427876353263855
       - 10
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.6946583390235901
       - 11
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7431448101997375
       - 12
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.788010835647583
       - 13
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8290375471115112
       - 14
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8660253882408142
       - 15
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8987940549850464
       - 16
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9271839261054993
       - 17
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9510565400123596
       - 18
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.970295786857605
       - 19
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9848077893257141
       - 20
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9945219159126282
       - 21
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9993908405303955
       - 22
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9993908405303955
       - 23
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9945219159126282
       - 24
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9848077893257141
       - 25
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9702957272529602
       - 26
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9510565400123596
       - 27
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9271838068962097
       - 28
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8987940549850464
       - 29
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8660253882408142
       - 30
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8290374875068665
       - 31
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7880107760429382
       - 32
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7431448101997375
       - 33
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.6946582198143005
       - 34
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.6427876353263855
       - 35
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5877852439880371
       - 36
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5299190878868103
       - 37
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.4694715738296509
       - 38
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.4067365825176239
       - 39
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.3420200049877167
       - 40
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.27563735842704773
       - 41
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.20791161060333252
       - 42
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.13917295634746552
       - 43
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.06975647062063217
       - 44
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.00000008742277657347586
       - 45
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.0697566419839859
       - 46
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.13917312026023865
       - 47
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.20791178941726685
       - 48
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.27563753724098206
       - 49
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.3420201539993286
       - 50
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.40673673152923584
       - 51
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.4694717228412628
       - 52
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5299192667007446
       - 53
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5877853035926819
       - 54
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.6427878141403198
       - 55
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.6946583986282349
       - 56
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7431449294090271
       - 57
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7880107164382935
       - 58
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8290375471115112
       - 59
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8660255074501038
       - 60
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8987940549850464
       - 61
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9271839261054993
       - 62
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9510564208030701
       - 63
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9702957272529602
       - 64
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9848077893257141
       - 65
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.994521975517273
       - 66
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9993908405303955
       - 67
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9993908405303955
       - 68
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9945217967033386
       - 69
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9848077893257141
       - 70
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9702957272529602
       - 71
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9510564804077148
       - 72
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9271838068962097
       - 73
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8987938761711121
       - 74
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8660255074501038
       - 75
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8290375471115112
       - 76
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7880107164382935
       - 77
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7431447505950928
       - 78
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.6946582198143005
       - 79
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.6427873969078064
       - 80
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5877849459648132
       - 81
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5299192667007446
       - 82
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.4694714844226837
       - 83
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.40673649311065674
       - 84
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.3420199155807495
       - 85
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.27563706040382385
       - 86
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.20791175961494446
       - 87
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.13917310535907745
       - 88
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.06975638121366501
       - 89
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.00000017484555314695172
       - 90
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.06975673139095306
       - 91
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.13917343318462372
       - 92
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.20791210234165192
       - 93
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.27563735842704773
       - 94
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.3420202136039734
       - 95
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.406736820936203
       - 96
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.4694717824459076
       - 97
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5299195647239685
       - 98
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5877856016159058
       - 99
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.6427876353263855
       - 100
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.6946583986282349
       - 101
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7431449890136719
       - 102
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7880109548568726
       - 103
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8290377855300903
       - 104
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8660255670547485
       - 105
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8987940549850464
       - 106
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9271839261054993
       - 107
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9510566592216492
       - 108
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9702957272529602
       - 109
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9848077893257141
       - 110
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9945219159126282
       - 111
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9993908405303955
       - 112
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9993908405303955
       - 113
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9945217967033386
       - 114
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9848077297210693
       - 115
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9702957272529602
       - 116
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9510563611984253
       - 117
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9271838665008545
       - 118
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8987937569618225
       - 119
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8660252690315247
       - 120
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8290376663208008
       - 121
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7880104780197144
       - 122
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7431448101997375
       - 123
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.6946579813957214
       - 124
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.642787516117096
       - 125
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5877854228019714
       - 126
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5299190282821655
       - 127
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.46947163343429565
       - 128
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.4067361652851105
       - 129
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.34202006459236145
       - 130
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.2756367325782776
       - 131
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.2079114466905594
       - 132
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.1391732394695282
       - 133
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.06975605338811874
       - 134
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.00000002384976127700611
       - 135
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.06975705176591873
       - 136
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.13917328417301178
       - 137
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.20791243016719818
       - 138
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.275637686252594
       - 139
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.34202006459236145
       - 140
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.4067371189594269
       - 141
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.46947166323661804
       - 142
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5299198627471924
       - 143
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5877854824066162
       - 144
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.642787516117096
       - 145
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.694658637046814
       - 146
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7431448698043823
       - 147
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7880111336708069
       - 148
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8290377259254456
       - 149
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8660252690315247
       - 150
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8987942337989807
       - 151
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9271838665008545
       - 152
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9510566592216492
       - 153
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9702957272529602
       - 154
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9848078489303589
       - 155
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.994521975517273
       - 156
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9993908405303955
       - 157
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9993908405303955
       - 158
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9945219159126282
       - 159
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9848076701164246
       - 160
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9702956676483154
       - 161
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9510563015937805
       - 162
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9271836280822754
       - 163
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8987940549850464
       - 164
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8660251498222351
       - 165
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8290374875068665
       - 166
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7880103588104248
       - 167
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7431446313858032
       - 168
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.6946584582328796
       - 169
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.6427872180938721
       - 170
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5877851843833923
       - 171
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5299187302589417
       - 172
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.4694713354110718
       - 173
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.4067367613315582
       - 174
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.3420197367668152
       - 175
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.27563732862472534
       - 176
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.20791111886501312
       - 177
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.13917292654514313
       - 178
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.06975572556257248
       - 179
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.00000034969110629390343
       - 180
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.06975642591714859
       - 181
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.13917361199855804
       - 182
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.20791181921958923
       - 183
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.27563798427581787
       - 184
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.3420203924179077
       - 185
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.40673741698265076
       - 186
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.4694719612598419
       - 187
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5299193263053894
       - 188
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5877857208251953
       - 189
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.642787754535675
       - 190
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.6946588754653931
       - 191
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7431451082229614
       - 192
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7880107164382935
       - 193
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8290378451347351
       - 194
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8660255074501038
       - 195
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8987943530082703
       - 196
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9271839261054993
       - 197
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9510568380355835
       - 198
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9702958464622498
       - 199
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9848077893257141
       - 200
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9945220351219177
       - 201
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9993908405303955
       - 202
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9993908405303955
       - 203
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9945217967033386
       - 204
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9848077893257141
       - 205
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9702956676483154
       - 206
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9510564804077148
       - 207
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9271835684776306
       - 208
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8987939953804016
       - 209
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8660249710083008
       - 210
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8290372490882874
       - 211
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7880106568336487
       - 212
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7431443929672241
       - 213
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.6946581602096558
       - 214
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.642786979675293
       - 215
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5877849459648132
       - 216
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5299192667007446
       - 217
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.4694710671901703
       - 218
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.40673646330833435
       - 219
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.3420194387435913
       - 220
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.27563703060150146
       - 221
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.20791174471378326
       - 222
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.13917259871959686
       - 223
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.06975635886192322
       - 224
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.0000006755324761797965
       - 225
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.06975675374269485
       - 226
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.1391739398241043
       - 227
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.2079121172428131
       - 228
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.2756373882293701
       - 229
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.342020720243454
       - 230
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.406736820936203
       - 231
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.46947139501571655
       - 232
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5299203991889954
       - 233
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5877860188484192
       - 234
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.6427880525588989
       - 235
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.6946584582328796
       - 236
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7431446313858032
       - 237
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7880115509033203
       - 238
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8290380239486694
       - 239
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8660255670547485
       - 240
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8987940549850464
       - 241
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9271837472915649
       - 242
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9510568380355835
       - 243
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9702959656715393
       - 244
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9848077893257141
       - 245
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9945219159126282
       - 246
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9993908405303955
       - 247
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9993908405303955
       - 248
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9945217967033386
       - 249
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9848076701164246
       - 250
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9702957272529602
       - 251
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9510566592216492
       - 252
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9271834492683411
       - 253
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8987937569618225
       - 254
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8660252690315247
       - 255
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8290376663208008
       - 256
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7880098819732666
       - 257
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.743144154548645
       - 258
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.6946579217910767
       - 259
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.642787516117096
       - 260
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5877854228019714
       - 261
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5299181342124939
       - 262
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.4694707691669464
       - 263
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.4067361652851105
       - 264
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.34202003479003906
       - 265
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.2756376266479492
       - 266
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.2079104781150818
       - 267
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.1391722708940506
       - 268
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.06975603103637695
       - 269
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.00000004769952255401222
       - 270
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.06975612789392471
       - 271
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.13917425274848938
       - 272
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.20791244506835938
       - 273
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.2756377160549164
       - 274
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.34202009439468384
       - 275
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.4067379832267761
       - 276
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.4694725275039673
       - 277
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5299198031425476
       - 278
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.587785542011261
       - 279
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.642787516117096
       - 280
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.694659411907196
       - 281
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7431455254554749
       - 282
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7880111336708069
       - 283
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8290377259254456
       - 284
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8660253286361694
       - 285
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8987946510314941
       - 286
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9271842241287231
       - 287
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9510566592216492
       - 288
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.970295786857605
       - 289
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9848076701164246
       - 290
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9945220351219177
       - 291
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9993908405303955
       - 292
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9993908405303955
       - 293
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9945219159126282
       - 294
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9848077893257141
       - 295
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9702954888343811
       - 296
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9510563015937805
       - 297
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9271836280822754
       - 298
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8987940549850464
       - 299
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8660256266593933
       - 300
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8290369510650635
       - 301
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7880103588104248
       - 302
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7431446313858032
       - 303
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.6946583986282349
       - 304
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.6427865028381348
       - 305
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5877844095230103
       - 306
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5299187302589417
       - 307
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.4694713056087494
       - 308
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.40673673152923584
       - 309
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.34201884269714355
       - 310
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.27563637495040894
       - 311
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.20791108906269073
       - 312
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.13917289674282074
       - 313
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.0697566568851471
       - 314
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.0000013272151591081638
       - 315
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.06975740194320679
       - 316
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.13917362689971924
       - 317
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.20791183412075043
       - 318
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.27563712000846863
       - 319
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.34202131628990173
       - 320
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.40673744678497314
       - 321
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.4694719910621643
       - 322
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5299193263053894
       - 323
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5877864956855774
       - 324
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.6427885293960571
       - 325
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.6946589350700378
       - 326
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7431451082229614
       - 327
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7880107760429382
       - 328
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8290384411811829
       - 329
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.866025984287262
       - 330
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8987943530082703
       - 331
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9271839261054993
       - 332
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9510565400123596
       - 333
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9702960252761841
       - 334
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9848078489303589
       - 335
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9945220351219177
       - 336
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9993908405303955
       - 337
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9993907809257507
       - 338
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9945217370986938
       - 339
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.984807550907135
       - 340
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9702956676483154
       - 341
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9510564804077148
       - 342
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.9271839261054993
       - 343
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8987935185432434
       - 344
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8660249710083008
       - 345
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.8290373086929321
       - 346
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7880106568336487
       - 347
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.7431450486183167
       - 348
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.6946575045585632
       - 349
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.6427869200706482
       - 350
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5877849459648132
       - 351
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.5299192070960999
       - 352
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.46947017312049866
       - 353
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.4067355990409851
       - 354
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.3420194387435913
       - 355
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.2756370007991791
       - 356
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.20791171491146088
       - 357
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.13917163014411926
       - 358
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.06975537538528442
       - 359
-      m_Children: 
-    - m_Name: 
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: 
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
       m_LineStyles: []
       m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 0.0000006993822125878069
       - 360
-      m_Children: 
-  m_SerieLiquids: []
   m_SeriePies: []
   m_SerieRadars: []
   m_SerieRings: []

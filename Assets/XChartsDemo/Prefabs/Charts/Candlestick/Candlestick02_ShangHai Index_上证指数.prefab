@@ -765,17 +765,73 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_DebugMode: 0
   m_EnableTextMeshPro: 0
+  m_DebugInfo:
+    m_Show: 0
+    m_ShowDebugInfo: 0
+    m_ShowAllChartObject: 0
+    m_FoldSeries: 0
+    m_LabelStyle:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
+      m_Rotate: 0
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0.1254902, g: 0.1254902, b: 0.1254902, a: 0.6666667}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_FontSize: 18
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
   m_ChartName: 
   m_Theme:
+    m_Show: 1
     m_SharedTheme: {fileID: 11400000, guid: e1dc23a10de1e4c5dbfbaf74c4dfd218, type: 2}
+    m_TransparentBackground: 0
     m_EnableCustomTheme: 0
+    m_CustomFont: {fileID: 0}
     m_CustomBackgroundColor:
       serializedVersion: 2
       rgba: 0
     m_CustomColorPalette: []
   m_Settings:
+    m_Show: 1
     m_MaxPainter: 10
     m_ReversePainter: 0
     m_BasePainterMaterial: {fileID: 0}
@@ -791,21 +847,6 @@ MonoBehaviour:
     - 0.25
     - 0.25
     - 0.25
-  m_DebugInfo:
-    m_Show: 0
-    m_TextStyle:
-      m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
-      m_Rotate: 0
-      m_ExtraWidth: 0
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-      m_BackgroundColor: {r: 0.1254902, g: 0.1254902, b: 0.1254902, a: 0.6666667}
-      m_FontSize: 18
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 4
   m_AngleAxes: []
   m_Backgrounds: []
   m_DataZooms:
@@ -844,19 +885,54 @@ MonoBehaviour:
     m_MinShowNum: 1
     m_ScrollSensitivity: 10
     m_Orient: 0
-    m_TextStyle:
-      m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
+    m_LabelStyle:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
       m_Rotate: 0
-      m_ExtraWidth: 0
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 4
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
     m_LineStyle:
       m_Show: 1
       m_Type: 0
@@ -882,7 +958,6 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       m_Opacity: 0.3
-      m_TooltipHighlight: 0
       m_HighlightColor:
         serializedVersion: 2
         rgba: 0
@@ -895,7 +970,14 @@ MonoBehaviour:
     m_Right: 0.08
     m_Top: 0.22
     m_Bottom: 0.16
-    m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
+    m_BackgroundColor:
+      serializedVersion: 2
+      rgba: 0
+    m_ShowBorder: 0
+    m_BorderWidth: 0
+    m_BorderColor:
+      serializedVersion: 2
+      rgba: 0
   m_Legends:
   - m_Show: 1
     m_IconType: 0
@@ -913,19 +995,54 @@ MonoBehaviour:
     m_ItemAutoColor: 1
     m_TextAutoColor: 0
     m_Formatter: 
-    m_TextStyle:
-      m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
+    m_LabelStyle:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
       m_Rotate: 0
-      m_ExtraWidth: 0
-      m_Offset: {x: 2, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 4
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
     m_Data: []
     m_Icons: []
   m_MarkLines: []
@@ -936,33 +1053,103 @@ MonoBehaviour:
   m_Titles:
   - m_Show: 1
     m_Text: CandlestickChart
-    m_TextStyle:
-      m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
-      m_Rotate: 0
-      m_ExtraWidth: 0
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 1
     m_SubText: 
-    m_SubTextStyle:
-      m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
+    m_LabelStyle:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
       m_Rotate: 0
-      m_ExtraWidth: 0
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 1
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
+    m_SubLabelStyle:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
+      m_Rotate: 0
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
     m_ItemGap: 0
     m_Location:
       m_Align: 2
@@ -986,7 +1173,8 @@ MonoBehaviour:
     m_PaddingTopBottom: 10
     m_IgnoreDataShow: 0
     m_IgnoreDataDefaultContent: '-'
-    m_AlwayShow: 0
+    m_ShowContent: 1
+    m_AlwayShowContent: 0
     m_Offset: {x: 18, y: -25}
     m_BackgroundImage: {fileID: 0}
     m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
@@ -1015,70 +1203,244 @@ MonoBehaviour:
       m_Width: 0
       m_Length: 0
       m_Opacity: 1
-    m_LabelTextStyle:
-      m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
+    m_IndicatorLabelStyle:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
       m_Rotate: 0
-      m_ExtraWidth: 0
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 4
-    m_TitleTextStyle:
-      m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
+    m_TitleLabelStyle:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
       m_Rotate: 0
-      m_ExtraWidth: 0
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 3
-    m_ColumnsTextStyle:
-    - m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 3
+    m_ContentLabelStyles:
+    - m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
       m_Rotate: 0
-      m_ExtraWidth: 5
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 3
-    - m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 0
+        m_Right: 5
+        m_Left: 0
+        m_Bottom: 0
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 3
+    - m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
       m_Rotate: 0
-      m_ExtraWidth: 20
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 3
-    - m_Font: {fileID: 0}
-      m_AutoWrap: 0
-      m_AutoAlign: 1
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 0
+        m_Right: 25
+        m_Left: 0
+        m_Bottom: 0
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 3
+    - m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
       m_Rotate: 0
-      m_ExtraWidth: 5
-      m_Offset: {x: 0, y: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
-      m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_LineSpacing: 1
-      m_Alignment: 5
-  m_Vessels: []
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: 
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 0
+        m_Right: 0
+        m_Left: 0
+        m_Bottom: 0
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 5
   m_VisualMaps: []
   m_XAxes:
   - m_Show: 1
@@ -1101,16 +1463,6 @@ MonoBehaviour:
     m_Inverse: 0
     m_Clockwise: 1
     m_InsertDataToHead: 0
-    m_IconStyle:
-      m_Show: 0
-      m_Layer: 0
-      m_Align: 1
-      m_Sprite: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-      m_Width: 20
-      m_Height: 20
-      m_Offset: {x: 0, y: 0, z: 0}
-      m_AutoHideWhenLabelEmpty: 0
     m_Icons: []
     m_Data:
     - 2013/1/24
@@ -1231,20 +1583,54 @@ MonoBehaviour:
     m_AxisName:
       m_Show: 0
       m_Name: axisName
-      m_Location: 2
-      m_TextStyle:
-        m_Font: {fileID: 0}
-        m_AutoWrap: 0
-        m_AutoAlign: 1
+      m_LabelStyle:
+        m_Show: 1
+        m_Position: 10
+        m_AutoOffset: 0
+        m_Offset: {x: 0, y: 0, z: 0}
         m_Rotate: 0
-        m_ExtraWidth: 0
-        m_Offset: {x: 0, y: 0}
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_LineSpacing: 1
-        m_Alignment: 4
+        m_Distance: 0
+        m_Formatter: 
+        m_NumericFormatter: 
+        m_Width: 0
+        m_Height: 0
+        m_Icon:
+          m_Show: 0
+          m_Layer: 0
+          m_Align: 1
+          m_Sprite: {fileID: 0}
+          m_Type: 0
+          m_Color: {r: 1, g: 1, b: 1, a: 1}
+          m_Width: 20
+          m_Height: 20
+          m_Offset: {x: 0, y: 0, z: 0}
+          m_AutoHideWhenLabelEmpty: 0
+        m_Background:
+          m_Show: 1
+          m_Sprite: {fileID: 0}
+          m_Type: 0
+          m_AutoColor: 0
+          m_Color: {r: 0, g: 0, b: 0, a: 0}
+          m_Width: 0
+          m_Height: 0
+        m_TextPadding:
+          m_Show: 1
+          m_Top: 2
+          m_Right: 4
+          m_Left: 4
+          m_Bottom: 2
+        m_TextStyle:
+          m_Show: 1
+          m_Font: {fileID: 0}
+          m_AutoWrap: 0
+          m_AutoAlign: 1
+          m_Rotate: 0
+          m_AutoColor: 0
+          m_Color: {r: 0, g: 0, b: 0, a: 0}
+          m_FontSize: 0
+          m_FontStyle: 0
+          m_LineSpacing: 1
+          m_Alignment: 4
     m_AxisTick:
       m_Show: 1
       m_LineStyle:
@@ -1266,17 +1652,61 @@ MonoBehaviour:
       m_Inside: 0
       m_ShowStartTick: 1
       m_ShowEndTick: 1
+      m_Distance: 0
+      m_SplitNumber: 0
+      m_AutoColor: 0
     m_AxisLabel:
       m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
+      m_Rotate: 0
+      m_Distance: 8
       m_Formatter: 
-      m_Interval: 0
-      m_Inside: 0
-      m_Margin: 8
       m_NumericFormatter: 
-      m_ShowAsPositiveNumber: 0
-      m_OnZero: 0
       m_Width: 0
       m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
+      m_Interval: 0
+      m_Inside: 0
+      m_ShowAsPositiveNumber: 0
+      m_OnZero: 0
       m_ShowStartLabel: 1
       m_ShowEndLabel: 1
       m_TextLimit:
@@ -1284,19 +1714,6 @@ MonoBehaviour:
         m_MaxWidth: 0
         m_Gap: 1
         m_Suffix: ...
-      m_TextStyle:
-        m_Font: {fileID: 0}
-        m_AutoWrap: 0
-        m_AutoAlign: 1
-        m_Rotate: 0
-        m_ExtraWidth: 0
-        m_Offset: {x: 0, y: 0}
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_LineSpacing: 1
-        m_Alignment: 4
     m_SplitLine:
       m_Show: 0
       m_LineStyle:
@@ -1315,6 +1732,8 @@ MonoBehaviour:
         m_Length: 0
         m_Opacity: 1
       m_Interval: 0
+      m_Distance: 0
+      m_AutoColor: 0
     m_SplitArea:
       m_Show: 0
       m_Color: []
@@ -1339,16 +1758,6 @@ MonoBehaviour:
     m_Inverse: 0
     m_Clockwise: 1
     m_InsertDataToHead: 0
-    m_IconStyle:
-      m_Show: 0
-      m_Layer: 0
-      m_Align: 1
-      m_Sprite: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-      m_Width: 20
-      m_Height: 20
-      m_Offset: {x: 0, y: 0, z: 0}
-      m_AutoHideWhenLabelEmpty: 0
     m_Icons: []
     m_Data: []
     m_AxisLine:
@@ -1381,20 +1790,54 @@ MonoBehaviour:
     m_AxisName:
       m_Show: 0
       m_Name: axisName
-      m_Location: 2
-      m_TextStyle:
-        m_Font: {fileID: 0}
-        m_AutoWrap: 0
-        m_AutoAlign: 1
+      m_LabelStyle:
+        m_Show: 1
+        m_Position: 10
+        m_AutoOffset: 0
+        m_Offset: {x: 0, y: 0, z: 0}
         m_Rotate: 0
-        m_ExtraWidth: 0
-        m_Offset: {x: 0, y: 0}
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_LineSpacing: 1
-        m_Alignment: 4
+        m_Distance: 0
+        m_Formatter: 
+        m_NumericFormatter: 
+        m_Width: 0
+        m_Height: 0
+        m_Icon:
+          m_Show: 0
+          m_Layer: 0
+          m_Align: 1
+          m_Sprite: {fileID: 0}
+          m_Type: 0
+          m_Color: {r: 1, g: 1, b: 1, a: 1}
+          m_Width: 20
+          m_Height: 20
+          m_Offset: {x: 0, y: 0, z: 0}
+          m_AutoHideWhenLabelEmpty: 0
+        m_Background:
+          m_Show: 1
+          m_Sprite: {fileID: 0}
+          m_Type: 0
+          m_AutoColor: 0
+          m_Color: {r: 0, g: 0, b: 0, a: 0}
+          m_Width: 0
+          m_Height: 0
+        m_TextPadding:
+          m_Show: 1
+          m_Top: 2
+          m_Right: 4
+          m_Left: 4
+          m_Bottom: 2
+        m_TextStyle:
+          m_Show: 1
+          m_Font: {fileID: 0}
+          m_AutoWrap: 0
+          m_AutoAlign: 1
+          m_Rotate: 0
+          m_AutoColor: 0
+          m_Color: {r: 0, g: 0, b: 0, a: 0}
+          m_FontSize: 0
+          m_FontStyle: 0
+          m_LineSpacing: 1
+          m_Alignment: 4
     m_AxisTick:
       m_Show: 1
       m_LineStyle:
@@ -1416,17 +1859,61 @@ MonoBehaviour:
       m_Inside: 0
       m_ShowStartTick: 1
       m_ShowEndTick: 1
+      m_Distance: 0
+      m_SplitNumber: 0
+      m_AutoColor: 0
     m_AxisLabel:
       m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
+      m_Rotate: 0
+      m_Distance: 8
       m_Formatter: 
-      m_Interval: 0
-      m_Inside: 0
-      m_Margin: 8
       m_NumericFormatter: 
-      m_ShowAsPositiveNumber: 0
-      m_OnZero: 0
       m_Width: 0
       m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 2
+        m_Right: 4
+        m_Left: 4
+        m_Bottom: 2
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
+      m_Interval: 0
+      m_Inside: 0
+      m_ShowAsPositiveNumber: 0
+      m_OnZero: 0
       m_ShowStartLabel: 1
       m_ShowEndLabel: 1
       m_TextLimit:
@@ -1434,19 +1921,6 @@ MonoBehaviour:
         m_MaxWidth: 0
         m_Gap: 1
         m_Suffix: ...
-      m_TextStyle:
-        m_Font: {fileID: 0}
-        m_AutoWrap: 0
-        m_AutoAlign: 1
-        m_Rotate: 0
-        m_ExtraWidth: 0
-        m_Offset: {x: 0, y: 0}
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_LineSpacing: 1
-        m_Alignment: 4
     m_SplitLine:
       m_Show: 1
       m_LineStyle:
@@ -1465,6 +1939,8 @@ MonoBehaviour:
         m_Length: 0
         m_Opacity: 1
       m_Interval: 0
+      m_Distance: 0
+      m_AutoColor: 0
     m_SplitArea:
       m_Show: 1
       m_Color: []
@@ -1478,7 +1954,7 @@ MonoBehaviour:
     m_EndLabels: []
     m_LineArrows: []
     m_AreaStyles: []
-    m_IconStyles: []
+    m_TitleStyles: []
     m_Emphases: []
     m_Index: 0
     m_Show: 1
@@ -1504,7 +1980,6 @@ MonoBehaviour:
     m_BarPercentStack: 0
     m_BarWidth: 0.6
     m_BarGap: 0.3
-    m_BarCategoryGap: 0.2
     m_BarZebraWidth: 4
     m_BarZebraGap: 2
     m_Min: 0
@@ -1516,11 +1991,10 @@ MonoBehaviour:
     m_MinAngle: 0
     m_Clockwise: 1
     m_RoundCap: 0
-    m_RingGap: 10
     m_SplitNumber: 0
     m_ClickOffset: 1
     m_RoseType: 0
-    m_Space: 0
+    m_Gap: 0
     m_Center:
     - 0.5
     - 0.45
@@ -1617,8 +2091,8 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       m_CenterGap: 0
-      m_BorderType: 0
       m_BorderWidth: 0
+      m_BorderGap: 0
       m_BorderColor:
         serializedVersion: 2
         rgba: 0
@@ -1637,1522 +2111,1506 @@ MonoBehaviour:
       - 0
       - 0
       - 0
-    m_TitleStyle:
-      m_Show: 0
-      m_TextStyle:
-        m_Font: {fileID: 0}
-        m_AutoWrap: 0
-        m_AutoAlign: 1
-        m_Rotate: 0
-        m_ExtraWidth: 0
-        m_Offset: {x: 0, y: 0}
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_LineSpacing: 1
-        m_Alignment: 4
     m_Data:
-    - m_Name: '''2013/1/24'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/1/24'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2320.26
       - 2320.26
       - 2287.3
       - 2362.94
-      m_Children: 
-    - m_Name: '''2013/1/25'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/1/25'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2300
       - 2291.3
       - 2288.26
       - 2308.38
-      m_Children: 
-    - m_Name: '''2013/1/28'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/1/28'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2295.35
       - 2346.5
       - 2295.35
       - 2346.92
-      m_Children: 
-    - m_Name: '''2013/1/29'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/1/29'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2347.22
       - 2358.98
       - 2337.35
       - 2363.8
-      m_Children: 
-    - m_Name: '''2013/1/30'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/1/30'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2360.75
       - 2382.48
       - 2347.89
       - 2383.76
-      m_Children: 
-    - m_Name: '''2013/1/31'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/1/31'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2383.43
       - 2385.42
       - 2371.23
       - 2391.82
-      m_Children: 
-    - m_Name: '''2013/2/1'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/2/1'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2377.41
       - 2419.02
       - 2369.57
       - 2421.15
-      m_Children: 
-    - m_Name: '''2013/2/4'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/2/4'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2425.92
       - 2428.15
       - 2417.58
       - 2440.38
-      m_Children: 
-    - m_Name: '''2013/2/5'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/2/5'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2411
       - 2433.13
       - 2403.3
       - 2437.42
-      m_Children: 
-    - m_Name: '''2013/2/6'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/2/6'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2432.68
       - 2434.48
       - 2427.7
       - 2441.73
-      m_Children: 
-    - m_Name: '''2013/2/7'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/2/7'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2430.69
       - 2418.53
       - 2394.22
       - 2433.89
-      m_Children: 
-    - m_Name: '''2013/2/8'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/2/8'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2416.62
       - 2432.4
       - 2414.4
       - 2443.03
-      m_Children: 
-    - m_Name: '''2013/2/18'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/2/18'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2441.91
       - 2421.56
       - 2415.43
       - 2444.8
-      m_Children: 
-    - m_Name: '''2013/2/19'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/2/19'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2420.26
       - 2382.91
       - 2373.53
       - 2427.07
-      m_Children: 
-    - m_Name: '''2013/2/20'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/2/20'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2383.49
       - 2397.18
       - 2370.61
       - 2397.94
-      m_Children: 
-    - m_Name: '''2013/2/21'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/2/21'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2378.82
       - 2325.95
       - 2309.17
       - 2378.82
-      m_Children: 
-    - m_Name: '''2013/2/22'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/2/22'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2322.94
       - 2314.16
       - 2308.76
       - 2330.88
-      m_Children: 
-    - m_Name: '''2013/2/25'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/2/25'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2320.62
       - 2325.82
       - 2315.01
       - 2338.78
-      m_Children: 
-    - m_Name: '''2013/2/26'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/2/26'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2313.74
       - 2293.34
       - 2289.89
       - 2340.71
-      m_Children: 
-    - m_Name: '''2013/2/27'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/2/27'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2297.77
       - 2313.22
       - 2292.03
       - 2324.63
-      m_Children: 
-    - m_Name: '''2013/2/28'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/2/28'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2322.32
       - 2365.59
       - 2308.92
       - 2366.16
-      m_Children: 
-    - m_Name: '''2013/3/1'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/3/1'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2364.54
       - 2359.51
       - 2330.86
       - 2369.65
-      m_Children: 
-    - m_Name: '''2013/3/4'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/3/4'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2332.08
       - 2273.4
       - 2259.25
       - 2333.54
-      m_Children: 
-    - m_Name: '''2013/3/5'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/3/5'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2274.81
       - 2326.31
       - 2270.1
       - 2328.14
-      m_Children: 
-    - m_Name: '''2013/3/6'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/3/6'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2333.61
       - 2347.18
       - 2321.6
       - 2351.44
-      m_Children: 
-    - m_Name: '''2013/3/7'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/3/7'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2340.44
       - 2324.29
       - 2304.27
       - 2352.02
-      m_Children: 
-    - m_Name: '''2013/3/8'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/3/8'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2326.42
       - 2318.61
       - 2314.59
       - 2333.67
-      m_Children: 
-    - m_Name: '''2013/3/11'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/3/11'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2314.68
       - 2310.59
       - 2296.58
       - 2320.96
-      m_Children: 
-    - m_Name: '''2013/3/12'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/3/12'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2309.16
       - 2286.6
       - 2264.83
       - 2333.29
-      m_Children: 
-    - m_Name: '''2013/3/13'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/3/13'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2282.17
       - 2263.97
       - 2253.25
       - 2286.33
-      m_Children: 
-    - m_Name: '''2013/3/14'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/3/14'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2255.77
       - 2270.28
       - 2253.31
       - 2276.22
-      m_Children: 
-    - m_Name: '''2013/3/15'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/3/15'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2269.31
       - 2278.4
       - 2250
       - 2312.08
-      m_Children: 
-    - m_Name: '''2013/3/18'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/3/18'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2267.29
       - 2240.02
       - 2239.21
       - 2276.05
-      m_Children: 
-    - m_Name: '''2013/3/19'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/3/19'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2244.26
       - 2257.43
       - 2232.02
       - 2261.31
-      m_Children: 
-    - m_Name: '''2013/3/20'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/3/20'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2257.74
       - 2317.37
       - 2257.42
       - 2317.86
-      m_Children: 
-    - m_Name: '''2013/3/21'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/3/21'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2318.21
       - 2324.24
       - 2311.6
       - 2330.81
-      m_Children: 
-    - m_Name: '''2013/3/22'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/3/22'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2321.4
       - 2328.28
       - 2314.97
       - 2332
-      m_Children: 
-    - m_Name: '''2013/3/25'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/3/25'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2334.74
       - 2326.72
       - 2319.91
       - 2344.89
-      m_Children: 
-    - m_Name: '''2013/3/26'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/3/26'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2318.58
       - 2297.67
       - 2281.12
       - 2319.99
-      m_Children: 
-    - m_Name: '''2013/3/27'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/3/27'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2299.38
       - 2301.26
       - 2289
       - 2323.48
-      m_Children: 
-    - m_Name: '''2013/3/28'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/3/28'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2273.55
       - 2236.3
       - 2232.91
       - 2273.55
-      m_Children: 
-    - m_Name: '''2013/3/29'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/3/29'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2238.49
       - 2236.62
       - 2228.81
       - 2246.87
-      m_Children: 
-    - m_Name: '''2013/4/1'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/4/1'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2229.46
       - 2234.4
       - 2227.31
       - 2243.95
-      m_Children: 
-    - m_Name: '''2013/4/2'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/4/2'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2234.9
       - 2227.74
       - 2220.44
       - 2253.42
-      m_Children: 
-    - m_Name: '''2013/4/3'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/4/3'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2232.69
       - 2225.29
       - 2217.25
       - 2241.34
-      m_Children: 
-    - m_Name: '''2013/4/8'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/4/8'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2196.24
       - 2211.59
       - 2180.67
       - 2212.59
-      m_Children: 
-    - m_Name: '''2013/4/9'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/4/9'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2215.47
       - 2225.77
       - 2215.47
       - 2234.73
-      m_Children: 
-    - m_Name: '''2013/4/10'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/4/10'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2224.93
       - 2226.13
       - 2212.56
       - 2233.04
-      m_Children: 
-    - m_Name: '''2013/4/11'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/4/11'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2236.98
       - 2219.55
       - 2217.26
       - 2242.48
-      m_Children: 
-    - m_Name: '''2013/4/12'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/4/12'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2218.09
       - 2206.78
       - 2204.44
       - 2226.26
-      m_Children: 
-    - m_Name: '''2013/4/15'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/4/15'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2199.91
       - 2181.94
       - 2177.39
       - 2204.99
-      m_Children: 
-    - m_Name: '''2013/4/16'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/4/16'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2169.63
       - 2194.85
       - 2165.78
       - 2196.43
-      m_Children: 
-    - m_Name: '''2013/4/17'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/4/17'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2195.03
       - 2193.8
       - 2178.47
       - 2197.51
-      m_Children: 
-    - m_Name: '''2013/4/18'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/4/18'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2181.82
       - 2197.6
       - 2175.44
       - 2206.03
-      m_Children: 
-    - m_Name: '''2013/4/19'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/4/19'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2201.12
       - 2244.64
       - 2200.58
       - 2250.11
-      m_Children: 
-    - m_Name: '''2013/4/22'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/4/22'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2236.4
       - 2242.17
       - 2232.26
       - 2245.12
-      m_Children: 
-    - m_Name: '''2013/4/23'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/4/23'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2242.62
       - 2184.54
       - 2182.81
       - 2242.62
-      m_Children: 
-    - m_Name: '''2013/4/24'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/4/24'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2187.35
       - 2218.32
       - 2184.11
       - 2226.12
-      m_Children: 
-    - m_Name: '''2013/4/25'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/4/25'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2213.19
       - 2199.31
       - 2191.85
       - 2224.63
-      m_Children: 
-    - m_Name: '''2013/4/26'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/4/26'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2203.89
       - 2177.91
       - 2173.86
       - 2210.58
-      m_Children: 
-    - m_Name: '''2013/5/2'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/5/2'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2170.78
       - 2174.12
       - 2161.14
       - 2179.65
-      m_Children: 
-    - m_Name: '''2013/5/3'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/5/3'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2179.05
       - 2205.5
       - 2179.05
       - 2222.81
-      m_Children: 
-    - m_Name: '''2013/5/6'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/5/6'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2212.5
       - 2231.17
       - 2212.5
       - 2236.07
-      m_Children: 
-    - m_Name: '''2013/5/7'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/5/7'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2227.86
       - 2235.57
       - 2219.44
       - 2240.26
-      m_Children: 
-    - m_Name: '''2013/5/8'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/5/8'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2242.39
       - 2246.3
       - 2235.42
       - 2255.21
-      m_Children: 
-    - m_Name: '''2013/5/9'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/5/9'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2246.96
       - 2232.97
       - 2221.38
       - 2247.86
-      m_Children: 
-    - m_Name: '''2013/5/10'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/5/10'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2228.82
       - 2246.83
       - 2225.81
       - 2247.67
-      m_Children: 
-    - m_Name: '''2013/5/13'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/5/13'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2247.68
       - 2241.92
       - 2231.36
       - 2250.85
-      m_Children: 
-    - m_Name: '''2013/5/14'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/5/14'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2238.9
       - 2217.01
       - 2205.87
       - 2239.93
-      m_Children: 
-    - m_Name: '''2013/5/15'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/5/15'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2217.09
       - 2224.8
       - 2213.58
       - 2225.19
-      m_Children: 
-    - m_Name: '''2013/5/16'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/5/16'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2221.34
       - 2251.81
       - 2210.77
       - 2252.87
-      m_Children: 
-    - m_Name: '''2013/5/17'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/5/17'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2249.81
       - 2282.87
       - 2248.41
       - 2288.09
-      m_Children: 
-    - m_Name: '''2013/5/20'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/5/20'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2286.33
       - 2299.99
       - 2281.9
       - 2309.39
-      m_Children: 
-    - m_Name: '''2013/5/21'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/5/21'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2297.11
       - 2305.11
       - 2290.12
       - 2305.3
-      m_Children: 
-    - m_Name: '''2013/5/22'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/5/22'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2303.75
       - 2302.4
       - 2292.43
       - 2314.18
-      m_Children: 
-    - m_Name: '''2013/5/23'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/5/23'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2293.81
       - 2275.67
       - 2274.1
       - 2304.95
-      m_Children: 
-    - m_Name: '''2013/5/24'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/5/24'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2281.45
       - 2288.53
       - 2270.25
       - 2292.59
-      m_Children: 
-    - m_Name: '''2013/5/27'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/5/27'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2286.66
       - 2293.08
       - 2283.94
       - 2301.7
-      m_Children: 
-    - m_Name: '''2013/5/28'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/5/28'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2293.4
       - 2321.32
       - 2281.47
       - 2322.1
-      m_Children: 
-    - m_Name: '''2013/5/29'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/5/29'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2323.54
       - 2324.02
       - 2321.17
       - 2334.33
-      m_Children: 
-    - m_Name: '''2013/5/30'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/5/30'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2316.25
       - 2317.75
       - 2310.49
       - 2325.72
-      m_Children: 
-    - m_Name: '''2013/5/31'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/5/31'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2320.74
       - 2300.59
       - 2299.37
       - 2325.53
-      m_Children: 
-    - m_Name: '''2013/6/3'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/6/3'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2300.21
       - 2299.25
       - 2294.11
       - 2313.43
-      m_Children: 
-    - m_Name: '''2013/6/4'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/6/4'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2297.1
       - 2272.42
       - 2264.76
       - 2297.1
-      m_Children: 
-    - m_Name: '''2013/6/5'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/6/5'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2270.71
       - 2270.93
       - 2260.87
       - 2276.86
-      m_Children: 
-    - m_Name: '''2013/6/6'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/6/6'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2264.43
       - 2242.11
       - 2240.07
       - 2266.69
-      m_Children: 
-    - m_Name: '''2013/6/7'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/6/7'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2242.26
       - 2210.9
       - 2205.07
       - 2250.63
-      m_Children: 
-    - m_Name: '''2013/6/13'''
-      m_Uuid: 
-      m_Selected: 0
-      m_Ignore: 0
-      m_Radius: 0
+    - m_Index: 0
+      m_Name: '''2013/6/13'''
+      m_Id: 
+      m_ParentId: 
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
       m_Emphases: []
       m_Symbols: []
-      m_IconStyles: []
+      m_LineStyles: []
+      m_AreaStyles: []
+      m_TitleStyles: []
       m_Data:
       - 2190.1
       - 2148.35
       - 2126.22
       - 2190.1
-      m_Children: 
   m_SerieEffectScatters: []
   m_SerieHeatmaps: []
   m_SerieLines: []
-  m_SerieLiquids: []
   m_SeriePies: []
   m_SerieRadars: []
   m_SerieRings: []

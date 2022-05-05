@@ -30,8 +30,9 @@ Pie 3d style.
 |--|--|--|
 | `show` |true |  |
 | `ellipseMinorAxis` |0.65f | The minor axis length of ellipse. |
-| `pieMaxHeight` |30f | The max height of 3d pie. |
-| `pieAutoHeight` |true | Whether auto set 3d pie height by data rate. |
+| `pieMaxHeight` |20f | The max height of 3d pie. |
+| `pieAutoHeight` |false | Whether auto set 3d pie height by data rate. |
+| `selectedOffset` |Vector2(0.1f, 0.5f) | The offset of selected pie slice. 被选中状态的饼图块的额外偏移。 |
 | `peripherySideColorRate` |0.8f | The periphery side color rate of 3d pie. |
 | `startSideColorRate` |0.7f | The start side color rate of 3d pie. |
 | `endSideColorRate` |0.65f | The end side color rate of 3d pie. |

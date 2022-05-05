@@ -25,7 +25,7 @@ Inherits or Implemented: [Serie](#Serie),[INeedSerieContainer](#INeedSerieContai
 
 ## `Vessel`
 
-Inherits or Implemented: [MainComponent](#MainComponent),[ISerieContainer](#ISerieContainer)
+Inherits or Implemented: [MainComponent](#MainComponent),[ISerieContainer](#ISerieContainer),[IUpdateRuntimeData](#IUpdateRuntimeData)
 
 Vessel component for liquid chart. There can be multiple vessels in a Chart, which can be matched by vesselIndex in Serie.
 

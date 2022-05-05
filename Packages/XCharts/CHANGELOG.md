@@ -2,6 +2,7 @@
 # 更新日志
 
 [master](#master)  
+[v3.0.0-preivew8](#v3.0.0-preivew8)  
 [v3.0.0-preivew7](#v3.0.0-preivew7)  
 [v3.0.0-preivew6](#v3.0.0-preivew6)  
 [v3.0.0-preivew5](#v3.0.0-preivew5)  
@@ -50,6 +51,21 @@
 
 ## master
 
+* (2022.05.05) 优化`ItemStyle`设置`color`时的一致性
+* (2022.05.05) 增加`Line`对`Dash`,`Dot`等的支持 (#197)
+* (2022.05.04) 增加`Legend`的委托回调
+* (2022.05.04) 优化`Symbol`和`Label`
+* (2022.05.01) 增加`Bar`对`clip`的支持 (#196)
+* (2022.05.01) 修复`RingChart`的`Label`不刷新的问题 (#195)
+* (2022.04.29) 增加`Tooltip`支持自定义背景图
+* (2022.04.27) 修复`ItemStyle`代码修改`color`不刷新的问题
+
+## v3.0.0-preivew8
+
+* (2022.04.26) 发布`v3.0.0-preivew8`版本
+* (2022.04.23) 移除`Serie`的`IconStyle`组件
+* (2022.04.23) 强化`LabelStyle`，所有组件的`TextStyle`都升级为`LabelStyle`
+* (2022.04.19) 增加`Label`的`rotate`支持设置旋转
 * (2022.04.17) 修复`Bar`在数值为负数时动画无效的问题
 * (2022.04.17) 增加`ItemStyle`的`BorderGap`支持设置边框间距
 * (2022.04.16) 优化`Bar`的`Border`和`Capsule`胶囊柱图

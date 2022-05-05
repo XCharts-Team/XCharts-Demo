@@ -105,7 +105,21 @@ namespace XCharts.Runtime
         /// 坐标轴变更数据索引时回调。参数：axis, dataIndex/dataValue
         /// </summary>
         public Action<Axis, double> onAxisPointerValueChanged { set { m_OnAxisPointerValueChanged = value; } get { return m_OnAxisPointerValueChanged; } }
-
+        /// <summary>
+        /// the callback function of click legend.
+        /// |点击图例按钮回调。参数：legendIndex, legendName, show
+        /// </summary>
+        public Action<Legend, int, string, bool> onLegendClick { set { m_OnLegendClick = value; } internal get { return m_OnLegendClick; } }
+        /// <summary>
+        /// the callback function of enter legend.
+        /// |鼠标进入图例回调。参数：legendIndex, legendName
+        /// </summary>
+        public Action<Legend, int, string> onLegendEnter { set { m_OnLegendEnter = value; } internal get { return m_OnLegendEnter; } }
+        /// <summary>
+        /// the callback function of exit legend.
+        /// |鼠标退出图例回调。参数：legendIndex, legendName
+        /// </summary>
+        public Action<Legend, int, string> onLegendExit { set { m_OnLegendExit = value; } internal get { return m_OnLegendExit; } }
         public void Init(bool defaultChart = true)
         {
             if (defaultChart)
@@ -120,13 +134,36 @@ namespace XCharts.Runtime
         }
         /// <summary>
         /// Redraw chart in next frame.
-        /// |在下一帧刷新图表。
+        /// |在下一帧刷新整个图表。
         /// </summary>
         public void RefreshChart()
         {
+            foreach (var serie in m_Series)
+                serie.ResetInteract();
             m_RefreshChart = true;
             if (m_Painter) m_Painter.Refresh();
         }
+
+        /// <summary>
+        /// Redraw chart serie in next frame.
+        /// |在下一帧刷新图表的指定serie。
+        /// </summary>
+        public void RefreshChart(int serieIndex)
+        {
+            RefreshPainter(GetSerie(serieIndex));
+        }
+
+        /// <summary>
+        /// Redraw chart serie in next frame.
+        /// |在下一帧刷新图表的指定serie。
+        /// </summary>
+        public void RefreshChart(Serie serie)
+        {
+            if (serie == null) return;
+            serie.ResetInteract();
+            RefreshPainter(serie);
+        }
+
 
         /// <summary>
         /// Remove all series and legend data.
@@ -486,6 +523,19 @@ namespace XCharts.Runtime
         {
             var background = GetChartComponent<Background>();
             return theme.GetBackgroundColor(background);
+        }
+
+        public Color32 GetItemColor(Serie serie, SerieData serieData, bool highlight = false)
+        {
+            var colorIndex = serieData == null || !serie.useDataNameForColor
+                ? GetLegendRealShowNameIndex(serie.legendName)
+                : GetLegendRealShowNameIndex(serieData.legendName);
+            return SerieHelper.GetItemColor(serie, serieData, m_Theme, colorIndex, highlight);
+        }
+
+        public Color32 GetItemColor(Serie serie, bool highlight = false)
+        {
+            return SerieHelper.GetItemColor(serie, null, m_Theme, serie.context.colorIndex, highlight);
         }
     }
 }

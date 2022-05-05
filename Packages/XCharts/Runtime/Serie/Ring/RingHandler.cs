@@ -96,7 +96,7 @@ namespace XCharts.Runtime
             param.serieData = serieData;
             param.value = serieData.GetData(0);
             param.total = serieData.GetData(1);
-            param.color = chart.theme.GetColor(dataIndex);
+            param.color = SerieHelper.GetItemColor(serie, serieData, chart.theme, dataIndex, false);
             param.marker = SerieHelper.GetItemMarker(serie, serieData, marker);
             param.itemFormatter = SerieHelper.GetItemFormatter(serie, serieData, itemFormatter);
             param.numericFormatter = SerieHelper.GetNumericFormatter(serie, serieData, numericFormatter); ;
@@ -116,21 +116,23 @@ namespace XCharts.Runtime
             var toAngle = serieData.context.toAngle;
             switch (label.position)
             {
-                case LabelStyle.Position.Center:
-                    serieData.context.labelPosition = serie.context.center + label.offset;
-                    break;
                 case LabelStyle.Position.Bottom:
+                case LabelStyle.Position.Start:
                     var px1 = Mathf.Sin(startAngle * Mathf.Deg2Rad) * centerRadius;
                     var py1 = Mathf.Cos(startAngle * Mathf.Deg2Rad) * centerRadius;
                     var xDiff = serie.clockwise ? -label.distance : label.distance;
                     serieData.context.labelPosition = serie.context.center + new Vector3(px1 + xDiff, py1);
                     break;
                 case LabelStyle.Position.Top:
+                case LabelStyle.Position.End:
                     startAngle += serie.clockwise ? -label.distance : label.distance;
                     toAngle += serie.clockwise ? label.distance : -label.distance;
                     var px2 = Mathf.Sin(toAngle * Mathf.Deg2Rad) * centerRadius;
                     var py2 = Mathf.Cos(toAngle * Mathf.Deg2Rad) * centerRadius;
                     serieData.context.labelPosition = serie.context.center + new Vector3(px2, py2);
+                    break;
+                default: //LabelStyle.Position.Center
+                    serieData.context.labelPosition = serie.context.center + label.offset;
                     break;
             }
             return serieData.context.labelPosition;
@@ -157,8 +159,9 @@ namespace XCharts.Runtime
                 var startDegree = GetStartAngle(serie);
                 var toDegree = GetToAngle(serie, degree);
                 var itemStyle = SerieHelper.GetItemStyle(serie, serieData, serieData.context.highlight);
-                var itemColor = SerieHelper.GetItemColor(serie, serieData, chart.theme, j, serieData.context.highlight);
-                var itemToColor = SerieHelper.GetItemToColor(serie, serieData, chart.theme, j, serieData.context.highlight);
+                var colorIndex = chart.GetLegendRealShowNameIndex(serieData.legendName);
+                var itemColor = SerieHelper.GetItemColor(serie, serieData, chart.theme, colorIndex, serieData.context.highlight);
+                var itemToColor = SerieHelper.GetItemToColor(serie, serieData, chart.theme, colorIndex, serieData.context.highlight);
                 var outsideRadius = serie.context.outsideRadius - j * (ringWidth + serie.gap);
                 var insideRadius = outsideRadius - ringWidth;
                 var borderWidth = itemStyle.borderWidth;
@@ -169,12 +172,7 @@ namespace XCharts.Runtime
                 serieData.context.toAngle = serie.clockwise ? toDegree : startDegree;
                 serieData.context.insideRadius = insideRadius;
                 serieData.context.outsideRadius = serieData.radius > 0 ? serieData.radius : outsideRadius;
-                if (itemStyle.backgroundColor.a != 0)
-                {
-                    UGL.DrawDoughnut(vh, serie.context.center, insideRadius, outsideRadius, itemStyle.backgroundColor,
-                        itemStyle.backgroundColor, Color.clear, 0, 360, borderWidth, borderColor, 0,
-                        chart.settings.cicleSmoothness, false, serie.clockwise);
-                }
+                DrawBackground(vh, serie, serieData, j, insideRadius, outsideRadius);
                 UGL.DrawDoughnut(vh, serie.context.center, insideRadius, outsideRadius, itemColor, itemToColor,
                     Color.clear, startDegree, toDegree, borderWidth, borderColor, 0, chart.settings.cicleSmoothness,
                     roundCap, serie.clockwise);

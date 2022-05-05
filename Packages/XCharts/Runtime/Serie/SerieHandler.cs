@@ -187,7 +187,16 @@ namespace XCharts.Runtime
 
         private void InitRoot()
         {
-            if (m_SerieRoot != null) return;
+            if (m_SerieRoot != null)
+            {
+                var rect = ChartHelper.GetOrAddComponent<RectTransform>(m_SerieRoot);
+                rect.localPosition = Vector3.zero;
+                rect.sizeDelta = chart.chartSizeDelta;
+                rect.anchorMin = chart.chartMinAnchor;
+                rect.anchorMax = chart.chartMaxAnchor;
+                rect.pivot = chart.chartPivot;
+                return;
+            }
             var objName = s_SerieRootObjectName + "_" + serie.index;
             m_SerieRoot = ChartHelper.AddObject(objName, chart.transform, chart.chartMinAnchor,
                 chart.chartMaxAnchor, chart.chartPivot, chart.chartSizeDelta);
@@ -198,8 +207,7 @@ namespace XCharts.Runtime
 
         private void InitSerieLabel()
         {
-            if (m_SerieRoot == null)
-                InitRoot();
+            InitRoot();
             m_SerieLabelRoot = ChartHelper.AddObject(s_SerieLabelObjectName, m_SerieRoot.transform,
                 chart.chartMinAnchor, chart.chartMaxAnchor, chart.chartPivot, chart.chartSizeDelta);
             m_SerieLabelRoot.hideFlags = chart.chartHideFlags;
@@ -236,32 +244,18 @@ namespace XCharts.Runtime
                 return false;
 
             var serieEmphasisLabel = SerieHelper.GetSerieEmphasisLabel(serie, serieData);
-            var iconStyle = SerieHelper.GetIconStyle(serie, serieData);
 
             if (!serieLabel.show
-                && (serieEmphasisLabel == null || !serieEmphasisLabel.show)
-                && (iconStyle == null || !iconStyle.show))
+                && (serieEmphasisLabel == null || !serieEmphasisLabel.show))
                 return false;
 
-            var dataAutoColor = (Color)chart.theme.GetColor(serieData.index);
-
+            var colorIndex = serie.useDataNameForColor ? serieData.index : serie.index;
+            var dataAutoColor = (Color)SerieHelper.GetItemColor(serie, serieData, chart.theme, colorIndex, false);
             var textName = ChartCached.GetSerieLabelName(s_SerieLabelObjectName, serie.index, serieData.index);
-            var color = serieLabel.textStyle.autoColor ? dataAutoColor : chart.theme.common.textColor;
-            var iconWidth = iconStyle != null ? iconStyle.width : 20;
-            var iconHeight = iconStyle != null ? iconStyle.height : 20;
-            var labelObj = SerieLabelPool.Get(textName, serieLabelRoot.transform, serieLabel, color,
-                       iconWidth, iconHeight, chart.theme);
-            var iconImage = labelObj.transform.Find("Icon").GetComponent<Image>();
-            var isAutoSize = serieLabel.backgroundWidth == 0 || serieLabel.backgroundHeight == 0;
-            var item = ChartHelper.GetOrAddComponent<ChartLabel>(labelObj);
-            item.SetLabel(labelObj, isAutoSize, serieLabel.paddingLeftRight, serieLabel.paddingTopBottom);
-            item.SetIcon(iconImage);
-            item.SetIconActive(iconStyle != null && iconStyle.show);
-            if (serieLabel.textStyle.autoBackgroundColor)
-                item.color = dataAutoColor;
-            else
-                item.color = serieLabel.textStyle.backgroundColor;
-            serieData.labelObject = item;
+            var label = ChartHelper.AddChartLabel(textName, serieLabelRoot.transform, serieLabel, chart.theme.common,
+                    "", dataAutoColor, TextAnchor.MiddleCenter);
+            label.SetActive(serieLabel.show);
+            serieData.labelObject = label;
 
             if (serieData.context.children.Count > 0)
             {
@@ -285,39 +279,17 @@ namespace XCharts.Runtime
                 }
                 return;
             }
-            if (m_SerieRoot == null)
-                InitRoot();
-            var serieLabel = serie.endLabel;
-            var textStyle = serieLabel.textStyle;
-            var dataAutoColor = (Color)chart.theme.GetColor(serie.index);
-
-            var color = serieLabel.textStyle.autoColor ? dataAutoColor : chart.theme.common.textColor;
-
-            var anchorMin = new Vector2(0f, 0.5f);
-            var anchorMax = new Vector2(0f, 0.5f);
-            var pivot = new Vector2(0f, 0.5f);
-            var sizeDelta = new Vector2(50, textStyle.GetFontSize(chart.theme.common) + 2);
-            var labelObj = ChartHelper.AddObject(s_SerieEndLabelObjectName, m_SerieRoot.transform, anchorMin, anchorMax, pivot, sizeDelta);
-            var txt = ChartHelper.AddTextObject("Text", labelObj.transform, anchorMin, anchorMax, pivot, sizeDelta, textStyle,
-                chart.theme.common);
-            txt.SetColor(color);
-            txt.SetAlignment(textStyle.alignment);
-            txt.SetText("Text");
-            txt.SetLocalPosition(new Vector2(0, 0));
-            txt.SetLocalEulerAngles(Vector3.zero);
-
-            var isAutoSize = serieLabel.backgroundWidth == 0 || serieLabel.backgroundHeight == 0;
-            m_EndLabel = ChartHelper.GetOrAddComponent<ChartLabel>(labelObj);
-            m_EndLabel.SetLabel(labelObj, isAutoSize, serieLabel.paddingLeftRight, serieLabel.paddingTopBottom);
-            m_EndLabel.SetIconActive(false);
-            m_EndLabel.SetActive(true);
+            InitRoot();
+            var dataAutoColor = (Color)chart.GetLegendRealShowNameColor(serie.legendName);
+            m_EndLabel = ChartHelper.AddChartLabel(s_SerieEndLabelObjectName, m_SerieRoot.transform, serie.endLabel,
+                chart.theme.common, "", dataAutoColor, TextAnchor.MiddleLeft);
+            m_EndLabel.SetActive(serie.endLabel.show);
             RefreshEndLabelInternal();
         }
 
         private void InitSerieTitle()
         {
-            if (m_SerieRoot == null)
-                InitRoot();
+            InitRoot();
             var serieTitleRoot = ChartHelper.AddObject(s_SerieTitleObjectName, m_SerieRoot.transform,
                 chart.chartMinAnchor, chart.chartMaxAnchor, chart.chartPivot, chart.chartSizeDelta);
             serieTitleRoot.hideFlags = chart.chartHideFlags;
@@ -325,28 +297,19 @@ namespace XCharts.Runtime
             ChartHelper.RemoveComponent<Text>(serieTitleRoot);
 
             SerieHelper.UpdateCenter(serie, chart.chartPosition, chart.chartWidth, chart.chartHeight);
-            var anchorMin = new Vector2(0.5f, 0.5f);
-            var anchorMax = new Vector2(0.5f, 0.5f);
-            var pivot = new Vector2(0.5f, 0.5f);
-            var fontSize = 10;
-            var sizeDelta = new Vector2(50, fontSize + 2);
             for (int i = 0; i < serie.dataCount; i++)
             {
                 var serieData = serie.data[i];
                 var titleStyle = SerieHelper.GetTitleStyle(serie, serieData);
                 if (titleStyle == null) continue;
-                var color = chart.GetLegendRealShowNameColor(serieData.name);
-                var label = ChartHelper.AddDefaultChartLabel("title_" + i, serieTitleRoot.transform, anchorMin, anchorMax,
-                    pivot, sizeDelta, titleStyle.textStyle, chart.theme.common, serieData.name);
+                var color = chart.GetItemColor(serie, serieData);
+                var label = ChartHelper.AddChartLabel("title_" + i, serieTitleRoot.transform, titleStyle, chart.theme.common,
+                    serieData.name, color, TextAnchor.MiddleCenter);
                 serieData.titleObject = label;
                 label.SetActive(titleStyle.show);
                 var labelPosition = GetSerieDataTitlePosition(serieData, titleStyle);
                 var offset = titleStyle.GetOffset(serie.context.insideRadius);
                 label.SetPosition(labelPosition + offset);
-                if (titleStyle.textStyle.autoBackgroundColor)
-                    label.color = color;
-                else
-                    label.color = titleStyle.textStyle.backgroundColor;
             }
         }
 
@@ -355,8 +318,6 @@ namespace XCharts.Runtime
             if (!m_InitedLabel)
                 return;
 
-            var colorIndex = chart.GetLegendRealShowNameIndex(serie.legendName);
-            var total = serie.GetDataTotal(defaultDimension);
             var dataChangeDuration = serie.animation.GetUpdateAnimationDuration();
 
             foreach (var serieData in serie.data)
@@ -366,44 +327,21 @@ namespace XCharts.Runtime
                 var serieLabel = SerieHelper.GetSerieLabel(serie, serieData);
                 var emphasisLabel = SerieHelper.GetSerieEmphasisLabel(serie, serieData);
                 var isHighlight = (serieData.context.highlight && emphasisLabel != null && emphasisLabel.show);
-                var iconStyle = SerieHelper.GetIconStyle(serie, serieData);
                 var isIgnore = serie.IsIgnoreIndex(serieData.index, defaultDimension);
                 var currLabel = isHighlight && emphasisLabel != null ? emphasisLabel : serieLabel;
-                serieData.labelObject.UpdateIcon(iconStyle);
                 if (serie.show
                     && currLabel != null
                     && (currLabel.show || isHighlight)
                     && serieData.context.canShowLabel
                     && !isIgnore)
                 {
-                    //var value = serieData.GetData(defaultDimension);
                     var value = serieData.GetCurrData(defaultDimension, dataChangeDuration);
+                    var total = serie.GetDataTotal(defaultDimension, serieData);
+                    var color = chart.GetItemColor(serie, serieData);
                     var content = string.IsNullOrEmpty(currLabel.formatter)
                         ? ChartCached.NumberToStr(value, serieLabel.numericFormatter)
                         : SerieLabelHelper.GetFormatterContent(serie, serieData, value, total,
-                            currLabel, chart.theme.GetColor(colorIndex));
-                    var isInsidePosition = currLabel.position == LabelStyle.Position.Inside;
-
-                    //text color
-                    var textColor = chart.theme.common.textColor;
-                    if (!ChartHelper.IsClearColor(currLabel.textStyle.color))
-                        textColor = currLabel.textStyle.color;
-                    else if (isInsidePosition)
-                        textColor = Color.white;
-                    if (currLabel.textStyle.autoColor && serie.useDataNameForColor)
-                        textColor = chart.theme.GetColor(serieData.index);
-                    //text rotate
-                    var rotate = currLabel.textStyle.rotate;
-                    if (currLabel.textStyle.rotate > 0 && isInsidePosition)
-                    {
-                        var currAngle = serieData.context.halfAngle;
-                        if (currAngle > 0)
-                        {
-                            if (currAngle > 180) rotate += 270 - currAngle;
-                            else rotate += -(currAngle - 90);
-                        }
-                    }
-                    SerieLabelHelper.ResetLabel(serieData.labelObject.label, currLabel, chart.theme, textColor, rotate);
+                            currLabel, color);
                     serieData.SetLabelActive(!isIgnore);
 
                     serieData.labelObject.SetText(content);
@@ -439,20 +377,21 @@ namespace XCharts.Runtime
 
         private void UpdateLabelPosition(SerieData serieData, LabelStyle currLabel)
         {
-            var isNeedInvertPositionSerie = serie is Line;
-            var invert = currLabel.autoOffset
-                        && isNeedInvertPositionSerie
-                        && SerieHelper.IsDownPoint(serie, serieData.index)
-                        && (serie.areaStyle == null || !serie.areaStyle.show);
             var labelPosition = GetSerieDataLabelPosition(serieData, currLabel);
-            var offset = currLabel.GetOffset(serie.context.insideRadius);
-            serieData.labelObject.SetPosition(labelPosition
-                + (invert ? -offset : offset));
+            var offset = GetSerieDataLabelOffset(serieData, currLabel);
+            serieData.labelObject.SetPosition(labelPosition + offset);
         }
 
         public virtual Vector3 GetSerieDataLabelPosition(SerieData serieData, LabelStyle label)
         {
-            return serieData.context.position;
+            return ChartHelper.IsZeroVector(serieData.context.labelPosition)
+                ? serieData.context.position
+                : serieData.context.labelPosition;
+        }
+
+        public virtual Vector3 GetSerieDataLabelOffset(SerieData serieData, LabelStyle label)
+        {
+            return label.GetOffset(serie.context.insideRadius);
         }
 
         public virtual Vector3 GetSerieDataTitlePosition(SerieData serieData, TitleStyle titleStyle)
@@ -486,7 +425,7 @@ namespace XCharts.Runtime
             param.serieData = serieData;
             param.value = serieData.GetData(1);
             param.total = serie.yTotal;
-            param.color = chart.GetLegendRealShowNameColor(serie.serieName);
+            param.color = SerieHelper.GetItemColor(serie, serieData, chart.theme, serie.context.colorIndex, false);
             param.marker = SerieHelper.GetItemMarker(serie, serieData, marker);
             param.itemFormatter = itemFormatter;
             param.numericFormatter = SerieHelper.GetNumericFormatter(serie, serieData, numericFormatter);
@@ -517,6 +456,8 @@ namespace XCharts.Runtime
             if (TooltipHelper.IsIgnoreItemFormatter(itemFormatter))
                 return;
 
+            var colorIndex = chart.GetLegendRealShowNameIndex(serieData.name);
+
             var param = serie.context.param;
             param.serieName = serie.serieName;
             param.serieIndex = serie.index;
@@ -525,7 +466,7 @@ namespace XCharts.Runtime
             param.serieData = serieData;
             param.value = serieData.GetData(param.dimension);
             param.total = SerieHelper.GetMaxData(serie, dimension);
-            param.color = chart.GetLegendRealShowNameColor(serieData.name);
+            param.color = SerieHelper.GetItemColor(serie, serieData, chart.theme, colorIndex, false);
             param.marker = SerieHelper.GetItemMarker(serie, serieData, marker);
             param.itemFormatter = itemFormatter;
             param.numericFormatter = SerieHelper.GetNumericFormatter(serie, serieData, numericFormatter);

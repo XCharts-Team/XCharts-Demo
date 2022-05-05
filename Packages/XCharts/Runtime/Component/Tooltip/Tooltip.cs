@@ -81,6 +81,7 @@ namespace XCharts.Runtime
         [SerializeField] private bool m_AlwayShowContent = false;
         [SerializeField] private Vector2 m_Offset = new Vector2(18f, -25f);
         [SerializeField] private Sprite m_BackgroundImage;
+        [SerializeField] private Image.Type m_BackgroundType = Image.Type.Simple;
         [SerializeField] private Color m_BackgroundColor;
         [SerializeField] private float m_BorderWidth = 2f;
         [SerializeField] private bool m_FixedXEnable = false;
@@ -91,13 +92,18 @@ namespace XCharts.Runtime
         [SerializeField] private float m_ItemHeight = 25f;
         [SerializeField] private Color32 m_BorderColor = new Color32(230, 230, 230, 255);
         [SerializeField] private LineStyle m_LineStyle = new LineStyle(LineStyle.Type.None);
-        [SerializeField] private TextStyle m_LabelTextStyle = new TextStyle();
-        [SerializeField] private TextStyle m_TitleTextStyle = new TextStyle() { alignment = TextAnchor.MiddleLeft };
+        [SerializeField] private LabelStyle m_IndicatorLabelStyle = new LabelStyle();
         [SerializeField]
-        private List<TextStyle> m_ColumnsTextStyle = new List<TextStyle>() {
-            new TextStyle() { alignment = TextAnchor.MiddleLeft, extraWidth = 5 },
-            new TextStyle() { alignment = TextAnchor.MiddleLeft, extraWidth = 20 },
-            new TextStyle() { alignment = TextAnchor.MiddleRight, extraWidth = 5 }
+        private LabelStyle m_TitleLabelStyle = new LabelStyle()
+        {
+            textStyle = new TextStyle() { alignment = TextAnchor.MiddleLeft }
+        };
+        [SerializeField]
+        private List<LabelStyle> m_ContentLabelStyles = new List<LabelStyle>()
+        {
+            new LabelStyle(){ textPadding = new TextPadding(0,5,0,0), textStyle = new TextStyle() { alignment = TextAnchor.MiddleLeft }},
+            new LabelStyle(){ textPadding = new TextPadding(0,20,0,0), textStyle = new TextStyle() { alignment = TextAnchor.MiddleLeft }},
+            new LabelStyle(){ textPadding = new TextPadding(0,0,0,0), textStyle = new TextStyle() { alignment = TextAnchor.MiddleRight }}
         };
 
         public TooltipContext context = new TooltipContext();
@@ -236,6 +242,11 @@ namespace XCharts.Runtime
         /// </summary>
         public Sprite backgroundImage { get { return m_BackgroundImage; } set { m_BackgroundImage = value; SetComponentDirty(); } }
         /// <summary>
+        /// The background type of tooltip.
+        /// |提示框的背景图片显示类型。
+        /// </summary>
+        public Image.Type backgroundType { get { return m_BackgroundType; } set { m_BackgroundType = value; SetComponentDirty(); } }
+        /// <summary>
         /// The background color of tooltip.
         /// |提示框的背景颜色。
         /// </summary>
@@ -305,27 +316,27 @@ namespace XCharts.Runtime
             set { if (PropertyUtil.SetStruct(ref m_ItemHeight, value)) SetComponentDirty(); }
         }
         /// <summary>
-        /// the text style of content.
-        /// |提示框标签的文本样式。
+        /// the label style of tooltip axis indicator label.
+        /// |提示框的坐标轴指示器文本的样式。
         /// </summary>
-        public TextStyle labelTextStyle
+        public LabelStyle indicatorLabelStyle
         {
-            get { return m_LabelTextStyle; }
-            set { if (value != null) { m_LabelTextStyle = value; SetComponentDirty(); } }
+            get { return m_IndicatorLabelStyle; }
+            set { if (value != null) { m_IndicatorLabelStyle = value; SetComponentDirty(); } }
         }
         /// <summary>
         /// 标题的文本样式。
         /// </summary>
-        public TextStyle titleTextStyle
+        public LabelStyle titleLabelStyle
         {
-            get { return m_TitleTextStyle; }
-            set { if (value != null) { m_TitleTextStyle = value; SetComponentDirty(); } }
+            get { return m_TitleLabelStyle; }
+            set { if (value != null) { m_TitleLabelStyle = value; SetComponentDirty(); } }
         }
 
-        public List<TextStyle> columnsTextStyle
+        public List<LabelStyle> contentLabelStyles
         {
-            get { return m_ColumnsTextStyle; }
-            set { if (value != null) { m_ColumnsTextStyle = value; SetComponentDirty(); } }
+            get { return m_ContentLabelStyles; }
+            set { if (value != null) { m_ContentLabelStyles = value; SetComponentDirty(); } }
         }
 
         /// <summary>
@@ -343,14 +354,14 @@ namespace XCharts.Runtime
         /// </summary>
         public override bool componentDirty
         {
-            get { return m_ComponentDirty || lineStyle.componentDirty || labelTextStyle.componentDirty; }
+            get { return m_ComponentDirty || lineStyle.componentDirty || indicatorLabelStyle.componentDirty; }
         }
 
         public override void ClearComponentDirty()
         {
             base.ClearComponentDirty();
             lineStyle.ClearComponentDirty();
-            labelTextStyle.ClearComponentDirty();
+            indicatorLabelStyle.ClearComponentDirty();
         }
         /// <summary>
         /// 当前提示框所指示的Serie索引（目前只对散点图有效）。
@@ -429,7 +440,7 @@ namespace XCharts.Runtime
         {
             if (view == null)
                 return;
-            
+
             view.SetActive(alwayShowContent ? true : flag);
         }
 
@@ -492,17 +503,17 @@ namespace XCharts.Runtime
             return trigger == Trigger.Axis;
         }
 
-        public TextStyle GetColumnTextStyle(int index)
+        public LabelStyle GetContentLabelStyle(int index)
         {
-            if (m_ColumnsTextStyle.Count == 0)
+            if (m_ContentLabelStyles.Count == 0)
                 return null;
 
             if (index < 0)
                 index = 0;
-            else if (index > m_ColumnsTextStyle.Count - 1)
-                index = m_ColumnsTextStyle.Count - 1;
+            else if (index > m_ContentLabelStyles.Count - 1)
+                index = m_ContentLabelStyles.Count - 1;
 
-            return m_ColumnsTextStyle[index];
+            return m_ContentLabelStyles[index];
         }
     }
 }

@@ -17,16 +17,17 @@ namespace XCharts.Editor
             PropertyField("m_TitleFormatter");
             PropertyField("m_ItemFormatter");
             PropertyField("m_NumericFormatter");
-            PropertyField("m_TitleHeight");
-            PropertyField("m_ItemHeight");
             PropertyFiledMore(() =>
             {
+                PropertyField("m_TitleHeight");
+                PropertyField("m_ItemHeight");
                 PropertyField("m_Marker");
                 PropertyField("m_BorderWidth");
                 PropertyField("m_BorderColor");
                 PropertyField("m_PaddingLeftRight");
                 PropertyField("m_PaddingTopBottom");
                 PropertyField("m_BackgroundImage");
+                PropertyField("m_BackgroundType");
                 PropertyField("m_BackgroundColor");
                 PropertyField("m_FixedWidth");
                 PropertyField("m_FixedHeight");
@@ -40,9 +41,9 @@ namespace XCharts.Editor
                 PropertyField("m_FixedY");
             });
             PropertyField("m_LineStyle");
-            PropertyField("m_LabelTextStyle");
-            PropertyField("m_TitleTextStyle");
-            PropertyListField("m_ColumnsTextStyle");
+            PropertyField("m_IndicatorLabelStyle");
+            PropertyField("m_TitleLabelStyle");
+            PropertyListField("m_ContentLabelStyles");
             --EditorGUI.indentLevel;
         }
     }

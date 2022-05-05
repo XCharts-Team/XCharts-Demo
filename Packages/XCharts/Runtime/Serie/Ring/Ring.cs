@@ -25,12 +25,19 @@ namespace XCharts.Runtime
 
             var titleStyle = serie.AddExtraComponent<TitleStyle>();
             titleStyle.show = false;
-            titleStyle.textStyle.offset = new Vector2(0, 30);
+            titleStyle.offset = new Vector2(0, 30);
 
             var value = Random.Range(30, 90);
             var max = 100;
             chart.AddData(serie.index, value, max, "data1");
             return serie;
+        }
+
+        public override double GetDataTotal(int dimension, SerieData serieData = null)
+        {
+            if (serieData == null || serieData.data.Count <= 1)
+                return base.GetDataTotal(dimension, serieData);
+            return serieData.GetData(1);
         }
     }
 }
