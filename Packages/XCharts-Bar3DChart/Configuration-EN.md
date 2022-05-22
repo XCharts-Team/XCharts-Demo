@@ -28,8 +28,8 @@ Inherits or Implemented: [ChildComponent](#ChildComponent)
 |--|--|--|
 | `show` |true |  |
 | `verticalArrange` |false | 是否垂直排列 |
-| `verticalArrangeDire` |Vector3(1, 1) |  |
-| `verticalArrangeGap` |20 |  |
+| `verticalArrangeDire` |Vector3(-1, 1) |  |
+| `verticalArrangeGap` |0.5f |  |
 | `barOffset` |0f |  |
 | `widthRate` |0.5f |  |
 | `topColorBurnRate` |0.8f |  |

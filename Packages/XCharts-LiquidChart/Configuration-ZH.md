@@ -32,7 +32,7 @@ Inherits or Implemented: [MainComponent](#MainComponent),[ISerieContainer](#ISer
 |field|default|comment|
 |--|--|--|
 | `show` |true | 是否显示容器组件。 [defaut: true] |
-| `shape` | | 容器形状。 [default: Shape.Circle]</br>`Vessel.Shape`:</br>- `Circle`: 圆形</br>- `Rect`: 正方形。</br>- `Triangle`: 三角形。</br>- `Diamond`: 菱形。</br>- `None`: 不显示标记。</br>|
+| `shape` | | 容器形状。 [default: Shape.Circle]</br>`Vessel.Shape`:</br>- `Circle`: 圆形</br>- `Rect`: 正方形。</br>- `Triangle`: 三角形。</br>- `Diamond`: 菱形。</br>|
 | `shapeWidth` |5f | 容器厚度。 [defaut: 5f] |
 | `gap` |5f | 间隙。容器和液体的间隙。 [defaut: 10f] |
 | `color` |Color32(70, 70, 240, 255) | 容器颜色。默认和serie一致。 |
@@ -43,6 +43,8 @@ Inherits or Implemented: [MainComponent](#MainComponent),[ISerieContainer](#ISer
 | `smoothness` |1f | 水波平滑度。 [default: 1f] |
 | `width` |0.5f | When value between 0 and 1 represents a percentage relative to the chart. |
 | `height` |0.7f | When value between 0 and 1 represents a percentage relative to the chart. |
+| `borderWidth` |0f | 内壁边框。 |
+| `borderColor` |Color32(70, 70, 240, 255) | 容器内壁边框颜色。默认和serie一致。 |
 | `cornerRadius` | | 容器的圆角半径。用数组分别指定4个圆角半径（顺时针左上，右上，右下，左下）。shape为Rect时有效。 |
 
 [XCharts主页](https://github.com/XCharts-Team/XCharts)</br>

@@ -1,5 +1,4 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using XCharts.Runtime;
@@ -35,7 +34,6 @@ namespace XChartsDemo
             m_SelectedTheme = config.darkMode ? ThemeType.Dark : ThemeType.Default;
             Init();
         }
-
 
         void Init()
         {
@@ -127,8 +125,6 @@ namespace XChartsDemo
             }
         }
 
-
-
         public void InitModuleButton()
         {
             var btnPanel = transform.Find("chart_btn/Viewport/content");
@@ -165,7 +161,7 @@ namespace XChartsDemo
                 module.button = btn.GetComponent<Button>();
                 module.button.transform.Find("Text").GetComponent<Text>().text = module.name.Replace("\\n", "\n");
                 module.button.transform.Find("SubText").GetComponent<Text>().text = module.subName.Replace("\\n", "\n");
-                module.button.onClick.AddListener(delegate ()
+                module.button.onClick.AddListener(delegate()
                 {
                     ClickModule(module);
                 });
@@ -229,6 +225,7 @@ namespace XChartsDemo
             var prefab = module.chartPrefabs[module.initedCount];
             InitChartThumb(module, prefab);
             module.initedCount++;
+            SetChartRootInfo(module);
         }
 
         private void InitChartThumb(ChartModule module, GameObject prefab)
@@ -243,11 +240,14 @@ namespace XChartsDemo
                 obj.SetActive(true);
                 var thumb = ChartHelper.GetOrAddComponent<ChartThumb>(obj);
                 thumb.BindPrefab(prefab);
-                thumb.AddBtnListener(delegate ()
+                thumb.AddBtnListener(delegate()
                 {
                     m_SelectedPanel = m_DetailChartRoot;
                     ChartHelper.DestroyAllChildren(m_DetailChartRoot.transform);
                     UIUtil.Instantiate(prefab, m_DetailChartRoot.transform, prefab.name);
+                    var names = prefab.name.Split('_');
+                    UIUtil.SetText(m_DetailRoot, names[1], "desc/Text");
+                    UIUtil.SetText(m_DetailRoot, names[2], "desc/Text2");
                     m_DetailRoot.SetActive(true);
                     module.panel.SetActive(false);
                     thumb.OnPointerExit(null);
@@ -294,7 +294,7 @@ namespace XChartsDemo
             m_DarkThemeToggle = transform.Find("chart_theme/dark").GetComponent<Toggle>();
             m_DarkThemeToggle.isOn = config.darkMode;
 
-            m_DarkThemeToggle.onValueChanged.AddListener(delegate (bool flag)
+            m_DarkThemeToggle.onValueChanged.AddListener(delegate(bool flag)
             {
                 m_SelectedTheme = flag ? ThemeType.Dark : ThemeType.Default;
                 UpdateChartTheme(m_SelectedTheme);
