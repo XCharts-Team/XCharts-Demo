@@ -5,7 +5,6 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.Networking;
 using XCharts.Runtime;
-using XCharts.Runtime.Treemaps;
 
 namespace XCharts.Demo
 {
