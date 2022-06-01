@@ -28,7 +28,7 @@ namespace XCharts.Demo
         void Awake()
         {
             m_Chart = GetComponent<LineChart>();
-            LoadDataFromFile();
+            LoadDataFromFile(Resources.Load<TextAsset>("Line17_life-expectancy-table").text);
         }
 
         void Update()
@@ -41,11 +41,9 @@ namespace XCharts.Demo
             }
         }
 
-        private void LoadDataFromFile()
+        private void LoadDataFromFile(string json)
         {
             m_Chart.ClearData();
-            var path = Application.dataPath + "/XChartsDemo/Charts/Line/Line17_life-expectancy-table.json";
-            var json = File.ReadAllText(path);
             json = json.Substring(1, json.Length - 2);
             var temp = json.Split(']');
             CountryInfo info = new CountryInfo();

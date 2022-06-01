@@ -154,6 +154,7 @@ namespace XCharts.Runtime
             }
         }
 
+#if UNITY_EDITOR
         public static bool ExistAssetFile()
         {
             return System.IO.File.Exists("Assets/XCharts/Resources/XCSettings.asset");
@@ -175,7 +176,7 @@ namespace XCharts.Runtime
                         var jsonText = File.ReadAllText(jsonPath);
                         if (jsonText.Contains("\"displayName\": \"XCharts\""))
                         {
-                            path = string.Format("{0}/Resources/XCSettings.asset", match);
+                            path = string.Format("{0}/Resources/XCSettings.asset", match.Replace('\\', '/'));
                             if (File.Exists(path))
                                 return path.Substring(path.IndexOf("/Assets/") + 1);
                         }
@@ -184,6 +185,7 @@ namespace XCharts.Runtime
             }
             return null;
         }
+#endif
 
         public static bool AddCustomTheme(Theme theme)
         {

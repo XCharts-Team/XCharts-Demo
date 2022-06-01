@@ -21,7 +21,7 @@ namespace XCharts.Runtime
     public static class XChartsMgr
     {
         public static readonly string version = "3.0.0";
-        public static readonly int versionDate = 20220522;
+        public static readonly int versionDate = 20220601;
         public static string fullVersion { get { return version + "-" + versionDate; } }
 
         internal static List<BaseChart> chartList = new List<BaseChart>();
@@ -126,6 +126,7 @@ namespace XCharts.Runtime
             }
         }
 
+#if UNITY_EDITOR
         public static string GetPackageFullPath()
         {
             string packagePath = Path.GetFullPath("Packages/com.monitor1394.xcharts");
@@ -166,8 +167,6 @@ namespace XCharts.Runtime
             }
             return null;
         }
-
-#if UNITY_EDITOR
 
         [UnityEditor.Callbacks.DidReloadScripts]
         static void OnEditorReload()
