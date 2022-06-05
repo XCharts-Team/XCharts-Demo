@@ -16,6 +16,7 @@ namespace XChartsDemo
         private float m_TargetScale = 0.23f;
         private Button m_Button;
 
+        public int index;
         public bool isBindPrefab = false;
         public bool isBindAction = false;
         public GameObject bindPrefab;
@@ -66,6 +67,10 @@ namespace XChartsDemo
                 UIUtil.SetText(gameObject, names[2], "desc/Text2");
             }
             isBindPrefab = true;
+        }
+
+        public void Click(){
+            bindAction();
         }
 
         public void AddBtnListener(UnityAction action)

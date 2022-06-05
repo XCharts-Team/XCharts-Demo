@@ -1,4 +1,3 @@
-
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -26,6 +25,7 @@ namespace XChartsDemo
         public bool select { get { return m_Selected; } set { m_Selected = value; } }
         public ChartType type { get { return m_Type; } }
         public List<GameObject> chartPrefabs { get { return m_ChartPrefabs; } }
+        public List<ChartThumb> chartThumbs = new List<ChartThumb>();
 
         public GameObject panel { get; set; }
         public Button button { get; set; }
@@ -33,6 +33,14 @@ namespace XChartsDemo
         internal int initedCount { get; set; }
         internal bool inited { get { return initedCount >= chartPrefabs.Count; } }
         internal bool runtimeSelected { get; set; }
+
+        public ChartThumb GetThumb(int index)
+        {
+            if (index >= 0 && index < chartThumbs.Count)
+                return chartThumbs[index];
+            else
+                return null;
+        }
     }
 
     [CreateAssetMenu(menuName = "CreateDemoConfig")]

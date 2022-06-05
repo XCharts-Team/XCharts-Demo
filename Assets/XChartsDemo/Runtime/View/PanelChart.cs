@@ -18,6 +18,7 @@ namespace XChartsDemo
         private Transform m_ChartListParent;
         private ThemeType m_SelectedTheme;
         private GameObject m_SelectedPanel;
+        private ChartThumb m_SelectedThumb;
         private float m_LastCheckLeftWidth;
 
         private Toggle m_DarkThemeToggle;
@@ -48,6 +49,8 @@ namespace XChartsDemo
             m_DetailRoot = transform.Find("chart_detail").gameObject;
             m_DetailRoot.SetActive(false);
             m_DetailChartRoot = transform.Find("chart_detail/chart").gameObject;
+            UIUtil.SetButton(gameObject, "chart_detail/btn_next", delegate() { NextDetailChart(); });
+            UIUtil.SetButton(gameObject, "chart_detail/btn_last", delegate() { LastDetailChart(); });
             InitThemeButton();
             InitModuleButton();
             InitChartList(true);
@@ -106,6 +109,14 @@ namespace XChartsDemo
                         CheckInitChartThumb(module);
                     }
                 }
+            }
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                NextDetailChart();
+            }
+            else if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                LastDetailChart();
             }
         }
 
@@ -202,14 +213,15 @@ namespace XChartsDemo
 
         public void InitChartList(ChartModule module, bool firstInit)
         {
+            module.chartThumbs.Clear();
             if (!Application.isPlaying)
             {
                 if (firstInit) ChartHelper.DestroyAllChildren(module.panel.transform);
                 else UIUtil.SetActiveAllChildren(module.panel, false);
                 module.panel.SetActive(module.select);
 
-                foreach (var prefab in module.chartPrefabs)
-                    InitChartThumb(module, prefab);
+                for (int i = 0; i < module.chartPrefabs.Count; i++)
+                    InitChartThumb(module, module.chartPrefabs[i], i);
             }
             else if (!module.inited)
             {
@@ -223,12 +235,12 @@ namespace XChartsDemo
             if (selectedModuleIndex != module.index) return;
             if (module.initedCount >= module.chartPrefabs.Count) return;
             var prefab = module.chartPrefabs[module.initedCount];
-            InitChartThumb(module, prefab);
+            InitChartThumb(module, prefab, module.initedCount);
             module.initedCount++;
             SetChartRootInfo(module);
         }
 
-        private void InitChartThumb(ChartModule module, GameObject prefab)
+        private void InitChartThumb(ChartModule module, GameObject prefab, int index)
         {
             if (prefab != null)
             {
@@ -239,10 +251,13 @@ namespace XChartsDemo
                     obj = UIUtil.Instantiate(m_ThumbClone, module.panel.transform, prefab.name);
                 obj.SetActive(true);
                 var thumb = ChartHelper.GetOrAddComponent<ChartThumb>(obj);
+                module.chartThumbs.Add(thumb);
+                thumb.index = index;
                 thumb.BindPrefab(prefab);
                 thumb.AddBtnListener(delegate()
                 {
                     m_SelectedPanel = m_DetailChartRoot;
+                    m_SelectedThumb = thumb;
                     ChartHelper.DestroyAllChildren(m_DetailChartRoot.transform);
                     UIUtil.Instantiate(prefab, m_DetailChartRoot.transform, prefab.name);
                     var names = prefab.name.Split('_');
@@ -253,6 +268,34 @@ namespace XChartsDemo
                     thumb.OnPointerExit(null);
                     UpdateChartTheme(m_SelectedTheme);
                 });
+            }
+        }
+
+        private void NextDetailChart()
+        {
+            if (m_SelectedThumb == null) return;
+            var module = config.chartModules[selectedModuleIndex];
+            if (module == null) return;
+            var thumb = module.GetThumb(m_SelectedThumb.index + 1);
+            if (thumb != null)
+            {
+                thumb.Click();
+                UIUtil.SetActive(gameObject, module.GetThumb(thumb.index + 1) != null, "chart_detail/btn_next");
+                UIUtil.SetActive(gameObject, module.GetThumb(thumb.index - 1) != null, "chart_detail/btn_last");
+            }
+        }
+
+        private void LastDetailChart()
+        {
+            if (m_SelectedThumb == null) return;
+            var module = config.chartModules[selectedModuleIndex];
+            if (module == null) return;
+            var thumb = module.GetThumb(m_SelectedThumb.index - 1);
+            if (thumb != null)
+            {
+                thumb.Click();
+                UIUtil.SetActive(gameObject, module.GetThumb(thumb.index + 1) != null, "chart_detail/btn_next");
+                UIUtil.SetActive(gameObject, module.GetThumb(thumb.index - 1) != null, "chart_detail/btn_last");
             }
         }
 
