@@ -196,8 +196,7 @@ namespace XCharts.Runtime
         /// <summary>
         /// Legend content string template formatter. Support for wrapping lines with \n. Template:{value}.
         /// |图例内容字符串模版格式器。支持用 \n 换行。
-        /// 模板变量为图例名称 {value}。
-        /// [default:null]
+        /// 模板变量为图例名称 {value}。其他模板变量参考Toolip的itemFormatter。
         /// </summary>
         public string formatter
         {
@@ -233,6 +232,10 @@ namespace XCharts.Runtime
             get { return m_Icons; }
             set { if (value != null) { m_Icons = value; SetComponentDirty(); } }
         }
+        /// <summary>
+        /// the colors of legend item.
+        /// 图例标记的颜色列表。
+        /// </summary>
         public List<Color> colors
         {
             get { return m_Colors; }

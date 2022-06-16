@@ -138,6 +138,13 @@ namespace XCharts.Runtime
         /// <summary>
         /// The string template formatter for the tooltip title content. Support for wrapping lines with \n.
         /// The placeholder {I} can be set separately to indicate that the title is ignored and not displayed.
+        /// Template see itemFormatter.
+        /// |提示框标题内容的字符串模版格式器。支持用 \n 换行。可以单独设置占位符{i}表示忽略不显示title。
+        /// 模板变量参考Toolip的itemFormatter。
+        /// </summary>
+        public string titleFormatter { get { return m_TitleFormatter; } set { m_TitleFormatter = value; } }
+        /// <summary>
+        /// a string template formatter for a single Serie or data item content. Support for wrapping lines with \n.
         /// Template variables are {.}, {a}, {b}, {c}, {d}.</br>
         /// {.} is the dot of the corresponding color of a Serie that is currently indicated or whose index is 0.</br>
         /// {a} is the series name of the serie that is currently indicated or whose index is 0.</br>
@@ -153,7 +160,7 @@ namespace XCharts.Runtime
         /// {d1:2: F2} indicates that a formatted string with a value specified separately is F2 (numericFormatter is used when numericFormatter is not specified).</br>
         /// {d:0.##} indicates that a formatted string with a value specified separately is 0.##   (used for percentage, reserved 2 valid digits while avoiding the situation similar to "100.00%" when using f2 ).</br>
         /// Example: "{a}, {c}", "{a1}, {c1: f1}", "{a1}, {c1:0: f1}", "{a1} : {c1:1-1: f1}"</br>
-        /// |提示框标题内容的字符串模版格式器。支持用 \n 换行。可以单独设置占位符{i}表示忽略不显示title。</br>
+        /// |提示框单个serie或数据项内容的字符串模版格式器。支持用 \n 换行。
         /// 模板变量有{.}、{a}、{b}、{c}、{d}、{e}。</br>
         /// {.}为当前所指示或index为0的serie的对应颜色的圆点。</br>
         /// {a}为当前所指示或index为0的serie的系列名name。</br>
@@ -169,12 +176,6 @@ namespace XCharts.Runtime
         /// {d1:2:f2}表示单独指定了数值的格式化字符串为f2（不指定时用numericFormatter）。</br>
         /// {d:0.##} 表示单独指定了数值的格式化字符串为 0.## （用于百分比，保留2位有效数同时又能避免使用 f2 而出现的类似于"100.00%"的情况 ）。</br>
         /// 示例："{a}:{c}"、"{a1}:{c1:f1}"、"{a1}:{c1:0:f1}"、"{a1}:{c1:1-1:f1}"
-        /// </summary>
-        public string titleFormatter { get { return m_TitleFormatter; } set { m_TitleFormatter = value; } }
-        /// <summary>
-        /// a string template formatter for a single Serie or data item content. Support for wrapping lines with \n.
-        /// When formatter is not null, use formatter first, otherwise use itemFormatter.
-        /// |提示框单个serie或数据项内容的字符串模版格式器。支持用 \n 换行。当formatter不为空时，优先使用formatter，否则使用itemFormatter。
         /// </summary>
         public string itemFormatter { get { return m_ItemFormatter; } set { m_ItemFormatter = value; } }
         /// <summary>
@@ -286,31 +287,55 @@ namespace XCharts.Runtime
             get { return m_BorderColor; }
             set { if (PropertyUtil.SetColor(ref m_BorderColor, value)) SetVerticesDirty(); }
         }
+        /// <summary>
+        /// enable fixedX.
+        /// |是否固定X位置。
+        /// </summary>
         public bool fixedXEnable
         {
             get { return m_FixedXEnable; }
             set { if (PropertyUtil.SetStruct(ref m_FixedXEnable, value)) SetVerticesDirty(); }
         }
+        /// <summary>
+        /// the x positionn of fixedX.
+        /// |固定X位置的坐标。
+        /// </summary>
         public float fixedX
         {
             get { return m_FixedX; }
             set { if (PropertyUtil.SetStruct(ref m_FixedX, value)) SetVerticesDirty(); }
         }
+        /// <summary>
+        /// enable fixedY.
+        /// |是否固定Y位置。
+        /// </summary>
         public bool fixedYEnable
         {
             get { return m_FixedYEnable; }
             set { if (PropertyUtil.SetStruct(ref m_FixedYEnable, value)) SetVerticesDirty(); }
         }
+        /// <summary>
+        /// the y position of fixedY.
+        /// |固定Y位置的坐标。
+        /// </summary>
         public float fixedY
         {
             get { return m_FixedY; }
             set { if (PropertyUtil.SetStruct(ref m_FixedY, value)) SetVerticesDirty(); }
         }
+        /// <summary>
+        /// height of title text.
+        /// |标题文本的高。
+        /// </summary>
         public float titleHeight
         {
             get { return m_TitleHeight; }
             set { if (PropertyUtil.SetStruct(ref m_TitleHeight, value)) SetComponentDirty(); }
         }
+        /// <summary>
+        /// height of content text.
+        /// |数据项文本的高。
+        /// </summary>
         public float itemHeight
         {
             get { return m_ItemHeight; }
@@ -326,14 +351,18 @@ namespace XCharts.Runtime
             set { if (value != null) { m_IndicatorLabelStyle = value; SetComponentDirty(); } }
         }
         /// <summary>
-        /// 标题的文本样式。
+        /// the textstyle of title.
+        /// |标题的文本样式。
         /// </summary>
         public LabelStyle titleLabelStyle
         {
             get { return m_TitleLabelStyle; }
             set { if (value != null) { m_TitleLabelStyle = value; SetComponentDirty(); } }
         }
-
+        /// <summary>
+        /// the textstyle list of content.
+        /// |内容部分的文本样式列表。和列一一对应。
+        /// </summary>
         public List<LabelStyle> contentLabelStyles
         {
             get { return m_ContentLabelStyles; }

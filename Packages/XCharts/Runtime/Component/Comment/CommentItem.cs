@@ -29,10 +29,18 @@ namespace XCharts.Runtime
         public Vector3 position { get { return m_Position; } set { if (PropertyUtil.SetStruct(ref m_Position, value)) SetComponentDirty(); } }
         /// <summary>
         /// content of comment.
-        /// |注解的文本内容。
+        /// |注解的文本内容。支持模板参数，可以参考Tooltip的itemFormatter。
         /// </summary>
         public string content { get { return m_Content; } set { if (PropertyUtil.SetClass(ref m_Content, value)) SetComponentDirty(); } }
+        /// <summary>
+        /// the mark rect of comment.
+        /// |注解区域。
+        /// </summary>
         public Rect markRect { get { return m_MarkRect; } set { if (PropertyUtil.SetStruct(ref m_MarkRect, value)) SetVerticesDirty(); } }
+        /// <summary>
+        /// the mark rect style.
+        /// |注解标记区域样式。
+        /// </summary>
         public CommentMarkStyle markStyle { get { return m_MarkStyle; } set { if (PropertyUtil.SetClass(ref m_MarkStyle, value)) SetVerticesDirty(); } }
         /// <summary>
         /// The text style of all comments.
