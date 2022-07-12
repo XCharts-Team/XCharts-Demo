@@ -28,20 +28,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2674364367038817795}
-  - {fileID: 4240362650824376598}
-  - {fileID: 7299152408306258827}
-  - {fileID: 1295795480066156739}
-  - {fileID: 8748151325423847688}
-  - {fileID: 7097861950173133920}
-  - {fileID: 7503663437174804595}
-  - {fileID: 5238883100897246412}
-  - {fileID: 6135566331335804564}
-  - {fileID: 1613076243222312741}
-  - {fileID: 605862543274906447}
-  - {fileID: 7580794819546264892}
-  - {fileID: 8408658463687180672}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -148,6 +135,7 @@ MonoBehaviour:
     m_ReversePainter: 0
     m_BasePainterMaterial: {fileID: 0}
     m_SeriePainterMaterial: {fileID: 0}
+    m_UpperPainterMaterial: {fileID: 0}
     m_TopPainterMaterial: {fileID: 0}
     m_LineSmoothStyle: 3
     m_LineSmoothness: 2
@@ -159,6 +147,7 @@ MonoBehaviour:
     - 0.25
     - 0.25
     - 0.25
+    m_AxisMaxSplitNumber: 50
   m_AngleAxes: []
   m_Backgrounds: []
   m_DataZooms:
@@ -174,7 +163,6 @@ MonoBehaviour:
     m_ShowDataShadow: 1
     m_ShowDetail: 0
     m_ZoomLock: 0
-    m_Realtime: 0
     m_FillerColor:
       serializedVersion: 2
       rgba: 0
@@ -192,8 +180,6 @@ MonoBehaviour:
     m_RangeMode: 0
     m_Start: 0
     m_End: 100
-    m_StartValue: 0
-    m_EndValue: 0
     m_MinShowNum: 1
     m_ScrollSensitivity: 10
     m_Orient: 0
@@ -305,8 +291,9 @@ MonoBehaviour:
     m_ItemHeight: 12
     m_ItemGap: 10
     m_ItemAutoColor: 1
-    m_TextAutoColor: 0
+    m_ItemOpacity: 1
     m_Formatter: 
+    m_NumericFormatter: 
     m_LabelStyle:
       m_Show: 1
       m_Position: 0
@@ -357,6 +344,21 @@ MonoBehaviour:
         m_Alignment: 4
     m_Data: []
     m_Icons: []
+    m_Colors: []
+    m_Background:
+      m_Show: 0
+      m_Sprite: {fileID: 0}
+      m_Type: 0
+      m_AutoColor: 0
+      m_Color: {r: 0, g: 0, b: 0, a: 0}
+      m_Width: 0
+      m_Height: 0
+    m_Padding:
+      m_Show: 1
+      m_Top: 0
+      m_Right: 2
+      m_Left: 2
+      m_Bottom: 0
   m_MarkLines: []
   m_MarkAreas: []
   m_Polars: []
@@ -489,6 +491,7 @@ MonoBehaviour:
     m_AlwayShowContent: 0
     m_Offset: {x: 18, y: -25}
     m_BackgroundImage: {fileID: 0}
+    m_BackgroundType: 0
     m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
     m_BorderWidth: 2
     m_FixedXEnable: 0
@@ -1006,6 +1009,7 @@ MonoBehaviour:
     m_AxisName:
       m_Show: 0
       m_Name: axisName
+      m_OnZero: 0
       m_LabelStyle:
         m_Show: 1
         m_Position: 10
@@ -1213,6 +1217,7 @@ MonoBehaviour:
     m_AxisName:
       m_Show: 0
       m_Name: axisName
+      m_OnZero: 0
       m_LabelStyle:
         m_Show: 1
         m_Position: 10
@@ -1370,6 +1375,7 @@ MonoBehaviour:
   m_SingleAxes: []
   m_Parallels: []
   m_ParallelAxes: []
+  m_Comments: []
   m_SerieBars: []
   m_SerieCandlesticks: []
   m_SerieEffectScatters: []
@@ -1381,7 +1387,9 @@ MonoBehaviour:
     m_LineArrows: []
     m_AreaStyles: []
     m_TitleStyles: []
-    m_Emphases: []
+    m_EmphasisItemStyles: []
+    m_EmphasisLabels: []
+    m_EmphasisLabelLines: []
     m_Index: 0
     m_Show: 1
     m_CoordSystem: GridCoord
@@ -1429,7 +1437,6 @@ MonoBehaviour:
     - 80
     m_ShowDataDimension: 1
     m_ShowDataName: 0
-    m_ShowDataIcon: 0
     m_Clip: 0
     m_Ignore: 0
     m_IgnoreValue: 0
@@ -1466,8 +1473,17 @@ MonoBehaviour:
     m_Symbol:
       m_Show: 0
       m_Type: 0
-      m_SizeType: 0
       m_Size: 0
+      m_Gap: 0
+      m_Width: 0
+      m_Height: 0
+      m_Offset: {x: 0, y: 0}
+      m_Image: {fileID: 0}
+      m_ImageType: 0
+      m_Color:
+        serializedVersion: 2
+        rgba: 0
+      m_SizeType: 0
       m_SelectedSize: 0
       m_DataIndex: 1
       m_DataScale: 1
@@ -1475,13 +1491,7 @@ MonoBehaviour:
       m_StartIndex: 0
       m_Interval: 0
       m_ForceShowLast: 0
-      m_Gap: 0
-      m_Width: 0
-      m_Height: 0
       m_Repeat: 0
-      m_Offset: {x: 0, y: 0}
-      m_Image: {fileID: 0}
-      m_ImageType: 0
     m_Animation:
       m_Enable: 1
       m_Type: 0
@@ -1494,7 +1504,6 @@ MonoBehaviour:
       m_DataChangeEnable: 1
       m_DataChangeDuration: 500
       m_ActualDuration: 0
-      m_AlongWithLinePath: 0
     m_ItemStyle:
       m_Show: 1
       m_Color:
@@ -1542,14 +1551,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 0
       - 304
@@ -1557,14 +1571,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 1
       - 296
@@ -1572,14 +1591,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 2
       - 305
@@ -1587,14 +1611,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 3
       - 299
@@ -1602,14 +1631,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 4
       - 304
@@ -1617,14 +1651,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 5
       - 305
@@ -1632,14 +1671,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 6
       - 313
@@ -1647,14 +1691,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 7
       - 311
@@ -1662,14 +1711,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 8
       - 315
@@ -1677,14 +1731,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 9
       - 307
@@ -1692,14 +1751,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 10
       - 306
@@ -1707,14 +1771,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 11
       - 313
@@ -1722,14 +1791,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 12
       - 319
@@ -1737,14 +1811,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 13
       - 321
@@ -1752,14 +1831,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 14
       - 324
@@ -1767,14 +1851,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 15
       - 332
@@ -1782,14 +1871,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 16
       - 323
@@ -1797,14 +1891,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 17
       - 320
@@ -1812,14 +1911,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 18
       - 326
@@ -1827,14 +1931,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 19
       - 332
@@ -1842,14 +1951,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 20
       - 337
@@ -1857,14 +1971,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 21
       - 346
@@ -1872,14 +1991,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 22
       - 348
@@ -1887,14 +2011,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 23
       - 344
@@ -1902,14 +2031,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 24
       - 344
@@ -1917,14 +2051,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 25
       - 337
@@ -1932,14 +2071,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 26
       - 339
@@ -1947,14 +2091,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 27
       - 330
@@ -1962,14 +2111,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 28
       - 331
@@ -1977,14 +2131,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 29
       - 338
@@ -1992,14 +2151,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 30
       - 332
@@ -2007,14 +2171,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 31
       - 326
@@ -2022,14 +2191,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 32
       - 318
@@ -2037,14 +2211,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 33
       - 320
@@ -2052,14 +2231,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 34
       - 322
@@ -2067,14 +2251,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 35
       - 324
@@ -2082,14 +2271,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 36
       - 326
@@ -2097,14 +2291,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 37
       - 320
@@ -2112,14 +2311,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 38
       - 321
@@ -2127,14 +2331,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 39
       - 311
@@ -2142,14 +2351,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 40
       - 312
@@ -2157,14 +2371,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 41
       - 315
@@ -2172,14 +2391,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 42
       - 320
@@ -2187,14 +2411,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 43
       - 318
@@ -2202,14 +2431,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 44
       - 316
@@ -2217,14 +2451,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 45
       - 310
@@ -2232,14 +2471,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 46
       - 317
@@ -2247,14 +2491,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 47
       - 321
@@ -2262,14 +2511,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 48
       - 328
@@ -2277,14 +2531,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 49
       - 322
@@ -2292,14 +2551,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 50
       - 331
@@ -2307,14 +2571,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 51
       - 321
@@ -2322,14 +2591,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 52
       - 326
@@ -2337,14 +2611,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 53
       - 324
@@ -2352,14 +2631,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 54
       - 316
@@ -2367,14 +2651,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 55
       - 324
@@ -2382,14 +2671,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 56
       - 315
@@ -2397,14 +2691,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 57
       - 311
@@ -2412,14 +2711,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 58
       - 314
@@ -2427,14 +2731,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 59
       - 304
@@ -2442,14 +2751,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 60
       - 308
@@ -2457,14 +2771,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 61
       - 305
@@ -2472,14 +2791,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 62
       - 304
@@ -2487,14 +2811,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 63
       - 301
@@ -2502,14 +2831,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 64
       - 297
@@ -2517,14 +2851,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 65
       - 294
@@ -2532,14 +2871,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 66
       - 291
@@ -2547,14 +2891,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 67
       - 296
@@ -2562,14 +2911,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 68
       - 291
@@ -2577,14 +2931,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 69
       - 287
@@ -2592,14 +2951,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 70
       - 279
@@ -2607,14 +2971,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 71
       - 274
@@ -2622,14 +2991,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 72
       - 265
@@ -2637,14 +3011,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 73
       - 265
@@ -2652,14 +3031,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 74
       - 262
@@ -2667,14 +3051,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 75
       - 270
@@ -2682,14 +3071,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 76
       - 262
@@ -2697,14 +3091,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 77
       - 254
@@ -2712,14 +3111,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 78
       - 247
@@ -2727,14 +3131,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 79
       - 249
@@ -2742,14 +3151,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 80
       - 251
@@ -2757,14 +3171,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 81
       - 248
@@ -2772,14 +3191,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 82
       - 238
@@ -2787,14 +3211,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 83
       - 240
@@ -2802,14 +3231,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 84
       - 240
@@ -2817,14 +3251,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 85
       - 238
@@ -2832,14 +3271,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 86
       - 237
@@ -2847,14 +3291,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 87
       - 241
@@ -2862,14 +3311,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 88
       - 241
@@ -2877,14 +3331,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 89
       - 238
@@ -2892,14 +3351,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 90
       - 241
@@ -2907,14 +3371,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 91
       - 233
@@ -2922,14 +3391,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 92
       - 238
@@ -2937,14 +3411,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 93
       - 245
@@ -2952,14 +3431,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 94
       - 252
@@ -2967,14 +3451,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 95
       - 258
@@ -2982,14 +3471,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 96
       - 264
@@ -2997,14 +3491,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 97
       - 256
@@ -3012,14 +3511,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 98
       - 254
@@ -3027,14 +3531,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 99
       - 257
@@ -3042,14 +3551,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 100
       - 252
@@ -3057,14 +3571,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 101
       - 243
@@ -3072,14 +3591,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 102
       - 239
@@ -3087,14 +3611,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 103
       - 231
@@ -3102,14 +3631,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 104
       - 224
@@ -3117,14 +3651,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 105
       - 232
@@ -3132,14 +3671,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 106
       - 226
@@ -3147,14 +3691,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 107
       - 225
@@ -3162,14 +3711,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 108
       - 232
@@ -3177,14 +3731,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 109
       - 240
@@ -3192,14 +3751,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 110
       - 230
@@ -3207,14 +3771,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 111
       - 239
@@ -3222,14 +3791,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 112
       - 231
@@ -3237,14 +3811,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 113
       - 234
@@ -3252,14 +3831,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 114
       - 231
@@ -3267,14 +3851,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 115
       - 231
@@ -3282,14 +3871,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 116
       - 238
@@ -3297,14 +3891,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 117
       - 231
@@ -3312,14 +3911,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 118
       - 240
@@ -3327,14 +3931,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 119
       - 230
@@ -3342,14 +3951,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 120
       - 236
@@ -3357,14 +3971,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 121
       - 238
@@ -3372,14 +3991,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 122
       - 231
@@ -3387,14 +4011,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 123
       - 230
@@ -3402,14 +4031,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 124
       - 227
@@ -3417,14 +4051,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 125
       - 229
@@ -3432,14 +4071,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 126
       - 235
@@ -3447,14 +4091,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 127
       - 237
@@ -3462,14 +4111,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 128
       - 237
@@ -3477,14 +4131,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 129
       - 240
@@ -3492,14 +4151,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 130
       - 241
@@ -3507,14 +4171,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 131
       - 244
@@ -3522,14 +4191,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 132
       - 248
@@ -3537,14 +4211,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 133
       - 244
@@ -3552,14 +4231,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 134
       - 250
@@ -3567,14 +4251,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 135
       - 250
@@ -3582,14 +4271,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 136
       - 256
@@ -3597,14 +4291,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 137
       - 248
@@ -3612,14 +4311,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 138
       - 239
@@ -3627,14 +4331,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 139
       - 240
@@ -3642,14 +4351,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 140
       - 240
@@ -3657,14 +4371,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 141
       - 232
@@ -3672,14 +4391,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 142
       - 237
@@ -3687,14 +4411,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 143
       - 231
@@ -3702,14 +4431,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 144
       - 233
@@ -3717,14 +4451,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 145
       - 241
@@ -3732,14 +4471,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 146
       - 246
@@ -3747,14 +4491,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 147
       - 247
@@ -3762,14 +4511,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 148
       - 237
@@ -3777,14 +4531,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 149
       - 245
@@ -3792,14 +4551,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 150
       - 254
@@ -3807,14 +4571,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 151
       - 255
@@ -3822,14 +4591,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 152
       - 256
@@ -3837,14 +4611,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 153
       - 254
@@ -3852,14 +4631,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 154
       - 256
@@ -3867,14 +4651,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 155
       - 263
@@ -3882,14 +4671,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 156
       - 261
@@ -3897,14 +4691,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 157
       - 266
@@ -3912,14 +4711,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 158
       - 264
@@ -3927,14 +4731,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 159
       - 255
@@ -3942,14 +4751,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 160
       - 247
@@ -3957,14 +4771,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 161
       - 247
@@ -3972,14 +4791,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 162
       - 251
@@ -3987,14 +4811,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 163
       - 241
@@ -4002,14 +4831,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 164
       - 244
@@ -4017,14 +4851,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 165
       - 244
@@ -4032,14 +4871,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 166
       - 247
@@ -4047,14 +4891,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 167
       - 255
@@ -4062,14 +4911,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 168
       - 260
@@ -4077,14 +4931,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 169
       - 254
@@ -4092,14 +4951,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 170
       - 247
@@ -4107,14 +4971,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 171
       - 251
@@ -4122,14 +4991,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 172
       - 244
@@ -4137,14 +5011,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 173
       - 248
@@ -4152,14 +5031,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 174
       - 247
@@ -4167,14 +5051,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 175
       - 245
@@ -4182,14 +5071,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 176
       - 239
@@ -4197,14 +5091,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 177
       - 231
@@ -4212,14 +5111,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 178
       - 238
@@ -4227,14 +5131,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 179
       - 228
@@ -4242,14 +5151,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 180
       - 228
@@ -4257,14 +5171,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 181
       - 220
@@ -4272,14 +5191,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 182
       - 223
@@ -4287,14 +5211,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 183
       - 230
@@ -4302,14 +5231,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 184
       - 226
@@ -4317,14 +5251,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 185
       - 217
@@ -4332,14 +5271,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 186
       - 210
@@ -4347,14 +5291,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 187
       - 218
@@ -4362,14 +5311,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 188
       - 209
@@ -4377,14 +5331,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 189
       - 203
@@ -4392,14 +5351,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 190
       - 203
@@ -4407,14 +5371,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 191
       - 194
@@ -4422,14 +5391,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 192
       - 194
@@ -4437,14 +5411,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 193
       - 184
@@ -4452,14 +5431,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 194
       - 190
@@ -4467,14 +5451,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 195
       - 180
@@ -4482,14 +5471,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 196
       - 173
@@ -4497,14 +5491,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 197
       - 180
@@ -4512,14 +5511,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 198
       - 183
@@ -4531,1264 +5535,3 @@ MonoBehaviour:
   m_SerieSimplifiedLines: []
   m_SerieSimplifiedBars: []
   m_SerieSimplifiedCandlesticks: []
---- !u!1 &438865678951287000
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5680939419607074206}
-  - component: {fileID: 2290622060001092041}
-  - component: {fileID: 7036186182771079890}
-  m_Layer: 0
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &5680939419607074206
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438865678951287000}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7769960069704134987}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 4, y: -2}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0.5}
---- !u!222 &2290622060001092041
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438865678951287000}
-  m_CullTransparentMesh: 0
---- !u!114 &7036186182771079890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438865678951287000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-  m_RaycastTarget: 0
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 3
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 1
-    m_VerticalOverflow: 1
-    m_LineSpacing: 1
-  m_Text: 
---- !u!1 &877067514030707295
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 605862543274906447}
-  - component: {fileID: 4118427156862725628}
-  - component: {fileID: 980209833910966961}
-  m_Layer: 0
-  m_Name: painter_9
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &605862543274906447
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 877067514030707295}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 224147804559871088}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1200, y: 800}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &4118427156862725628
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 877067514030707295}
-  m_CullTransparentMesh: 0
---- !u!114 &980209833910966961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 877067514030707295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01c85cd323a9f4dfb803470695bd0944, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!1 &1046223316635718321
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7580794819546264892}
-  - component: {fileID: 1726193704545807442}
-  - component: {fileID: 444828155757140469}
-  m_Layer: 0
-  m_Name: painter_t
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &7580794819546264892
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1046223316635718321}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 224147804559871088}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1200, y: 800}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1726193704545807442
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1046223316635718321}
-  m_CullTransparentMesh: 0
---- !u!114 &444828155757140469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1046223316635718321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01c85cd323a9f4dfb803470695bd0944, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!1 &2055191703260961592
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2674364367038817795}
-  - component: {fileID: 4752718056774246969}
-  - component: {fileID: 922876126307382998}
-  m_Layer: 0
-  m_Name: painter_b
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2674364367038817795
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2055191703260961592}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 224147804559871088}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1200, y: 800}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &4752718056774246969
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2055191703260961592}
-  m_CullTransparentMesh: 0
---- !u!114 &922876126307382998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2055191703260961592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01c85cd323a9f4dfb803470695bd0944, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!1 &2119123035322130145
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 477703158735903761}
-  - component: {fileID: 3756199381635558684}
-  - component: {fileID: 4098475018729377737}
-  m_Layer: 0
-  m_Name: Icon
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &477703158735903761
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119123035322130145}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 7769960069704134987}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &3756199381635558684
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119123035322130145}
-  m_CullTransparentMesh: 0
---- !u!114 &4098475018729377737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119123035322130145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!1 &2183729413171912267
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2718905422116255524}
-  - component: {fileID: 1796073242958292745}
-  - component: {fileID: 5415944001134244937}
-  m_Layer: 0
-  m_Name: Icon
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2718905422116255524
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2183729413171912267}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 6997427915497566783}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1796073242958292745
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2183729413171912267}
-  m_CullTransparentMesh: 0
---- !u!114 &5415944001134244937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2183729413171912267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!1 &3598237253526347762
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1295795480066156739}
-  - component: {fileID: 7442662452147849541}
-  - component: {fileID: 8567854579325004855}
-  m_Layer: 0
-  m_Name: painter_2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1295795480066156739
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3598237253526347762}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 224147804559871088}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1200, y: 800}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &7442662452147849541
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3598237253526347762}
-  m_CullTransparentMesh: 0
---- !u!114 &8567854579325004855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3598237253526347762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01c85cd323a9f4dfb803470695bd0944, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!1 &4064533401038656316
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7769960069704134987}
-  - component: {fileID: 5279067922727860521}
-  - component: {fileID: 2254748804117378524}
-  m_Layer: 0
-  m_Name: datazoomend
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &7769960069704134987
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4064533401038656316}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 5680939419607074206}
-  - {fileID: 477703158735903761}
-  m_Father: {fileID: 8408658463687180672}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 600, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0.5}
---- !u!222 &5279067922727860521
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4064533401038656316}
-  m_CullTransparentMesh: 0
---- !u!114 &2254748804117378524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4064533401038656316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61287841bdc4142caba8e77985cd8715, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
-  m_RaycastTarget: 0
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!1 &4735234235574818692
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7503663437174804595}
-  - component: {fileID: 2366555444715981450}
-  - component: {fileID: 1565443000403259217}
-  m_Layer: 0
-  m_Name: painter_5
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &7503663437174804595
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4735234235574818692}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 224147804559871088}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1200, y: 800}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &2366555444715981450
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4735234235574818692}
-  m_CullTransparentMesh: 0
---- !u!114 &1565443000403259217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4735234235574818692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01c85cd323a9f4dfb803470695bd0944, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!1 &4975834321167166518
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8748151325423847688}
-  - component: {fileID: 5283498605535422717}
-  - component: {fileID: 6231981782717659559}
-  m_Layer: 0
-  m_Name: painter_3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &8748151325423847688
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4975834321167166518}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 224147804559871088}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1200, y: 800}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &5283498605535422717
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4975834321167166518}
-  m_CullTransparentMesh: 0
---- !u!114 &6231981782717659559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4975834321167166518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01c85cd323a9f4dfb803470695bd0944, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!1 &4982601562725881587
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4436903958033915383}
-  - component: {fileID: 748152148495193435}
-  - component: {fileID: 7805730960014128107}
-  m_Layer: 0
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &4436903958033915383
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4982601562725881587}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6997427915497566783}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -4, y: -2}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 1, y: 0.5}
---- !u!222 &748152148495193435
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4982601562725881587}
-  m_CullTransparentMesh: 0
---- !u!114 &7805730960014128107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4982601562725881587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-  m_RaycastTarget: 0
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 5
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 1
-    m_VerticalOverflow: 1
-    m_LineSpacing: 1
-  m_Text: 
---- !u!1 &5989616846982124881
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6135566331335804564}
-  - component: {fileID: 3679177090324279615}
-  - component: {fileID: 8367587524349933108}
-  m_Layer: 0
-  m_Name: painter_7
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &6135566331335804564
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5989616846982124881}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 224147804559871088}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1200, y: 800}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &3679177090324279615
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5989616846982124881}
-  m_CullTransparentMesh: 0
---- !u!114 &8367587524349933108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5989616846982124881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01c85cd323a9f4dfb803470695bd0944, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!1 &6060220420212160680
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1613076243222312741}
-  - component: {fileID: 9056231661739937939}
-  - component: {fileID: 7036619846466683254}
-  m_Layer: 0
-  m_Name: painter_8
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1613076243222312741
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6060220420212160680}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 224147804559871088}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1200, y: 800}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &9056231661739937939
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6060220420212160680}
-  m_CullTransparentMesh: 0
---- !u!114 &7036619846466683254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6060220420212160680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01c85cd323a9f4dfb803470695bd0944, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!1 &7194785562916546060
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8408658463687180672}
-  m_Layer: 0
-  m_Name: datazoom0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &8408658463687180672
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7194785562916546060}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 6997427915497566783}
-  - {fileID: 7769960069704134987}
-  m_Father: {fileID: 224147804559871088}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1200, y: 800}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &7637796135240244466
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4240362650824376598}
-  - component: {fileID: 5755699523705397306}
-  - component: {fileID: 3757928775611047916}
-  m_Layer: 0
-  m_Name: painter_0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &4240362650824376598
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7637796135240244466}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 224147804559871088}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1200, y: 800}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &5755699523705397306
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7637796135240244466}
-  m_CullTransparentMesh: 0
---- !u!114 &3757928775611047916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7637796135240244466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01c85cd323a9f4dfb803470695bd0944, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!1 &7644046461895337086
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7097861950173133920}
-  - component: {fileID: 3376970918971576601}
-  - component: {fileID: 5591713236650513407}
-  m_Layer: 0
-  m_Name: painter_4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &7097861950173133920
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7644046461895337086}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 224147804559871088}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1200, y: 800}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &3376970918971576601
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7644046461895337086}
-  m_CullTransparentMesh: 0
---- !u!114 &5591713236650513407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7644046461895337086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01c85cd323a9f4dfb803470695bd0944, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!1 &7854102373326492779
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7299152408306258827}
-  - component: {fileID: 5576428533638938431}
-  - component: {fileID: 9040355948735732664}
-  m_Layer: 0
-  m_Name: painter_1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &7299152408306258827
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7854102373326492779}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 224147804559871088}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1200, y: 800}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &5576428533638938431
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7854102373326492779}
-  m_CullTransparentMesh: 0
---- !u!114 &9040355948735732664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7854102373326492779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01c85cd323a9f4dfb803470695bd0944, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!1 &8556842210855753205
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6997427915497566783}
-  - component: {fileID: 757046973329551662}
-  - component: {fileID: 3237885765093682138}
-  m_Layer: 0
-  m_Name: datazoomstart
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &6997427915497566783
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8556842210855753205}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 4436903958033915383}
-  - {fileID: 2718905422116255524}
-  m_Father: {fileID: 8408658463687180672}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -600, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 1, y: 0.5}
---- !u!222 &757046973329551662
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8556842210855753205}
-  m_CullTransparentMesh: 0
---- !u!114 &3237885765093682138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8556842210855753205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61287841bdc4142caba8e77985cd8715, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
-  m_RaycastTarget: 0
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!1 &9146687964473200947
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5238883100897246412}
-  - component: {fileID: 7650207888892634741}
-  - component: {fileID: 3534105607914393634}
-  m_Layer: 0
-  m_Name: painter_6
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &5238883100897246412
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9146687964473200947}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 224147804559871088}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1200, y: 800}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &7650207888892634741
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9146687964473200947}
-  m_CullTransparentMesh: 0
---- !u!114 &3534105607914393634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9146687964473200947}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01c85cd323a9f4dfb803470695bd0944, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []

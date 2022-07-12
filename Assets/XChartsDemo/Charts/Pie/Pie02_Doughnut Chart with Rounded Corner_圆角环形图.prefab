@@ -135,6 +135,7 @@ MonoBehaviour:
     m_ReversePainter: 0
     m_BasePainterMaterial: {fileID: 0}
     m_SeriePainterMaterial: {fileID: 0}
+    m_UpperPainterMaterial: {fileID: 0}
     m_TopPainterMaterial: {fileID: 0}
     m_LineSmoothStyle: 3
     m_LineSmoothness: 2
@@ -146,6 +147,7 @@ MonoBehaviour:
     - 0.25
     - 0.25
     - 0.25
+    m_AxisMaxSplitNumber: 50
   m_AngleAxes: []
   m_Backgrounds: []
   m_DataZooms: []
@@ -165,8 +167,9 @@ MonoBehaviour:
     m_ItemHeight: 12
     m_ItemGap: 10
     m_ItemAutoColor: 1
-    m_TextAutoColor: 0
+    m_ItemOpacity: 1
     m_Formatter: 
+    m_NumericFormatter: 
     m_LabelStyle:
       m_Show: 1
       m_Position: 0
@@ -217,6 +220,21 @@ MonoBehaviour:
         m_Alignment: 4
     m_Data: []
     m_Icons: []
+    m_Colors: []
+    m_Background:
+      m_Show: 0
+      m_Sprite: {fileID: 0}
+      m_Type: 0
+      m_AutoColor: 0
+      m_Color: {r: 0, g: 0, b: 0, a: 0}
+      m_Width: 0
+      m_Height: 0
+    m_Padding:
+      m_Show: 1
+      m_Top: 0
+      m_Right: 2
+      m_Left: 2
+      m_Bottom: 0
   m_MarkLines: []
   m_MarkAreas: []
   m_Polars: []
@@ -349,6 +367,7 @@ MonoBehaviour:
     m_AlwayShowContent: 0
     m_Offset: {x: 18, y: -25}
     m_BackgroundImage: {fileID: 0}
+    m_BackgroundType: 0
     m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
     m_BorderWidth: 2
     m_FixedXEnable: 0
@@ -619,6 +638,7 @@ MonoBehaviour:
   m_SingleAxes: []
   m_Parallels: []
   m_ParallelAxes: []
+  m_Comments: []
   m_SerieBars: []
   m_SerieCandlesticks: []
   m_SerieEffectScatters: []
@@ -678,108 +698,9 @@ MonoBehaviour:
     m_LineArrows: []
     m_AreaStyles: []
     m_TitleStyles: []
-    m_Emphases:
-    - m_Show: 1
-      m_Label:
-        m_Show: 1
-        m_Position: 2
-        m_AutoOffset: 0
-        m_Offset: {x: 0, y: 0, z: 0}
-        m_Rotate: 0
-        m_Distance: 0
-        m_Formatter: '{b}'
-        m_NumericFormatter: 
-        m_Width: 0
-        m_Height: 0
-        m_Icon:
-          m_Show: 0
-          m_Layer: 0
-          m_Align: 1
-          m_Sprite: {fileID: 0}
-          m_Type: 0
-          m_Color: {r: 1, g: 1, b: 1, a: 1}
-          m_Width: 20
-          m_Height: 20
-          m_Offset: {x: 0, y: 0, z: 0}
-          m_AutoHideWhenLabelEmpty: 0
-        m_Background:
-          m_Show: 1
-          m_Sprite: {fileID: 0}
-          m_Type: 0
-          m_AutoColor: 0
-          m_Color: {r: 0, g: 0, b: 0, a: 0}
-          m_Width: 0
-          m_Height: 0
-        m_TextPadding:
-          m_Show: 1
-          m_Top: 2
-          m_Right: 4
-          m_Left: 4
-          m_Bottom: 2
-        m_TextStyle:
-          m_Show: 1
-          m_Font: {fileID: 0}
-          m_AutoWrap: 0
-          m_AutoAlign: 1
-          m_Rotate: 0
-          m_AutoColor: 0
-          m_Color: {r: 0, g: 0, b: 0, a: 0}
-          m_FontSize: 50
-          m_FontStyle: 0
-          m_LineSpacing: 1
-          m_Alignment: 4
-      m_LabelLine:
-        m_Show: 0
-        m_LineType: 0
-        m_LineColor:
-          serializedVersion: 2
-          rgba: 0
-        m_LineWidth: 1
-        m_LineGap: 1
-        m_LineLength1: 25
-        m_LineLength2: 15
-      m_ItemStyle:
-        m_Show: 0
-        m_Color:
-          serializedVersion: 2
-          rgba: 0
-        m_Color0:
-          serializedVersion: 2
-          rgba: 0
-        m_ToColor:
-          serializedVersion: 2
-          rgba: 0
-        m_ToColor2:
-          serializedVersion: 2
-          rgba: 0
-        m_BackgroundColor:
-          serializedVersion: 2
-          rgba: 0
-        m_BackgroundWidth: 0
-        m_CenterColor:
-          serializedVersion: 2
-          rgba: 0
-        m_CenterGap: 0
-        m_BorderWidth: 0
-        m_BorderGap: 0
-        m_BorderColor:
-          serializedVersion: 2
-          rgba: 0
-        m_BorderColor0:
-          serializedVersion: 2
-          rgba: 0
-        m_BorderToColor:
-          serializedVersion: 2
-          rgba: 0
-        m_Opacity: 1
-        m_ItemMarker: 
-        m_ItemFormatter: 
-        m_NumericFormatter: 
-        m_CornerRadius:
-        - 0
-        - 0
-        - 0
-        - 0
+    m_EmphasisItemStyles: []
+    m_EmphasisLabels: []
+    m_EmphasisLabelLines: []
     m_Index: 0
     m_Show: 1
     m_CoordSystem: GridCoord
@@ -827,7 +748,6 @@ MonoBehaviour:
     - 0.35
     m_ShowDataDimension: 1
     m_ShowDataName: 1
-    m_ShowDataIcon: 0
     m_Clip: 0
     m_Ignore: 0
     m_IgnoreValue: 0
@@ -864,8 +784,17 @@ MonoBehaviour:
     m_Symbol:
       m_Show: 0
       m_Type: 3
-      m_SizeType: 0
       m_Size: 0
+      m_Gap: 0
+      m_Width: 0
+      m_Height: 0
+      m_Offset: {x: 0, y: 0}
+      m_Image: {fileID: 0}
+      m_ImageType: 0
+      m_Color:
+        serializedVersion: 2
+        rgba: 0
+      m_SizeType: 0
       m_SelectedSize: 0
       m_DataIndex: 1
       m_DataScale: 1
@@ -873,13 +802,7 @@ MonoBehaviour:
       m_StartIndex: 0
       m_Interval: 0
       m_ForceShowLast: 0
-      m_Gap: 0
-      m_Width: 0
-      m_Height: 0
       m_Repeat: 0
-      m_Offset: {x: 0, y: 0}
-      m_Image: {fileID: 0}
-      m_ImageType: 0
     m_Animation:
       m_Enable: 1
       m_Type: 0
@@ -892,7 +815,6 @@ MonoBehaviour:
       m_DataChangeEnable: 1
       m_DataChangeDuration: 500
       m_ActualDuration: 0
-      m_AlongWithLinePath: 0
     m_ItemStyle:
       m_Show: 1
       m_Color:
@@ -940,14 +862,19 @@ MonoBehaviour:
       m_Name: SearchEngine
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 0
       - 1048
@@ -955,14 +882,19 @@ MonoBehaviour:
       m_Name: Direct
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 1
       - 735
@@ -970,14 +902,19 @@ MonoBehaviour:
       m_Name: Email
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 2
       - 580
@@ -985,14 +922,19 @@ MonoBehaviour:
       m_Name: UnionAds
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 3
       - 484
@@ -1000,14 +942,19 @@ MonoBehaviour:
       m_Name: VideoAds
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 4
       - 300

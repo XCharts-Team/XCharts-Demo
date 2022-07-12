@@ -135,6 +135,7 @@ MonoBehaviour:
     m_ReversePainter: 0
     m_BasePainterMaterial: {fileID: 0}
     m_SeriePainterMaterial: {fileID: 0}
+    m_UpperPainterMaterial: {fileID: 0}
     m_TopPainterMaterial: {fileID: 0}
     m_LineSmoothStyle: 3
     m_LineSmoothness: 2
@@ -146,6 +147,7 @@ MonoBehaviour:
     - 0.25
     - 0.25
     - 0.25
+    m_AxisMaxSplitNumber: 50
   m_AngleAxes: []
   m_Backgrounds: []
   m_DataZooms: []
@@ -178,8 +180,9 @@ MonoBehaviour:
     m_ItemHeight: 12
     m_ItemGap: 10
     m_ItemAutoColor: 1
-    m_TextAutoColor: 0
+    m_ItemOpacity: 1
     m_Formatter: 
+    m_NumericFormatter: 
     m_LabelStyle:
       m_Show: 1
       m_Position: 0
@@ -230,6 +233,21 @@ MonoBehaviour:
         m_Alignment: 4
     m_Data: []
     m_Icons: []
+    m_Colors: []
+    m_Background:
+      m_Show: 0
+      m_Sprite: {fileID: 0}
+      m_Type: 0
+      m_AutoColor: 0
+      m_Color: {r: 0, g: 0, b: 0, a: 0}
+      m_Width: 0
+      m_Height: 0
+    m_Padding:
+      m_Show: 1
+      m_Top: 0
+      m_Right: 2
+      m_Left: 2
+      m_Bottom: 0
   m_MarkLines: []
   m_MarkAreas: []
   m_Polars: []
@@ -362,6 +380,7 @@ MonoBehaviour:
     m_AlwayShowContent: 0
     m_Offset: {x: 18, y: -25}
     m_BackgroundImage: {fileID: 0}
+    m_BackgroundType: 0
     m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
     m_BorderWidth: 2
     m_FixedXEnable: 0
@@ -687,6 +706,7 @@ MonoBehaviour:
     m_AxisName:
       m_Show: 0
       m_Name: axisName
+      m_OnZero: 0
       m_LabelStyle:
         m_Show: 1
         m_Position: 10
@@ -894,6 +914,7 @@ MonoBehaviour:
     m_AxisName:
       m_Show: 1
       m_Name: Precipitation
+      m_OnZero: 0
       m_LabelStyle:
         m_Show: 1
         m_Position: 10
@@ -1100,6 +1121,7 @@ MonoBehaviour:
     m_AxisName:
       m_Show: 1
       m_Name: Temperature
+      m_OnZero: 0
       m_LabelStyle:
         m_Show: 1
         m_Position: 10
@@ -1257,6 +1279,7 @@ MonoBehaviour:
   m_SingleAxes: []
   m_Parallels: []
   m_ParallelAxes: []
+  m_Comments: []
   m_SerieBars:
   - m_Labels: []
     m_LabelLines: []
@@ -1264,7 +1287,9 @@ MonoBehaviour:
     m_LineArrows: []
     m_AreaStyles: []
     m_TitleStyles: []
-    m_Emphases: []
+    m_EmphasisItemStyles: []
+    m_EmphasisLabels: []
+    m_EmphasisLabelLines: []
     m_Index: 0
     m_Show: 1
     m_CoordSystem: GridCoord
@@ -1312,7 +1337,6 @@ MonoBehaviour:
     - 80
     m_ShowDataDimension: 1
     m_ShowDataName: 0
-    m_ShowDataIcon: 0
     m_Clip: 0
     m_Ignore: 0
     m_IgnoreValue: 0
@@ -1349,8 +1373,17 @@ MonoBehaviour:
     m_Symbol:
       m_Show: 0
       m_Type: 3
-      m_SizeType: 0
       m_Size: 0
+      m_Gap: 0
+      m_Width: 0
+      m_Height: 0
+      m_Offset: {x: 0, y: 0}
+      m_Image: {fileID: 0}
+      m_ImageType: 0
+      m_Color:
+        serializedVersion: 2
+        rgba: 0
+      m_SizeType: 0
       m_SelectedSize: 0
       m_DataIndex: 1
       m_DataScale: 1
@@ -1358,13 +1391,7 @@ MonoBehaviour:
       m_StartIndex: 0
       m_Interval: 0
       m_ForceShowLast: 0
-      m_Gap: 0
-      m_Width: 0
-      m_Height: 0
       m_Repeat: 0
-      m_Offset: {x: 0, y: 0}
-      m_Image: {fileID: 0}
-      m_ImageType: 0
     m_Animation:
       m_Enable: 1
       m_Type: 0
@@ -1377,7 +1404,6 @@ MonoBehaviour:
       m_DataChangeEnable: 1
       m_DataChangeDuration: 500
       m_ActualDuration: 0
-      m_AlongWithLinePath: 0
     m_ItemStyle:
       m_Show: 1
       m_Color:
@@ -1425,14 +1451,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 0
       - 2
@@ -1440,14 +1471,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 1
       - 4.9
@@ -1455,14 +1491,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 2
       - 7
@@ -1470,14 +1511,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 3
       - 23.2
@@ -1485,14 +1531,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 4
       - 25.6
@@ -1500,14 +1551,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 5
       - 76.7
@@ -1515,14 +1571,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 6
       - 135.6
@@ -1532,7 +1593,9 @@ MonoBehaviour:
     m_LineArrows: []
     m_AreaStyles: []
     m_TitleStyles: []
-    m_Emphases: []
+    m_EmphasisItemStyles: []
+    m_EmphasisLabels: []
+    m_EmphasisLabelLines: []
     m_Index: 1
     m_Show: 1
     m_CoordSystem: GridCoord
@@ -1580,7 +1643,6 @@ MonoBehaviour:
     - 80
     m_ShowDataDimension: 1
     m_ShowDataName: 0
-    m_ShowDataIcon: 0
     m_Clip: 1
     m_Ignore: 0
     m_IgnoreValue: 0
@@ -1617,8 +1679,17 @@ MonoBehaviour:
     m_Symbol:
       m_Show: 0
       m_Type: 3
-      m_SizeType: 0
       m_Size: 0
+      m_Gap: 0
+      m_Width: 0
+      m_Height: 0
+      m_Offset: {x: 0, y: 0}
+      m_Image: {fileID: 0}
+      m_ImageType: 0
+      m_Color:
+        serializedVersion: 2
+        rgba: 0
+      m_SizeType: 0
       m_SelectedSize: 0
       m_DataIndex: 1
       m_DataScale: 1
@@ -1626,13 +1697,7 @@ MonoBehaviour:
       m_StartIndex: 0
       m_Interval: 0
       m_ForceShowLast: 0
-      m_Gap: 0
-      m_Width: 0
-      m_Height: 0
       m_Repeat: 0
-      m_Offset: {x: 0, y: 0}
-      m_Image: {fileID: 0}
-      m_ImageType: 0
     m_Animation:
       m_Enable: 1
       m_Type: 0
@@ -1645,7 +1710,6 @@ MonoBehaviour:
       m_DataChangeEnable: 1
       m_DataChangeDuration: 500
       m_ActualDuration: 0
-      m_AlongWithLinePath: 0
     m_ItemStyle:
       m_Show: 1
       m_Color:
@@ -1693,14 +1757,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 0
       - 2.6
@@ -1708,14 +1777,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 1
       - 5.9
@@ -1723,14 +1797,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 2
       - 9
@@ -1738,14 +1817,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 3
       - 26.4
@@ -1753,14 +1837,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 4
       - 28.7
@@ -1768,14 +1857,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 5
       - 70.7
@@ -1783,14 +1877,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 6
       - 175.6
@@ -1804,7 +1903,9 @@ MonoBehaviour:
     m_LineArrows: []
     m_AreaStyles: []
     m_TitleStyles: []
-    m_Emphases: []
+    m_EmphasisItemStyles: []
+    m_EmphasisLabels: []
+    m_EmphasisLabelLines: []
     m_Index: 2
     m_Show: 1
     m_CoordSystem: GridCoord
@@ -1852,7 +1953,6 @@ MonoBehaviour:
     - 80
     m_ShowDataDimension: 1
     m_ShowDataName: 0
-    m_ShowDataIcon: 0
     m_Clip: 1
     m_Ignore: 0
     m_IgnoreValue: 0
@@ -1889,8 +1989,17 @@ MonoBehaviour:
     m_Symbol:
       m_Show: 1
       m_Type: 3
-      m_SizeType: 0
       m_Size: 0
+      m_Gap: 0
+      m_Width: 0
+      m_Height: 0
+      m_Offset: {x: 0, y: 0}
+      m_Image: {fileID: 0}
+      m_ImageType: 0
+      m_Color:
+        serializedVersion: 2
+        rgba: 0
+      m_SizeType: 0
       m_SelectedSize: 0
       m_DataIndex: 1
       m_DataScale: 1
@@ -1898,13 +2007,7 @@ MonoBehaviour:
       m_StartIndex: 0
       m_Interval: 0
       m_ForceShowLast: 0
-      m_Gap: 0
-      m_Width: 0
-      m_Height: 0
       m_Repeat: 0
-      m_Offset: {x: 0, y: 0}
-      m_Image: {fileID: 0}
-      m_ImageType: 0
     m_Animation:
       m_Enable: 1
       m_Type: 0
@@ -1917,7 +2020,6 @@ MonoBehaviour:
       m_DataChangeEnable: 1
       m_DataChangeDuration: 500
       m_ActualDuration: 0
-      m_AlongWithLinePath: 0
     m_ItemStyle:
       m_Show: 1
       m_Color:
@@ -1965,14 +2067,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 0
       - 2
@@ -1980,14 +2087,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 1
       - 2.2
@@ -1995,14 +2107,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 2
       - 3.3
@@ -2010,14 +2127,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 3
       - 4.5
@@ -2025,14 +2147,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 4
       - 6.3
@@ -2040,14 +2167,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 5
       - 10.2
@@ -2055,14 +2187,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 6
       - 20.3
@@ -2070,14 +2207,19 @@ MonoBehaviour:
       m_Name: 
       m_Id: 
       m_ParentId: 
+      m_Ignore: 0
+      m_Selected: 0
+      m_Radius: 0
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
-      m_Emphases: []
       m_Symbols: []
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
+      m_EmphasisItemStyles: []
+      m_EmphasisLabels: []
+      m_EmphasisLabelLines: []
       m_Data:
       - 6
       - 23.4
