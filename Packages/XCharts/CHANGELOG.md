@@ -57,6 +57,23 @@
 
 ## master
 
+* (2022.07.29) 修复在某些`Unity`版本导入后图表创建异常的问题
+* (2022.07.29) 增加`Axis`为`Time`时间轴时，支持次刻度和次分割线
+* (2022.07.28) 优化`Radar`雷达图效果
+* (2022.07.28) 增加`Serie`的`colorBy`参数配置取色策略
+* (2022.07.27) 增加`StateStyle`的`Symbol`用于配置状态下的标记样式
+* (2022.07.27) 去掉`SerieSymbol`的`selectedSize`参数
+* (2022.07.24) 增加`Serie`和`SerieData`的`state`设置默认状态
+* (2022.07.22) 增加`Serie`的三种状态`EmphasisStyle`,`BlurStyle`,`SelectStyle`
+* (2022.07.22) 去掉`AreaStyle`的`highlightColor`和`highlightToColor`参数
+* (2022.07.22) 去掉`Emphasis`,`EmphasisItemStyle`,`EmphasisLabelStyle`,`EmphasisLabelLine`组件
+* (2022.07.20) 文档支持用`Since`标识类从哪个版本开始支持
+* (2022.07.20) 修复`Axis`在`Value`轴时，`AxisLabel`的`showStartLabel`和`showEndLabel`参数设置不生效的问题
+* (2022.07.19) 增加`Axis`的`MinorSplitLine`设置坐标轴次分割线
+* (2022.07.19) 增加`Axis`的`MinorTick`设置坐标轴次刻度
+* (2022.07.17) 增加`Radar`的`smooth`参数设置平滑曲线
+* (2022.07.15) 增加`DataZoom`对`Time`时间轴的支持
+
 ## 3.1.0
 
 ### 版本要点

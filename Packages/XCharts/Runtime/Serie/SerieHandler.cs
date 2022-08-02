@@ -144,7 +144,7 @@ namespace XCharts.Runtime
 
         public override void OnLegendButtonClick(int index, string legendName, bool show)
         {
-            if (serie.useDataNameForColor && serie.IsSerieDataLegendName(legendName))
+            if (serie.colorByData && serie.IsSerieDataLegendName(legendName))
             {
                 LegendHelper.CheckDataShow(serie, legendName, show);
                 chart.UpdateLegendColor(legendName, show);
@@ -159,7 +159,7 @@ namespace XCharts.Runtime
 
         public override void OnLegendButtonEnter(int index, string legendName)
         {
-            if (serie.useDataNameForColor && serie.IsSerieDataLegendName(legendName))
+            if (serie.colorByData && serie.IsSerieDataLegendName(legendName))
             {
                 LegendHelper.CheckDataHighlighted(serie, legendName, true);
                 chart.RefreshPainter(serie);
@@ -173,7 +173,7 @@ namespace XCharts.Runtime
 
         public override void OnLegendButtonExit(int index, string legendName)
         {
-            if (serie.useDataNameForColor && serie.IsSerieDataLegendName(legendName))
+            if (serie.colorByData && serie.IsSerieDataLegendName(legendName))
             {
                 LegendHelper.CheckDataHighlighted(serie, legendName, false);
                 chart.RefreshPainter(serie);
@@ -240,11 +240,9 @@ namespace XCharts.Runtime
 
             if (count == -1) count = serie.dataCount;
             var serieLabel = SerieHelper.GetSerieLabel(serie, serieData);
-            if (serieLabel == null)
+            if (serieLabel == null || !serieLabel.show)
             {
-                serieLabel = SerieHelper.GetSerieEmphasisLabel(serie, serieData);
-                if (serieLabel == null || !serieLabel.show)
-                    return false;
+                return false;
             }
 
             var dataAutoColor = GetSerieDataAutoColor(serieData);
@@ -375,14 +373,10 @@ namespace XCharts.Runtime
             {
                 if (serieData.labelObject == null && serieData.context.dataLabels.Count <= 0)
                     continue;
-                var serieLabel = SerieHelper.GetSerieLabel(serie, serieData);
-                var emphasisLabel = SerieHelper.GetSerieEmphasisLabel(serie, serieData);
-                var isHighlight = (serieData.context.highlight && emphasisLabel != null && emphasisLabel.show);
+                var currLabel = SerieHelper.GetSerieLabel(serie, serieData);
                 var isIgnore = serie.IsIgnoreIndex(serieData.index, defaultDimension);
-                var currLabel = isHighlight && emphasisLabel != null ? emphasisLabel : serieLabel;
                 if (serie.show &&
                     currLabel != null &&
-                    (currLabel.show || isHighlight) &&
                     serieData.context.canShowLabel &&
                     !isIgnore)
                 {
@@ -396,7 +390,7 @@ namespace XCharts.Runtime
                             var labelObject = serieData.context.dataLabels[i];
                             var value = serieData.GetCurrData(i, dataChangeDuration);
                             var content = string.IsNullOrEmpty(currLabel.formatter) ?
-                                ChartCached.NumberToStr(value, serieLabel.numericFormatter) :
+                                ChartCached.NumberToStr(value, currLabel.numericFormatter) :
                                 SerieLabelHelper.GetFormatterContent(serie, serieData, value, total,
                                     currLabel, color);
                             var offset = GetSerieDataLabelOffset(serieData, currLabel);
@@ -418,7 +412,7 @@ namespace XCharts.Runtime
                         var total = serie.GetDataTotal(defaultDimension, serieData);
                         var color = chart.GetItemColor(serie, serieData);
                         var content = string.IsNullOrEmpty(currLabel.formatter) ?
-                            ChartCached.NumberToStr(value, serieLabel.numericFormatter) :
+                            ChartCached.NumberToStr(value, currLabel.numericFormatter) :
                             SerieLabelHelper.GetFormatterContent(serie, serieData, value, total,
                                 currLabel, color);
                         serieData.SetLabelActive(!isIgnore);
@@ -491,8 +485,10 @@ namespace XCharts.Runtime
 
         public virtual Color GetSerieDataAutoColor(SerieData serieData)
         {
-            var colorIndex = serie.useDataNameForColor ? serieData.index : serie.index;
-            return (Color) SerieHelper.GetItemColor(serie, serieData, chart.theme, colorIndex, false, false);
+            var colorIndex = serie.colorByData ? serieData.index : serie.index;
+            Color32 color, toColor;
+            SerieHelper.GetItemColor(out color, out toColor, serie, serieData, chart.theme, colorIndex, SerieState.Normal, false);
+            return (Color) color;
         }
 
         protected void UpdateCoordSerieParams(ref List<SerieParams> paramList, ref string title,
@@ -522,7 +518,7 @@ namespace XCharts.Runtime
             param.dataCount = serie.dataCount;
             param.value = serieData.GetData(1);
             param.total = serie.yTotal;
-            param.color = SerieHelper.GetItemColor(serie, serieData, chart.theme, serie.context.colorIndex, false);
+            param.color = chart.GetItemColor(serie, serieData);
             param.marker = SerieHelper.GetItemMarker(serie, serieData, marker);
             param.itemFormatter = itemFormatter;
             param.numericFormatter = SerieHelper.GetNumericFormatter(serie, serieData, numericFormatter);
@@ -537,7 +533,7 @@ namespace XCharts.Runtime
 
         protected void UpdateItemSerieParams(ref List<SerieParams> paramList, ref string title,
             int dataIndex, string category, string marker,
-            string itemFormatter, string numericFormatter, int dimension = 1)
+            string itemFormatter, string numericFormatter, int dimension = 1, int colorIndex = -1)
         {
             if (dataIndex < 0)
                 dataIndex = serie.context.pointerItemDataIndex;
@@ -553,8 +549,11 @@ namespace XCharts.Runtime
             if (serie.placeHolder || TooltipHelper.IsIgnoreFormatter(itemFormatter))
                 return;
 
-            var colorIndex = chart.GetLegendRealShowNameIndex(serieData.name);
+            if (colorIndex < 0)
+                colorIndex = serie.colorByData?dataIndex : chart.GetLegendRealShowNameIndex(serieData.name);
 
+            Color32 color, toColor;
+            SerieHelper.GetItemColor(out color, out toColor, serie, serieData, chart.theme, colorIndex, SerieState.Normal);
             var param = serie.context.param;
             param.serieName = serie.serieName;
             param.serieIndex = serie.index;
@@ -564,7 +563,7 @@ namespace XCharts.Runtime
             param.dataCount = serie.dataCount;
             param.value = serieData.GetData(param.dimension);
             param.total = SerieHelper.GetMaxData(serie, dimension);
-            param.color = SerieHelper.GetItemColor(serie, serieData, chart.theme, colorIndex, false);
+            param.color = color;
             param.marker = SerieHelper.GetItemMarker(serie, serieData, marker);
             param.itemFormatter = itemFormatter;
             param.numericFormatter = SerieHelper.GetNumericFormatter(serie, serieData, numericFormatter);
