@@ -74,7 +74,7 @@ namespace XCharts.Runtime
         }
 
         public override void UpdateTooltipSerieParams(int dataIndex, bool showCategory, string category,
-            string marker, string itemFormatter, string numericFormatter,
+            string marker, string itemFormatter, string numericFormatter, string ignoreDataDefaultContent,
             ref List<SerieParams> paramList, ref string title)
         {
             if (dataIndex < 0)
@@ -152,7 +152,6 @@ namespace XCharts.Runtime
             for (int j = 0; j < data.Count; j++)
             {
                 var serieData = data[j];
-                serieData.index = j;
                 if (!serieData.show) continue;
                 if (serieData.IsDataChanged()) dataChanging = true;
                 var value = serieData.GetFirstData(dataChangeDuration);
@@ -303,7 +302,6 @@ namespace XCharts.Runtime
             for (int i = 0; i < serie.data.Count; i++)
             {
                 var serieData = serie.data[i];
-                serieData.index = i;
                 if (dist >= serieData.context.insideRadius &&
                     dist <= serieData.context.outsideRadius &&
                     angle >= serieData.context.startAngle &&

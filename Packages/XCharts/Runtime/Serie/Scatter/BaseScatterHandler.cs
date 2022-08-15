@@ -16,7 +16,7 @@ namespace XCharts.Runtime
         }
 
         public override void UpdateTooltipSerieParams(int dataIndex, bool showCategory, string category,
-            string marker, string itemFormatter, string numericFormatter,
+            string marker, string itemFormatter, string numericFormatter, string ignoreDataDefaultContent,
             ref List<SerieParams> paramList, ref string title)
         {
             dataIndex = serie.context.pointerItemDataIndex;
@@ -172,6 +172,7 @@ namespace XCharts.Runtime
                     continue;
 
                 serie.context.dataPoints.Add(pos);
+                serie.context.dataIndexs.Add(serieData.index);
                 serieData.context.position = pos;
                 var datas = serieData.data;
                 var symbolSize = 0f;
@@ -276,6 +277,7 @@ namespace XCharts.Runtime
                     pos = new Vector3(axis.context.x + xDataHig, axis.context.y + yDataHig);
                 }
                 serie.context.dataPoints.Add(pos);
+                serie.context.dataIndexs.Add(serieData.index);
                 serieData.context.position = pos;
 
                 var datas = serieData.data;
