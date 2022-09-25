@@ -1,15 +1,28 @@
 # XChartsDemo
 
-XCharts3.0的Demo，仅包含内置图表部分，支持扩展图表Demo导入。
+XCharts 3.0 的官方图表示例Demo，用于展示XCharts可以实现哪些功能效果。
 
-不支持XCharts2.0。
+> 本Demo只支持XCharts 3.0，不支持XCharts 2.0。
+
+> 本Demo只包含内置图表，扩展图表需要单独导入。
 
 ## 使用
 
-项目使用`Unity2019.4.39f1`开发，下载项目后，使用相近的Unity版本打开即可。
-Demo有发布WebGL版本（包含扩展图表部分），可以直接web运行查看效果：[WebGL Demo](https://xcharts-team.github.io/demo/)
+本项目使用`Unity2019.4.39f1`开发，下载项目后，使用相近的Unity版本打开即可。
+Demo有发布WebGL版本（包含扩展图表部分），可以直接浏览器看效果：[WebGL Demo](https://xcharts-team.github.io/demo/)
 
 ![buildinchart](buildinchart.png)
+
+## 目录结构
+
+|||
+|--|--|
+| Assets/Internal                       | Demo的内部资源和代码 |
+| Assets/XCharts                        | XCharts需要的内置资源 |
+| Assets/XChartsDemo                    | Demo示例目录，__要查看示例的主要关注这个目录__ |
+| Assets/XChartsDemo/DemoConfig.asset   | Demo示例的各图表示例对应的prefab配置 |
+| Assets/XChartsDemo/Charts             | 内置图表示例的prefab |
+| Assets/XChartsExtensionDemo           | 扩展图表示例的prefab |
 
 ## 扩展图表
 
