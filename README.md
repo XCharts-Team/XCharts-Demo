@@ -1,6 +1,6 @@
-# XChartsDemo
+# XCharts-Demo
 
-XCharts 3.0 的官方图表示例Demo，用于展示XCharts可以实现哪些功能效果。
+Unity可视化图表插件[XCharts](https://github.com/XCharts-Team/XCharts) 的官方图表示例Demo，用于展示XCharts可以实现哪些功能和效果。
 
 > 本Demo只支持XCharts 3.0，不支持XCharts 2.0。
 
