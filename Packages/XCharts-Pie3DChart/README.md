@@ -17,6 +17,11 @@ XCharts的付费扩展图表 - 3D饼图。
 
 ## 日志
 
+### v3.4.0
+
+* (2022.11.01) 支持`Animation`的`unscaledTime`
+* (2022.11.01) 同步`XCharts v3.4.0`
+
 ### v3.3.0
 
 * (2022.09.02) 增加`onPointerEnterPie`回调支持
