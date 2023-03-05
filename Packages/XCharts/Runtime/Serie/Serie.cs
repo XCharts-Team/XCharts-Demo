@@ -230,7 +230,6 @@ namespace XCharts.Runtime
         [SerializeField] private string m_SerieName;
         [SerializeField][Since("v3.2.0")] private SerieState m_State = SerieState.Normal;
         [SerializeField][Since("v3.2.0")] private SerieColorBy m_ColorBy = SerieColorBy.Default;
-        [SerializeField][Since("v3.4.0")] private Color32 m_MarkColor;
         [SerializeField] private string m_Stack;
         [SerializeField] private int m_XAxisIndex = 0;
         [SerializeField] private int m_YAxisIndex = 0;
@@ -252,6 +251,7 @@ namespace XCharts.Runtime
         [SerializeField] private BarType m_BarType = BarType.Normal;
         [SerializeField] private bool m_BarPercentStack = false;
         [SerializeField] private float m_BarWidth = 0;
+        [SerializeField][Since("v3.5.0")] private float m_BarMaxWidth = 0;
         [SerializeField] private float m_BarGap = 0.1f;
         [SerializeField] private float m_BarZebraWidth = 4f;
         [SerializeField] private float m_BarZebraGap = 2f;
@@ -371,17 +371,8 @@ namespace XCharts.Runtime
         public SerieColorBy colorBy
         {
             //get { return m_ColorBy; }
-            get { return m_ColorBy == SerieColorBy.Default?defaultColorBy : m_ColorBy; }
+            get { return m_ColorBy == SerieColorBy.Default ? defaultColorBy : m_ColorBy; }
             set { if (PropertyUtil.SetStruct(ref m_ColorBy, value)) { SetAllDirty(); } }
-        }
-        /// <summary>
-        /// Serie's mark color. It is only used to display Legend and Tooltip, and does not affect the drawing color. The default value is clear.
-        /// |Serie的标识颜色。仅用于Legend和Tooltip的展示，不影响绘制颜色，默认为clear。
-        /// </summary>
-        public Color32 markColor
-        {
-            get { return m_MarkColor; }
-            set { if (PropertyUtil.SetStruct(ref m_MarkColor, value)) { SetAllDirty(); } }
         }
         /// <summary>
         /// If stack the value. On the same category axis, the series with the same stack name would be put on top of each other.
@@ -571,6 +562,15 @@ namespace XCharts.Runtime
         {
             get { return m_BarWidth; }
             set { if (PropertyUtil.SetStruct(ref m_BarWidth, value)) SetVerticesDirty(); }
+        }
+        /// <summary>
+        /// The max width of the bar. Adaptive when default 0.
+        /// |柱条的最大宽度，默认为0为不限制最大宽度。支持设置成相对于类目宽度的百分比。
+        /// </summary>
+        public float barMaxWidth
+        {
+            get { return m_BarMaxWidth; }
+            set { if (PropertyUtil.SetStruct(ref m_BarMaxWidth, value)) SetVerticesDirty(); }
         }
         /// <summary>
         /// The gap between bars between different series, is a percent value like '0.3f' , which means 30% of the bar width, can be set as a fixed value.
@@ -1061,7 +1061,7 @@ namespace XCharts.Runtime
                 var max = double.MinValue;
                 foreach (var sdata in data)
                 {
-                    if (sdata.show && !IsIgnoreValue(sdata.data[1]) && sdata.data[1] > max)
+                    if (sdata.show && !IsIgnoreValue(sdata, sdata.data[1]) && sdata.data[1] > max)
                     {
                         max = sdata.data[1];
                     }
@@ -1080,7 +1080,7 @@ namespace XCharts.Runtime
                 var max = double.MinValue;
                 foreach (var sdata in data)
                 {
-                    if (sdata.show && !IsIgnoreValue(sdata.data[0]) && sdata.data[0] > max)
+                    if (sdata.show && !IsIgnoreValue(sdata, sdata.data[0]) && sdata.data[0] > max)
                     {
                         max = sdata.data[0];
                     }
@@ -1099,7 +1099,7 @@ namespace XCharts.Runtime
                 var min = double.MaxValue;
                 foreach (var sdata in data)
                 {
-                    if (sdata.show && !IsIgnoreValue(sdata.data[1]) && sdata.data[1] < min)
+                    if (sdata.show && !IsIgnoreValue(sdata, sdata.data[1]) && sdata.data[1] < min)
                     {
                         min = sdata.data[1];
                     }
@@ -1118,7 +1118,7 @@ namespace XCharts.Runtime
                 var min = double.MaxValue;
                 foreach (var sdata in data)
                 {
-                    if (sdata.show && !IsIgnoreValue(sdata.data[0]) && sdata.data[0] < min)
+                    if (sdata.show && !IsIgnoreValue(sdata, sdata.data[0]) && sdata.data[0] < min)
                     {
                         min = sdata.data[0];
                     }
@@ -1139,7 +1139,7 @@ namespace XCharts.Runtime
                 {
                     foreach (var sdata in data)
                     {
-                        if (sdata.show && !IsIgnoreValue(sdata.data[1]))
+                        if (sdata.show && !IsIgnoreValue(sdata, sdata.data[1]))
                             total += sdata.data[1];
                     }
                 }
@@ -1149,7 +1149,7 @@ namespace XCharts.Runtime
                     var unscaledTime = animation.unscaledTime;
                     foreach (var sdata in data)
                     {
-                        if (sdata.show && !IsIgnoreValue(sdata.data[1]))
+                        if (sdata.show && !IsIgnoreValue(sdata, sdata.data[1]))
                             total += sdata.GetCurrData(1, duration, unscaledTime);
                     }
                 }
@@ -1167,7 +1167,7 @@ namespace XCharts.Runtime
                 double total = 0;
                 foreach (var sdata in data)
                 {
-                    if (sdata.show && !IsIgnoreValue(sdata.data[1]))
+                    if (sdata.show && !IsIgnoreValue(sdata, sdata.data[1]))
                         total += sdata.data[0];
                 }
                 return total;
@@ -1648,7 +1648,7 @@ namespace XCharts.Runtime
         /// <param name="index"></param>
         /// <param name="xValue"></param>
         /// <param name="yValue"></param>
-        public bool UpdateXYData(int index, float xValue, float yValue)
+        public bool UpdateXYData(int index, double xValue, double yValue)
         {
             var flag1 = UpdateData(index, 0, xValue);
             var flag2 = UpdateData(index, 1, yValue);
@@ -1742,17 +1742,32 @@ namespace XCharts.Runtime
 
         public float GetBarWidth(float categoryWidth, int barCount = 0)
         {
-            if (categoryWidth < 2) return categoryWidth;
-            if (m_BarWidth == 0)
+            var realWidth = 0f;
+            if (categoryWidth < 2)
+            {
+                realWidth = categoryWidth;
+            }
+            else if (m_BarWidth == 0)
             {
                 var width = ChartHelper.GetActualValue(0.6f, categoryWidth);
                 if (barCount == 0)
-                    return width < 1 ? categoryWidth : width;
+                    realWidth = width < 1 ? categoryWidth : width;
                 else
-                    return width / barCount;
+                    realWidth = width / barCount;
             }
             else
-                return ChartHelper.GetActualValue(m_BarWidth, categoryWidth);
+            {
+                realWidth = ChartHelper.GetActualValue(m_BarWidth, categoryWidth);
+            }
+            if (m_BarMaxWidth == 0)
+            {
+                return realWidth;
+            }
+            else
+            {
+                var maxWidth = ChartHelper.GetActualValue(m_BarMaxWidth, categoryWidth);
+                return realWidth > maxWidth ? maxWidth : realWidth;
+            }
         }
 
         public bool IsIgnoreIndex(int index, int dimension = 1)
@@ -1765,12 +1780,17 @@ namespace XCharts.Runtime
 
         public bool IsIgnoreValue(SerieData serieData, int dimension = 1)
         {
-            return serieData.ignore || IsIgnoreValue(serieData.GetData(dimension));
+            return IsIgnoreValue(serieData, serieData.GetData(dimension));
         }
 
         public bool IsIgnoreValue(double value)
         {
             return m_Ignore && MathUtil.Approximately(value, m_IgnoreValue);
+        }
+
+        public bool IsIgnoreValue(SerieData serieData, double value)
+        {
+            return serieData.ignore || IsIgnoreValue(value);
         }
 
         public bool IsIgnorePoint(int index)

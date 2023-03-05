@@ -27,7 +27,7 @@ namespace XCharts.Demo
         void Awake()
         {
             m_Chart = GetComponent<CandlestickChart>();
-            var legend = m_Chart.GetOrAddChartComponent<Legend>();
+            var legend = m_Chart.EnsureChartComponent<Legend>();
             legend.AddData("上涨");
             legend.AddData("下跌");
             legend.colors.Clear();
@@ -50,7 +50,7 @@ namespace XCharts.Demo
                 m_Chart.AddXAxisData(info.time, 1);
                 m_Chart.AddData(0, count++, info.start, info.end, info.min, info.max, dataName);
                 var serieData = m_Chart.AddData(1, info.volumn, dataName);
-                var itemStyle = serieData.GetOrAddComponent<ItemStyle>();
+                var itemStyle = serieData.EnsureComponent<ItemStyle>();
                 itemStyle.color = info.end >= info.start ?
                     m_Chart.theme.serie.candlestickColor :
                     m_Chart.theme.serie.candlestickColor0;

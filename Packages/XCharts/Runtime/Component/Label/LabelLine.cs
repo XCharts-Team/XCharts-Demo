@@ -7,7 +7,7 @@ namespace XCharts.Runtime
     /// 标签的引导线
     /// </summary>
     [System.Serializable]
-    public class LabelLine : ChildComponent, ISerieExtraComponent, ISerieDataComponent
+    public class LabelLine : ChildComponent, ISerieComponent, ISerieDataComponent
     {
         /// <summary>
         /// 标签视觉引导线类型
@@ -36,8 +36,8 @@ namespace XCharts.Runtime
         [SerializeField] private float m_LineGap = 1.0f;
         [SerializeField] private float m_LineLength1 = 25f;
         [SerializeField] private float m_LineLength2 = 15f;
-        [SerializeField] private SymbolStyle m_StartSymbol = new SymbolStyle() { type = SymbolType.Circle, size = 3 };
-        [SerializeField] private SymbolStyle m_EndSymbol = new SymbolStyle() { type = SymbolType.Circle, size = 3 };
+        [SerializeField] private SymbolStyle m_StartSymbol = new SymbolStyle() { show = false, type = SymbolType.Circle, size = 3 };
+        [SerializeField] private SymbolStyle m_EndSymbol = new SymbolStyle() { show = false, type = SymbolType.Circle, size = 3 };
 
         public void Reset()
         {

@@ -11,13 +11,14 @@ namespace XCharts.Runtime
 {
     [AddComponentMenu("XCharts/EmptyChart", 10)]
     [ExecuteInEditMode]
-    [RequireComponent(typeof(RectTransform))]
+    [RequireComponent(typeof(RectTransform),typeof(CanvasRenderer))]
     [DisallowMultipleComponent]
     public partial class BaseChart : BaseGraph, ISerializationCallbackReceiver
     {
         [SerializeField] protected string m_ChartName;
         [SerializeField] protected ThemeStyle m_Theme = new ThemeStyle();
         [SerializeField] protected Settings m_Settings;
+        [SerializeField] protected DebugInfo m_DebugInfo = new DebugInfo();
 
 #pragma warning disable 0414
         [SerializeField][ListForComponent(typeof(AngleAxis))] private List<AngleAxis> m_AngleAxes = new List<AngleAxis>();
@@ -67,6 +68,8 @@ namespace XCharts.Runtime
         public List<MainComponent> components { get { return m_Components; } }
 
         public List<Serie> series { get { return m_Series; } }
+        public DebugInfo debug { get { return m_DebugInfo; } }
+        public override HideFlags chartHideFlags { get { return m_DebugInfo.showAllChartObject ? HideFlags.None : HideFlags.HideInHierarchy; } }
 
         protected float m_ChartWidth;
         protected float m_ChartHeight;
@@ -742,12 +745,6 @@ namespace XCharts.Runtime
             m_Components.Sort();
             InitComponentHandlers();
             InitSerieHandlers();
-        }
-
-        private IEnumerator SaveAsImageSync(string imageType, string path)
-        {
-            yield return new WaitForEndOfFrame();
-            ChartHelper.SaveAsImage(rectTransform, canvas, imageType, path);
         }
     }
 }

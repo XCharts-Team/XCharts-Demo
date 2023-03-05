@@ -40,12 +40,12 @@ namespace XCharts.Demo
                 if (!xData.Contains(info.name))
                     xData.Add(info.name);
             }
-            var xAxis = m_Chart.GetOrAddChartComponent<XAxis>();
+            var xAxis = m_Chart.EnsureChartComponent<XAxis>();
             xAxis.data = xData;
-            var yAxis = m_Chart.GetOrAddChartComponent<YAxis>();
+            var yAxis = m_Chart.EnsureChartComponent<YAxis>();
             yAxis.data = yData;
 
-            var visualMap = m_Chart.GetOrAddChartComponent<VisualMap>();
+            var visualMap = m_Chart.EnsureChartComponent<VisualMap>();
             var colors = new List<string> { "#0d5fbb", "#7eadfc", "#fd8b6f", "#aa3523" };
             visualMap.AddColors(colors);
             visualMap.autoMinMax = true;

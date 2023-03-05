@@ -7,7 +7,8 @@ namespace XChartsDemo
     public enum ChartType
     {
         Buildin,
-        Extend
+        Extend,
+        Widget
     }
 
     [System.Serializable]

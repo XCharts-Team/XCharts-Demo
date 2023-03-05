@@ -1,8 +1,10 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using XUGL;
+#if INPUT_SYSTEM_ENABLED
+using Input = XCharts.Runtime.InputHelper;
+#endif
 
 namespace XCharts.Runtime
 {
@@ -20,7 +22,7 @@ namespace XCharts.Runtime
         {
             var dataZoom = component;
             dataZoom.painter = chart.m_PainterUpper;
-            dataZoom.refreshComponent = delegate()
+            dataZoom.refreshComponent = delegate ()
             {
                 var dataZoomObject = ChartHelper.AddObject(s_DefaultDataZoom + dataZoom.index, chart.transform,
                     chart.chartMinAnchor, chart.chartMaxAnchor, chart.chartPivot, chart.chartSizeDelta);
@@ -72,9 +74,11 @@ namespace XCharts.Runtime
             {
                 case Orient.Horizonal:
                     DrawHorizonalDataZoomSlider(vh, dataZoom);
+                    DrawMarquee(vh, dataZoom);
                     break;
                 case Orient.Vertical:
                     DrawVerticalDataZoomSlider(vh, dataZoom);
+                    DrawMarquee(vh, dataZoom);
                     break;
             }
         }
@@ -87,12 +91,12 @@ namespace XCharts.Runtime
             if (Input.touchCount > 1)
                 return;
 
-            Vector2 pos;
-            if (!chart.ScreenPointToChartPoint(eventData.position, out pos))
-                return;
-
             var dataZoom = component;
             if (!dataZoom.enable)
+                return;
+
+            Vector2 pos;
+            if (!chart.ScreenPointToChartPoint(eventData.position, out pos))
                 return;
 
             var grid = chart.GetGridOfDataZoom(dataZoom);
@@ -102,6 +106,23 @@ namespace XCharts.Runtime
                 {
                     dataZoom.context.isCoordinateDrag = true;
                 }
+            }
+            if (dataZoom.supportMarquee)
+            {
+                dataZoom.context.isMarqueeDrag = true;
+                dataZoom.context.marqueeStartPos = pos;
+                dataZoom.context.marqueeEndPos = pos;
+
+                if (dataZoom.marqueeStyle.realRect)
+                    dataZoom.context.marqueeRect = new Rect(pos.x, pos.y, 0, 0);
+                else
+                    dataZoom.context.marqueeRect = new Rect(pos.x, grid.context.y, 0, grid.context.height);
+
+                if (dataZoom.marqueeStyle.onStart != null)
+                {
+                    dataZoom.marqueeStyle.onStart(dataZoom);
+                }
+                return;
             }
             if (dataZoom.supportSlider)
             {
@@ -136,18 +157,40 @@ namespace XCharts.Runtime
 
             var dataZoom = component;
             var grid = chart.GetGridOfDataZoom(dataZoom);
-            switch (dataZoom.orient)
+            if (dataZoom.supportMarquee)
             {
-                case Orient.Horizonal:
-                    var deltaPercent = eventData.delta.x / grid.context.width * 100;
-                    OnDragInside(dataZoom, deltaPercent);
-                    OnDragSlider(dataZoom, deltaPercent);
-                    break;
-                case Orient.Vertical:
-                    deltaPercent = eventData.delta.y / grid.context.height * 100;
-                    OnDragInside(dataZoom, deltaPercent);
-                    OnDragSlider(dataZoom, deltaPercent);
-                    break;
+                Vector2 pos;
+                if (!chart.ScreenPointToChartPoint(eventData.position, out pos))
+                    return;
+
+                dataZoom.context.marqueeEndPos = pos;
+                var oldRect = dataZoom.context.marqueeRect;
+                var rectWidth = pos.x - dataZoom.context.marqueeStartPos.x;
+                if (dataZoom.marqueeStyle.realRect)
+                    dataZoom.context.marqueeRect = Rect.MinMaxRect(dataZoom.context.marqueeStartPos.x, pos.y, pos.x, dataZoom.context.marqueeStartPos.y);
+                else
+                    dataZoom.context.marqueeRect = new Rect(oldRect.x, oldRect.y, rectWidth, oldRect.height);
+
+                dataZoom.SetVerticesDirty();
+                if (dataZoom.marqueeStyle.onGoing != null)
+                    dataZoom.marqueeStyle.onGoing(dataZoom);
+                return;
+            }
+            else
+            {
+                switch (dataZoom.orient)
+                {
+                    case Orient.Horizonal:
+                        var deltaPercent = eventData.delta.x / grid.context.width * 100;
+                        OnDragInside(dataZoom, deltaPercent);
+                        OnDragSlider(dataZoom, deltaPercent);
+                        break;
+                    case Orient.Vertical:
+                        deltaPercent = eventData.delta.y / grid.context.height * 100;
+                        OnDragInside(dataZoom, deltaPercent);
+                        OnDragSlider(dataZoom, deltaPercent);
+                        break;
+                }
             }
         }
 
@@ -157,6 +200,23 @@ namespace XCharts.Runtime
                 return;
 
             var dataZoom = component;
+
+            if (dataZoom.supportMarquee)
+            {
+                dataZoom.context.isMarqueeDrag = false;
+                if (dataZoom.marqueeStyle.apply)
+                {
+                    var grid = chart.GetGridOfDataZoom(dataZoom);
+                    var start = (dataZoom.context.marqueeRect.x - grid.context.x) / grid.context.width * 100;
+                    var end = (dataZoom.context.marqueeRect.x - grid.context.x + dataZoom.context.marqueeRect.width) / grid.context.width * 100;
+                    UpdateDataZoomRange(dataZoom, start, end);
+                }
+                if (dataZoom.marqueeStyle.onEnd != null)
+                {
+                    dataZoom.marqueeStyle.onEnd(dataZoom);
+                }
+                return;
+            }
             if (dataZoom.context.isDrag || dataZoom.context.isStartDrag || dataZoom.context.isEndDrag ||
                 dataZoom.context.isCoordinateDrag)
             {
@@ -208,6 +268,7 @@ namespace XCharts.Runtime
                 UpdateDataZoomRange(dataZoom, start, end);
             }
         }
+
         public override void OnScroll(PointerEventData eventData)
         {
             if (chart == null)
@@ -215,12 +276,12 @@ namespace XCharts.Runtime
             if (Input.touchCount > 1)
                 return;
 
-            Vector2 pos;
-            if (!chart.ScreenPointToChartPoint(eventData.position, out pos))
-                return;
-
             var dataZoom = component;
             if (!dataZoom.enable || dataZoom.zoomLock)
+                return;
+
+            Vector2 pos;
+            if (!chart.ScreenPointToChartPoint(eventData.position, out pos))
                 return;
 
             var grid = chart.GetGridOfDataZoom(dataZoom);
@@ -336,9 +397,13 @@ namespace XCharts.Runtime
 
             if (end < start)
                 end = start;
+            if (dataZoom.startEndFunction != null)
+                dataZoom.startEndFunction(ref start, ref end);
 
-            dataZoom.start = start;
-            dataZoom.end = end;
+            if (!dataZoom.startLock)
+                dataZoom.start = start;
+            if (!dataZoom.endLock)
+                dataZoom.end = end;
             if (dataZoom.realtime)
             {
                 chart.OnDataZoomRangeChanged(dataZoom);
@@ -405,8 +470,8 @@ namespace XCharts.Runtime
             {
                 m_CheckDataZoomLabel = false;
                 var xAxis = chart.GetChartComponent<XAxis>(dataZoom.xAxisIndexs[0]);
-                var startIndex = (int) ((xAxis.data.Count - 1) * dataZoom.start / 100);
-                var endIndex = (int) ((xAxis.data.Count - 1) * dataZoom.end / 100);
+                var startIndex = (int)((xAxis.data.Count - 1) * dataZoom.start / 100);
+                var endIndex = (int)((xAxis.data.Count - 1) * dataZoom.end / 100);
 
                 if (m_DataZoomLastStartIndex != startIndex || m_DataZoomLastEndIndex != endIndex)
                 {
@@ -471,7 +536,7 @@ namespace XCharts.Runtime
                 var sampleDist = serie.sampleDist < 2 ? 2 : serie.sampleDist;
                 var maxCount = showData.Count;
                 if (sampleDist > 0)
-                    rate = (int) ((maxCount - serie.minShow) / (dataZoom.context.width / sampleDist));
+                    rate = (int)((maxCount - serie.minShow) / (dataZoom.context.width / sampleDist));
                 if (rate < 1)
                     rate = 1;
 
@@ -486,7 +551,7 @@ namespace XCharts.Runtime
                     double value = DataHelper.SampleValue(ref showData, serie.sampleType, rate, serie.minShow, maxCount, totalAverage, i,
                         animationDuration, ref dataChanging, axis, unscaledTime);
                     float pX = dataZoom.context.x + i * scaleWid;
-                    float dataHig = (float) ((maxValue - minValue) == 0 ? 0 :
+                    float dataHig = (float)((maxValue - minValue) == 0 ? 0 :
                         (value - minValue) / (maxValue - minValue) * dataZoom.context.height);
                     np = new Vector3(pX, chart.chartY + dataZoom.bottom + dataHig);
                     if (i > 0)
@@ -562,7 +627,7 @@ namespace XCharts.Runtime
                 var sampleDist = serie.sampleDist < 2 ? 2 : serie.sampleDist;
                 var maxCount = showData.Count;
                 if (sampleDist > 0)
-                    rate = (int) ((maxCount - serie.minShow) / (dataZoom.context.height / sampleDist));
+                    rate = (int)((maxCount - serie.minShow) / (dataZoom.context.height / sampleDist));
                 if (rate < 1)
                     rate = 1;
 
@@ -578,7 +643,7 @@ namespace XCharts.Runtime
                         animationDuration, ref dataChanging, axis, unscaledTime);
                     float pY = dataZoom.context.y + i * scaleWid;
                     float dataHig = (maxValue - minValue) == 0 ? 0 :
-                        (float) ((value - minValue) / (maxValue - minValue) * dataZoom.context.width);
+                        (float)((value - minValue) / (maxValue - minValue) * dataZoom.context.width);
                     np = new Vector3(chart.chartX + chart.chartWidth - dataZoom.right - dataHig, pY);
                     if (i > 0)
                     {
@@ -613,6 +678,14 @@ namespace XCharts.Runtime
                     UGL.DrawLine(vh, p3, p4, lineWidth, fillerColor);
                     break;
             }
+        }
+
+        private void DrawMarquee(VertexHelper vh, DataZoom dataZoom)
+        {
+            if (!dataZoom.enable || !dataZoom.supportMarquee)
+                return;
+            var areaColor = dataZoom.marqueeStyle.areaStyle.GetColor(chart.theme.dataZoom.dataAreaColor);
+            UGL.DrawRectangle(vh, dataZoom.context.marqueeRect, areaColor);
         }
     }
 }

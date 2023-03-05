@@ -49,7 +49,7 @@ namespace XCharts.Demo
                         bData.Add(info.score);
                 }
             }
-            var radar = m_Chart.GetOrAddChartComponent<RadarCoord>();
+            var radar = m_Chart.EnsureChartComponent<RadarCoord>();
             radar.AddIndicatorList(indicatorList, 0, 80);
             m_Chart.AddData(0, aData, "a");
             m_Chart.AddData(0, bData, "b");

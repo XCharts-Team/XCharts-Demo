@@ -69,7 +69,15 @@ namespace XCharts.Runtime
         /// </summary>
         public Vector3 chartPosition { get { return m_ChartPosition; } }
         public Rect chartRect { get { return m_ChartRect; } }
+        /// <summary>
+        /// The callback function of chart init.
+        /// |图表的初始化完成回调。
+        /// </summary>
         public Action onInit { set { m_OnInit = value; } }
+        /// <summary>
+        /// The callback function of chart update.
+        /// |图表的Update回调。
+        /// </summary>
         public Action onUpdate { set { m_OnUpdate = value; } }
         /// <summary>
         /// 自定义绘制回调。在绘制Serie前调用。
@@ -360,8 +368,10 @@ namespace XCharts.Runtime
         /// fadeIn animation.
         /// |开始渐入动画。
         /// </summary>
-        public void AnimationFadeIn()
+        public void AnimationFadeIn(bool reset = true)
         {
+            if (reset)
+                AnimationReset();
             foreach (var serie in m_Series) serie.AnimationFadeIn();
         }
 
@@ -462,7 +472,7 @@ namespace XCharts.Runtime
         /// 转换X轴和Y轴的配置
         /// </summary>
         /// <param name="index">坐标轴索引，0或1</param>
-        public void CovertXYAxis(int index)
+        public void ConvertXYAxis(int index)
         {
             List<MainComponent> m_XAxes;
             List<MainComponent> m_YAxes;
@@ -599,13 +609,14 @@ namespace XCharts.Runtime
         /// <returns></returns>
         public Color32 GetMarkColor(Serie serie, SerieData serieData)
         {
-            if (ChartHelper.IsClearColor(serie.markColor))
+            var itemStyle = SerieHelper.GetItemStyle(serie, serieData);
+            if (ChartHelper.IsClearColor(itemStyle.markColor))
             {
                 return GetItemColor(serie, serieData);
             }
             else
             {
-                return serie.markColor;
+                return itemStyle.markColor;
             }
         }
 
@@ -628,16 +639,6 @@ namespace XCharts.Runtime
             Color32 color, toColor;
             SerieHelper.GetItemColor(out color, out toColor, serie, null, m_Theme);
             return color;
-        }
-
-        /// <summary>
-        /// 保存图表为图片。
-        /// </summary>
-        /// <param name="imageType">type of image: png, jpg, exr</param>
-        /// <param name="savePath">save path</param>
-        public void SaveAsImage(string imageType = "png", string savePath = "")
-        {
-            StartCoroutine(SaveAsImageSync(imageType, savePath));
         }
     }
 }

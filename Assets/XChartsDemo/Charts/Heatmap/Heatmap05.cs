@@ -32,7 +32,7 @@ namespace XCharts.Demo
             var infos = JsonHelper.GetJsonArray<JsonInfo>(json);
             m_Chart.ClearData();
 
-            var visualMap = m_Chart.GetOrAddChartComponent<VisualMap>();
+            var visualMap = m_Chart.EnsureChartComponent<VisualMap>();
             var colors = new List<string>
             {
                 "#BAE7FF",

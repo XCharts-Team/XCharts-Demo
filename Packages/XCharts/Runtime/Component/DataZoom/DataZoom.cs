@@ -65,7 +65,7 @@ namespace XCharts.Runtime
         [SerializeField] private bool m_SupportInsideScroll = true;
         [SerializeField] private bool m_SupportInsideDrag = true;
         [SerializeField] private bool m_SupportSlider;
-        [SerializeField] private bool m_SupportSelect;
+        [SerializeField] private bool m_SupportMarquee;
         [SerializeField] private bool m_ShowDataShadow;
         [SerializeField] private bool m_ShowDetail;
         [SerializeField] private bool m_ZoomLock;
@@ -81,8 +81,6 @@ namespace XCharts.Runtime
         [SerializeField] private RangeMode m_RangeMode;
         [SerializeField] private float m_Start;
         [SerializeField] private float m_End;
-        //[SerializeField] private float m_StartValue;
-        //[SerializeField] private float m_EndValue;
         [SerializeField] private int m_MinShowNum = 1;
         [Range(1f, 20f)]
         [SerializeField] private float m_ScrollSensitivity = 1.1f;
@@ -90,8 +88,12 @@ namespace XCharts.Runtime
         [SerializeField] private LabelStyle m_LabelStyle = new LabelStyle();
         [SerializeField] private LineStyle m_LineStyle = new LineStyle(LineStyle.Type.Solid);
         [SerializeField] private AreaStyle m_AreaStyle = new AreaStyle();
+        [SerializeField][Since("v3.5.0")] private MarqueeStyle m_MarqueeStyle = new MarqueeStyle();
+        [SerializeField][Since("v3.6.0")] private bool m_StartLock;
+        [SerializeField][Since("v3.6.0")] private bool m_EndLock;
 
         public DataZoomContext context = new DataZoomContext();
+        private CustomDataZoomStartEndFunction m_StartEndFunction;
 
         /// <summary>
         /// Whether to show dataZoom.
@@ -141,7 +143,8 @@ namespace XCharts.Runtime
             set { if (PropertyUtil.SetStruct(ref m_SupportInside, value)) SetVerticesDirty(); }
         }
         /// <summary>
-        /// 是否支持坐标系内滚动
+        /// Whether inside scrolling is supported.
+        /// |是否支持坐标系内滚动
         /// </summary>
         public bool supportInsideScroll
         {
@@ -149,7 +152,8 @@ namespace XCharts.Runtime
             set { if (PropertyUtil.SetStruct(ref m_SupportInsideScroll, value)) SetVerticesDirty(); }
         }
         /// <summary>
-        /// 是否支持坐标系内拖拽
+        /// Whether insde drag is supported.
+        /// |是否支持坐标系内拖拽
         /// </summary>
         public bool supportInsideDrag
         {
@@ -166,12 +170,13 @@ namespace XCharts.Runtime
             set { if (PropertyUtil.SetStruct(ref m_SupportSlider, value)) SetVerticesDirty(); }
         }
         /// <summary>
-        /// 是否支持框选。提供一个选框进行数据区域缩放。
+        /// Supported Box Selected. Provides a marquee for scaling the data area.
+        /// |是否支持框选。提供一个选框进行数据区域缩放。
         /// </summary>
-        public bool supportSelect
+        public bool supportMarquee
         {
-            get { return m_SupportSelect; }
-            set { if (PropertyUtil.SetStruct(ref m_SupportSelect, value)) SetVerticesDirty(); }
+            get { return m_SupportMarquee; }
+            set { if (PropertyUtil.SetStruct(ref m_SupportMarquee, value)) SetVerticesDirty(); }
         }
         /// <summary>
         /// Whether to show data shadow, to indicate the data tendency in brief.
@@ -301,6 +306,24 @@ namespace XCharts.Runtime
             set { m_Start = value; if (m_Start < 0) m_Start = 0; if (m_Start > 100) m_Start = 100; SetVerticesDirty(); }
         }
         /// <summary>
+        /// Lock start value.
+        /// |固定起始值，不让改变。
+        /// </summary>
+        public bool startLock
+        {
+            get { return m_StartLock; }
+            set { if (PropertyUtil.SetStruct(ref m_StartLock, value)) SetVerticesDirty(); }
+        }
+        /// <summary>
+        /// Lock end value.
+        /// |固定结束值，不让改变。
+        /// </summary>
+        public bool endLock
+        {
+            get { return m_EndLock; }
+            set { if (PropertyUtil.SetStruct(ref m_EndLock, value)) SetVerticesDirty(); }
+        }
+        /// <summary>
         /// The end percentage of the window out of the data extent, in the range of 0 ~ 100.
         /// |数据窗口范围的结束百分比。范围是：0 ~ 100。
         /// </summary>
@@ -363,6 +386,18 @@ namespace XCharts.Runtime
             get { return m_AreaStyle; }
             set { if (PropertyUtil.SetClass(ref m_AreaStyle, value)) SetComponentDirty(); }
         }
+        /// <summary>
+        /// 选取框样式。
+        /// </summary>
+        public MarqueeStyle marqueeStyle
+        {
+            get { return m_MarqueeStyle; }
+            set { if (PropertyUtil.SetClass(ref m_MarqueeStyle, value)) SetAllDirty(); }
+        }
+        /// <summary>
+        /// start和end变更委托。
+        /// </summary>
+        public CustomDataZoomStartEndFunction startEndFunction { get { return m_StartEndFunction; } set { m_StartEndFunction = value; } }
 
         class AxisIndexValueInfo
         {
@@ -414,6 +449,7 @@ namespace XCharts.Runtime
                 show = true,
                 opacity = 0.3f
             };
+            m_MarqueeStyle = new MarqueeStyle();
         }
 
         /// <summary>
@@ -515,6 +551,25 @@ namespace XCharts.Runtime
             }
         }
 
+        public bool IsInMarqueeArea(SerieData serieData)
+        {
+            return IsInMarqueeArea(serieData.context.position);
+        }
+
+        public bool IsInMarqueeArea(Vector2 pos)
+        {
+            if (!supportMarquee) return false;
+            if (context.marqueeRect.width >= 0)
+            {
+                return context.marqueeRect.Contains(pos);
+            }
+            else
+            {
+                var rect = context.marqueeRect;
+                return (new Rect(rect.x + rect.width, rect.y, -rect.width, rect.height)).Contains(pos);
+            }
+        }
+
         public bool IsContainsAxis(Axis axis)
         {
             if (axis == null)
@@ -599,12 +654,12 @@ namespace XCharts.Runtime
 
         internal void UpdateStartLabelPosition(Vector3 pos)
         {
-            m_StartLabel.SetPosition(pos);
+            if (m_StartLabel != null) m_StartLabel.SetPosition(pos);
         }
 
         internal void UpdateEndLabelPosition(Vector3 pos)
         {
-            m_EndLabel.SetPosition(pos);
+            if (m_EndLabel != null) m_EndLabel.SetPosition(pos);
         }
 
         public void UpdateRuntimeData(float chartX, float chartY, float chartWidth, float chartHeight)

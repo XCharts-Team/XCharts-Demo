@@ -40,12 +40,12 @@ namespace XCharts.Demo
                 if (!radiusData.Contains(info.week))
                     radiusData.Add(info.week);
             }
-            var xAxis = m_Chart.GetOrAddChartComponent<AngleAxis>();
+            var xAxis = m_Chart.EnsureChartComponent<AngleAxis>();
             xAxis.data = angleData;
-            var yAxis = m_Chart.GetOrAddChartComponent<RadiusAxis>();
+            var yAxis = m_Chart.EnsureChartComponent<RadiusAxis>();
             yAxis.data = radiusData;
 
-            var visualMap = m_Chart.GetOrAddChartComponent<VisualMap>();
+            var visualMap = m_Chart.EnsureChartComponent<VisualMap>();
             var colors = new List<string> { "#BAE7FF", "#1890FF", "#1028ff" };
             visualMap.AddColors(colors);
             visualMap.autoMinMax = true;

@@ -1,10 +1,12 @@
-# XCharts-PyramidChart
+# PyramidChart 金字塔
 
 XCharts付费扩展图表 - 金字塔。
 
+![pyramid](Documentation~/zh/img/pyramid.png)
+
 ## 许可
 
-扩展图表，需付费购买后才获得使用许可。尊重劳动成果，不传播购买内容。
+扩展图表，需付费购买后才获得使用许可。
 
 ## 教程
 
@@ -12,10 +14,19 @@ XCharts付费扩展图表 - 金字塔。
 
 ## 文档
 
-[API](Documentation/API-ZH.md)  
-[配置项手册](Documentation/Configuration-ZH.md)  
+[API](Documentation~/zh/api.md)  
+[配置项手册](Documentation~/zh/configuration.md)  
 
 ## 日志
+
+### v3.6.0
+
+* (2023.02.14) 同步`XCharts v3.6.0`
+
+### v3.5.0
+
+* (2022.12.01) 发布`v3.5.0`版本
+* (2022.11.27) 调整`Documentation`文档结构
 
 ### v3.2.0
 

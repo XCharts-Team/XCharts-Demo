@@ -10,6 +10,7 @@ namespace XCharts.Editor
         {
             var m_SupportInside = baseProperty.FindPropertyRelative("m_SupportInside");
             var m_SupportSlider = baseProperty.FindPropertyRelative("m_SupportSlider");
+            var m_SupportMarquee = baseProperty.FindPropertyRelative("m_SupportMarquee");
             var m_Start = baseProperty.FindPropertyRelative("m_Start");
             var m_End = baseProperty.FindPropertyRelative("m_End");
             var m_MinShowNum = baseProperty.FindPropertyRelative("m_MinShowNum");
@@ -22,11 +23,14 @@ namespace XCharts.Editor
                 PropertyField("m_SupportInsideDrag");
             }
             PropertyField(m_SupportSlider);
+            PropertyField(m_SupportMarquee);
             PropertyField("m_ZoomLock");
             PropertyField("m_ScrollSensitivity");
             PropertyField("m_RangeMode");
             PropertyField(m_Start);
             PropertyField(m_End);
+            PropertyField("m_StartLock");
+            PropertyField("m_EndLock");
             PropertyField(m_MinShowNum);
             if (m_Start.floatValue < 0) m_Start.floatValue = 0;
             if (m_End.floatValue > 100) m_End.floatValue = 100;
@@ -54,6 +58,7 @@ namespace XCharts.Editor
                 PropertyListField("m_XAxisIndexs", true);
                 PropertyListField("m_YAxisIndexs", true);
             }
+            PropertyField("m_MarqueeStyle");
             --EditorGUI.indentLevel;
         }
     }

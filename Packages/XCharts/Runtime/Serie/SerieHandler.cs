@@ -189,7 +189,7 @@ namespace XCharts.Runtime
         {
             if (m_SerieRoot != null)
             {
-                var rect = ChartHelper.GetOrAddComponent<RectTransform>(m_SerieRoot);
+                var rect = ChartHelper.EnsureComponent<RectTransform>(m_SerieRoot);
                 rect.localPosition = Vector3.zero;
                 rect.sizeDelta = chart.chartSizeDelta;
                 rect.anchorMin = chart.chartMinAnchor;
@@ -385,6 +385,7 @@ namespace XCharts.Runtime
                 var isIgnore = serie.IsIgnoreIndex(serieData.index, defaultDimension);
                 if (serie.show &&
                     currLabel != null &&
+                    currLabel.show &&
                     serieData.context.canShowLabel &&
                     !isIgnore)
                 {
@@ -579,7 +580,7 @@ namespace XCharts.Runtime
             param.dataCount = serie.dataCount;
             param.value = serieData.GetData(param.dimension);
             param.ignore = ignore;
-            param.total = SerieHelper.GetMaxData(serie, dimension);
+            param.total = serie.multiDimensionLabel? serieData.GetTotalData() : serie.GetDataTotal(defaultDimension);
             param.color = color;
             param.marker = SerieHelper.GetItemMarker(serie, serieData, marker);
             param.itemFormatter = itemFormatter;
@@ -592,6 +593,25 @@ namespace XCharts.Runtime
             param.columns.Add(ignore?ignoreDataDefaultContent : ChartCached.NumberToStr(param.value, param.numericFormatter));
 
             paramList.Add(param);
+        }
+
+        public void DrawLabelLineSymbol(VertexHelper vh, LabelLine labelLine, Vector3 startPos, Vector3 endPos, Color32 defaultColor)
+        {
+            if (labelLine.startSymbol != null && labelLine.startSymbol.show)
+            {
+                DrawSymbol(vh, labelLine.startSymbol, startPos, defaultColor);
+            }
+            if (labelLine.endSymbol != null && labelLine.endSymbol.show)
+            {
+                DrawSymbol(vh, labelLine.endSymbol, endPos, defaultColor);
+            }
+        }
+
+        private void DrawSymbol(VertexHelper vh, SymbolStyle symbol, Vector3 pos, Color32 defaultColor)
+        {
+            var color = symbol.GetColor(defaultColor);
+            chart.DrawSymbol(vh, symbol.type, symbol.size, 1, pos,
+                color, color, ColorUtil.clearColor32, color, symbol.gap, null);
         }
     }
 }

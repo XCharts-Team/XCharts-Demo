@@ -35,7 +35,7 @@ namespace XCharts.Demo
         {
             var infos = JsonHelper.GetJsonArray<JsonInfo>(json);
             m_Chart.ClearData();
-            var legend = m_Chart.GetOrAddChartComponent<Legend>();
+            var legend = m_Chart.EnsureChartComponent<Legend>();
             legend.ClearData();
             legend.AddData("up");
             legend.AddData("down");

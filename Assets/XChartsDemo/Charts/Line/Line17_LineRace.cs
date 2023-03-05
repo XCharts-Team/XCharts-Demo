@@ -69,7 +69,7 @@ namespace XCharts.Demo
                 serie.symbol.show = false;
                 serie.animation.fadeInDelay = 0;
                 serie.animation.fadeInDuration = 10000;
-                serie.AddExtraComponent<EndLabelStyle>();
+                serie.EnsureComponent<EndLabelStyle>();
             }
             for (int i = 1; i < temp.Length; i++)
             {

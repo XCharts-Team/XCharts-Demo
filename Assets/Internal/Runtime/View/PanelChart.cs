@@ -2,11 +2,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 using XCharts.Runtime;
+using XCharts.Runtime.UI;
 
 namespace XChartsDemo
 {
     [DisallowMultipleComponent]
-    [ExecuteInEditMode]
+    //[ExecuteInEditMode]
     public class PanelChart : MonoBehaviour
     {
         [SerializeField] public int selectedModuleIndex = -1;
@@ -253,7 +254,7 @@ namespace XChartsDemo
 
         private void InitChartThumb(ChartModule module, GameObject prefab, int index)
         {
-            if (prefab != null)
+            if (prefab != null && module.panel != null)
             {
                 GameObject obj;
                 if (module.panel.transform.Find(prefab.name))
@@ -261,7 +262,7 @@ namespace XChartsDemo
                 else
                     obj = UIUtil.Instantiate(m_ThumbClone, module.panel.transform, prefab.name);
                 obj.SetActive(true);
-                var thumb = ChartHelper.GetOrAddComponent<ChartThumb>(obj);
+                var thumb = ChartHelper.EnsureComponent<ChartThumb>(obj);
                 module.chartThumbs.Add(thumb);
                 thumb.index = index;
                 thumb.BindPrefab(prefab);
@@ -375,6 +376,11 @@ namespace XChartsDemo
             m_DetailChartDescBackground.color = m_SelectedTheme == ThemeType.Dark?(Color) new Color32(16, 12, 42, 255) : Color.white;
             var charts = (m_SelectedPanel == null ? transform : m_SelectedPanel.transform).GetComponentsInChildren<BaseChart>();
             foreach (var chart in charts)
+            {
+                chart.UpdateTheme(theme);
+            }
+            var widgets = (m_SelectedPanel == null ? transform : m_SelectedPanel.transform).GetComponentsInChildren<UIComponent>();
+            foreach (var chart in widgets)
             {
                 chart.UpdateTheme(theme);
             }

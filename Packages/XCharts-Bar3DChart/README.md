@@ -1,10 +1,12 @@
-# XCharts-Bar3DChart
+# Bar3DChart 3D柱图
 
 XCharts的付费扩展图表 - 3D柱图。
 
+![bar3d](Documentation~/zh/img/bar3d.png)
+
 ## 许可
 
-扩展图表，需付费购买后才获得使用许可。尊重劳动成果，不传播购买内容。
+扩展图表，需付费购买后才获得使用许可。
 
 ## 教程
 
@@ -12,10 +14,22 @@ XCharts的付费扩展图表 - 3D柱图。
 
 ## 文档
 
-[API](Documentation/API-ZH.md)  
-[配置项手册](Documentation/Configuration-ZH.md)  
+[API](Documentation~/zh/api.md)  
+[配置项手册](Documentation~/zh/configuration.md)  
 
 ## 日志
+
+### v3.6.0
+
+* (2023.02.14) 同步`XCharts v3.6.0`
+* (2023.02.14) 增加`Bar3DStyle`的`topColor`、`bottomColor`和`sideColor`参数支持
+
+### v3.5.0
+
+* (2022.11.29) 增加`Serie`的`barMaxWidth`参数支持
+* (2022.11.27) 增加`Serie`的`ItemStyle`的`backgroundColor`参数支持
+* (2022.11.27) 增加`Serie`的`colorBy`的支持
+* (2022.11.27) 更新文档
 
 ### v3.4.0
 

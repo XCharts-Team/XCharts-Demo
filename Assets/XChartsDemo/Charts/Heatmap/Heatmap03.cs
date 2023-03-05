@@ -45,12 +45,12 @@ namespace XCharts.Demo
                 if (info.AQHI > max) max = info.AQHI;
             }
             xData.Sort();
-            var xAxis = m_Chart.GetOrAddChartComponent<XAxis>();
+            var xAxis = m_Chart.EnsureChartComponent<XAxis>();
             xAxis.data = xData;
-            var yAxis = m_Chart.GetOrAddChartComponent<YAxis>();
+            var yAxis = m_Chart.EnsureChartComponent<YAxis>();
             yAxis.data = yData;
 
-            var visualMap = m_Chart.GetOrAddChartComponent<VisualMap>();
+            var visualMap = m_Chart.EnsureChartComponent<VisualMap>();
             var colors = new List<string>
             {
                 "#174c83",

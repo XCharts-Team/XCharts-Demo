@@ -54,7 +54,7 @@ namespace XCharts.Demo
                 m_Chart.AddXAxisData(date);
                 m_Chart.AddData(0, i, open, close, lowest, highest, trend);
                 var serieData = m_Chart.AddData(1, volumn);
-                var itemStyle = serieData.GetOrAddComponent<ItemStyle>();
+                var itemStyle = serieData.EnsureComponent<ItemStyle>();
                 itemStyle.color = close >= open ?
                     m_Chart.theme.serie.candlestickColor :
                     m_Chart.theme.serie.candlestickColor0;
