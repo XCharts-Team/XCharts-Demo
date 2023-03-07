@@ -28,7 +28,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 9060989824105346337}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -65,6 +66,36 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_EnableTextMeshPro: 0
+  m_ChartName: 
+  m_Theme:
+    m_Show: 1
+    m_SharedTheme: {fileID: 11400000, guid: e1dc23a10de1e4c5dbfbaf74c4dfd218, type: 2}
+    m_TransparentBackground: 0
+    m_EnableCustomTheme: 0
+    m_CustomFont: {fileID: 0}
+    m_CustomBackgroundColor:
+      serializedVersion: 2
+      rgba: 0
+    m_CustomColorPalette: []
+  m_Settings:
+    m_Show: 1
+    m_MaxPainter: 10
+    m_ReversePainter: 0
+    m_BasePainterMaterial: {fileID: 0}
+    m_SeriePainterMaterial: {fileID: 0}
+    m_UpperPainterMaterial: {fileID: 0}
+    m_TopPainterMaterial: {fileID: 0}
+    m_LineSmoothStyle: 3
+    m_LineSmoothness: 2
+    m_LineSegmentDistance: 3
+    m_CicleSmoothness: 2
+    m_LegendIconLineWidth: 2
+    m_LegendIconCornerRadius:
+    - 0.25
+    - 0.25
+    - 0.25
+    - 0.25
+    m_AxisMaxSplitNumber: 50
   m_DebugInfo:
     m_Show: 0
     m_ShowDebugInfo: 0
@@ -118,36 +149,6 @@ MonoBehaviour:
         m_FontStyle: 0
         m_LineSpacing: 1
         m_Alignment: 4
-  m_ChartName: 
-  m_Theme:
-    m_Show: 1
-    m_SharedTheme: {fileID: 11400000, guid: e1dc23a10de1e4c5dbfbaf74c4dfd218, type: 2}
-    m_TransparentBackground: 0
-    m_EnableCustomTheme: 0
-    m_CustomFont: {fileID: 0}
-    m_CustomBackgroundColor:
-      serializedVersion: 2
-      rgba: 0
-    m_CustomColorPalette: []
-  m_Settings:
-    m_Show: 1
-    m_MaxPainter: 10
-    m_ReversePainter: 0
-    m_BasePainterMaterial: {fileID: 0}
-    m_SeriePainterMaterial: {fileID: 0}
-    m_UpperPainterMaterial: {fileID: 0}
-    m_TopPainterMaterial: {fileID: 0}
-    m_LineSmoothStyle: 3
-    m_LineSmoothness: 2
-    m_LineSegmentDistance: 3
-    m_CicleSmoothness: 2
-    m_LegendIconLineWidth: 2
-    m_LegendIconCornerRadius:
-    - 0.25
-    - 0.25
-    - 0.25
-    - 0.25
-    m_AxisMaxSplitNumber: 50
   m_AngleAxes: []
   m_Backgrounds: []
   m_DataZooms: []
@@ -282,6 +283,7 @@ MonoBehaviour:
   - m_Show: 1
     m_Type: 2
     m_Trigger: 0
+    m_Position: 0
     m_ItemFormatter: 
     m_TitleFormatter: 
     m_Marker: "\u25CF"
@@ -301,9 +303,7 @@ MonoBehaviour:
     m_BackgroundType: 0
     m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
     m_BorderWidth: 2
-    m_FixedXEnable: 0
     m_FixedX: 0
-    m_FixedYEnable: 0
     m_FixedY: 0
     m_TitleHeight: 25
     m_ItemHeight: 25
@@ -325,54 +325,6 @@ MonoBehaviour:
       m_Width: 0
       m_Length: 0
       m_Opacity: 1
-    m_IndicatorLabelStyle:
-      m_Show: 1
-      m_Position: 0
-      m_AutoOffset: 0
-      m_Offset: {x: 0, y: 0, z: 0}
-      m_Rotate: 0
-      m_Distance: 0
-      m_Formatter: 
-      m_NumericFormatter: 
-      m_Width: 0
-      m_Height: 0
-      m_Icon:
-        m_Show: 0
-        m_Layer: 0
-        m_Align: 1
-        m_Sprite: {fileID: 0}
-        m_Type: 0
-        m_Color: {r: 1, g: 1, b: 1, a: 1}
-        m_Width: 20
-        m_Height: 20
-        m_Offset: {x: 0, y: 0, z: 0}
-        m_AutoHideWhenLabelEmpty: 0
-      m_Background:
-        m_Show: 1
-        m_Sprite: {fileID: 0}
-        m_Type: 0
-        m_AutoColor: 0
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_Width: 0
-        m_Height: 0
-      m_TextPadding:
-        m_Show: 1
-        m_Top: 2
-        m_Right: 4
-        m_Left: 4
-        m_Bottom: 2
-      m_TextStyle:
-        m_Show: 1
-        m_Font: {fileID: 0}
-        m_AutoWrap: 0
-        m_AutoAlign: 1
-        m_Rotate: 0
-        m_AutoColor: 0
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_LineSpacing: 1
-        m_Alignment: 4
     m_TitleLabelStyle:
       m_Show: 1
       m_Position: 0
@@ -812,9 +764,97 @@ MonoBehaviour:
       m_Interval: 0
       m_Distance: 0
       m_AutoColor: 0
+      m_ShowStartLine: 1
+      m_ShowEndLine: 1
     m_SplitArea:
       m_Show: 0
       m_Color: []
+    m_MinorTick:
+      m_Show: 0
+      m_LineStyle:
+        m_Show: 1
+        m_Type: 0
+        m_Color:
+          serializedVersion: 2
+          rgba: 0
+        m_ToColor:
+          serializedVersion: 2
+          rgba: 0
+        m_ToColor2:
+          serializedVersion: 2
+          rgba: 0
+        m_Width: 0
+        m_Length: 0
+        m_Opacity: 1
+      m_SplitNumber: 5
+      m_AutoColor: 0
+    m_MinorSplitLine:
+      m_Show: 0
+      m_LineStyle:
+        m_Show: 1
+        m_Type: 0
+        m_Color:
+          serializedVersion: 2
+          rgba: 0
+        m_ToColor:
+          serializedVersion: 2
+          rgba: 0
+        m_ToColor2:
+          serializedVersion: 2
+          rgba: 0
+        m_Width: 0
+        m_Length: 0
+        m_Opacity: 1
+      m_Distance: 0
+      m_AutoColor: 0
+    m_IndicatorLabel:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
+      m_Rotate: 0
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: f2
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 0
+        m_Right: 2
+        m_Left: 2
+        m_Bottom: 0
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
   m_YAxes:
   - m_Show: 1
     m_Type: 0
@@ -1020,9 +1060,97 @@ MonoBehaviour:
       m_Interval: 0
       m_Distance: 0
       m_AutoColor: 0
+      m_ShowStartLine: 1
+      m_ShowEndLine: 1
     m_SplitArea:
       m_Show: 0
       m_Color: []
+    m_MinorTick:
+      m_Show: 0
+      m_LineStyle:
+        m_Show: 1
+        m_Type: 0
+        m_Color:
+          serializedVersion: 2
+          rgba: 0
+        m_ToColor:
+          serializedVersion: 2
+          rgba: 0
+        m_ToColor2:
+          serializedVersion: 2
+          rgba: 0
+        m_Width: 0
+        m_Length: 0
+        m_Opacity: 1
+      m_SplitNumber: 5
+      m_AutoColor: 0
+    m_MinorSplitLine:
+      m_Show: 0
+      m_LineStyle:
+        m_Show: 1
+        m_Type: 0
+        m_Color:
+          serializedVersion: 2
+          rgba: 0
+        m_ToColor:
+          serializedVersion: 2
+          rgba: 0
+        m_ToColor2:
+          serializedVersion: 2
+          rgba: 0
+        m_Width: 0
+        m_Length: 0
+        m_Opacity: 1
+      m_Distance: 0
+      m_AutoColor: 0
+    m_IndicatorLabel:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
+      m_Rotate: 0
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: f2
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 0
+        m_Right: 2
+        m_Left: 2
+        m_Bottom: 0
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
   m_SingleAxes: []
   m_Parallels: []
   m_ParallelAxes: []
@@ -1042,14 +1170,16 @@ MonoBehaviour:
     m_LineArrows: []
     m_AreaStyles: []
     m_TitleStyles: []
-    m_EmphasisItemStyles: []
-    m_EmphasisLabels: []
-    m_EmphasisLabelLines: []
+    m_EmphasisStyles: []
+    m_BlurStyles: []
+    m_SelectStyles: []
     m_Index: 0
     m_Show: 1
     m_CoordSystem: GridCoord
     m_SerieType: Scatter
     m_SerieName: serie0
+    m_State: 0
+    m_ColorBy: 0
     m_Stack: 
     m_XAxisIndex: 0
     m_YAxisIndex: 0
@@ -1065,9 +1195,11 @@ MonoBehaviour:
     m_SampleType: 1
     m_SampleAverage: 0
     m_LineType: 0
+    m_SmoothLimit: 1
     m_BarType: 0
     m_BarPercentStack: 0
     m_BarWidth: 0.6
+    m_BarMaxWidth: 0
     m_BarGap: 0.3
     m_BarZebraWidth: 4
     m_BarZebraGap: 2
@@ -1139,14 +1271,14 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       m_SizeType: 0
-      m_SelectedSize: 14
       m_DataIndex: 1
       m_DataScale: 1
-      m_SelectedDataScale: 1.5
       m_StartIndex: 0
       m_Interval: 0
       m_ForceShowLast: 0
       m_Repeat: 0
+      m_MinSize: 0
+      m_MaxSize: 0
     m_Animation:
       m_Enable: 1
       m_Type: 0
@@ -1159,6 +1291,7 @@ MonoBehaviour:
       m_DataChangeEnable: 1
       m_DataChangeDuration: 500
       m_ActualDuration: 0
+      m_UnscaledTime: 0
     m_ItemStyle:
       m_Show: 1
       m_Color:
@@ -1171,6 +1304,9 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       m_ToColor2:
+        serializedVersion: 2
+        rgba: 0
+      m_MarkColor:
         serializedVersion: 2
         rgba: 0
       m_BackgroundColor:
@@ -1209,6 +1345,7 @@ MonoBehaviour:
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1216,19 +1353,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 3.275154
       - 2.957587
-    - m_Index: 0
+    - m_Index: 1
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1236,19 +1374,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -3.344465
       - 2.603513
-    - m_Index: 0
+    - m_Index: 2
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1256,19 +1395,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 0.355083
       - -3.376585
-    - m_Index: 0
+    - m_Index: 3
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1276,19 +1416,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 1.852435
       - 3.547351
-    - m_Index: 0
+    - m_Index: 4
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1296,19 +1437,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -2.078973
       - 2.552013
-    - m_Index: 0
+    - m_Index: 5
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1316,19 +1458,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -0.993756
       - -0.884433
-    - m_Index: 0
+    - m_Index: 6
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1336,19 +1479,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2.682252
       - 4.007573
-    - m_Index: 0
+    - m_Index: 7
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1356,19 +1500,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -3.087776
       - 2.878713
-    - m_Index: 0
+    - m_Index: 8
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1376,19 +1521,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -1.565978
       - -1.256985
-    - m_Index: 0
+    - m_Index: 9
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1396,19 +1542,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2.441611
       - 0.444826
-    - m_Index: 0
+    - m_Index: 10
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1416,19 +1563,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -0.659487
       - 3.111284
-    - m_Index: 0
+    - m_Index: 11
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1436,19 +1584,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -0.459601
       - -2.618005
-    - m_Index: 0
+    - m_Index: 12
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1456,19 +1605,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2.17768
       - 2.387793
-    - m_Index: 0
+    - m_Index: 13
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1476,19 +1626,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -2.920969
       - 2.917485
-    - m_Index: 0
+    - m_Index: 14
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1496,19 +1647,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -0.028814
       - -4.168078
-    - m_Index: 0
+    - m_Index: 15
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1516,19 +1668,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 3.625746
       - 2.119041
-    - m_Index: 0
+    - m_Index: 16
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1536,19 +1689,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -3.912363
       - 1.325108
-    - m_Index: 0
+    - m_Index: 17
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1556,19 +1710,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -0.551694
       - -2.814223
-    - m_Index: 0
+    - m_Index: 18
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1576,19 +1731,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2.855808
       - 3.483301
-    - m_Index: 0
+    - m_Index: 19
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1596,19 +1752,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -3.594448
       - 2.856651
-    - m_Index: 0
+    - m_Index: 20
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1616,19 +1773,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 0.421993
       - -2.372646
-    - m_Index: 0
+    - m_Index: 21
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1636,19 +1794,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 1.650821
       - 3.407572
-    - m_Index: 0
+    - m_Index: 22
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1656,19 +1815,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -2.082902
       - 3.384412
-    - m_Index: 0
+    - m_Index: 23
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1676,19 +1836,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -0.718809
       - -2.492514
-    - m_Index: 0
+    - m_Index: 24
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1696,19 +1857,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 4.513623
       - 3.841029
-    - m_Index: 0
+    - m_Index: 25
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1716,19 +1878,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -4.822011
       - 4.607049
-    - m_Index: 0
+    - m_Index: 26
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1736,19 +1899,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -0.656297
       - -1.449872
-    - m_Index: 0
+    - m_Index: 27
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1756,19 +1920,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 1.919901
       - 4.439368
-    - m_Index: 0
+    - m_Index: 28
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1776,19 +1941,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -3.287749
       - 3.918836
-    - m_Index: 0
+    - m_Index: 29
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1796,19 +1962,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -1.576936
       - -2.977622
-    - m_Index: 0
+    - m_Index: 30
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1816,19 +1983,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 3.598143
       - 1.97597
-    - m_Index: 0
+    - m_Index: 31
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1836,19 +2004,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -3.977329
       - 4.900932
-    - m_Index: 0
+    - m_Index: 32
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1856,19 +2025,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -1.79108
       - -2.184517
-    - m_Index: 0
+    - m_Index: 33
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1876,19 +2046,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 3.914654
       - 3.559303
-    - m_Index: 0
+    - m_Index: 34
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1896,19 +2067,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -1.910108
       - 4.166946
-    - m_Index: 0
+    - m_Index: 35
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1916,19 +2088,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -1.226597
       - -3.317889
-    - m_Index: 0
+    - m_Index: 36
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1936,19 +2109,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 1.148946
       - 3.345138
-    - m_Index: 0
+    - m_Index: 37
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1956,19 +2130,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -2.113864
       - 3.548172
-    - m_Index: 0
+    - m_Index: 38
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1976,19 +2151,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 0.845762
       - -3.589788
-    - m_Index: 0
+    - m_Index: 39
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1996,19 +2172,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2.629062
       - 3.535831
-    - m_Index: 0
+    - m_Index: 40
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2016,19 +2193,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -1.640717
       - 2.990517
-    - m_Index: 0
+    - m_Index: 41
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2036,19 +2214,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -1.881012
       - -2.485405
-    - m_Index: 0
+    - m_Index: 42
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2056,19 +2235,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 4.606999
       - 3.510312
-    - m_Index: 0
+    - m_Index: 43
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2076,19 +2256,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -4.366462
       - 4.023316
-    - m_Index: 0
+    - m_Index: 44
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2096,19 +2277,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 0.765015
       - -3.00127
-    - m_Index: 0
+    - m_Index: 45
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2116,19 +2298,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 3.121904
       - 2.173988
-    - m_Index: 0
+    - m_Index: 46
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2136,19 +2319,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -4.025139
       - 4.65231
-    - m_Index: 0
+    - m_Index: 47
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2156,19 +2340,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -0.559558
       - -3.840539
-    - m_Index: 0
+    - m_Index: 48
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2176,19 +2361,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 4.376754
       - 4.863579
-    - m_Index: 0
+    - m_Index: 49
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2196,19 +2382,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -1.874308
       - 4.032237
-    - m_Index: 0
+    - m_Index: 50
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2216,19 +2403,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -0.089337
       - -3.026809
-    - m_Index: 0
+    - m_Index: 51
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2236,19 +2424,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 3.997787
       - 2.518662
-    - m_Index: 0
+    - m_Index: 52
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2256,19 +2445,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -3.082978
       - 2.884822
-    - m_Index: 0
+    - m_Index: 53
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2276,19 +2466,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 0.845235
       - -3.454465
-    - m_Index: 0
+    - m_Index: 54
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2296,19 +2487,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 1.327224
       - 3.358778
-    - m_Index: 0
+    - m_Index: 55
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2316,19 +2508,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -2.889949
       - 3.596178
-    - m_Index: 0
+    - m_Index: 56
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2336,19 +2529,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -0.966018
       - -2.839827
-    - m_Index: 0
+    - m_Index: 57
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2356,19 +2550,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2.960769
       - 3.079555
-    - m_Index: 0
+    - m_Index: 58
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2376,19 +2571,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - -3.275518
       - 1.577068
-    - m_Index: 0
+    - m_Index: 59
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2396,9 +2592,9 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 0.639276
       - -3.41284
@@ -2406,3 +2602,110 @@ MonoBehaviour:
   m_SerieSimplifiedLines: []
   m_SerieSimplifiedBars: []
   m_SerieSimplifiedCandlesticks: []
+--- !u!1 &3029924571675385405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9060989824105346337}
+  m_Layer: 0
+  m_Name: serie_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &9060989824105346337
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3029924571675385405}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1408297857582676829}
+  - {fileID: 4299621953347515673}
+  m_Father: {fileID: 2497711779381218539}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1200, y: 800}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &3088752093803106682
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1408297857582676829}
+  m_Layer: 0
+  m_Name: label
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1408297857582676829
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3088752093803106682}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9060989824105346337}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1200, y: 800}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &7073409754417216143
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4299621953347515673}
+  m_Layer: 0
+  m_Name: title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4299621953347515673
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7073409754417216143}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9060989824105346337}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1200, y: 800}
+  m_Pivot: {x: 0.5, y: 0.5}

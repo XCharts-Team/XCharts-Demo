@@ -120,6 +120,11 @@ namespace XCharts.Runtime
         /// </summary>
         public Action<PointerEventData, int> onPointerClickBar { set { m_OnPointerClickBar = value; m_ForceOpenRaycastTarget = true; } get { return m_OnPointerClickBar; } }
         /// <summary>
+        /// the callback function of click bar.
+        /// |点击柱形图柱条回调。参数：eventData, serieIndex, dataIndex
+        /// </summary>
+        public Action<PointerEventData, int, int> onPointerClickLine { set { m_OnPointerClickLine = value; m_ForceOpenRaycastTarget = true; } get { return m_OnPointerClickLine; } }
+        /// <summary>
         /// 坐标轴变更数据索引时回调。参数：axis, dataIndex/dataValue
         /// </summary>
         public Action<Axis, double> onAxisPointerValueChanged { set { m_OnAxisPointerValueChanged = value; } get { return m_OnAxisPointerValueChanged; } }

@@ -28,7 +28,12 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 5426476250919811246}
+  - {fileID: 839359895086981065}
+  - {fileID: 5053603332431324380}
+  - {fileID: 4042684430861043066}
+  - {fileID: 2429257845286611559}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -65,6 +70,36 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_EnableTextMeshPro: 0
+  m_ChartName: 
+  m_Theme:
+    m_Show: 1
+    m_SharedTheme: {fileID: 11400000, guid: e1dc23a10de1e4c5dbfbaf74c4dfd218, type: 2}
+    m_TransparentBackground: 0
+    m_EnableCustomTheme: 0
+    m_CustomFont: {fileID: 0}
+    m_CustomBackgroundColor:
+      serializedVersion: 2
+      rgba: 0
+    m_CustomColorPalette: []
+  m_Settings:
+    m_Show: 1
+    m_MaxPainter: 10
+    m_ReversePainter: 0
+    m_BasePainterMaterial: {fileID: 0}
+    m_SeriePainterMaterial: {fileID: 0}
+    m_UpperPainterMaterial: {fileID: 0}
+    m_TopPainterMaterial: {fileID: 0}
+    m_LineSmoothStyle: 3
+    m_LineSmoothness: 2
+    m_LineSegmentDistance: 3
+    m_CicleSmoothness: 2
+    m_LegendIconLineWidth: 2
+    m_LegendIconCornerRadius:
+    - 0.25
+    - 0.25
+    - 0.25
+    - 0.25
+    m_AxisMaxSplitNumber: 50
   m_DebugInfo:
     m_Show: 0
     m_ShowDebugInfo: 0
@@ -118,36 +153,6 @@ MonoBehaviour:
         m_FontStyle: 0
         m_LineSpacing: 1
         m_Alignment: 4
-  m_ChartName: 
-  m_Theme:
-    m_Show: 1
-    m_SharedTheme: {fileID: 11400000, guid: e1dc23a10de1e4c5dbfbaf74c4dfd218, type: 2}
-    m_TransparentBackground: 0
-    m_EnableCustomTheme: 0
-    m_CustomFont: {fileID: 0}
-    m_CustomBackgroundColor:
-      serializedVersion: 2
-      rgba: 0
-    m_CustomColorPalette: []
-  m_Settings:
-    m_Show: 1
-    m_MaxPainter: 10
-    m_ReversePainter: 0
-    m_BasePainterMaterial: {fileID: 0}
-    m_SeriePainterMaterial: {fileID: 0}
-    m_UpperPainterMaterial: {fileID: 0}
-    m_TopPainterMaterial: {fileID: 0}
-    m_LineSmoothStyle: 3
-    m_LineSmoothness: 2
-    m_LineSegmentDistance: 3
-    m_CicleSmoothness: 2
-    m_LegendIconLineWidth: 2
-    m_LegendIconCornerRadius:
-    - 0.25
-    - 0.25
-    - 0.25
-    - 0.25
-    m_AxisMaxSplitNumber: 50
   m_AngleAxes: []
   m_Backgrounds: []
   m_DataZooms: []
@@ -248,6 +253,7 @@ MonoBehaviour:
       m_Right: 2
       m_Left: 2
       m_Bottom: 0
+    m_Positions: []
   m_MarkLines: []
   m_MarkAreas: []
   m_Polars: []
@@ -364,6 +370,7 @@ MonoBehaviour:
   - m_Show: 1
     m_Type: 0
     m_Trigger: 0
+    m_Position: 0
     m_ItemFormatter: 
     m_TitleFormatter: 
     m_Marker: "\u25CF"
@@ -383,9 +390,7 @@ MonoBehaviour:
     m_BackgroundType: 0
     m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
     m_BorderWidth: 2
-    m_FixedXEnable: 0
     m_FixedX: 0
-    m_FixedYEnable: 0
     m_FixedY: 0
     m_TitleHeight: 25
     m_ItemHeight: 25
@@ -407,54 +412,6 @@ MonoBehaviour:
       m_Width: 0
       m_Length: 0
       m_Opacity: 1
-    m_IndicatorLabelStyle:
-      m_Show: 1
-      m_Position: 0
-      m_AutoOffset: 0
-      m_Offset: {x: 0, y: 0, z: 0}
-      m_Rotate: 0
-      m_Distance: 0
-      m_Formatter: 
-      m_NumericFormatter: 
-      m_Width: 0
-      m_Height: 0
-      m_Icon:
-        m_Show: 0
-        m_Layer: 0
-        m_Align: 1
-        m_Sprite: {fileID: 0}
-        m_Type: 0
-        m_Color: {r: 1, g: 1, b: 1, a: 1}
-        m_Width: 20
-        m_Height: 20
-        m_Offset: {x: 0, y: 0, z: 0}
-        m_AutoHideWhenLabelEmpty: 0
-      m_Background:
-        m_Show: 1
-        m_Sprite: {fileID: 0}
-        m_Type: 0
-        m_AutoColor: 0
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_Width: 0
-        m_Height: 0
-      m_TextPadding:
-        m_Show: 1
-        m_Top: 2
-        m_Right: 4
-        m_Left: 4
-        m_Bottom: 2
-      m_TextStyle:
-        m_Show: 1
-        m_Font: {fileID: 0}
-        m_AutoWrap: 0
-        m_AutoAlign: 1
-        m_Rotate: 0
-        m_AutoColor: 0
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_LineSpacing: 1
-        m_Alignment: 4
     m_TitleLabelStyle:
       m_Show: 1
       m_Position: 0
@@ -858,9 +815,97 @@ MonoBehaviour:
       m_Interval: 0
       m_Distance: 0
       m_AutoColor: 0
+      m_ShowStartLine: 1
+      m_ShowEndLine: 1
     m_SplitArea:
       m_Show: 0
       m_Color: []
+    m_MinorTick:
+      m_Show: 0
+      m_LineStyle:
+        m_Show: 1
+        m_Type: 0
+        m_Color:
+          serializedVersion: 2
+          rgba: 0
+        m_ToColor:
+          serializedVersion: 2
+          rgba: 0
+        m_ToColor2:
+          serializedVersion: 2
+          rgba: 0
+        m_Width: 0
+        m_Length: 0
+        m_Opacity: 1
+      m_SplitNumber: 5
+      m_AutoColor: 0
+    m_MinorSplitLine:
+      m_Show: 0
+      m_LineStyle:
+        m_Show: 1
+        m_Type: 0
+        m_Color:
+          serializedVersion: 2
+          rgba: 0
+        m_ToColor:
+          serializedVersion: 2
+          rgba: 0
+        m_ToColor2:
+          serializedVersion: 2
+          rgba: 0
+        m_Width: 0
+        m_Length: 0
+        m_Opacity: 1
+      m_Distance: 0
+      m_AutoColor: 0
+    m_IndicatorLabel:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
+      m_Rotate: 0
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: f2
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 0
+        m_Right: 2
+        m_Left: 2
+        m_Bottom: 0
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
   m_YAxes:
   - m_Show: 1
     m_Type: 0
@@ -1066,9 +1111,97 @@ MonoBehaviour:
       m_Interval: 0
       m_Distance: 0
       m_AutoColor: 0
+      m_ShowStartLine: 1
+      m_ShowEndLine: 1
     m_SplitArea:
       m_Show: 0
       m_Color: []
+    m_MinorTick:
+      m_Show: 0
+      m_LineStyle:
+        m_Show: 1
+        m_Type: 0
+        m_Color:
+          serializedVersion: 2
+          rgba: 0
+        m_ToColor:
+          serializedVersion: 2
+          rgba: 0
+        m_ToColor2:
+          serializedVersion: 2
+          rgba: 0
+        m_Width: 0
+        m_Length: 0
+        m_Opacity: 1
+      m_SplitNumber: 5
+      m_AutoColor: 0
+    m_MinorSplitLine:
+      m_Show: 0
+      m_LineStyle:
+        m_Show: 1
+        m_Type: 0
+        m_Color:
+          serializedVersion: 2
+          rgba: 0
+        m_ToColor:
+          serializedVersion: 2
+          rgba: 0
+        m_ToColor2:
+          serializedVersion: 2
+          rgba: 0
+        m_Width: 0
+        m_Length: 0
+        m_Opacity: 1
+      m_Distance: 0
+      m_AutoColor: 0
+    m_IndicatorLabel:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
+      m_Rotate: 0
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: f2
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 0
+        m_Right: 2
+        m_Left: 2
+        m_Bottom: 0
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
   m_SingleAxes: []
   m_Parallels: []
   m_ParallelAxes: []
@@ -1084,14 +1217,16 @@ MonoBehaviour:
     m_LineArrows: []
     m_AreaStyles: []
     m_TitleStyles: []
-    m_EmphasisItemStyles: []
-    m_EmphasisLabels: []
-    m_EmphasisLabelLines: []
+    m_EmphasisStyles: []
+    m_BlurStyles: []
+    m_SelectStyles: []
     m_Index: 0
     m_Show: 1
     m_CoordSystem: GridCoord
     m_SerieType: Line
     m_SerieName: serie0
+    m_State: 0
+    m_ColorBy: 0
     m_Stack: total
     m_XAxisIndex: 0
     m_YAxisIndex: 0
@@ -1107,9 +1242,11 @@ MonoBehaviour:
     m_SampleType: 1
     m_SampleAverage: 0
     m_LineType: 0
+    m_SmoothLimit: 1
     m_BarType: 0
     m_BarPercentStack: 0
     m_BarWidth: 0.6
+    m_BarMaxWidth: 0
     m_BarGap: 0.3
     m_BarZebraWidth: 4
     m_BarZebraGap: 2
@@ -1181,14 +1318,14 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       m_SizeType: 0
-      m_SelectedSize: 0
       m_DataIndex: 1
       m_DataScale: 1
-      m_SelectedDataScale: 1.5
       m_StartIndex: 0
       m_Interval: 0
       m_ForceShowLast: 0
       m_Repeat: 0
+      m_MinSize: 0
+      m_MaxSize: 0
     m_Animation:
       m_Enable: 1
       m_Type: 0
@@ -1201,6 +1338,7 @@ MonoBehaviour:
       m_DataChangeEnable: 1
       m_DataChangeDuration: 500
       m_ActualDuration: 0
+      m_UnscaledTime: 0
     m_ItemStyle:
       m_Show: 1
       m_Color:
@@ -1213,6 +1351,9 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       m_ToColor2:
+        serializedVersion: 2
+        rgba: 0
+      m_MarkColor:
         serializedVersion: 2
         rgba: 0
       m_BackgroundColor:
@@ -1251,6 +1392,7 @@ MonoBehaviour:
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1258,19 +1400,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 0
       - 120
-    - m_Index: 0
+    - m_Index: 1
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1278,19 +1421,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 1
       - 132
-    - m_Index: 0
+    - m_Index: 2
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1298,19 +1442,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2
       - 101
-    - m_Index: 0
+    - m_Index: 3
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1318,19 +1463,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 3
       - 134
-    - m_Index: 0
+    - m_Index: 4
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1338,19 +1484,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 4
       - 90
-    - m_Index: 0
+    - m_Index: 5
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1358,19 +1505,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 5
       - 230
-    - m_Index: 0
+    - m_Index: 6
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1378,9 +1526,9 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 6
       - 210
@@ -1390,14 +1538,16 @@ MonoBehaviour:
     m_LineArrows: []
     m_AreaStyles: []
     m_TitleStyles: []
-    m_EmphasisItemStyles: []
-    m_EmphasisLabels: []
-    m_EmphasisLabelLines: []
+    m_EmphasisStyles: []
+    m_BlurStyles: []
+    m_SelectStyles: []
     m_Index: 1
     m_Show: 1
     m_CoordSystem: GridCoord
     m_SerieType: Line
     m_SerieName: serie1
+    m_State: 0
+    m_ColorBy: 0
     m_Stack: total
     m_XAxisIndex: 0
     m_YAxisIndex: 0
@@ -1413,9 +1563,11 @@ MonoBehaviour:
     m_SampleType: 1
     m_SampleAverage: 0
     m_LineType: 0
+    m_SmoothLimit: 1
     m_BarType: 0
     m_BarPercentStack: 0
     m_BarWidth: 0.6
+    m_BarMaxWidth: 0
     m_BarGap: 0.3
     m_BarZebraWidth: 4
     m_BarZebraGap: 2
@@ -1487,14 +1639,14 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       m_SizeType: 0
-      m_SelectedSize: 0
       m_DataIndex: 1
       m_DataScale: 1
-      m_SelectedDataScale: 1.5
       m_StartIndex: 0
       m_Interval: 0
       m_ForceShowLast: 0
       m_Repeat: 0
+      m_MinSize: 0
+      m_MaxSize: 0
     m_Animation:
       m_Enable: 1
       m_Type: 0
@@ -1507,6 +1659,7 @@ MonoBehaviour:
       m_DataChangeEnable: 1
       m_DataChangeDuration: 500
       m_ActualDuration: 0
+      m_UnscaledTime: 0
     m_ItemStyle:
       m_Show: 1
       m_Color:
@@ -1519,6 +1672,9 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       m_ToColor2:
+        serializedVersion: 2
+        rgba: 0
+      m_MarkColor:
         serializedVersion: 2
         rgba: 0
       m_BackgroundColor:
@@ -1557,6 +1713,7 @@ MonoBehaviour:
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1564,19 +1721,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 0
       - 220
-    - m_Index: 0
+    - m_Index: 1
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1584,19 +1742,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 1
       - 182
-    - m_Index: 0
+    - m_Index: 2
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1604,19 +1763,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2
       - 191
-    - m_Index: 0
+    - m_Index: 3
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1624,19 +1784,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 3
       - 234
-    - m_Index: 0
+    - m_Index: 4
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1644,19 +1805,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 4
       - 290
-    - m_Index: 0
+    - m_Index: 5
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1664,19 +1826,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 5
       - 330
-    - m_Index: 0
+    - m_Index: 6
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1684,9 +1847,9 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 6
       - 310
@@ -1696,14 +1859,16 @@ MonoBehaviour:
     m_LineArrows: []
     m_AreaStyles: []
     m_TitleStyles: []
-    m_EmphasisItemStyles: []
-    m_EmphasisLabels: []
-    m_EmphasisLabelLines: []
+    m_EmphasisStyles: []
+    m_BlurStyles: []
+    m_SelectStyles: []
     m_Index: 2
     m_Show: 1
     m_CoordSystem: GridCoord
     m_SerieType: Line
     m_SerieName: serie2
+    m_State: 0
+    m_ColorBy: 0
     m_Stack: total
     m_XAxisIndex: 0
     m_YAxisIndex: 0
@@ -1719,9 +1884,11 @@ MonoBehaviour:
     m_SampleType: 1
     m_SampleAverage: 0
     m_LineType: 0
+    m_SmoothLimit: 1
     m_BarType: 0
     m_BarPercentStack: 0
     m_BarWidth: 0.6
+    m_BarMaxWidth: 0
     m_BarGap: 0.3
     m_BarZebraWidth: 4
     m_BarZebraGap: 2
@@ -1793,14 +1960,14 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       m_SizeType: 0
-      m_SelectedSize: 0
       m_DataIndex: 1
       m_DataScale: 1
-      m_SelectedDataScale: 1.5
       m_StartIndex: 0
       m_Interval: 0
       m_ForceShowLast: 0
       m_Repeat: 0
+      m_MinSize: 0
+      m_MaxSize: 0
     m_Animation:
       m_Enable: 1
       m_Type: 0
@@ -1813,6 +1980,7 @@ MonoBehaviour:
       m_DataChangeEnable: 1
       m_DataChangeDuration: 500
       m_ActualDuration: 0
+      m_UnscaledTime: 0
     m_ItemStyle:
       m_Show: 1
       m_Color:
@@ -1825,6 +1993,9 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       m_ToColor2:
+        serializedVersion: 2
+        rgba: 0
+      m_MarkColor:
         serializedVersion: 2
         rgba: 0
       m_BackgroundColor:
@@ -1863,6 +2034,7 @@ MonoBehaviour:
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1870,19 +2042,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 0
       - 150
-    - m_Index: 0
+    - m_Index: 1
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1890,19 +2063,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 1
       - 232
-    - m_Index: 0
+    - m_Index: 2
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1910,19 +2084,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2
       - 201
-    - m_Index: 0
+    - m_Index: 3
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1930,19 +2105,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 3
       - 154
-    - m_Index: 0
+    - m_Index: 4
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1950,19 +2126,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 4
       - 190
-    - m_Index: 0
+    - m_Index: 5
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1970,19 +2147,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 5
       - 330
-    - m_Index: 0
+    - m_Index: 6
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1990,9 +2168,9 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 6
       - 410
@@ -2002,14 +2180,16 @@ MonoBehaviour:
     m_LineArrows: []
     m_AreaStyles: []
     m_TitleStyles: []
-    m_EmphasisItemStyles: []
-    m_EmphasisLabels: []
-    m_EmphasisLabelLines: []
+    m_EmphasisStyles: []
+    m_BlurStyles: []
+    m_SelectStyles: []
     m_Index: 3
     m_Show: 1
     m_CoordSystem: GridCoord
     m_SerieType: Line
     m_SerieName: serie3
+    m_State: 0
+    m_ColorBy: 0
     m_Stack: total
     m_XAxisIndex: 0
     m_YAxisIndex: 0
@@ -2025,9 +2205,11 @@ MonoBehaviour:
     m_SampleType: 1
     m_SampleAverage: 0
     m_LineType: 0
+    m_SmoothLimit: 1
     m_BarType: 0
     m_BarPercentStack: 0
     m_BarWidth: 0.6
+    m_BarMaxWidth: 0
     m_BarGap: 0.3
     m_BarZebraWidth: 4
     m_BarZebraGap: 2
@@ -2099,14 +2281,14 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       m_SizeType: 0
-      m_SelectedSize: 0
       m_DataIndex: 1
       m_DataScale: 1
-      m_SelectedDataScale: 1.5
       m_StartIndex: 0
       m_Interval: 0
       m_ForceShowLast: 0
       m_Repeat: 0
+      m_MinSize: 0
+      m_MaxSize: 0
     m_Animation:
       m_Enable: 1
       m_Type: 0
@@ -2119,6 +2301,7 @@ MonoBehaviour:
       m_DataChangeEnable: 1
       m_DataChangeDuration: 500
       m_ActualDuration: 0
+      m_UnscaledTime: 0
     m_ItemStyle:
       m_Show: 1
       m_Color:
@@ -2131,6 +2314,9 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       m_ToColor2:
+        serializedVersion: 2
+        rgba: 0
+      m_MarkColor:
         serializedVersion: 2
         rgba: 0
       m_BackgroundColor:
@@ -2169,6 +2355,7 @@ MonoBehaviour:
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2176,19 +2363,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 0
       - 320
-    - m_Index: 0
+    - m_Index: 1
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2196,19 +2384,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 1
       - 332
-    - m_Index: 0
+    - m_Index: 2
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2216,19 +2405,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2
       - 301
-    - m_Index: 0
+    - m_Index: 3
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2236,19 +2426,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 3
       - 334
-    - m_Index: 0
+    - m_Index: 4
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2256,19 +2447,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 4
       - 390
-    - m_Index: 0
+    - m_Index: 5
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2276,19 +2468,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 5
       - 330
-    - m_Index: 0
+    - m_Index: 6
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2296,9 +2489,9 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 6
       - 320
@@ -2308,14 +2501,16 @@ MonoBehaviour:
     m_LineArrows: []
     m_AreaStyles: []
     m_TitleStyles: []
-    m_EmphasisItemStyles: []
-    m_EmphasisLabels: []
-    m_EmphasisLabelLines: []
+    m_EmphasisStyles: []
+    m_BlurStyles: []
+    m_SelectStyles: []
     m_Index: 4
     m_Show: 1
     m_CoordSystem: GridCoord
     m_SerieType: Line
     m_SerieName: serie4
+    m_State: 0
+    m_ColorBy: 0
     m_Stack: total
     m_XAxisIndex: 0
     m_YAxisIndex: 0
@@ -2331,9 +2526,11 @@ MonoBehaviour:
     m_SampleType: 1
     m_SampleAverage: 0
     m_LineType: 0
+    m_SmoothLimit: 1
     m_BarType: 0
     m_BarPercentStack: 0
     m_BarWidth: 0.6
+    m_BarMaxWidth: 0
     m_BarGap: 0.3
     m_BarZebraWidth: 4
     m_BarZebraGap: 2
@@ -2405,14 +2602,14 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       m_SizeType: 0
-      m_SelectedSize: 0
       m_DataIndex: 1
       m_DataScale: 1
-      m_SelectedDataScale: 1.5
       m_StartIndex: 0
       m_Interval: 0
       m_ForceShowLast: 0
       m_Repeat: 0
+      m_MinSize: 0
+      m_MaxSize: 0
     m_Animation:
       m_Enable: 1
       m_Type: 0
@@ -2425,6 +2622,7 @@ MonoBehaviour:
       m_DataChangeEnable: 1
       m_DataChangeDuration: 500
       m_ActualDuration: 0
+      m_UnscaledTime: 0
     m_ItemStyle:
       m_Show: 1
       m_Color:
@@ -2437,6 +2635,9 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       m_ToColor2:
+        serializedVersion: 2
+        rgba: 0
+      m_MarkColor:
         serializedVersion: 2
         rgba: 0
       m_BackgroundColor:
@@ -2475,6 +2676,7 @@ MonoBehaviour:
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2482,19 +2684,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 0
       - 820
-    - m_Index: 0
+    - m_Index: 1
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2502,19 +2705,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 1
       - 932
-    - m_Index: 0
+    - m_Index: 2
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2522,19 +2726,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2
       - 901
-    - m_Index: 0
+    - m_Index: 3
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2542,19 +2747,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 3
       - 934
-    - m_Index: 0
+    - m_Index: 4
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2562,19 +2768,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 4
       - 1290
-    - m_Index: 0
+    - m_Index: 5
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2582,19 +2789,20 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 5
       - 1330
-    - m_Index: 0
+    - m_Index: 6
       m_Name: 
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2602,9 +2810,9 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 6
       - 1320
@@ -2616,3 +2824,538 @@ MonoBehaviour:
   m_SerieSimplifiedLines: []
   m_SerieSimplifiedBars: []
   m_SerieSimplifiedCandlesticks: []
+--- !u!1 &2119548582889367138
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4042684430861043066}
+  m_Layer: 5
+  m_Name: serie_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4042684430861043066
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119548582889367138}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2505279344473708861}
+  - {fileID: 925538591947489189}
+  m_Father: {fileID: 224147804559871088}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1200, y: 800}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2723560526532607845
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2429257845286611559}
+  m_Layer: 5
+  m_Name: serie_4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2429257845286611559
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2723560526532607845}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 57750528168872224}
+  - {fileID: 316004479689307139}
+  m_Father: {fileID: 224147804559871088}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1200, y: 800}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2860720539454677447
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5426476250919811246}
+  m_Layer: 5
+  m_Name: serie_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5426476250919811246
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2860720539454677447}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2832646639082944275}
+  - {fileID: 572859380588645840}
+  m_Father: {fileID: 224147804559871088}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1200, y: 800}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &3669164607822707283
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1858503889535145681}
+  m_Layer: 5
+  m_Name: label
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1858503889535145681
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3669164607822707283}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5053603332431324380}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1200, y: 800}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &3812982256774934763
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 839359895086981065}
+  m_Layer: 5
+  m_Name: serie_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &839359895086981065
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3812982256774934763}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1710979242315819943}
+  - {fileID: 6619786295208258624}
+  m_Father: {fileID: 224147804559871088}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1200, y: 800}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &4359727349122539149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1611215019921897858}
+  m_Layer: 5
+  m_Name: title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1611215019921897858
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4359727349122539149}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5053603332431324380}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1200, y: 800}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &5056134921495000938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1710979242315819943}
+  m_Layer: 5
+  m_Name: label
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1710979242315819943
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5056134921495000938}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 839359895086981065}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1200, y: 800}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &5831172305053049275
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 925538591947489189}
+  m_Layer: 5
+  m_Name: title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &925538591947489189
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5831172305053049275}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4042684430861043066}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1200, y: 800}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &6163573414133471201
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6619786295208258624}
+  m_Layer: 5
+  m_Name: title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6619786295208258624
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6163573414133471201}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 839359895086981065}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1200, y: 800}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &7085024204601408882
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 572859380588645840}
+  m_Layer: 5
+  m_Name: title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &572859380588645840
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7085024204601408882}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5426476250919811246}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1200, y: 800}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &7511564650500209209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5053603332431324380}
+  m_Layer: 5
+  m_Name: serie_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5053603332431324380
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7511564650500209209}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1858503889535145681}
+  - {fileID: 1611215019921897858}
+  m_Father: {fileID: 224147804559871088}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1200, y: 800}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &7813284416770447774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2505279344473708861}
+  m_Layer: 5
+  m_Name: label
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2505279344473708861
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7813284416770447774}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4042684430861043066}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1200, y: 800}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &8913785251923555549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2832646639082944275}
+  m_Layer: 5
+  m_Name: label
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2832646639082944275
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8913785251923555549}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5426476250919811246}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1200, y: 800}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &9013500699452406098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 316004479689307139}
+  m_Layer: 5
+  m_Name: title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &316004479689307139
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9013500699452406098}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2429257845286611559}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1200, y: 800}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &9049060181714947018
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 57750528168872224}
+  m_Layer: 5
+  m_Name: label
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &57750528168872224
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9049060181714947018}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2429257845286611559}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1200, y: 800}
+  m_Pivot: {x: 0.5, y: 0.5}

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using XUGL;
 
@@ -95,6 +96,31 @@ namespace XCharts.Runtime
                     lastY = label.transform.localPosition.y;
                 }
             }
+        }
+
+        public override void OnPointerDown(PointerEventData eventData)
+        {
+            if (!serie.context.pointerEnter) return;
+            if(chart.onPointerClickLine == null) return;
+            var selectedIndex = -1;
+            var symbolSize = SerieHelper.GetSysmbolSize(serie, null, chart.theme, chart.theme.serie.lineSymbolSize) * 1.5f;
+            var count = serie.context.dataPoints.Count;
+            for (int i = 0; i < count; i++)
+            {
+                var index = serie.context.dataIndexs[i];
+                var serieData = serie.GetSerieData(index);
+                if (serieData == null)
+                    continue;
+                if (serieData.context.isClip)
+                    continue;
+
+                var pos = serie.context.dataPoints[i];
+                if(Vector2.Distance(pos,chart.pointerPos)<symbolSize){
+                    selectedIndex = i;
+                    break;
+                }
+            }
+            chart.onPointerClickLine(eventData, serie.index, selectedIndex);
         }
     }
 }

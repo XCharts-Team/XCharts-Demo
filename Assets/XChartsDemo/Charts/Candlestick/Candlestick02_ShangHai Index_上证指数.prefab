@@ -1,5 +1,40 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &940035192531108185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7949321891268541144}
+  m_Layer: 0
+  m_Name: title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7949321891268541144
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940035192531108185}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6344713281385410697}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1200, y: 800}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1232364793489074813
 GameObject:
   m_ObjectHideFlags: 0
@@ -28,7 +63,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 6344713281385410697}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -65,6 +101,36 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_EnableTextMeshPro: 0
+  m_ChartName: 
+  m_Theme:
+    m_Show: 1
+    m_SharedTheme: {fileID: 11400000, guid: e1dc23a10de1e4c5dbfbaf74c4dfd218, type: 2}
+    m_TransparentBackground: 0
+    m_EnableCustomTheme: 0
+    m_CustomFont: {fileID: 0}
+    m_CustomBackgroundColor:
+      serializedVersion: 2
+      rgba: 0
+    m_CustomColorPalette: []
+  m_Settings:
+    m_Show: 1
+    m_MaxPainter: 10
+    m_ReversePainter: 0
+    m_BasePainterMaterial: {fileID: 0}
+    m_SeriePainterMaterial: {fileID: 0}
+    m_UpperPainterMaterial: {fileID: 0}
+    m_TopPainterMaterial: {fileID: 0}
+    m_LineSmoothStyle: 3
+    m_LineSmoothness: 2
+    m_LineSegmentDistance: 3
+    m_CicleSmoothness: 2
+    m_LegendIconLineWidth: 2
+    m_LegendIconCornerRadius:
+    - 0.25
+    - 0.25
+    - 0.25
+    - 0.25
+    m_AxisMaxSplitNumber: 50
   m_DebugInfo:
     m_Show: 0
     m_ShowDebugInfo: 0
@@ -118,36 +184,6 @@ MonoBehaviour:
         m_FontStyle: 0
         m_LineSpacing: 1
         m_Alignment: 4
-  m_ChartName: 
-  m_Theme:
-    m_Show: 1
-    m_SharedTheme: {fileID: 11400000, guid: e1dc23a10de1e4c5dbfbaf74c4dfd218, type: 2}
-    m_TransparentBackground: 0
-    m_EnableCustomTheme: 0
-    m_CustomFont: {fileID: 0}
-    m_CustomBackgroundColor:
-      serializedVersion: 2
-      rgba: 0
-    m_CustomColorPalette: []
-  m_Settings:
-    m_Show: 1
-    m_MaxPainter: 10
-    m_ReversePainter: 0
-    m_BasePainterMaterial: {fileID: 0}
-    m_SeriePainterMaterial: {fileID: 0}
-    m_UpperPainterMaterial: {fileID: 0}
-    m_TopPainterMaterial: {fileID: 0}
-    m_LineSmoothStyle: 3
-    m_LineSmoothness: 2
-    m_LineSegmentDistance: 3
-    m_CicleSmoothness: 2
-    m_LegendIconLineWidth: 2
-    m_LegendIconCornerRadius:
-    - 0.25
-    - 0.25
-    - 0.25
-    - 0.25
-    m_AxisMaxSplitNumber: 50
   m_AngleAxes: []
   m_Backgrounds: []
   m_DataZooms:
@@ -159,7 +195,7 @@ MonoBehaviour:
     m_SupportInsideScroll: 1
     m_SupportInsideDrag: 1
     m_SupportSlider: 1
-    m_SupportSelect: 0
+    m_SupportMarquee: 0
     m_ShowDataShadow: 1
     m_ShowDetail: 0
     m_ZoomLock: 0
@@ -256,12 +292,40 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       m_Opacity: 0.3
-      m_HighlightColor:
-        serializedVersion: 2
-        rgba: 0
-      m_HighlightToColor:
-        serializedVersion: 2
-        rgba: 0
+      m_InnerFill: 0
+      m_ToTop: 1
+    m_MarqueeStyle:
+      m_Apply: 0
+      m_RealRect: 0
+      m_AreaStyle:
+        m_Show: 1
+        m_Origin: 0
+        m_Color:
+          serializedVersion: 2
+          rgba: 0
+        m_ToColor:
+          serializedVersion: 2
+          rgba: 0
+        m_Opacity: 0.6
+        m_InnerFill: 0
+        m_ToTop: 1
+      m_LineStyle:
+        m_Show: 1
+        m_Type: 0
+        m_Color:
+          serializedVersion: 2
+          rgba: 0
+        m_ToColor:
+          serializedVersion: 2
+          rgba: 0
+        m_ToColor2:
+          serializedVersion: 2
+          rgba: 0
+        m_Width: 0
+        m_Length: 0
+        m_Opacity: 1
+    m_StartLock: 0
+    m_EndLock: 0
   m_Grids:
   - m_Show: 1
     m_Left: 0.1
@@ -359,6 +423,7 @@ MonoBehaviour:
       m_Right: 2
       m_Left: 2
       m_Bottom: 0
+    m_Positions: []
   m_MarkLines: []
   m_MarkAreas: []
   m_Polars: []
@@ -475,6 +540,7 @@ MonoBehaviour:
   - m_Show: 1
     m_Type: 3
     m_Trigger: 1
+    m_Position: 0
     m_ItemFormatter: 
     m_TitleFormatter: 
     m_Marker: "\u25CF"
@@ -494,9 +560,7 @@ MonoBehaviour:
     m_BackgroundType: 0
     m_BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
     m_BorderWidth: 2
-    m_FixedXEnable: 0
     m_FixedX: 0
-    m_FixedYEnable: 0
     m_FixedY: 0
     m_TitleHeight: 25
     m_ItemHeight: 25
@@ -518,54 +582,6 @@ MonoBehaviour:
       m_Width: 0
       m_Length: 0
       m_Opacity: 1
-    m_IndicatorLabelStyle:
-      m_Show: 1
-      m_Position: 0
-      m_AutoOffset: 0
-      m_Offset: {x: 0, y: 0, z: 0}
-      m_Rotate: 0
-      m_Distance: 0
-      m_Formatter: 
-      m_NumericFormatter: 
-      m_Width: 0
-      m_Height: 0
-      m_Icon:
-        m_Show: 0
-        m_Layer: 0
-        m_Align: 1
-        m_Sprite: {fileID: 0}
-        m_Type: 0
-        m_Color: {r: 1, g: 1, b: 1, a: 1}
-        m_Width: 20
-        m_Height: 20
-        m_Offset: {x: 0, y: 0, z: 0}
-        m_AutoHideWhenLabelEmpty: 0
-      m_Background:
-        m_Show: 1
-        m_Sprite: {fileID: 0}
-        m_Type: 0
-        m_AutoColor: 0
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_Width: 0
-        m_Height: 0
-      m_TextPadding:
-        m_Show: 1
-        m_Top: 2
-        m_Right: 4
-        m_Left: 4
-        m_Bottom: 2
-      m_TextStyle:
-        m_Show: 1
-        m_Font: {fileID: 0}
-        m_AutoWrap: 0
-        m_AutoAlign: 1
-        m_Rotate: 0
-        m_AutoColor: 0
-        m_Color: {r: 0, g: 0, b: 0, a: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_LineSpacing: 1
-        m_Alignment: 4
     m_TitleLabelStyle:
       m_Show: 1
       m_Position: 0
@@ -1050,9 +1066,97 @@ MonoBehaviour:
       m_Interval: 0
       m_Distance: 0
       m_AutoColor: 0
+      m_ShowStartLine: 1
+      m_ShowEndLine: 1
     m_SplitArea:
       m_Show: 0
       m_Color: []
+    m_MinorTick:
+      m_Show: 0
+      m_LineStyle:
+        m_Show: 1
+        m_Type: 0
+        m_Color:
+          serializedVersion: 2
+          rgba: 0
+        m_ToColor:
+          serializedVersion: 2
+          rgba: 0
+        m_ToColor2:
+          serializedVersion: 2
+          rgba: 0
+        m_Width: 0
+        m_Length: 0
+        m_Opacity: 1
+      m_SplitNumber: 5
+      m_AutoColor: 0
+    m_MinorSplitLine:
+      m_Show: 0
+      m_LineStyle:
+        m_Show: 1
+        m_Type: 0
+        m_Color:
+          serializedVersion: 2
+          rgba: 0
+        m_ToColor:
+          serializedVersion: 2
+          rgba: 0
+        m_ToColor2:
+          serializedVersion: 2
+          rgba: 0
+        m_Width: 0
+        m_Length: 0
+        m_Opacity: 1
+      m_Distance: 0
+      m_AutoColor: 0
+    m_IndicatorLabel:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
+      m_Rotate: 0
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: f2
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 0
+        m_Right: 2
+        m_Left: 2
+        m_Bottom: 0
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
   m_YAxes:
   - m_Show: 1
     m_Type: 0
@@ -1258,9 +1362,97 @@ MonoBehaviour:
       m_Interval: 0
       m_Distance: 0
       m_AutoColor: 0
+      m_ShowStartLine: 1
+      m_ShowEndLine: 1
     m_SplitArea:
       m_Show: 1
       m_Color: []
+    m_MinorTick:
+      m_Show: 0
+      m_LineStyle:
+        m_Show: 1
+        m_Type: 0
+        m_Color:
+          serializedVersion: 2
+          rgba: 0
+        m_ToColor:
+          serializedVersion: 2
+          rgba: 0
+        m_ToColor2:
+          serializedVersion: 2
+          rgba: 0
+        m_Width: 0
+        m_Length: 0
+        m_Opacity: 1
+      m_SplitNumber: 5
+      m_AutoColor: 0
+    m_MinorSplitLine:
+      m_Show: 0
+      m_LineStyle:
+        m_Show: 1
+        m_Type: 0
+        m_Color:
+          serializedVersion: 2
+          rgba: 0
+        m_ToColor:
+          serializedVersion: 2
+          rgba: 0
+        m_ToColor2:
+          serializedVersion: 2
+          rgba: 0
+        m_Width: 0
+        m_Length: 0
+        m_Opacity: 1
+      m_Distance: 0
+      m_AutoColor: 0
+    m_IndicatorLabel:
+      m_Show: 1
+      m_Position: 0
+      m_AutoOffset: 0
+      m_Offset: {x: 0, y: 0, z: 0}
+      m_Rotate: 0
+      m_Distance: 0
+      m_Formatter: 
+      m_NumericFormatter: f2
+      m_Width: 0
+      m_Height: 0
+      m_Icon:
+        m_Show: 0
+        m_Layer: 0
+        m_Align: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_Color: {r: 1, g: 1, b: 1, a: 1}
+        m_Width: 20
+        m_Height: 20
+        m_Offset: {x: 0, y: 0, z: 0}
+        m_AutoHideWhenLabelEmpty: 0
+      m_Background:
+        m_Show: 1
+        m_Sprite: {fileID: 0}
+        m_Type: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_Width: 0
+        m_Height: 0
+      m_TextPadding:
+        m_Show: 1
+        m_Top: 0
+        m_Right: 2
+        m_Left: 2
+        m_Bottom: 0
+      m_TextStyle:
+        m_Show: 1
+        m_Font: {fileID: 0}
+        m_AutoWrap: 0
+        m_AutoAlign: 1
+        m_Rotate: 0
+        m_AutoColor: 0
+        m_Color: {r: 0, g: 0, b: 0, a: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_LineSpacing: 1
+        m_Alignment: 4
   m_SingleAxes: []
   m_Parallels: []
   m_ParallelAxes: []
@@ -1273,14 +1465,16 @@ MonoBehaviour:
     m_LineArrows: []
     m_AreaStyles: []
     m_TitleStyles: []
-    m_EmphasisItemStyles: []
-    m_EmphasisLabels: []
-    m_EmphasisLabelLines: []
+    m_EmphasisStyles: []
+    m_BlurStyles: []
+    m_SelectStyles: []
     m_Index: 0
     m_Show: 1
     m_CoordSystem: GridCoord
     m_SerieType: Candlestick
     m_SerieName: "\u65E5K"
+    m_State: 0
+    m_ColorBy: 0
     m_Stack: 
     m_XAxisIndex: 0
     m_YAxisIndex: 0
@@ -1296,9 +1490,11 @@ MonoBehaviour:
     m_SampleType: 1
     m_SampleAverage: 0
     m_LineType: 0
+    m_SmoothLimit: 1
     m_BarType: 0
     m_BarPercentStack: 0
     m_BarWidth: 0.6
+    m_BarMaxWidth: 0
     m_BarGap: 0.3
     m_BarZebraWidth: 4
     m_BarZebraGap: 2
@@ -1370,14 +1566,14 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       m_SizeType: 0
-      m_SelectedSize: 0
       m_DataIndex: 1
       m_DataScale: 1
-      m_SelectedDataScale: 1.5
       m_StartIndex: 0
       m_Interval: 0
       m_ForceShowLast: 0
       m_Repeat: 0
+      m_MinSize: 0
+      m_MaxSize: 0
     m_Animation:
       m_Enable: 1
       m_Type: 0
@@ -1390,6 +1586,7 @@ MonoBehaviour:
       m_DataChangeEnable: 1
       m_DataChangeDuration: 500
       m_ActualDuration: 0
+      m_UnscaledTime: 0
     m_ItemStyle:
       m_Show: 1
       m_Color:
@@ -1402,6 +1599,9 @@ MonoBehaviour:
         serializedVersion: 2
         rgba: 0
       m_ToColor2:
+        serializedVersion: 2
+        rgba: 0
+      m_MarkColor:
         serializedVersion: 2
         rgba: 0
       m_BackgroundColor:
@@ -1440,6 +1640,7 @@ MonoBehaviour:
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1447,21 +1648,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2320.26
       - 2320.26
       - 2287.3
       - 2362.94
-    - m_Index: 0
+    - m_Index: 1
       m_Name: '''2013/1/25'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1469,21 +1671,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2300
       - 2291.3
       - 2288.26
       - 2308.38
-    - m_Index: 0
+    - m_Index: 2
       m_Name: '''2013/1/28'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1491,21 +1694,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2295.35
       - 2346.5
       - 2295.35
       - 2346.92
-    - m_Index: 0
+    - m_Index: 3
       m_Name: '''2013/1/29'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1513,21 +1717,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2347.22
       - 2358.98
       - 2337.35
       - 2363.8
-    - m_Index: 0
+    - m_Index: 4
       m_Name: '''2013/1/30'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1535,21 +1740,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2360.75
       - 2382.48
       - 2347.89
       - 2383.76
-    - m_Index: 0
+    - m_Index: 5
       m_Name: '''2013/1/31'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1557,21 +1763,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2383.43
       - 2385.42
       - 2371.23
       - 2391.82
-    - m_Index: 0
+    - m_Index: 6
       m_Name: '''2013/2/1'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1579,21 +1786,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2377.41
       - 2419.02
       - 2369.57
       - 2421.15
-    - m_Index: 0
+    - m_Index: 7
       m_Name: '''2013/2/4'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1601,21 +1809,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2425.92
       - 2428.15
       - 2417.58
       - 2440.38
-    - m_Index: 0
+    - m_Index: 8
       m_Name: '''2013/2/5'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1623,21 +1832,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2411
       - 2433.13
       - 2403.3
       - 2437.42
-    - m_Index: 0
+    - m_Index: 9
       m_Name: '''2013/2/6'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1645,21 +1855,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2432.68
       - 2434.48
       - 2427.7
       - 2441.73
-    - m_Index: 0
+    - m_Index: 10
       m_Name: '''2013/2/7'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1667,21 +1878,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2430.69
       - 2418.53
       - 2394.22
       - 2433.89
-    - m_Index: 0
+    - m_Index: 11
       m_Name: '''2013/2/8'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1689,21 +1901,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2416.62
       - 2432.4
       - 2414.4
       - 2443.03
-    - m_Index: 0
+    - m_Index: 12
       m_Name: '''2013/2/18'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1711,21 +1924,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2441.91
       - 2421.56
       - 2415.43
       - 2444.8
-    - m_Index: 0
+    - m_Index: 13
       m_Name: '''2013/2/19'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1733,21 +1947,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2420.26
       - 2382.91
       - 2373.53
       - 2427.07
-    - m_Index: 0
+    - m_Index: 14
       m_Name: '''2013/2/20'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1755,21 +1970,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2383.49
       - 2397.18
       - 2370.61
       - 2397.94
-    - m_Index: 0
+    - m_Index: 15
       m_Name: '''2013/2/21'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1777,21 +1993,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2378.82
       - 2325.95
       - 2309.17
       - 2378.82
-    - m_Index: 0
+    - m_Index: 16
       m_Name: '''2013/2/22'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1799,21 +2016,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2322.94
       - 2314.16
       - 2308.76
       - 2330.88
-    - m_Index: 0
+    - m_Index: 17
       m_Name: '''2013/2/25'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1821,21 +2039,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2320.62
       - 2325.82
       - 2315.01
       - 2338.78
-    - m_Index: 0
+    - m_Index: 18
       m_Name: '''2013/2/26'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1843,21 +2062,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2313.74
       - 2293.34
       - 2289.89
       - 2340.71
-    - m_Index: 0
+    - m_Index: 19
       m_Name: '''2013/2/27'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1865,21 +2085,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2297.77
       - 2313.22
       - 2292.03
       - 2324.63
-    - m_Index: 0
+    - m_Index: 20
       m_Name: '''2013/2/28'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1887,21 +2108,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2322.32
       - 2365.59
       - 2308.92
       - 2366.16
-    - m_Index: 0
+    - m_Index: 21
       m_Name: '''2013/3/1'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1909,21 +2131,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2364.54
       - 2359.51
       - 2330.86
       - 2369.65
-    - m_Index: 0
+    - m_Index: 22
       m_Name: '''2013/3/4'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1931,21 +2154,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2332.08
       - 2273.4
       - 2259.25
       - 2333.54
-    - m_Index: 0
+    - m_Index: 23
       m_Name: '''2013/3/5'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1953,21 +2177,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2274.81
       - 2326.31
       - 2270.1
       - 2328.14
-    - m_Index: 0
+    - m_Index: 24
       m_Name: '''2013/3/6'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1975,21 +2200,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2333.61
       - 2347.18
       - 2321.6
       - 2351.44
-    - m_Index: 0
+    - m_Index: 25
       m_Name: '''2013/3/7'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -1997,21 +2223,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2340.44
       - 2324.29
       - 2304.27
       - 2352.02
-    - m_Index: 0
+    - m_Index: 26
       m_Name: '''2013/3/8'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2019,21 +2246,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2326.42
       - 2318.61
       - 2314.59
       - 2333.67
-    - m_Index: 0
+    - m_Index: 27
       m_Name: '''2013/3/11'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2041,21 +2269,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2314.68
       - 2310.59
       - 2296.58
       - 2320.96
-    - m_Index: 0
+    - m_Index: 28
       m_Name: '''2013/3/12'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2063,21 +2292,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2309.16
       - 2286.6
       - 2264.83
       - 2333.29
-    - m_Index: 0
+    - m_Index: 29
       m_Name: '''2013/3/13'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2085,21 +2315,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2282.17
       - 2263.97
       - 2253.25
       - 2286.33
-    - m_Index: 0
+    - m_Index: 30
       m_Name: '''2013/3/14'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2107,21 +2338,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2255.77
       - 2270.28
       - 2253.31
       - 2276.22
-    - m_Index: 0
+    - m_Index: 31
       m_Name: '''2013/3/15'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2129,21 +2361,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2269.31
       - 2278.4
       - 2250
       - 2312.08
-    - m_Index: 0
+    - m_Index: 32
       m_Name: '''2013/3/18'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2151,21 +2384,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2267.29
       - 2240.02
       - 2239.21
       - 2276.05
-    - m_Index: 0
+    - m_Index: 33
       m_Name: '''2013/3/19'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2173,21 +2407,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2244.26
       - 2257.43
       - 2232.02
       - 2261.31
-    - m_Index: 0
+    - m_Index: 34
       m_Name: '''2013/3/20'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2195,21 +2430,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2257.74
       - 2317.37
       - 2257.42
       - 2317.86
-    - m_Index: 0
+    - m_Index: 35
       m_Name: '''2013/3/21'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2217,21 +2453,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2318.21
       - 2324.24
       - 2311.6
       - 2330.81
-    - m_Index: 0
+    - m_Index: 36
       m_Name: '''2013/3/22'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2239,21 +2476,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2321.4
       - 2328.28
       - 2314.97
       - 2332
-    - m_Index: 0
+    - m_Index: 37
       m_Name: '''2013/3/25'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2261,21 +2499,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2334.74
       - 2326.72
       - 2319.91
       - 2344.89
-    - m_Index: 0
+    - m_Index: 38
       m_Name: '''2013/3/26'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2283,21 +2522,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2318.58
       - 2297.67
       - 2281.12
       - 2319.99
-    - m_Index: 0
+    - m_Index: 39
       m_Name: '''2013/3/27'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2305,21 +2545,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2299.38
       - 2301.26
       - 2289
       - 2323.48
-    - m_Index: 0
+    - m_Index: 40
       m_Name: '''2013/3/28'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2327,21 +2568,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2273.55
       - 2236.3
       - 2232.91
       - 2273.55
-    - m_Index: 0
+    - m_Index: 41
       m_Name: '''2013/3/29'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2349,21 +2591,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2238.49
       - 2236.62
       - 2228.81
       - 2246.87
-    - m_Index: 0
+    - m_Index: 42
       m_Name: '''2013/4/1'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2371,21 +2614,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2229.46
       - 2234.4
       - 2227.31
       - 2243.95
-    - m_Index: 0
+    - m_Index: 43
       m_Name: '''2013/4/2'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2393,21 +2637,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2234.9
       - 2227.74
       - 2220.44
       - 2253.42
-    - m_Index: 0
+    - m_Index: 44
       m_Name: '''2013/4/3'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2415,21 +2660,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2232.69
       - 2225.29
       - 2217.25
       - 2241.34
-    - m_Index: 0
+    - m_Index: 45
       m_Name: '''2013/4/8'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2437,21 +2683,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2196.24
       - 2211.59
       - 2180.67
       - 2212.59
-    - m_Index: 0
+    - m_Index: 46
       m_Name: '''2013/4/9'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2459,21 +2706,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2215.47
       - 2225.77
       - 2215.47
       - 2234.73
-    - m_Index: 0
+    - m_Index: 47
       m_Name: '''2013/4/10'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2481,21 +2729,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2224.93
       - 2226.13
       - 2212.56
       - 2233.04
-    - m_Index: 0
+    - m_Index: 48
       m_Name: '''2013/4/11'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2503,21 +2752,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2236.98
       - 2219.55
       - 2217.26
       - 2242.48
-    - m_Index: 0
+    - m_Index: 49
       m_Name: '''2013/4/12'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2525,21 +2775,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2218.09
       - 2206.78
       - 2204.44
       - 2226.26
-    - m_Index: 0
+    - m_Index: 50
       m_Name: '''2013/4/15'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2547,21 +2798,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2199.91
       - 2181.94
       - 2177.39
       - 2204.99
-    - m_Index: 0
+    - m_Index: 51
       m_Name: '''2013/4/16'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2569,21 +2821,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2169.63
       - 2194.85
       - 2165.78
       - 2196.43
-    - m_Index: 0
+    - m_Index: 52
       m_Name: '''2013/4/17'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2591,21 +2844,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2195.03
       - 2193.8
       - 2178.47
       - 2197.51
-    - m_Index: 0
+    - m_Index: 53
       m_Name: '''2013/4/18'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2613,21 +2867,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2181.82
       - 2197.6
       - 2175.44
       - 2206.03
-    - m_Index: 0
+    - m_Index: 54
       m_Name: '''2013/4/19'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2635,21 +2890,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2201.12
       - 2244.64
       - 2200.58
       - 2250.11
-    - m_Index: 0
+    - m_Index: 55
       m_Name: '''2013/4/22'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2657,21 +2913,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2236.4
       - 2242.17
       - 2232.26
       - 2245.12
-    - m_Index: 0
+    - m_Index: 56
       m_Name: '''2013/4/23'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2679,21 +2936,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2242.62
       - 2184.54
       - 2182.81
       - 2242.62
-    - m_Index: 0
+    - m_Index: 57
       m_Name: '''2013/4/24'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2701,21 +2959,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2187.35
       - 2218.32
       - 2184.11
       - 2226.12
-    - m_Index: 0
+    - m_Index: 58
       m_Name: '''2013/4/25'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2723,21 +2982,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2213.19
       - 2199.31
       - 2191.85
       - 2224.63
-    - m_Index: 0
+    - m_Index: 59
       m_Name: '''2013/4/26'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2745,21 +3005,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2203.89
       - 2177.91
       - 2173.86
       - 2210.58
-    - m_Index: 0
+    - m_Index: 60
       m_Name: '''2013/5/2'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2767,21 +3028,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2170.78
       - 2174.12
       - 2161.14
       - 2179.65
-    - m_Index: 0
+    - m_Index: 61
       m_Name: '''2013/5/3'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2789,21 +3051,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2179.05
       - 2205.5
       - 2179.05
       - 2222.81
-    - m_Index: 0
+    - m_Index: 62
       m_Name: '''2013/5/6'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2811,21 +3074,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2212.5
       - 2231.17
       - 2212.5
       - 2236.07
-    - m_Index: 0
+    - m_Index: 63
       m_Name: '''2013/5/7'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2833,21 +3097,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2227.86
       - 2235.57
       - 2219.44
       - 2240.26
-    - m_Index: 0
+    - m_Index: 64
       m_Name: '''2013/5/8'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2855,21 +3120,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2242.39
       - 2246.3
       - 2235.42
       - 2255.21
-    - m_Index: 0
+    - m_Index: 65
       m_Name: '''2013/5/9'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2877,21 +3143,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2246.96
       - 2232.97
       - 2221.38
       - 2247.86
-    - m_Index: 0
+    - m_Index: 66
       m_Name: '''2013/5/10'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2899,21 +3166,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2228.82
       - 2246.83
       - 2225.81
       - 2247.67
-    - m_Index: 0
+    - m_Index: 67
       m_Name: '''2013/5/13'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2921,21 +3189,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2247.68
       - 2241.92
       - 2231.36
       - 2250.85
-    - m_Index: 0
+    - m_Index: 68
       m_Name: '''2013/5/14'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2943,21 +3212,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2238.9
       - 2217.01
       - 2205.87
       - 2239.93
-    - m_Index: 0
+    - m_Index: 69
       m_Name: '''2013/5/15'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2965,21 +3235,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2217.09
       - 2224.8
       - 2213.58
       - 2225.19
-    - m_Index: 0
+    - m_Index: 70
       m_Name: '''2013/5/16'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -2987,21 +3258,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2221.34
       - 2251.81
       - 2210.77
       - 2252.87
-    - m_Index: 0
+    - m_Index: 71
       m_Name: '''2013/5/17'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -3009,21 +3281,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2249.81
       - 2282.87
       - 2248.41
       - 2288.09
-    - m_Index: 0
+    - m_Index: 72
       m_Name: '''2013/5/20'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -3031,21 +3304,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2286.33
       - 2299.99
       - 2281.9
       - 2309.39
-    - m_Index: 0
+    - m_Index: 73
       m_Name: '''2013/5/21'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -3053,21 +3327,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2297.11
       - 2305.11
       - 2290.12
       - 2305.3
-    - m_Index: 0
+    - m_Index: 74
       m_Name: '''2013/5/22'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -3075,21 +3350,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2303.75
       - 2302.4
       - 2292.43
       - 2314.18
-    - m_Index: 0
+    - m_Index: 75
       m_Name: '''2013/5/23'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -3097,21 +3373,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2293.81
       - 2275.67
       - 2274.1
       - 2304.95
-    - m_Index: 0
+    - m_Index: 76
       m_Name: '''2013/5/24'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -3119,21 +3396,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2281.45
       - 2288.53
       - 2270.25
       - 2292.59
-    - m_Index: 0
+    - m_Index: 77
       m_Name: '''2013/5/27'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -3141,21 +3419,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2286.66
       - 2293.08
       - 2283.94
       - 2301.7
-    - m_Index: 0
+    - m_Index: 78
       m_Name: '''2013/5/28'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -3163,21 +3442,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2293.4
       - 2321.32
       - 2281.47
       - 2322.1
-    - m_Index: 0
+    - m_Index: 79
       m_Name: '''2013/5/29'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -3185,21 +3465,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2323.54
       - 2324.02
       - 2321.17
       - 2334.33
-    - m_Index: 0
+    - m_Index: 80
       m_Name: '''2013/5/30'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -3207,21 +3488,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2316.25
       - 2317.75
       - 2310.49
       - 2325.72
-    - m_Index: 0
+    - m_Index: 81
       m_Name: '''2013/5/31'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -3229,21 +3511,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2320.74
       - 2300.59
       - 2299.37
       - 2325.53
-    - m_Index: 0
+    - m_Index: 82
       m_Name: '''2013/6/3'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -3251,21 +3534,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2300.21
       - 2299.25
       - 2294.11
       - 2313.43
-    - m_Index: 0
+    - m_Index: 83
       m_Name: '''2013/6/4'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -3273,21 +3557,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2297.1
       - 2272.42
       - 2264.76
       - 2297.1
-    - m_Index: 0
+    - m_Index: 84
       m_Name: '''2013/6/5'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -3295,21 +3580,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2270.71
       - 2270.93
       - 2260.87
       - 2276.86
-    - m_Index: 0
+    - m_Index: 85
       m_Name: '''2013/6/6'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -3317,21 +3603,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2264.43
       - 2242.11
       - 2240.07
       - 2266.69
-    - m_Index: 0
+    - m_Index: 86
       m_Name: '''2013/6/7'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -3339,21 +3626,22 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2242.26
       - 2210.9
       - 2205.07
       - 2250.63
-    - m_Index: 0
+    - m_Index: 87
       m_Name: '''2013/6/13'''
       m_Id: 
       m_ParentId: 
       m_Ignore: 0
       m_Selected: 0
       m_Radius: 0
+      m_State: 4
       m_ItemStyles: []
       m_Labels: []
       m_LabelLines: []
@@ -3361,9 +3649,9 @@ MonoBehaviour:
       m_LineStyles: []
       m_AreaStyles: []
       m_TitleStyles: []
-      m_EmphasisItemStyles: []
-      m_EmphasisLabels: []
-      m_EmphasisLabelLines: []
+      m_EmphasisStyles: []
+      m_BlurStyles: []
+      m_SelectStyles: []
       m_Data:
       - 2190.1
       - 2148.35
@@ -3380,3 +3668,75 @@ MonoBehaviour:
   m_SerieSimplifiedLines: []
   m_SerieSimplifiedBars: []
   m_SerieSimplifiedCandlesticks: []
+--- !u!1 &6090321940107123098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6344713281385410697}
+  m_Layer: 0
+  m_Name: serie_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6344713281385410697
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6090321940107123098}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6141371197125542086}
+  - {fileID: 7949321891268541144}
+  m_Father: {fileID: 1232364793489074814}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1200, y: 800}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &7424897804630301380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6141371197125542086}
+  m_Layer: 0
+  m_Name: label
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6141371197125542086
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7424897804630301380}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6344713281385410697}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1200, y: 800}
+  m_Pivot: {x: 0.5, y: 0.5}

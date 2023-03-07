@@ -1,12 +1,13 @@
-using System.IO;
-using UnityEditor;
+
 using UnityEngine;
+using UnityEditor;
+using System.IO;
 using XCharts.Runtime;
 
 public static class ChartUpdate
 {
 
-    [MenuItem("Tools/UpdateTooltip")]
+    //[MenuItem("Tools/UpdateTooltip")]
     public static void UpdateTooltip()
     {
         var files = new DirectoryInfo(Application.dataPath).GetFiles("*.prefab", SearchOption.AllDirectories);
@@ -42,15 +43,40 @@ public static class ChartUpdate
             var index = file.FullName.IndexOf("Assets/");
             var assetPath = file.FullName.Substring(index);
             var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(assetPath);
-            var chart = prefab.GetComponent<BaseChart>();
-            if (chart != null)
-            {
-                Debug.LogError("file:" + assetPath + "," + chart);
-                chart.RebuildChartObject();
-                EditorUtility.SetDirty(prefab);
-            }
+            RebuildChartPrefab(prefab);
         }
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
+    }
+
+    [MenuItem("Assets/XCharts/RebuildChart")]
+    public static void RebuildSelectedChart()
+    {
+        foreach (var obj in Selection.objects)
+        {
+            RebuildChartPrefab(obj);
+        }
+        AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
+    }
+
+    private static void RebuildChartPrefab(Object obj)
+    {
+        var prefab = PrefabUtility.InstantiatePrefab(obj) as GameObject;
+        if (prefab != null)
+        {
+            var chart = prefab.GetComponent<BaseChart>();
+            if (chart != null)
+            {
+                Debug.LogError("RebuildChartPrefab:" + AssetDatabase.GetAssetPath(prefab) + "," + chart);
+                chart.RebuildChartObject();
+#if UNITY_2018_3_OR_NEWER
+                PrefabUtility.SaveAsPrefabAsset(prefab, AssetDatabase.GetAssetPath(obj));
+#else
+                PrefabUtility.ReplacePrefab(prefab, obj, ReplacePrefabOptions.ConnectToPrefab);
+#endif
+                GameObject.DestroyImmediate(prefab);
+            }
+        }
     }
 }

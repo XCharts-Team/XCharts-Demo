@@ -92,6 +92,7 @@ namespace XCharts.Runtime
         protected Action<PointerEventData, int, int> m_OnPointerClickPie;
         protected Action<int, int> m_OnPointerEnterPie;
         protected Action<PointerEventData, int> m_OnPointerClickBar;
+        protected Action<PointerEventData, int, int> m_OnPointerClickLine;
         protected Action<Axis, double> m_OnAxisPointerValueChanged;
         protected Action<Legend, int, string, bool> m_OnLegendClick;
         protected Action<Legend, int, string> m_OnLegendEnter;

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using XCharts.Runtime;
 #if INPUT_SYSTEM_ENABLED
@@ -14,11 +15,17 @@ namespace XCharts.Example
         void Awake()
         {
             chart = gameObject.GetComponent<BaseChart>();
+            chart.onPointerClickLine = OnPointerClickLine;
             var btnTrans = transform.parent.Find("Button");
             if (btnTrans)
             {
                 btnTrans.gameObject.GetComponent<Button>().onClick.AddListener(OnTestBtn);
             }
+        }
+
+        void OnPointerClickLine(PointerEventData data, int serieIndex, int dataIndex)
+        {
+            Debug.Log("OnPointerClickLine: " + serieIndex+ " " + dataIndex);
         }
 
         void Update()
