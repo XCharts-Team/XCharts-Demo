@@ -21,6 +21,7 @@ XCharts付费扩展图表 - 矩形树图。
 
 ### v3.6.0
 
+* (2023.03.09) 支持`onSerieClick` `onSerieDown` `onSerieEnter`和`onSerieExit`回调
 * (2023.02.14) 同步`XCharts v3.6.0`
 
 ### v3.5.0

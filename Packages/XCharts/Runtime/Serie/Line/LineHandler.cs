@@ -70,7 +70,7 @@ namespace XCharts.Runtime
             var endLabelList = m_SerieGrid.context.endLabelList;
             if (endLabelList.Count <= 1) return;
 
-            endLabelList.Sort(delegate(ChartLabel a, ChartLabel b)
+            endLabelList.Sort(delegate (ChartLabel a, ChartLabel b)
             {
                 if (a == null || b == null) return 1;
                 return b.transform.position.y.CompareTo(a.transform.position.y);
@@ -98,11 +98,8 @@ namespace XCharts.Runtime
             }
         }
 
-        public override void OnPointerDown(PointerEventData eventData)
+        public override int GetPointerItemDataIndex()
         {
-            if (!serie.context.pointerEnter) return;
-            if(chart.onPointerClickLine == null) return;
-            var selectedIndex = -1;
             var symbolSize = SerieHelper.GetSysmbolSize(serie, null, chart.theme, chart.theme.serie.lineSymbolSize) * 1.5f;
             var count = serie.context.dataPoints.Count;
             for (int i = 0; i < count; i++)
@@ -115,12 +112,12 @@ namespace XCharts.Runtime
                     continue;
 
                 var pos = serie.context.dataPoints[i];
-                if(Vector2.Distance(pos,chart.pointerPos)<symbolSize){
-                    selectedIndex = i;
-                    break;
+                if (Vector2.Distance(pos, chart.pointerPos) < symbolSize)
+                {
+                    return i;
                 }
             }
-            chart.onPointerClickLine(eventData, serie.index, selectedIndex);
+            return -1;
         }
     }
 }

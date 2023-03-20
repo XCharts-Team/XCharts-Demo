@@ -15,7 +15,9 @@ namespace XCharts.Example
         void Awake()
         {
             chart = gameObject.GetComponent<BaseChart>();
-            chart.onPointerClickLine = OnPointerClickLine;
+            chart.onSerieClick = OnPointerClickLine;
+            chart.onSerieEnter = OnPointerEnterLine;
+            chart.onSerieExit = OnPointerExitLine;
             var btnTrans = transform.parent.Find("Button");
             if (btnTrans)
             {
@@ -23,9 +25,19 @@ namespace XCharts.Example
             }
         }
 
-        void OnPointerClickLine(PointerEventData data, int serieIndex, int dataIndex)
+        void OnPointerClickLine(SerieEventData data)
         {
-            Debug.Log("OnPointerClickLine: " + serieIndex+ " " + dataIndex);
+            Debug.Log("OnPointerClick: " + data.serieIndex+ " " + data.dataIndex +" "+ data.dimension);
+        }
+
+        void OnPointerEnterLine(SerieEventData data)
+        {
+            Debug.Log("OnPointerEnter: " + data.serieIndex + " " + data.dataIndex + " " + data.dimension);
+        }
+
+        void OnPointerExitLine(SerieEventData data)
+        {
+            Debug.Log("OnPointerExit: " + data.serieIndex + " " + data.dataIndex + " " + data.dimension);
         }
 
         void Update()
