@@ -58,7 +58,7 @@ namespace XChartsDemo
             if (prefab == null) return;
             bindPrefab = prefab;
             if (chartParent == null) return;
-            ChartHelper.DestroyAllChildren(chartParent);
+            // ChartHelper.DestroyAllChildren(chartParent);
             var names = prefab.name.Split('_');
             var chart = UIUtil.Instantiate(prefab, chartParent, prefab.name);
             if (names.Length == 3)

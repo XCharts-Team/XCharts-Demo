@@ -78,7 +78,7 @@
 
 ![扩展图表](Documentation~/zh/img/readme_extendchart.png)
 
-XCharts不再内置Demo，Demo已独立出单独的仓库 [XCharts-Demo](https://github.com/XCharts-Team/XCharts-Demo)，也可以在浏览器查看`WebGL`下的运行效果 [在线Demo](https://xcharts-team.github.io/demo/) 。
+XCharts不再内置Demo，Demo已独立出单独的仓库 [XCharts-Demo](https://github.com/XCharts-Team/XCharts-Demo)，也可以在浏览器查看`WebGL`下的运行效果 [在线Demo](https://xcharts-team.github.io/examples/) 。
 
 ## `XCharts3.0`
 
@@ -108,10 +108,10 @@ XCharts不再内置Demo，Demo已独立出单独的仓库 [XCharts-Demo](https:/
 
 ## 注意
 
-- `XCharts3.0` 不完全兼容 `XCharts2.0` 版本，升级`3.0`可能需要调整部分代码和配置。建议旧项目可以继续使用`XCharts2.0`，新项目推荐使用`XCharts3.0`。
-- `XCharts2.0` 进入维护阶段，后续只修复严重`bug`，理论上不再加新功能。
+- `XCharts3.0` 不完全兼容 `XCharts2.0` 版本，升级`3.0`可能需要调整部分代码，图表部分配置需要重新调整。建议旧项目可以继续使用`XCharts2.0`，新项目推荐使用`XCharts3.0`。
+- `XCharts2.0` 进入维护阶段，后续只修复严重`bug`，原则上不再加新功能。
 - `XCharts` 理论上支持`Unity 5.6`及以上版本，但由于版本测试有限难免疏漏，发现版本兼容问题可提`Issue`。
-- 本仓库只包含`XCharts`源码，不包含`Demo`示例部分。需要查看`Demo`请到[XCharts-Demo](https://github.com/XCharts-Team/XCharts-Demo)仓库。
+- 本仓库只包含`XCharts`源码，不包含`Demo`示例部分。需要查看`Demo`示例源码请到[XCharts-Demo](https://github.com/XCharts-Team/XCharts-Demo)仓库。
 
 ## 使用
 
@@ -137,7 +137,7 @@ XCharts不再内置Demo，Demo已独立出单独的仓库 [XCharts-Demo](https:/
    答：`XCharts`使用`MIT`协议，可以免费使用。也可以订阅`VIP`享受更多增值服务。
 
 2. `XCharts`支持代码动态添加和修改数据吗？支持从`Excel`或数据库中获取数据吗？  
-   答：`XCharts`提供了各种数据操作的接口，支持代码动态修改配置，添加和修改数据，但数据来源需要自己解析或获取，再调用`XCharts`的接口添加到`XCharts`。
+   答：`XCharts`提供了各种数据操作的接口，支持代码动态修改配置，添加和修改数据，但数据来源需要自己解析和获取，再调用`XCharts`的接口添加到图表。
 
 3. 这个插件除了用在`Unity`，还能用在其他平台（如`Winform`或`WPF`）吗？  
    答：目前只支持在`Unity`平台使用。理论上任何支持`UGUI`的`Unity`版本都能运行`XCharts`。
@@ -161,4 +161,4 @@ XCharts不再内置Demo，Demo已独立出单独的仓库 [XCharts-Demo](https:/
 - 邮箱：`monitor1394@gmail.com`  
 - QQ群：XCharts交流群（`202030963`）  
 - VIP群：XCharts技术支持VIP群（`867291970`）  
-- 捐助、合作和技术支持：[☞ 看这里](Documentation~/zh/support.md)
+- 捐助、合作、订阅和技术支持：[☞ 看这里](Documentation~/zh/support.md)

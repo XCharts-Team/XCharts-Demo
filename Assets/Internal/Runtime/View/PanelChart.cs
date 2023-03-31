@@ -228,8 +228,9 @@ namespace XChartsDemo
             module.chartThumbs.Clear();
             if (!Application.isPlaying)
             {
-                if (firstInit) ChartHelper.DestroyAllChildren(module.panel.transform);
-                else UIUtil.SetActiveAllChildren(module.panel, false);
+                // if (firstInit) ChartHelper.DestroyAllChildren(module.panel.transform);
+                // else UIUtil.SetActiveAllChildren(module.panel, false);
+                UIUtil.SetActiveAllChildren(module.panel, false);
                 module.panel.SetActive(module.select);
 
                 for (int i = 0; i < module.chartPrefabs.Count; i++)
@@ -237,8 +238,9 @@ namespace XChartsDemo
             }
             else if (!module.inited)
             {
-                if (firstInit) ChartHelper.DestroyAllChildren(module.panel.transform);
-                else UIUtil.SetActiveAllChildren(module.panel, false);
+                // if (firstInit) ChartHelper.DestroyAllChildren(module.panel.transform);
+                // else UIUtil.SetActiveAllChildren(module.panel, false);
+                UIUtil.SetActiveAllChildren(module.panel, false);
             }
         }
 
