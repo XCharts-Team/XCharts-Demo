@@ -21,6 +21,7 @@ XCharts的付费扩展图表 - 3D柱图。
 
 ### v3.6.0
 
+* (2023.04.01) 发布`v3.6.0`版本
 * (2023.03.09) 支持`onSerieClick` `onSerieDown` `onSerieEnter`和`onSerieExit`回调
 * (2023.02.14) 同步`XCharts v3.6.0`
 * (2023.02.14) 增加`Bar3DStyle`的`topColor`、`bottomColor`和`sideColor`参数支持

@@ -53,8 +53,9 @@ namespace XChartsDemo
                 if (m_Text != null)
                 {
                     s_Sb.Length = 0;
-                    s_Sb.AppendFormat("CUR FPS: {0:f0}\n", fps);
-                    s_Sb.AppendFormat("AVG FPS: {0:f0}", avgFps);
+                    s_Sb.AppendFormat("{0:f0}", fps);
+                    // s_Sb.AppendFormat("CUR FPS: {0:f0}\n", fps);
+                    // s_Sb.AppendFormat("AVG FPS: {0:f0}", avgFps);
                     m_Text.text = s_Sb.ToString();
                     var width = m_Text.preferredWidth;
                     width  = (int)width - (int)width % 50 + 50;
