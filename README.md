@@ -1,15 +1,13 @@
 # XCharts-Demo
 
-Unity可视化图表插件[XCharts](https://github.com/XCharts-Team/XCharts) 的官方图表示例Demo，用于展示XCharts可以实现哪些功能和效果。
-
-> 本Demo只支持XCharts 3.0，不支持XCharts 2.0。
-
-> 本Demo只包含内置图表，扩展图表需要单独导入。
+Unity可视化图表插件[XCharts](https://github.com/XCharts-Team/XCharts) 的官方Demo示例。
 
 ## 使用
 
 本项目使用`Unity2019.4.39f1`开发，下载项目后，使用相近的Unity版本打开即可。
 Demo有发布WebGL版本（包含扩展图表部分），可以直接浏览器看效果：[WebGL Demo](https://xcharts-team.github.io/demo/)
+
+__【注意】__ XCharts-Demo是一个完整的Unity工程，直接用Unity打开即可，不能整个再放到自己的项目中。
 
 ![buildinchart](buildinchart.png)
 
@@ -26,7 +24,7 @@ Demo有发布WebGL版本（包含扩展图表部分），可以直接浏览器�
 
 ## 扩展图表
 
-Demo预留了扩展图表的导入，扩展图表是付费内容，默认不包含在项目里面。付费购买后可直接导入扩展图表的Package和Demo部分，即可在Demo里查看和运行扩展图表。
+Demo预留了扩展图表的导入，扩展图表是付费内容，需要付费订阅购买，默认不包含在项目里面，订阅详情[☞ 请看这里](https://github.com/XCharts-Team/XCharts/blob/master/Documentation~/zh/support.md)。付费购买后可直接导入扩展图表的Package和Demo部分，即可在Demo里查看和运行扩展图表。
 
 ![extendchart](extendchart.png)
 
