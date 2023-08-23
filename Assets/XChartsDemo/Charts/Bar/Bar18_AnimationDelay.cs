@@ -20,11 +20,11 @@ namespace XChartsDemo
                 chart.AddData(1, (System.Math.Cos(i / 5d) * (i / 5d - 10) + i / 6d) * 5d);
             }
 
-            chart.GetSerie(0).animation.fadeInDelayFunction = delegate(int dataIndex)
+            chart.GetSerie(0).animation.fadeIn.delayFunction = delegate(int dataIndex)
             {
                 return dataIndex * 10f;
             };
-            chart.GetSerie(1).animation.fadeInDelayFunction = delegate(int dataIndex)
+            chart.GetSerie(1).animation.fadeIn.delayFunction = delegate(int dataIndex)
             {
                 return dataIndex * 10 + 100f;
             };

@@ -436,14 +436,14 @@ namespace XCharts.Runtime
         public static ItemStyle GetItemStyle(Serie serie, SerieData serieData, SerieState state = SerieState.Auto)
         {
             if (state == SerieState.Auto) state = GetSerieState(serie, serieData);
-            if (state == SerieState.Normal)
+            var stateStyle = GetStateStyle(serie, serieData, state);
+            if (stateStyle == null || !stateStyle.show)
             {
                 return serieData != null && serieData.itemStyle != null ? serieData.itemStyle : serie.itemStyle;
             }
             else
             {
-                var stateStyle = GetStateStyle(serie, serieData, state);
-                return stateStyle == null || !stateStyle.show ? serie.itemStyle : stateStyle.itemStyle;
+                return stateStyle.itemStyle;
             }
         }
 
@@ -646,7 +646,7 @@ namespace XCharts.Runtime
             if (stateStyle == null)
             {
                 var itemStyle = GetItemStyle(serie, serieData, SerieState.Normal);
-                border = itemStyle.borderWidth != 0 ? itemStyle.borderWidth : serie.lineStyle.GetWidth(theme.serie.lineWidth);
+                border = itemStyle.borderWidth != 0 ? itemStyle.borderWidth : serie.lineStyle.GetWidth(theme.serie.lineWidth) * 1.8f;
                 cornerRadius = itemStyle.cornerRadius;
                 GetColor(ref borderColor, itemStyle.borderColor, itemStyle.borderColor, 1, theme, -1);
                 switch (state)
@@ -667,14 +667,15 @@ namespace XCharts.Runtime
             else
             {
                 var itemStyle = stateStyle.itemStyle;
-                border = itemStyle.borderWidth != 0 ? itemStyle.borderWidth : stateStyle.lineStyle.GetWidth(theme.serie.lineWidth);
+                border = itemStyle.borderWidth != 0 ? itemStyle.borderWidth : stateStyle.lineStyle.GetWidth(theme.serie.lineWidth) * 1.8f;
                 cornerRadius = itemStyle.cornerRadius;
                 GetColor(ref borderColor, stateStyle.itemStyle.borderColor, ColorUtil.clearColor32, 1, theme, -1);
             }
         }
 
-        public static float GetSysmbolSize(Serie serie, SerieData serieData, ThemeStyle theme, float defaultSize, SerieState state = SerieState.Auto)
+        public static float GetSysmbolSize(Serie serie, SerieData serieData, float defaultSize, SerieState state = SerieState.Auto, bool checkAnimation = false)
         {
+            if (serie == null) return defaultSize;
             if (state == SerieState.Auto)
                 state = GetSerieState(serie, serieData);
             var stateStyle = GetStateStyle(serie, serieData, state);
@@ -687,7 +688,7 @@ namespace XCharts.Runtime
                 {
                     case SerieState.Emphasis:
                     case SerieState.Select:
-                        size *= theme.serie.selectedRate;
+                        size = serie.animation.interaction.GetRadius(size);
                         break;
                     default:
                         break;
@@ -697,6 +698,10 @@ namespace XCharts.Runtime
             {
                 var symbol = stateStyle.symbol;
                 size = symbol.GetSize(serieData == null ? null : serieData.data, defaultSize);
+            }
+            if (serieData != null && checkAnimation)
+            {
+                size = (float)serieData.GetAddAnimationData(0, size, serie.animation.GetAdditionDuration());
             }
             return size;
         }
@@ -760,14 +765,19 @@ namespace XCharts.Runtime
             }
         }
 
-        private static List<SerieData> emptyFilter = new List<SerieData>();
         /// <summary>
         /// 根据dataZoom更新数据列表缓存
         /// </summary>
         /// <param name="dataZoom"></param>
         public static void UpdateFilterData(Serie serie, DataZoom dataZoom)
         {
-            if (dataZoom == null || !dataZoom.enable) return;
+            if (dataZoom == null || !dataZoom.enable)
+            {
+                serie.m_NeedUpdateFilterData = true;
+                serie.context.dataZoomStartIndex = 0;
+                serie.context.dataZoomStartIndexOffset = 0;
+                return;
+            }
             if (dataZoom.IsContainsXAxis(serie.xAxisIndex))
             {
                 if (dataZoom.IsXAxisIndexValue(serie.xAxisIndex))
@@ -810,6 +820,10 @@ namespace XCharts.Runtime
                 serie.m_FilterMinShow = dataZoom.minShowNum;
                 serie.m_NeedUpdateFilterData = false;
 
+                if(ReferenceEquals(serie.m_FilterData,data))
+                {
+                    serie.m_FilterData = new List<SerieData>();
+                }
                 serie.m_FilterData.Clear();
                 foreach (var serieData in data)
                 {
@@ -822,7 +836,10 @@ namespace XCharts.Runtime
             }
             else if (endValue == 0)
             {
-                serie.m_FilterData = emptyFilter;
+                if (serie.m_FilterData == null)
+                    serie.m_FilterData = new List<SerieData>();
+                else if (serie.m_FilterData.Count > 0)
+                    serie.m_FilterData.Clear();
             }
         }
 
@@ -863,24 +880,54 @@ namespace XCharts.Runtime
                     if (start >= 0)
                     {
                         serie.context.dataZoomStartIndex = start;
+                        serie.context.dataZoomStartIndexOffset = 0;
                         serie.m_FilterData = data.GetRange(start, range);
+                        var nowCount = serie.m_FilterData.Count;
+                        if (nowCount > 0)
+                        {
+                            if (serie.IsIgnoreValue(serie.m_FilterData[nowCount - 1]))
+                            {
+                                for (int i = start + range; i < data.Count; i++)
+                                {
+                                    serie.m_FilterData.Add(data[i]);
+                                    if (!serie.IsIgnoreValue(data[i]))
+                                        break;
+                                }
+                            }
+                            if (serie.IsIgnoreValue(serie.m_FilterData[0]))
+                            {
+                                for (int i = start - 1; i >= 0; i--)
+                                {
+                                    serie.m_FilterData.Insert(0, data[i]);
+                                    serie.context.dataZoomStartIndexOffset++;
+                                    if (!serie.IsIgnoreValue(data[i]))
+                                        break;
+                                }
+                            }
+                        }
                     }
                     else
                     {
                         serie.context.dataZoomStartIndex = 0;
+                        serie.context.dataZoomStartIndexOffset = 0;
                         serie.m_FilterData = data;
                     }
                 }
                 else
                 {
                     serie.context.dataZoomStartIndex = 0;
+                    serie.context.dataZoomStartIndexOffset = 0;
                     serie.m_FilterData = data;
                 }
             }
             else if (end == 0)
             {
                 serie.context.dataZoomStartIndex = 0;
-                serie.m_FilterData = emptyFilter;
+                serie.context.dataZoomStartIndexOffset = 0;
+                if (serie.m_FilterData == null)
+                    serie.m_FilterData = new List<SerieData>();
+                else if (serie.m_FilterData.Count > 0)
+                    serie.m_FilterData.Clear();
             }
         }
 

@@ -6,7 +6,7 @@ namespace XCharts.Runtime
 {
     /// <summary>
     /// Whether to show as Nightingale chart, which distinguishs data through radius. 
-    /// 是否展示成南丁格尔图，通过半径区分数据大小。
+    /// |是否展示成南丁格尔图，通过半径区分数据大小。
     /// </summary>
     public enum RoseType
     {
@@ -61,7 +61,8 @@ namespace XCharts.Runtime
     }
 
     /// <summary>
-    /// the type of bar. |柱状图类型。
+    /// the type of bar. 
+    /// |柱状图类型。
     /// </summary>
     public enum BarType
     {
@@ -83,7 +84,8 @@ namespace XCharts.Runtime
     }
 
     /// <summary>
-    /// the type of radar. |雷达图类型。
+    /// the type of radar. 
+    /// |雷达图类型。
     /// </summary>
     public enum RadarType
     {
@@ -100,7 +102,8 @@ namespace XCharts.Runtime
     }
 
     /// <summary>
-    /// 采样类型
+    /// sample type of line chart.
+    /// |采样类型，一般用于折线图。
     /// </summary>
     public enum SampleType
     {
@@ -133,26 +136,31 @@ namespace XCharts.Runtime
     }
 
     /// <summary>
-    /// 数据排序方式
+    /// the sort type of serie data.
+    /// |数据排序方式。
     /// </summary>
     public enum SerieDataSortType
     {
         /// <summary>
-        /// 按 data 的顺序
+        /// In the order of data.
+        /// |按数据的顺序。
         /// </summary>
         None,
         /// <summary>
-        /// 升序
+        /// Sort data in ascending order.
+        /// |升序。
         /// </summary>
         Ascending,
         /// <summary>
-        /// 降序
+        /// Sort data in descending order.
+        /// |降序。
         /// </summary>
         Descending,
     }
 
     /// <summary>
-    /// 对齐方式
+    /// Alignment mode.
+    /// |对齐方式。文本，图标，图形等的对齐方式。
     /// </summary>
     public enum Align
     {
@@ -202,23 +210,23 @@ namespace XCharts.Runtime
     {
         /// <summary>
         /// Select state.
-        /// |默认策略。每种Serie都有自己的默认的取颜色策略。比如Line默认是Series策略，Pie默认是Data策略
+        /// |默认策略。每种Serie都有自己的默认的取颜色策略。比如Line默认是Series策略，Pie默认是Data策略。
         /// </summary>
         Default,
         /// <summary>
-        /// assigns the colors in the palette by serie, so that all data in the same series are in the same color;.
+        /// assigns the colors in the palette by serie, so that all data in the same series are in the same color.
         /// |按照系列分配调色盘中的颜色，同一系列中的所有数据都是用相同的颜色。
         /// </summary>
         Serie,
         /// <summary>
-        /// assigns colors in the palette according to data items, with each data item using a different color..
+        /// assigns colors in the palette according to data items, with each data item using a different color.
         /// |按照数据项分配调色盘中的颜色，每个数据项都使用不同的颜色。
         /// </summary>
         Data
     }
 
     /// <summary>
-    /// 系列。
+    /// 系列。系列一般由数据和配置组成，用来表示具体的图表图形，如折线图的一条折线，柱图的一组柱子等。一个图表中可以包含多个不同类型的系列。
     /// </summary>
     [System.Serializable]
     public partial class Serie : BaseSerie, IComparable
@@ -271,6 +279,7 @@ namespace XCharts.Runtime
         [SerializeField] private float m_Gap;
         [SerializeField] private float[] m_Center = new float[2] { 0.5f, 0.48f };
         [SerializeField] private float[] m_Radius = new float[2] { 0, 0.28f };
+        [SerializeField][Since("v3.8.0")] private float m_MinRadius = 0f;
 
         [SerializeField][Range(2, 10)] private int m_ShowDataDimension;
         [SerializeField] private bool m_ShowDataName;
@@ -671,6 +680,15 @@ namespace XCharts.Runtime
             set { if (value != null && value.Length == 2) { m_Radius = value; SetVerticesDirty(); } }
         }
         /// <summary>
+        /// the min radius of chart. It can be used to limit the minimum radius of the rose chart.
+        /// |最小半径。可用于限制玫瑰图的最小半径。
+        /// </summary>
+        public float minRadius
+        {
+            get { return m_MinRadius; }
+            set { if (PropertyUtil.SetStruct(ref m_MinRadius, value)) SetVerticesDirty(); }
+        }
+        /// <summary>
         /// 最小值。
         /// </summary>
         public float min
@@ -839,7 +857,8 @@ namespace XCharts.Runtime
             set { if (PropertyUtil.SetStruct(ref m_Large, value)) SetAllDirty(); }
         }
         /// <summary>
-        /// 开启大数量优化的阈值。只有当开启了large并且数据量大于该阀值时才进入性能模式。
+        /// Turn on the threshold for mass optimization. Enter performance mode only when large is enabled and the amount of data is greater than the threshold.
+        /// |开启大数量优化的阈值。只有当开启了large并且数据量大于该阀值时才进入性能模式。
         /// </summary>
         public int largeThreshold
         {
@@ -847,7 +866,8 @@ namespace XCharts.Runtime
             set { if (PropertyUtil.SetStruct(ref m_LargeThreshold, value)) SetAllDirty(); }
         }
         /// <summary>
-        /// 在饼图且标签外部显示的情况下，是否启用防止标签重叠策略，默认关闭，在标签拥挤重叠的情况下会挪动各个标签的位置，防止标签间的重叠。
+        /// If the pie chart and labels are displayed externally, whether to enable the label overlap prevention policy is disabled by default. If labels are crowded and overlapped, the positions of labels are moved to prevent label overlap.
+        /// |在饼图且标签外部显示的情况下，是否启用防止标签重叠策略，默认关闭，在标签拥挤重叠的情况下会挪动各个标签的位置，防止标签间的重叠。
         /// </summary>
         public bool avoidLabelOverlap
         {
@@ -1021,6 +1041,12 @@ namespace XCharts.Runtime
             titleDirty = true;
         }
 
+        public override void SetVerticesDirty()
+        {
+            base.SetVerticesDirty();
+            interactDirty = true;
+        }
+
         private bool AnySerieDataVerticesDirty()
         {
             if (IsPerformanceMode())
@@ -1056,6 +1082,7 @@ namespace XCharts.Runtime
         public bool labelDirty { get; set; }
         public bool titleDirty { get; set; }
         public bool dataDirty { get; set; }
+        public bool interactDirty { get; set; }
 
         private void SetSerieNameDirty()
         {
@@ -1166,12 +1193,13 @@ namespace XCharts.Runtime
                 }
                 else
                 {
-                    var duration = animation.GetUpdateAnimationDuration();
+                    var duration = animation.GetChangeDuration();
+                    var dataAddDuration = animation.GetAdditionDuration();
                     var unscaledTime = animation.unscaledTime;
                     foreach (var sdata in data)
                     {
                         if (sdata.show && !IsIgnoreValue(sdata, sdata.data[1]))
-                            total += sdata.GetCurrData(1, duration, unscaledTime);
+                            total += sdata.GetCurrData(1, dataAddDuration, duration, unscaledTime);
                     }
                 }
                 return total;
@@ -1291,6 +1319,7 @@ namespace XCharts.Runtime
                 m_Data.Insert(0, serieData);
             else
                 m_Data.Add(serieData);
+            serieData.OnAdd(animation);
             SetVerticesDirty();
             dataDirty = true;
             m_NeedUpdateFilterData = true;
@@ -1434,7 +1463,8 @@ namespace XCharts.Runtime
             serieData.name = name;
             serieData.index = m_Data.Count;
             serieData.id = id;
-            serieData.data = new List<double>() { m_Data.Count, value };
+            serieData.data.Add(m_Data.Count);
+            serieData.data.Add(value);
             AddChildData(parent, serieData);
             return serieData;
         }
@@ -1445,7 +1475,7 @@ namespace XCharts.Runtime
             serieData.name = name;
             serieData.index = m_Data.Count;
             serieData.id = id;
-            serieData.data = new List<double>(value);
+            serieData.data.AddRange(value);
             AddChildData(parent, serieData);
             return serieData;
         }
@@ -1525,7 +1555,7 @@ namespace XCharts.Runtime
             var serieData = GetDataList(dataZoom);
             if (index < serieData.Count)
             {
-                var value = serieData[index].GetCurrData(1, animation.GetUpdateAnimationDuration(), animation.unscaledTime);
+                var value = serieData[index].GetCurrData(1, 0, animation.GetChangeDuration(), animation.unscaledTime);
                 if (showAsPositiveNumber)
                     value = Math.Abs(value);
                 return value;
@@ -1687,7 +1717,7 @@ namespace XCharts.Runtime
             if (index >= 0 && index < m_Data.Count)
             {
                 var animationOpen = animation.enable;
-                var animationDuration = animation.GetUpdateAnimationDuration();
+                var animationDuration = animation.GetChangeDuration();
                 var unscaledTime = animation.unscaledTime;
                 var flag = m_Data[index].UpdateData(dimension, value, animationOpen, unscaledTime, animationDuration);
                 if (flag)
@@ -1714,7 +1744,7 @@ namespace XCharts.Runtime
             {
                 var serieData = m_Data[index];
                 var animationOpen = animation.enable;
-                var animationDuration = animation.GetUpdateAnimationDuration();
+                var animationDuration = animation.GetChangeDuration();
                 var unscaledTime = animation.unscaledTime;
                 for (int i = 0; i < values.Count; i++)
                     serieData.UpdateData(i, values[i], animationOpen, unscaledTime, animationDuration);
@@ -1897,6 +1927,7 @@ namespace XCharts.Runtime
         /// </summary>
         public void AnimationFadeIn()
         {
+            ResetInteract();
             if (animation.enable) animation.FadeIn();
             SetVerticesDirty();
         }
@@ -1906,6 +1937,7 @@ namespace XCharts.Runtime
         /// </summary>
         public void AnimationFadeOut()
         {
+            ResetInteract();
             if (animation.enable) animation.FadeOut();
             SetVerticesDirty();
         }

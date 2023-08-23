@@ -6,6 +6,7 @@ slug: /changelog
 # 更新日志
 
 [master](#master)  
+[v3.7.0](#v370)  
 [v3.6.0](#v360)  
 [v3.5.0](#v350)  
 [v3.4.0](#v340)  
@@ -65,6 +66,76 @@ slug: /changelog
 [v0.1.0](#v010)  
 
 ## master
+
+版本要点：
+
+* 重构`Animation`动画系统，增加`新增动画`和`交互动画`的支持
+* 完善`PieChart`的动画交互表现
+* 增加`Symbol`的`EmptyTriangle`、`EmptyDiamond`、`Plus`、`Minus`四种新标记
+* 完善`Chart`的鼠标交互回调
+* 增加`LabelLine`可固定横坐标的功能
+* 修复千年老问题：开启TMP后更新版本会报错的问题
+
+日志详情：
+
+* (2023.08.22) 修复`Bar`显示隐藏时绘制表现异常的问题
+* (2023.08.22) 优化`Zebra`斑马柱图的绘制表现 (#276)
+* (2023.08.16) 增加`Daemon`守护程序，解决本地开启TMP后更新版本报错问题
+* (2023.08.15) 修复`Data`数据在-1到1之间时坐标轴显示错误的问题 (#273) (by __Ambitroc__)
+* (2023.08.14) 修复`XCharts`本地开启`TextMeshPro`和 `NewInputSystem`后更新版本会报错的问题 (#272)
+* (2023.08.12) 修复`Chart`在运行时被删除时会异常报错的问题 (#269)
+* (2023.08.11) 修复`DataZoom`开启时可能会导致无法添加数据的问题
+* (2023.08.11) 修复`SerieData`单独设置`ItemStyle`的`itemFormatter`不生效的问题
+* (2023.08.10) 优化`BarChart`在`Tooltip`的`Trigger`为`Item`时的表现
+* (2023.08.09) 增加`Axis`可通过设置`IconStyle`的`color`为`clear`来实现动态图标颜色的支持
+* (2023.08.08) 增加`Pie`对`LabelLine`的`lineEndX`的支持
+* (2023.08.05) 整理`Examples`的代码，删除不必要的用例
+* (2023.08.04) 增加`LabelLine`的`lineEndX`可设置引导线固定X位置的支持
+* (2023.08.04) 增加`Ring`的`avoidLabelOverlap`避免文本堆叠的支持 (#247)
+* (2023.08.03) 完善`Chart`的`onSerieEnter`，`onSerieExit`和`onSerieClick`回调
+* (2023.08.02) 修复`BarChart`的`onSerieEnter`和`onSerieExit`回调无效的问题
+* (2023.08.02) 增加`Symbol`的`Plus`加号和`Minus`减号的支持
+* (2023.07.31) 增加`Symbol`的`EmptyTriangle`和`EmptyDiamond`的支持，优化`Symbol`表现效果
+* (2023.07.31) 优化`Line`的默认配置效果
+* (2023.07.27) 增加`Serie`的`minRadius`可设置最小半径
+* (2023.07.26) 增加`MLValue`多样式数值
+* (2023.07.25) 增加`XLog`日志系统
+* (2023.07.18) 完善`Pie`饼图的交互动画效果
+* (2023.07.14) 增加`Animation`的`Interaction`交互动画配置支持
+* (2023.07.11) 增加`Animation`的`Addition`新增动画配置支持
+* (2023.07.11) 重构`Animation`动画系统，完善动画体验
+* (2023.06.30) 增加`PolarCood`的`indicatorLabelOffset`设置指示文本偏移的支持
+* (2023.06.30) 修复`Axis`的`IndicatorLabel`的背景颜色可能不正常的问题
+* (2023.06.30) 增加`Axis`的`IndicatorLabel`可自定义`color`的支持
+* (2023.06.12) 修复`AxisLabel`的`formatterFunction`在数值轴时`value`不对的问题
+
+## v3.7.0
+
+版本要点：
+
+* 增加`HelpDoc`官网帮助文档跳转
+* 增加`Line`对`Clip`的支持
+* 优化`Axis`的范围设置
+* 其他优化和修复
+
+日志详情：
+
+* (2023.06.08) 发布`v3.7.0`版本
+* (2023.06.04) 增加`HelpDoc`帮助文档跳转
+* (2023.05.30) 修复`Serie`的名字带`_`线导致`Legend`无法触发的问题 (#259) (by __svr2kos2__)
+* (2023.05.10) 增加`Axis`的`MinMaxAuto`范围类型
+* (2023.05.10) 增加`Line`对`Clip`的支持
+* (2023.05.04) 优化`Axis`在-1到1范围时设置`CeilRate`不生效的问题
+* (2023.05.04) 优化`Axis`的`MinMax`类型范围计算
+* (2023.05.04) 修复`AxisLabel`在数据都是小于1的浮点数时显示`Label`格式不对的问题
+* (2023.05.04) 修复`Theme`在修改默认主题的参数后运行被重置的问题
+* (2023.05.04) 增加`Symbol`选择`Custom`类型时的`Warning`提示
+* (2023.04.15) 修复`DataZoom`在多个图表时可能异常的问题 (#252)
+* (2023.04.14) 修复`Tooltip`在只有一个数据时可能异常的问题
+* (2023.04.14) 增加`BaseChart`的`TriggerTooltip()`接口尝试触发`ToolTip`
+* (2023.04.12) 优化`RadarCood`设置`startAngle`时文本也跟随调整位置
+* (2023.04.12) 增加`Radar`对通配符`{b}`的支持
+* (2023.04.11) 修复`Inspector`在动态添加组件时可能异常的问题
 
 ## v3.6.0
 

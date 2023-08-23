@@ -11,7 +11,7 @@ namespace XCharts.Runtime
 {
     [AddComponentMenu("XCharts/EmptyChart", 10)]
     [ExecuteInEditMode]
-    [RequireComponent(typeof(RectTransform),typeof(CanvasRenderer))]
+    [RequireComponent(typeof(RectTransform), typeof(CanvasRenderer))]
     [DisallowMultipleComponent]
     public partial class BaseChart : BaseGraph, ISerializationCallbackReceiver
     {
@@ -131,7 +131,7 @@ namespace XCharts.Runtime
         {
             if (m_Settings == null)
                 m_Settings = Settings.DefaultSettings;
-            CheckTheme();
+            CheckTheme(true);
             base.Awake();
             InitComponentHandlers();
             InitSerieHandlers();
@@ -172,6 +172,12 @@ namespace XCharts.Runtime
             DefaultChart();
             Awake();
         }
+
+        protected override void OnValidate()
+        {
+            base.OnValidate();
+            foreach (var handler in m_SerieHandlers) handler.ForceUpdateSerieContext();
+        }
 #endif
 
         protected override void Start()
@@ -186,7 +192,9 @@ namespace XCharts.Runtime
             CheckPainter();
             CheckRefreshChart();
             Internal_CheckAnimation();
+            foreach (var handler in m_SerieHandlers) handler.BeforeUpdate();
             foreach (var handler in m_SerieHandlers) handler.Update();
+            foreach (var handler in m_SerieHandlers) handler.AfterUpdate();
             foreach (var handler in m_ComponentHandlers) handler.Update();
             m_DebugInfo.Update();
             if (m_OnUpdate != null)
@@ -244,11 +252,15 @@ namespace XCharts.Runtime
             painter.SetActive(flag, m_DebugInfo.showAllChartObject);
         }
 
-        protected virtual void CheckTheme()
+        protected virtual void CheckTheme(bool firstInit = false)
         {
             if (m_Theme.sharedTheme == null)
             {
                 m_Theme.sharedTheme = XCThemeMgr.GetTheme(ThemeType.Default);
+            }
+            if (firstInit)
+            {
+                m_CheckTheme = m_Theme.themeType;
             }
             if (m_Theme.sharedTheme != null && m_CheckTheme != m_Theme.themeType)
             {
@@ -311,6 +323,8 @@ namespace XCharts.Runtime
 
         protected override void OnDestroy()
         {
+            base.OnDestroy();
+            XChartsMgr.RemoveChart(chartName);
             for (int i = transform.childCount - 1; i >= 0; i--)
             {
                 DestroyImmediate(transform.GetChild(i).gameObject);
@@ -588,8 +602,6 @@ namespace XCharts.Runtime
                 serie.animation.context.isAllItemAnimationEnd = true;
                 if (serie.show && !serie.animation.HasFadeOut())
                 {
-                    if (!serie.context.pointerEnter)
-                        serie.ResetInteract();
                     if (m_OnDrawSerieBefore != null)
                     {
                         m_OnDrawSerieBefore.Invoke(vh, serie);

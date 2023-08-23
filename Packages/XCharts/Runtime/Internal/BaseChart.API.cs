@@ -183,8 +183,6 @@ namespace XCharts.Runtime
         /// </summary>
         public void RefreshChart()
         {
-            foreach (var serie in m_Series)
-                serie.ResetInteract();
             m_RefreshChart = true;
             if (m_Painter) m_Painter.Refresh();
             foreach (var painter in m_PainterList) painter.Refresh();
@@ -213,7 +211,7 @@ namespace XCharts.Runtime
         public void RefreshChart(Serie serie)
         {
             if (serie == null) return;
-            serie.ResetInteract();
+            // serie.ResetInteract();
             RefreshPainter(serie);
         }
 
@@ -382,8 +380,8 @@ namespace XCharts.Runtime
         }
 
         /// <summary>
-        /// Whether series animation enabel.
-        /// |启用或关闭起始动画。
+        /// Whether enable serie animations.
+        /// |是否启用Serie动画。
         /// </summary>
         /// <param name="flag"></param>
         public void AnimationEnable(bool flag)
@@ -392,19 +390,19 @@ namespace XCharts.Runtime
         }
 
         /// <summary>
-        /// fadeIn animation.
-        /// |开始渐入动画。
+        /// Start all serie fadein animations.
+        /// |开始所有Serie的渐入动画。
         /// </summary>
+        /// <param name="reset">reset animation</param>
         public void AnimationFadeIn(bool reset = true)
         {
-            if (reset)
-                AnimationReset();
+            if (reset) AnimationReset();
             foreach (var serie in m_Series) serie.AnimationFadeIn();
         }
 
         /// <summary>
-        /// fadeIn animation.
-        /// |开始渐出动画。
+        /// Start all serie fadeout animations.
+        /// |开始所有Serie的渐出动画。
         /// </summary>
         public void AnimationFadeOut()
         {
@@ -412,8 +410,8 @@ namespace XCharts.Runtime
         }
 
         /// <summary>
-        /// Pause animation.
-        /// |暂停动画。
+        /// Pause all animations.
+        /// |暂停所有Serie的动画。
         /// </summary>
         public void AnimationPause()
         {
@@ -421,8 +419,8 @@ namespace XCharts.Runtime
         }
 
         /// <summary>
-        /// Stop play animation.
-        /// |继续动画。
+        /// Resume all animations.
+        /// |继续所有Serie的动画。
         /// </summary>
         public void AnimationResume()
         {
@@ -430,8 +428,8 @@ namespace XCharts.Runtime
         }
 
         /// <summary>
-        /// Reset animation.
-        /// |重置动画。
+        /// Reset all animations.
+        /// |重置所有Serie的动画。
         /// </summary>
         public void AnimationReset()
         {
@@ -666,6 +664,65 @@ namespace XCharts.Runtime
             Color32 color, toColor;
             SerieHelper.GetItemColor(out color, out toColor, serie, null, m_Theme);
             return color;
+        }
+
+        /// <summary>
+        /// trigger tooltip by data index.
+        /// |尝试触发指定数据项的Tooltip.
+        /// </summary>
+        /// <param name="dataIndex">数据项索引</param>
+        /// <returns></returns>
+        [Since("v3.7.0")]
+        public bool TriggerTooltip(int dataIndex)
+        {
+            var serie = GetSerie(0);
+            if (serie == null) return false;
+            var dataPoints = serie.context.dataPoints;
+            var dataPoint = Vector3.zero;
+            if (dataPoints.Count == 0)
+            {
+                if (serie.dataCount == 0) return false;
+                dataIndex = dataIndex % serie.dataCount;
+                var serieData = serie.GetSerieData(dataIndex);
+                if (serieData == null) return false;
+                dataPoint = serie.GetSerieData(dataIndex).context.position;
+            }
+            else
+            {
+                dataIndex = dataIndex % dataPoints.Count;
+                dataPoint = dataPoints[dataIndex];
+            }
+            return TriggerTooltip(dataPoint);
+        }
+
+        /// <summary>
+        /// trigger tooltip by chart local position.
+        /// |在指定的位置尝试触发Tooltip.
+        /// </summary>
+        /// <param name="localPosition"></param>
+        /// <returns></returns>
+        [Since("v3.7.0")]
+        public bool TriggerTooltip(Vector3 localPosition)
+        {
+            var screenPoint = LocalPointToScreenPoint(localPosition);
+            var eventData = new PointerEventData(EventSystem.current);
+            eventData.position = screenPoint;
+            OnPointerEnter(eventData);
+            return true;
+        }
+
+        /// <summary>
+        /// cancel tooltip.
+        /// |取消Tooltip.
+        /// </summary>
+        [Since("v3.7.0")]
+        public void CancelTooltip()
+        {
+            var tooltip = GetChartComponent<Tooltip>();
+            if (tooltip != null)
+            {
+                tooltip.SetActive(false);
+            }
         }
     }
 }

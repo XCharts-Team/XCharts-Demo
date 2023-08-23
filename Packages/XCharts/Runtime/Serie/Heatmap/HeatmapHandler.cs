@@ -209,7 +209,8 @@ namespace XCharts.Runtime
 
             serie.animation.InitProgress(0, xCount);
             var animationIndex = serie.animation.GetCurrIndex();
-            var dataChangeDuration = serie.animation.GetUpdateAnimationDuration();
+            var dataChangeDuration = serie.animation.GetChangeDuration();
+            var dataAddDuration = serie.animation.GetAdditionDuration();
             var unscaledTime = serie.animation.unscaledTime;
             var dataChanging = false;
             serie.containerIndex = m_SerieGrid.index;
@@ -246,7 +247,7 @@ namespace XCharts.Runtime
                 var symbol = SerieHelper.GetSerieSymbol(serie, serieData, state);
                 var isRectSymbol = symbol.type == SymbolType.Rect;
                 SerieHelper.GetSymbolInfo(out borderColor, out symbolBorder, out cornerRadius, serie, serieData, chart.theme, state);
-                var value = serieData.GetCurrData(dimension, dataChangeDuration, yAxis.inverse,
+                var value = serieData.GetCurrData(dimension, dataAddDuration, dataChangeDuration, yAxis.inverse,
                     yAxis.context.minValue, yAxis.context.maxValue, unscaledTime);
                 if (serieData.IsDataChanged()) dataChanging = true;
                 var pos = new Vector3(zeroX + (i + 0.5f) * xWidth,
@@ -283,7 +284,7 @@ namespace XCharts.Runtime
                     }
                     else
                     {
-                        var symbolSize = SerieHelper.GetSysmbolSize(serie, serieData, chart.theme, defaultSymbolSize, state);
+                        var symbolSize = SerieHelper.GetSysmbolSize(serie, serieData, defaultSymbolSize, state);
                         rectWid = symbolSize;
                         rectHig = symbolSize;
                     }
@@ -297,7 +298,7 @@ namespace XCharts.Runtime
                 }
                 else
                 {
-                    var symbolSize = SerieHelper.GetSysmbolSize(serie, serieData, chart.theme, defaultSymbolSize, state);
+                    var symbolSize = SerieHelper.GetSysmbolSize(serie, serieData, defaultSymbolSize, state);
                     var emptyColor = SerieHelper.GetItemBackgroundColor(serie, serieData, chart.theme, serie.context.colorIndex, state);
                     serieData.context.rect = new Rect(pos.x - symbolSize / 2, pos.y - symbolSize / 2, symbolSize, symbolSize);
                     chart.DrawSymbol(vh, symbol.type, symbolSize, symbolBorder, pos,
@@ -397,7 +398,7 @@ namespace XCharts.Runtime
             }
             var state = SerieHelper.GetSerieState(serie, null, true);
             var symbol = SerieHelper.GetSerieSymbol(serie, null, state);
-            var symbolSize = SerieHelper.GetSysmbolSize(serie, null, chart.theme, defaultSymbolSize, state);
+            var symbolSize = SerieHelper.GetSysmbolSize(serie, null, defaultSymbolSize, state);
             var isRectSymbol = symbol.type == SymbolType.Rect;
             float symbolBorder = 0f;
             float[] cornerRadius = null;

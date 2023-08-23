@@ -7,6 +7,7 @@ namespace XChartsDemo
     [ExecuteInEditMode]
     public class Bar20_BarRace : MonoBehaviour
     {
+        public float updateTime = 3f;
         private BarChart chart;
         private float lastTime;
 
@@ -33,7 +34,7 @@ namespace XChartsDemo
         void UpdateData()
         {
             var serie = chart.GetSerie(0);
-
+            serie.animation.change.duration = updateTime* 1000;
             for (int i = 0; i < serie.dataCount; i++)
             {
                 if (Random.Range(0, 1f) > 0.9f)

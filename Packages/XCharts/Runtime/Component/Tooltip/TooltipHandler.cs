@@ -34,7 +34,7 @@ namespace XCharts.Runtime
         private void InitTooltip(Tooltip tooltip)
         {
             tooltip.painter = chart.m_PainterUpper;
-            tooltip.refreshComponent = delegate()
+            tooltip.refreshComponent = delegate ()
             {
                 var objName = ChartCached.GetComponentObjectName(tooltip);
                 tooltip.gameObject = ChartHelper.AddObject(objName, chart.transform, chart.chartMinAnchor,
@@ -57,9 +57,10 @@ namespace XCharts.Runtime
                     if (com is Axis)
                     {
                         var axis = com as Axis;
+                        var aligment = (com is AngleAxis) ? TextAnchor.MiddleCenter : axis.context.aligment;
                         var labelName = ChartCached.GetComponentObjectName(axis);
                         var item = ChartHelper.AddTooltipIndicatorLabel(component, labelName, m_LabelRoot.transform,
-                            chart.theme, axis.context.aligment, axis.indicatorLabel);
+                            chart.theme, aligment, axis.indicatorLabel);
                         item.SetActive(false);
                         m_IndicatorLabels[labelName] = item;
                     }
@@ -193,7 +194,7 @@ namespace XCharts.Runtime
 
             if (axis.IsCategory())
             {
-                var index = (int) axis.context.pointerValue;
+                var index = (int)axis.context.pointerValue;
                 var category = axis.GetData(index);
                 label.SetText(axis.indicatorLabel.GetFormatterContent(index, category));
             }
@@ -210,7 +211,11 @@ namespace XCharts.Runtime
                 label.color = textColor;
             else
                 label.color = axis.indicatorLabel.background.color;
-            label.SetTextColor(Color.white);
+
+            if (ChartHelper.IsClearColor(axis.indicatorLabel.textStyle.color))
+                label.SetTextColor(Color.white);
+            else
+                label.SetTextColor(axis.indicatorLabel.textStyle.color);
         }
 
         private ISerieContainer GetPointerContainerAndSeries(Tooltip tooltip, List<Serie> list)
@@ -241,7 +246,7 @@ namespace XCharts.Runtime
                                 else if (container is PolarCoord)
                                 {
                                     var m_AngleAxis = ComponentHelper.GetAngleAxis(chart.components, container.index);
-                                    tooltip.context.angle = (float) m_AngleAxis.context.pointerValue;
+                                    tooltip.context.angle = (float)m_AngleAxis.context.pointerValue;
                                 }
                                 list.Add(serie);
                                 if (!isTriggerAxis)
@@ -267,7 +272,7 @@ namespace XCharts.Runtime
                 if (isTriggerAxis)
                 {
                     serie.context.pointerEnter = true;
-                    serie.context.pointerAxisDataIndexs.Add((int) yAxis.context.pointerValue);
+                    serie.context.pointerAxisDataIndexs.Add((int)yAxis.context.pointerValue);
                     yAxis.context.axisTooltipValue = yAxis.context.pointerValue;
                 }
             }
@@ -283,7 +288,7 @@ namespace XCharts.Runtime
             {
                 if (isTriggerAxis)
                 {
-                    var index = serie.context.dataZoomStartIndex + (int) xAxis.context.pointerValue;
+                    var index = serie.context.dataZoomStartIndex + (int)xAxis.context.pointerValue;
                     serie.context.pointerEnter = true;
                     serie.context.pointerAxisDataIndexs.Add(index);
                     serie.context.pointerItemDataIndex = index;
@@ -344,7 +349,7 @@ namespace XCharts.Runtime
                     var serieData = serie.data[i];
                     serie.context.sortedData.Add(serieData);
                 }
-                serie.context.sortedData.Sort(delegate(SerieData a, SerieData b)
+                serie.context.sortedData.Sort(delegate (SerieData a, SerieData b)
                 {
                     return a.GetData(dimension).CompareTo(b.GetData(dimension));
                 });
@@ -355,7 +360,7 @@ namespace XCharts.Runtime
             {
                 var serieData = data[i];
                 currValue = serieData.GetData(dimension);
-                if (i == 0)
+                if (i == 0 && i + 1 < dataCount)
                 {
                     nextValue = data[i + 1].GetData(dimension);
                     if (axisValue <= currValue + (nextValue - currValue) / 2)
@@ -372,7 +377,7 @@ namespace XCharts.Runtime
                         break;
                     }
                 }
-                else
+                else if (i + 1 < dataCount)
                 {
                     nextValue = data[i + 1].GetData(dimension);
                     if (axisValue > (currValue - (currValue - lastValue) / 2) && axisValue <= currValue + (nextValue - currValue) / 2)
@@ -444,15 +449,16 @@ namespace XCharts.Runtime
             string category = null;
             var showCategory = false;
             var isTriggerByAxis = false;
+            var isTriggerByItem = false;
             var dataIndex = -1;
             tooltip.context.data.param.Clear();
             tooltip.context.pointer = chart.pointerPos;
             if (m_PointerContainer is GridCoord)
             {
+                GetAxisCategory(m_PointerContainer.index, ref dataIndex, ref category);
                 if (tooltip.trigger == Tooltip.Trigger.Axis)
                 {
                     isTriggerByAxis = true;
-                    GetAxisCategory(m_PointerContainer.index, ref dataIndex, ref category);
                     if (series.Count <= 1)
                     {
                         showCategory = true;
@@ -461,12 +467,18 @@ namespace XCharts.Runtime
                     else
                         tooltip.context.data.title = category;
                 }
+                else if (tooltip.trigger == Tooltip.Trigger.Item)
+                {
+                    isTriggerByItem = true;
+                    showCategory = series.Count <= 1;
+                }
             }
 
             for (int i = 0; i < series.Count; i++)
             {
                 var serie = series[i];
                 if (!serie.show) continue;
+                if (isTriggerByItem && serie.context.pointerItemDataIndex < 0) continue;
                 serie.context.isTriggerByAxis = isTriggerByAxis;
                 if (isTriggerByAxis && dataIndex >= 0 && serie.context.pointerItemDataIndex < 0)
                     serie.context.pointerItemDataIndex = dataIndex;
@@ -497,7 +509,9 @@ namespace XCharts.Runtime
                     var axis = component as Axis;
                     if (axis.gridIndex == gridIndex && axis.IsCategory())
                     {
-                        dataIndex = axis.context.dataZoomStartIndex + (int) axis.context.pointerValue;
+                        dataIndex = double.IsNaN(axis.context.pointerValue)
+                            ? axis.context.dataZoomStartIndex
+                            : axis.context.dataZoomStartIndex + (int)axis.context.pointerValue;
                         category = axis.GetData(dataIndex);
                         return true;
                     }
@@ -558,7 +572,7 @@ namespace XCharts.Runtime
                         case Tooltip.Type.Line:
                             float pX = grid.context.x;
                             pX += xAxis.IsCategory() ?
-                                (float) (xAxis.context.pointerValue * splitWidth + (xAxis.boundaryGap ? splitWidth / 2 : 0)) :
+                                (float)(xAxis.context.pointerValue * splitWidth + (xAxis.boundaryGap ? splitWidth / 2 : 0)) :
                                 xAxis.GetDistance(xAxis.context.axisTooltipValue, grid.context.width);
                             if (pX < grid.context.x)
                                 break;
@@ -577,15 +591,15 @@ namespace XCharts.Runtime
                             if (xAxis.IsCategory() && !double.IsInfinity(xAxis.context.pointerValue))
                             {
                                 float tooltipSplitWid = splitWidth < 1 ? 1 : splitWidth;
-                                pX = (float) (grid.context.x + splitWidth * xAxis.context.pointerValue -
+                                pX = (float)(grid.context.x + splitWidth * xAxis.context.pointerValue -
                                     (xAxis.boundaryGap ? 0 : splitWidth / 2));
                                 if (pX < grid.context.x)
                                     break;
                                 float pY = grid.context.y + grid.context.height;
-                                Vector3 p1 = chart.ClampInGrid(grid,new Vector3(pX, grid.context.y));
-                                Vector3 p2 = chart.ClampInGrid(grid,new Vector3(pX, pY));
-                                Vector3 p3 = chart.ClampInGrid(grid,new Vector3(pX + tooltipSplitWid, pY));
-                                Vector3 p4 = chart.ClampInGrid(grid,new Vector3(pX + tooltipSplitWid, grid.context.y));
+                                Vector3 p1 = chart.ClampInGrid(grid, new Vector3(pX, grid.context.y));
+                                Vector3 p2 = chart.ClampInGrid(grid, new Vector3(pX, pY));
+                                Vector3 p3 = chart.ClampInGrid(grid, new Vector3(pX + tooltipSplitWid, pY));
+                                Vector3 p4 = chart.ClampInGrid(grid, new Vector3(pX + tooltipSplitWid, grid.context.y));
                                 var areaColor = TooltipHelper.GetLineColor(tooltip, chart.theme.tooltip.areaColor);
                                 UGL.DrawQuadrilateral(vh, p1, p2, p3, p4, areaColor);
                             }
@@ -622,7 +636,7 @@ namespace XCharts.Runtime
                     {
                         case Tooltip.Type.Corss:
                         case Tooltip.Type.Line:
-                            float pY = (float) (grid.context.y + yAxis.context.pointerValue * splitWidth +
+                            float pY = (float)(grid.context.y + yAxis.context.pointerValue * splitWidth +
                                 (yAxis.boundaryGap ? splitWidth / 2 : 0));
                             if (pY < grid.context.y)
                                 break;
@@ -642,7 +656,7 @@ namespace XCharts.Runtime
                             {
                                 float tooltipSplitWid = splitWidth < 1 ? 1 : splitWidth;
                                 float pX = grid.context.x + grid.context.width;
-                                pY = (float) (grid.context.y + splitWidth * yAxis.context.pointerValue -
+                                pY = (float)(grid.context.y + splitWidth * yAxis.context.pointerValue -
                                     (yAxis.boundaryGap ? 0 : splitWidth / 2));
                                 if (pY < grid.context.y)
                                     break;

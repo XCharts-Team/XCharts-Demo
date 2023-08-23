@@ -67,8 +67,8 @@ namespace XCharts.Demo
                 var serie = m_Chart.GetSerie(i);
                 serie.serieName = countries[i];
                 serie.symbol.show = false;
-                serie.animation.fadeInDelay = 0;
-                serie.animation.fadeInDuration = 10000;
+                serie.animation.fadeIn.delay = 0;
+                serie.animation.fadeIn.duration = 10000;
                 serie.EnsureComponent<EndLabelStyle>();
             }
             for (int i = 1; i < temp.Length; i++)

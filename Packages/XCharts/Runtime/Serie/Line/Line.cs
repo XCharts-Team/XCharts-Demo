@@ -6,7 +6,7 @@ namespace XCharts.Runtime
     [SerieHandler(typeof(LineHandler), true)]
     [SerieConvert(typeof(Bar), typeof(Pie))]
     [CoordOptions(typeof(GridCoord), typeof(PolarCoord))]
-    [DefaultAnimation(AnimationType.LeftToRight)]
+    [DefaultAnimation(AnimationType.LeftToRight, false)]
     [SerieComponent(
         typeof(LabelStyle),
         typeof(EndLabelStyle),
@@ -31,6 +31,7 @@ namespace XCharts.Runtime
         {
             var serie = chart.AddSerie<Line>(serieName);
             serie.symbol.show = true;
+            serie.animation.interaction.radius.value = 1.5f;
             for (int i = 0; i < 5; i++)
             {
                 chart.AddData(serie.index, UnityEngine.Random.Range(10, 90));

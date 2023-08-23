@@ -6,6 +6,14 @@ slug: /tutorial01
 
 # 教程：5分钟上手 XCharts 3.0
 
+> 注：本教程适用XCharts 3.x版本，2.x版本请看 [教程：5分钟上手XCharts 2.0](https://github.com/XCharts-Team/XCharts/blob/2.0/Doc/教程：5分钟上手XCharts.md)
+
+## 使用 XCharts 前需要掌握什么
+
+- 会简单使用Unity
+- 了解UGUI，会使用UGUI
+- 了解Unity的MonoBehavior脚本用法，知道怎么挂脚本，用代码操作脚本
+
 ## 获取和导入 XCharts
 
 XCharts可通过以下任意一种方式导入到项目：
@@ -29,6 +37,10 @@ XCharts可通过以下任意一种方式导入到项目：
     ```
 
     如需更新`XCharts`，删除`manifest.json`文件（部分Unity版本可能是packages-lock.json文件）的`lock`下的`com.monitor1394.xcharts`相关内容即会重新下载编译。
+
+- 建议先导入XCharts的守护程序（非必须）
+
+    守护程序[XCharts-Daemon](https://github.com/XCharts-Team/XCharts-Daemon)可以确保更新时编译正常，当本地开启TextMeshPro或NewInputSystem时将会非常有用。将XCharts-Daemon导入项目后，在更新XCharts时守护程序会自动根据本地TMP等的开启情况刷新asmdef，确保编译正常，不用手动去解决，方便CI-CD等自动化流程执行。
 
 ## 添加一个简单图表
 
@@ -192,6 +204,8 @@ XCharts支持TextMeshPro，但默认是不开启的，需要自己手动切换�
 1. 找到`XCharts.Runtime.asmdef`和`XCharts.Editor.asmdef`，手动加上 `TextMeshPro`的引用
 2. 移除`PlayerSetting`中`Scripting Define Symbols`的`dUI_TextMeshPro`宏
 
+`3.8.0`版本后增加[XCharts-Daemon](https://github.com/XCharts-Team/XCharts-Daemon)守护程序，将XCharts-Daemon导入项目后，在更新XCharts时守护程序会自动根据本地开启的TMP情况刷新asmdef，确保编译正常。
+
 ## 用代码改图表参数
 
 `Inspector`上看到的所有参数都可以用代码来修改，关键是要定位好你要改的参数是在组件上、还是Serie上、还是在具体的数据项SerieData上。
@@ -210,6 +224,8 @@ xAxis.splitNumber = 10;
 xAxis.boundaryGap = true;
 xAxis.type = Axis.AxisType.Category;
 ```
+
+> 注：低版本没有`EnsureChartComponent()`接口时，用`GetOrAddChartComponent()`
 
 ### 改Serie的参数
 

@@ -32,9 +32,9 @@ namespace XChartsDemo
             {
                 foreach (var serie in chart.series)
                 {
-                    serie.animation.fadeInDuration = m_FadeInDuration;
-                    serie.animation.fadeOutDuration = m_FadeOutDuration;
-                    serie.animation.dataChangeDuration = m_DataChangeDuration;
+                    serie.animation.fadeIn.duration = m_FadeInDuration;
+                    serie.animation.fadeOut.duration = m_FadeOutDuration;
+                    serie.animation.change.duration = m_DataChangeDuration;
                 }
             }
             SetInputField("settings/fadeIn/InputField", m_FadeInDuration, OnFadeInDurationChanged);
@@ -145,7 +145,7 @@ namespace XChartsDemo
             {
                 foreach (var serie in chart.series)
                 {
-                    serie.animation.fadeInDuration = m_FadeInDuration;
+                    serie.animation.fadeIn.duration = m_FadeInDuration;
                 }
             }
         }
@@ -158,7 +158,7 @@ namespace XChartsDemo
             {
                 foreach (var serie in chart.series)
                 {
-                    serie.animation.fadeOutDuration = m_FadeOutDuration;
+                    serie.animation.fadeOut.duration = m_FadeOutDuration;
                 }
             }
         }
@@ -171,7 +171,7 @@ namespace XChartsDemo
             {
                 foreach (var serie in chart.series)
                 {
-                    serie.animation.dataChangeDuration = m_DataChangeDuration;
+                    serie.animation.change.duration = m_DataChangeDuration;
                 }
             }
         }

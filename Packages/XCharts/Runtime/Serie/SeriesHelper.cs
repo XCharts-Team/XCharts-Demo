@@ -294,7 +294,7 @@ namespace XCharts.Runtime
             for (int i = 0; i <= currSerie.index; i++)
             {
                 var serie = series[i];
-                if (serie.GetType() == currSerie.GetType() && ChartHelper.IsValueEqualsString(serie.stack, currSerie.stack))
+                if (serie.show && serie.GetType() == currSerie.GetType() && ChartHelper.IsValueEqualsString(serie.stack, currSerie.stack))
                 {
                     dataList.Add(serie.GetDataList(dataZoom));
                 }
@@ -346,7 +346,8 @@ namespace XCharts.Runtime
                     if ((isPolar && serie.polarIndex != axisIndex) ||
                         (!isPolar && serie.yAxisIndex != axisIndex) ||
                         !serie.show) continue;
-                    var updateDuration = serie.animation.enable ? serie.animation.dataChangeDuration : 0;
+                    var updateDuration = serie.animation.GetChangeDuration();
+                    var dataAddDuration = serie.animation.GetAdditionDuration();
                     var unscaledTime = serie.animation.unscaledTime;
                     if (isPercentStack && SeriesHelper.IsPercentStack<Bar>(series, serie.serieName))
                     {
@@ -372,7 +373,7 @@ namespace XCharts.Runtime
                             foreach (var data in showData)
                             {
                                 var currData = performanceMode ? data.GetData(yValue ? 1 : 0, inverse) :
-                                    data.GetCurrData(yValue ? 1 : 0, updateDuration, unscaledTime, inverse);
+                                    data.GetCurrData(yValue ? 1 : 0, dataAddDuration, updateDuration, unscaledTime, inverse);
                                 if (!serie.IsIgnoreValue(data, currData))
                                 {
                                     if (currData > max) max = currData;
@@ -405,6 +406,9 @@ namespace XCharts.Runtime
                         }
                         else
                         {
+                            var updateDuration = serie.animation.GetChangeDuration();
+                            var dataAddDuration = serie.animation.GetAdditionDuration();
+                            var unscaledTime = serie.animation.unscaledTime;
                             for (int j = 0; j < showData.Count; j++)
                             {
                                 if (!_serieTotalValueForMinMax.ContainsKey(j))
@@ -416,9 +420,10 @@ namespace XCharts.Runtime
                                 }
                                 else
                                 {
-                                    currData = yValue ? showData[j].GetData(1) : showData[j].GetData(0);
+                                    //currData = yValue ? showData[j].GetData(1) : showData[j].GetData(0);
+                                    currData = showData[j].GetCurrData(yValue ? 1 : 0, dataAddDuration, updateDuration, unscaledTime, inverse);
                                 }
-                                if (inverse) currData = -currData;
+                                //if (inverse) currData = -currData;
                                 if (!serie.IsIgnoreValue(showData[j], currData))
                                     _serieTotalValueForMinMax[j] = _serieTotalValueForMinMax[j] + currData;
                             }
