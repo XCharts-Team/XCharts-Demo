@@ -56,6 +56,7 @@ import APITable from '@site/src/components/APITable';
 - [CoordSystem](#coordsystem)
 - [DataZoom](#datazoom)
 - [GridCoord](#gridcoord)
+- [GridLayout](#gridlayout)
 - [Legend](#legend)
 - [MarkArea](#markarea)
 - [MarkLine](#markline)
@@ -952,6 +953,7 @@ Grid component.
 |field|default|since|comment|
 |--|--|--|--|
 |show|true||Whether to show the grid in rectangular coordinate.
+|layoutIndex|-1|v3.8.0|The index of the grid layout component to which the grid belongs. The default is -1, which means that it does not belong to any grid layout component. When this value is set, the left, right, top, and bottom properties will be invalid.
 |left|0.1f||Distance between grid component and the left side of the container.
 |right|0.08f||Distance between grid component and the right side of the container.
 |top|0.22f||Distance between grid component and the top side of the container.
@@ -960,6 +962,35 @@ Grid component.
 |showBorder|false||Whether to show the grid border.
 |borderWidth|0f||Border width of grid.
 |borderColor|||The color of grid border.
+
+```mdx-code-block
+</APITable>
+```
+
+## GridLayout
+
+> XCharts.Runtime.GridLayout : [MainComponent](#maincomponent), [IUpdateRuntimeData](#iupdateruntimedata)
+
+> Since `v3.8.0`
+
+Grid layout component. Used to manage the layout of multiple `GridCoord`, and the number of rows and columns of the grid can be controlled by `row` and `column`.
+
+```mdx-code-block
+<APITable name="GridLayout">
+```
+
+
+|field|default|since|comment|
+|--|--|--|--|
+|show|true||Whether to show the grid in rectangular coordinate.
+|left|0.1f||Distance between grid component and the left side of the container.
+|right|0.08f||Distance between grid component and the right side of the container.
+|top|0.22f||Distance between grid component and the top side of the container.
+|bottom|0.12f||Distance between grid component and the bottom side of the container.
+|row|2||the row count of grid layout.
+|column|2||the column count of grid layout.
+|spacing|Vector2.zero||the spacing of grid layout.
+|inverse|false||Whether to inverse the grid layout.
 
 ```mdx-code-block
 </APITable>
@@ -1066,6 +1097,7 @@ Indicator of radar chart, which is used to assign multiple variables(dimensions)
 |connectCenter|false||Whether serie data connect to radar center with line.
 |lineGradient|true||Whether need gradient for data line.
 |startAngle||v3.4.0|起始角度。和时钟一样，12点钟位置是0度，顺时针到360度。
+|gridIndex|-1|v3.8.0|Index of layout component that serie uses. Default is -1 means not use layout, otherwise use the first layout component.
 |indicatorList|||the indicator list.
 
 ```mdx-code-block
@@ -1142,7 +1174,7 @@ The interface for serie data component.
 
 ## IUpdateRuntimeData
 
-> XCharts.Runtime.IUpdateRuntimeData / Subclasses: [SingleAxis](#singleaxis), [DataZoom](#datazoom), [CalendarCoord](#calendarcoord), [GridCoord](#gridcoord), [ParallelCoord](#parallelcoord)
+> XCharts.Runtime.IUpdateRuntimeData / Subclasses: [SingleAxis](#singleaxis), [DataZoom](#datazoom), [CalendarCoord](#calendarcoord), [GridCoord](#gridcoord), [GridLayout](#gridlayout), [ParallelCoord](#parallelcoord)
 
 ## LabelLine
 
@@ -1160,7 +1192,7 @@ The interface for serie data component.
 |show|true||Whether the label line is showed.
 |lineType|||the type of visual guide line.<br/>`LabelLine.LineType`:<br/>- `BrokenLine`: 折线<br/>- `Curves`: 曲线<br/>- `HorizontalLine`: 水平线<br/>|
 |lineColor|Color32(0,0,0,0)||the color of visual guild line.
-|lineAngle|60||the angle of visual guild line.
+|lineAngle|60||the angle of visual guild line. Valid for broken line and curve line. Invalid in Pie.
 |lineWidth|1.0f||the width of visual guild line.
 |lineGap|1.0f||the gap of container and guild line.
 |lineLength1|25f||The length of the first segment of visual guide line.
@@ -1385,7 +1417,7 @@ Location type. Quick to set the general location.
 
 ## MainComponent
 
-> XCharts.Runtime.MainComponent : [IComparable](https://docs.unity3d.com/ScriptReference/30_search.html?q=IComparable) / Subclasses: [Axis](#axis), [Background](#background), [Comment](#comment), [DataZoom](#datazoom), [Legend](#legend), [MarkArea](#markarea), [MarkLine](#markline), [Settings](#settings), [Title](#title), [Tooltip](#tooltip), [VisualMap](#visualmap), [CoordSystem](#coordsystem)
+> XCharts.Runtime.MainComponent : [IComparable](https://docs.unity3d.com/ScriptReference/30_search.html?q=IComparable) / Subclasses: [Axis](#axis), [Background](#background), [Comment](#comment), [DataZoom](#datazoom), [Legend](#legend), [MarkArea](#markarea), [MarkLine](#markline), [Settings](#settings), [Title](#title), [Tooltip](#tooltip), [VisualMap](#visualmap), [GridLayout](#gridlayout), [CoordSystem](#coordsystem)
 
 ## MarkArea
 
@@ -1704,6 +1736,7 @@ Configurations of select state.
 |polarIndex|0||Index of polar component that serie uses.
 |singleAxisIndex|0||Index of single axis component that serie uses.
 |parallelIndex|0||Index of parallel coord component that serie uses.
+|gridIndex|-1|v3.8.0|Index of layout component that serie uses. Default is -1 means not use layout, otherwise use the first layout component.
 |minShow|||The min number of data to show in chart.
 |maxShow|||The max number of data to show in chart.
 |maxCache|||The max number of serie data cache. The first data will be remove when the size of serie data is larger then maxCache.
@@ -2163,8 +2196,8 @@ Tooltip component.
 |field|default|since|comment|
 |--|--|--|--|
 |show|true||Whether to show the tooltip component.
-|type|||Indicator type.<br/>`Tooltip.Type`:<br/>- `Line`: line indicator.<br/>- `Shadow`: shadow crosshair indicator.<br/>- `None`: no indicator displayed.<br/>- `Corss`: crosshair indicator, which is actually the shortcut of enable two axisPointers of two orthometric axes.<br/>|
-|trigger|||Type of triggering.<br/>`Tooltip.Trigger`:<br/>- `Item`: Triggered by data item, which is mainly used for charts that don't have a category axis like scatter charts or pie charts.<br/>- `Axis`: Triggered by axes, which is mainly used for charts that have category axes, like bar charts or line charts.<br/>- `None`: Trigger nothing.<br/>|
+|type|||Indicator type.<br/>`Tooltip.Type`:<br/>- `Line`: line indicator.<br/>- `Shadow`: shadow crosshair indicator.<br/>- `None`: no indicator displayed.<br/>- `Corss`: crosshair indicator, which is actually the shortcut of enable two axisPointers of two orthometric axes.<br/>- `Auto`: Auto select indicator according to serie type.<br/>|
+|trigger|||Type of triggering.<br/>`Tooltip.Trigger`:<br/>- `Item`: Triggered by data item, which is mainly used for charts that don't have a category axis like scatter charts or pie charts.<br/>- `Axis`: Triggered by axes, which is mainly used for charts that have category axes, like bar charts or line charts.<br/>- `None`: Trigger nothing.<br/>- `Auto`: Auto select trigger according to serie type.<br/>|
 |position||v3.3.0|Type of position.<br/>`Tooltip.Position`:<br/>- `Auto`: Auto. The mobile platform is displayed at the top, and the non-mobile platform follows the mouse position.<br/>- `Custom`: Custom. Fully customize display position (x,y).<br/>- `FixedX`: Just fix the coordinate X. Y follows the mouse position.<br/>- `FixedY`: <br/>|
 |itemFormatter|||a string template formatter for a single Serie or data item content. Support for wrapping lines with \n. Template variables are {.}, {a}, {b}, {c}, {d}.<br/> {.} is the dot of the corresponding color of a Serie that is currently indicated or whose index is 0.<br/> {a} is the series name of the serie that is currently indicated or whose index is 0.<br/> {b} is the name of the data item serieData that is currently indicated or whose index is 0, or a category value (such as the X-axis of a line chart).<br/> {c} is the value of a Y-dimension (dimesion is 1) from a Serie that is currently indicated or whose index is 0.<br/> {d} is the percentage value of Y-dimensions (dimesion is 1) from serie that is currently indicated or whose index is 0, with no % sign.<br/> {e} is the name of the data item serieData that is currently indicated or whose index is 0.<br/> {f} is sum of data.<br/> {.1} represents a dot from serie corresponding color that specifies index as 1.<br/> 1 in {a1}, {b1}, {c1} represents a serie that specifies an index of 1.<br/> {c1:2} represents the third data from serie's current indication data item indexed to 1 (a data item has multiple data, index 2 represents the third data).<br/> {c1:2-2} represents the third data item from serie's third data item indexed to 1 (i.e., which data item must be specified to specify).<br/> {d1:2: F2} indicates that a formatted string with a value specified separately is F2 (numericFormatter is used when numericFormatter is not specified).<br/> {d:0.##} indicates that a formatted string with a value specified separately is 0.##   (used for percentage, reserved 2 valid digits while avoiding the situation similar to "100.00%" when using f2 ).<br/> Example: "{a}, {c}", "{a1}, {c1: f1}", "{a1}, {c1:0: f1}", "{a1} : {c1:1-1: f1}"<br/>
 |titleFormatter|||The string template formatter for the tooltip title content. Support for wrapping lines with \n. The placeholder {I} can be set separately to indicate that the title is ignored and not displayed. Template see itemFormatter.

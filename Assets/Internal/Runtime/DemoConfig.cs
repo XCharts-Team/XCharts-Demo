@@ -8,7 +8,8 @@ namespace XChartsDemo
     {
         Buildin,
         Extend,
-        Widget
+        Widget,
+        Component
     }
 
     [System.Serializable]

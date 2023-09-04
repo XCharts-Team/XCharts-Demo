@@ -280,6 +280,7 @@ namespace XChartsDemo
                     module.panel.SetActive(false);
                     thumb.OnPointerExit(null);
                     UpdateChartTheme(m_SelectedTheme);
+                    ResetChartAnimation();
                     CheckDetailBackgound();
                     CheckArrowButton(module, thumb);
                 });

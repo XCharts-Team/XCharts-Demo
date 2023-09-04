@@ -56,6 +56,7 @@ import APITable from '@site/src/components/APITable';
 - [CoordSystem](#coordsystem)
 - [DataZoom](#datazoom)
 - [GridCoord](#gridcoord)
+- [GridLayout](#gridlayout)
 - [Legend](#legend)
 - [MarkArea](#markarea)
 - [MarkLine](#markline)
@@ -952,6 +953,7 @@ Drawing grid in rectangular coordinate. Line chart, bar chart, and scatter chart
 |field|default|since|comment|
 |--|--|--|--|
 |show|true||是否显示直角坐标系网格。
+|layoutIndex|-1|v3.8.0|网格所属的网格布局组件的索引。默认为-1，表示不属于任何网格布局组件。当设置了该值时，left、right、top、bottom属性将失效。
 |left|0.1f||grid 组件离容器左侧的距离。
 |right|0.08f||grid 组件离容器右侧的距离。
 |top|0.22f||grid 组件离容器上侧的距离。
@@ -960,6 +962,35 @@ Drawing grid in rectangular coordinate. Line chart, bar chart, and scatter chart
 |showBorder|false||是否显示网格边框。
 |borderWidth|0f||网格边框宽。
 |borderColor|||网格边框颜色。
+
+```mdx-code-block
+</APITable>
+```
+
+## GridLayout
+
+> XCharts.Runtime.GridLayout : [MainComponent](#maincomponent), [IUpdateRuntimeData](#iupdateruntimedata)
+
+> 从 `v3.8.0` 开始支持
+
+网格布局组件。用于管理多个`GridCoord`的布局，可以通过`row`和`column`来控制网格的行列数。
+
+```mdx-code-block
+<APITable name="GridLayout">
+```
+
+
+|field|default|since|comment|
+|--|--|--|--|
+|show|true||是否显示直角坐标系网格。
+|left|0.1f||grid 组件离容器左侧的距离。
+|right|0.08f||grid 组件离容器右侧的距离。
+|top|0.22f||grid 组件离容器上侧的距离。
+|bottom|0.12f||grid 组件离容器下侧的距离。
+|row|2||网格布局的行数。
+|column|2||网格布局的列数。
+|spacing|Vector2.zero||网格布局的间距。
+|inverse|false||是否反转网格布局。
 
 ```mdx-code-block
 </APITable>
@@ -1066,6 +1097,7 @@ Drawing grid in rectangular coordinate. Line chart, bar chart, and scatter chart
 |connectCenter|false||数值是否连线到中心点。
 |lineGradient|true||数值线段是否需要渐变。
 |startAngle||v3.4.0|起始角度。和时钟一样，12点钟位置是0度，顺时针到360度。
+|gridIndex|-1|v3.8.0|所使用的 layout 组件的 index。 默认为-1不指定index, 当为大于或等于0时, 为第一个layout组件的第index个格子。
 |indicatorList|||指示器列表。
 
 ```mdx-code-block
@@ -1142,7 +1174,7 @@ Drawing grid in rectangular coordinate. Line chart, bar chart, and scatter chart
 
 ## IUpdateRuntimeData
 
-> XCharts.Runtime.IUpdateRuntimeData / Subclasses: [SingleAxis](#singleaxis), [DataZoom](#datazoom), [CalendarCoord](#calendarcoord), [GridCoord](#gridcoord), [ParallelCoord](#parallelcoord)
+> XCharts.Runtime.IUpdateRuntimeData / Subclasses: [SingleAxis](#singleaxis), [DataZoom](#datazoom), [CalendarCoord](#calendarcoord), [GridCoord](#gridcoord), [GridLayout](#gridlayout), [ParallelCoord](#parallelcoord)
 
 ## LabelLine
 
@@ -1160,7 +1192,7 @@ Drawing grid in rectangular coordinate. Line chart, bar chart, and scatter chart
 |show|true||是否显示视觉引导线。
 |lineType|||视觉引导线类型。<br/>`LabelLine.LineType`:<br/>- `BrokenLine`: 折线<br/>- `Curves`: 曲线<br/>- `HorizontalLine`: 水平线<br/>|
 |lineColor|Color32(0,0,0,0)||视觉引导线颜色。默认和serie一致取自调色板。
-|lineAngle|60||视觉引导线的固定角度。对折线和曲线有效。
+|lineAngle|60||视觉引导线的固定角度。对折线和曲线有效。在Pie中无效。
 |lineWidth|1.0f||视觉引导线的宽度。
 |lineGap|1.0f||视觉引导线和容器的间距。
 |lineLength1|25f||视觉引导线第一段的长度。
@@ -1385,7 +1417,7 @@ Drawing grid in rectangular coordinate. Line chart, bar chart, and scatter chart
 
 ## MainComponent
 
-> XCharts.Runtime.MainComponent : [IComparable](https://docs.unity3d.com/ScriptReference/30_search.html?q=IComparable) / Subclasses: [Axis](#axis), [Background](#background), [Comment](#comment), [DataZoom](#datazoom), [Legend](#legend), [MarkArea](#markarea), [MarkLine](#markline), [Settings](#settings), [Title](#title), [Tooltip](#tooltip), [VisualMap](#visualmap), [CoordSystem](#coordsystem)
+> XCharts.Runtime.MainComponent : [IComparable](https://docs.unity3d.com/ScriptReference/30_search.html?q=IComparable) / Subclasses: [Axis](#axis), [Background](#background), [Comment](#comment), [DataZoom](#datazoom), [Legend](#legend), [MarkArea](#markarea), [MarkLine](#markline), [Settings](#settings), [Title](#title), [Tooltip](#tooltip), [VisualMap](#visualmap), [GridLayout](#gridlayout), [CoordSystem](#coordsystem)
 
 ## MarkArea
 
@@ -1704,6 +1736,7 @@ Radar coordinate conponnet for radar charts. 雷达图坐标系组件，只适�
 |polarIndex|0||所使用的 polar 组件的 index。
 |singleAxisIndex|0||所使用的 singleAxis 组件的 index。
 |parallelIndex|0||所使用的 parallel coord 组件的 index。
+|gridIndex|-1|v3.8.0|所使用的 layout 组件的 index。 默认为-1不指定index, 当为大于或等于0时, 为第一个layout组件的第index个格子。
 |minShow|||系列所显示数据的最小索引
 |maxShow|||系列所显示数据的最大索引
 |maxCache|||系列中可缓存的最大数据量。默认为0没有限制，大于0时超过指定值会移除旧数据再插入新数据。
@@ -2163,8 +2196,8 @@ Serie的状态样式。Serie的状态有正常，高亮，淡出，选中四种�
 |field|default|since|comment|
 |--|--|--|--|
 |show|true||是否显示提示框组件。
-|type|||提示框指示器类型。<br/>`Tooltip.Type`:<br/>- `Line`: 直线指示器<br/>- `Shadow`: 阴影指示器<br/>- `None`: 无指示器<br/>- `Corss`: 十字准星指示器。坐标轴显示Label和交叉线。<br/>|
-|trigger|||触发类型。<br/>`Tooltip.Trigger`:<br/>- `Item`: 数据项图形触发，主要在散点图，饼图等无类目轴的图表中使用。<br/>- `Axis`: 坐标轴触发，主要在柱状图，折线图等会使用类目轴的图表中使用。<br/>- `None`: 什么都不触发。<br/>|
+|type|||提示框指示器类型。<br/>`Tooltip.Type`:<br/>- `Line`: 直线指示器<br/>- `Shadow`: 阴影指示器<br/>- `None`: 无指示器<br/>- `Corss`: 十字准星指示器。坐标轴显示Label和交叉线。<br/>- `Auto`: 根据serie的类型自动选择显示指示器。<br/>|
+|trigger|||触发类型。<br/>`Tooltip.Trigger`:<br/>- `Item`: 数据项图形触发，主要在散点图，饼图等无类目轴的图表中使用。<br/>- `Axis`: 坐标轴触发，主要在柱状图，折线图等会使用类目轴的图表中使用。<br/>- `None`: 什么都不触发。<br/>- `Auto`: 根据serie的类型自动选择触发类型。<br/>|
 |position||v3.3.0|显示位置类型。<br/>`Tooltip.Position`:<br/>- `Auto`: 自适应。移动平台靠顶部显示，非移动平台跟随鼠标位置。<br/>- `Custom`: 自定义。完全自定义显示位置(x,y)。<br/>- `FixedX`: 只固定坐标X。Y跟随鼠标位置。<br/>- `FixedY`: <br/>|
 |itemFormatter|||提示框单个serie或数据项内容的字符串模版格式器。支持用 \n 换行。用
 |titleFormatter|||提示框标题内容的字符串模版格式器。支持用 \n 换行。可以单独设置占位符{i}表示忽略不显示title。 模板变量有{.}、{a}、{b}、{c}、{d}、{e}、{f}、{g}。<br/> {.}为当前所指示或index为0的serie的对应颜色的圆点。<br/> {a}为当前所指示或index为0的serie的系列名name。<br/> {b}为当前所指示或index为0的serie的数据项serieData的name，或者类目值（如折线图的X轴）。<br/> {c}为当前所指示或index为0的serie的y维（dimesion为1）的数值。<br/> {d}为当前所指示或index为0的serie的y维（dimesion为1）百分比值，注意不带%号。<br/> {e}为当前所指示或index为0的serie的数据项serieData的name。<br/> {h}为当前所指示或index为0的serie的数据项serieData的十六进制颜色值。<br/> {f}为数据总和。<br/> {g}为数据总个数。<br/> {.1}表示指定index为1的serie对应颜色的圆点。<br/> {a1}、{b1}、{c1}中的1表示指定index为1的serie。<br/> {c1:2}表示索引为1的serie的当前指示数据项的第3个数据（一个数据项有多个数据，index为2表示第3个数据）。<br/> {c1:2-2}表示索引为1的serie的第3个数据项的第3个数据（也就是要指定第几个数据项时必须要指定第几个数据）。<br/> {d1:2:f2}表示单独指定了数值的格式化字符串为f2（不指定时用numericFormatter）。<br/> {d:0.##} 表示单独指定了数值的格式化字符串为 0.## （用于百分比，保留2位有效数同时又能避免使用 f2 而出现的类似于"100.00%"的情况 ）。<br/> 示例："{a}:{c}"、"{a1}:{c1:f1}"、"{a1}:{c1:0:f1}"、"{a1}:{c1:1-1:f1}"
