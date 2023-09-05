@@ -121,8 +121,11 @@ namespace XChartsDemo
                     foreach (var serieData in serie.data)
                     {
                         serieData.context.highlight = serieData.index == index;
+                        serieData.selected = serieData.index == index;
                     }
+                    chart.TriggerTooltip(index);
                 }
+                chart.RefreshChart();
             }
         }
 
