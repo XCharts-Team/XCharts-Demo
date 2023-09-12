@@ -9,16 +9,20 @@ namespace XChartsDemo
     [ExecuteInEditMode]
     internal class DemoView : MonoBehaviour
     {
-        [SerializeField] private int m_TabIndex = 0;
+        [SerializeField] private int m_TabIndex = -1;
         [SerializeField] private DemoConfig m_Config = null;
         private PanelChart m_PanelChart;
+        private PanelHomepage m_PanelHomePage;
         private List<Button> m_TabButtonList = new List<Button>();
 
         private void Awake()
         {
             m_PanelChart = gameObject.GetComponentInChildren<PanelChart>();
+            m_PanelHomePage = gameObject.GetComponentInChildren<PanelHomepage>();
+            if (m_PanelChart == null) return;
             m_PanelChart.config = m_Config;
             UIUtil.SetText(gameObject, XChartsMgr.fullVersion, "panel_top/logo/version");
+            var logo = UIUtil.SetButton(gameObject, "panel_top/logo", delegate () { SwitchTab(-1); });
             var tab1 = UIUtil.SetButton(gameObject, "panel_top/menubar/btn_Buildin", delegate () { SwitchTab(0); });
             var tab2 = UIUtil.SetButton(gameObject, "panel_top/menubar/btn_ExtraChart", delegate () { SwitchTab(1); });
             var tab3 = UIUtil.SetButton(gameObject, "panel_top/menubar/btn_Component", delegate () { SwitchTab(2); });
@@ -28,8 +32,6 @@ namespace XChartsDemo
             m_TabButtonList.Add(tab2);
             m_TabButtonList.Add(tab3);
             m_TabButtonList.Add(tab4);
-            if (m_TabIndex >= m_TabButtonList.Count)
-                m_TabIndex = 0;
             UpdateTabButtonStatus();
         }
 
@@ -37,14 +39,24 @@ namespace XChartsDemo
         {
             m_TabIndex = tabIndex;
             UpdateTabButtonStatus();
-            if (m_TabIndex == 0)
-                m_PanelChart.SwitchTab(ChartType.Buildin);
-            else if (m_TabIndex == 1)
-                m_PanelChart.SwitchTab(ChartType.Extend);
-            else if (m_TabIndex == 2)
-                m_PanelChart.SwitchTab(ChartType.Component);
-            else if (m_TabIndex == 3)
-                m_PanelChart.SwitchTab(ChartType.Widget);
+            if (m_TabIndex == -1)
+            {
+                UIUtil.SetActive(m_PanelHomePage.gameObject, true);
+                UIUtil.SetActive(m_PanelChart.gameObject, false);
+            }
+            else
+            {
+                UIUtil.SetActive(m_PanelHomePage.gameObject, false);
+                UIUtil.SetActive(m_PanelChart.gameObject, true);
+                if (m_TabIndex == 0)
+                    m_PanelChart.SwitchTab(ChartType.Buildin);
+                else if (m_TabIndex == 1)
+                    m_PanelChart.SwitchTab(ChartType.Extend);
+                else if (m_TabIndex == 2)
+                    m_PanelChart.SwitchTab(ChartType.Component);
+                else if (m_TabIndex == 3)
+                    m_PanelChart.SwitchTab(ChartType.Widget);
+            }
         }
 
         private void UpdateTabButtonStatus()

@@ -152,12 +152,13 @@ namespace XChartsDemo
             button.colors = block;
         }
 
-        public static void SetActive(GameObject parent, bool flag, string subPath)
+        public static void SetActive(GameObject parent, bool flag, string subPath = null)
         {
-            var trans = GetTransform(parent, subPath);
+            var trans = subPath == null ? parent.transform : GetTransform(parent, subPath);
             if (trans != null)
             {
-                trans.gameObject.SetActive(flag);
+                if(trans.gameObject.activeSelf != flag)
+                    trans.gameObject.SetActive(flag);
             }
         }
 

@@ -51,8 +51,8 @@ namespace XChartsDemo
             m_DetailRoot.SetActive(false);
             m_DetailChartRoot = transform.Find("chart_detail/chart").gameObject;
             m_DetailChartDescBackground = transform.Find("chart_detail/desc").GetComponent<Image>();
-            UIUtil.SetButton(gameObject, "chart_detail/btn_next", delegate() { NextDetailChart(); });
-            UIUtil.SetButton(gameObject, "chart_detail/btn_last", delegate() { LastDetailChart(); });
+            UIUtil.SetButton(gameObject, "chart_detail/btn_next", delegate () { NextDetailChart(); });
+            UIUtil.SetButton(gameObject, "chart_detail/btn_last", delegate () { LastDetailChart(); });
             InitThemeButton();
             InitModuleButton();
             InitChartList(true);
@@ -183,7 +183,7 @@ namespace XChartsDemo
                 module.button = btn.GetComponent<Button>();
                 module.button.transform.Find("Text").GetComponent<Text>().text = module.name.Replace("\\n", "\n");
                 module.button.transform.Find("SubText").GetComponent<Text>().text = module.subName.Replace("\\n", "\n");
-                module.button.onClick.AddListener(delegate()
+                module.button.onClick.AddListener(delegate ()
                 {
                     ClickModule(module);
                 });
@@ -267,15 +267,20 @@ namespace XChartsDemo
                 module.chartThumbs.Add(thumb);
                 thumb.index = index;
                 thumb.BindPrefab(prefab);
-                thumb.AddBtnListener(delegate()
+                thumb.AddBtnListener(delegate ()
                 {
                     m_SelectedPanel = m_DetailChartRoot;
                     m_SelectedThumb = thumb;
                     ChartHelper.DestroyAllChildren(m_DetailChartRoot.transform);
                     UIUtil.Instantiate(prefab, m_DetailChartRoot.transform, prefab.name);
                     var names = prefab.name.Split('_');
-                    UIUtil.SetText(m_DetailRoot, names[1], "desc/Text");
-                    UIUtil.SetText(m_DetailRoot, names[2], "desc/Text2");
+                    UIUtil.SetActive(m_DetailRoot, m_SelectedTheme == ThemeType.Dark, "desc/dark");
+                    UIUtil.SetActive(m_DetailRoot, m_SelectedTheme != ThemeType.Dark, "desc/default");
+                    UIUtil.SetText(m_DetailRoot, names[1], "desc/dark/Text");
+                    UIUtil.SetText(m_DetailRoot, names[2], "desc/dark/Text2");
+                    UIUtil.SetText(m_DetailRoot, names[1], "desc/default/Text");
+                    UIUtil.SetText(m_DetailRoot, names[2], "desc/default/Text2");
+                    UIUtil.SetRectTransformWidth(m_DetailRoot.transform, prefab.GetComponent<RectTransform>().sizeDelta.x, "desc");
                     m_DetailRoot.SetActive(true);
                     module.panel.SetActive(false);
                     thumb.OnPointerExit(null);
@@ -366,7 +371,7 @@ namespace XChartsDemo
             m_DarkThemeToggle = transform.Find("chart_theme/dark").GetComponent<Toggle>();
             m_DarkThemeToggle.isOn = config.darkMode;
 
-            m_DarkThemeToggle.onValueChanged.AddListener(delegate(bool flag)
+            m_DarkThemeToggle.onValueChanged.AddListener(delegate (bool flag)
             {
                 m_SelectedTheme = flag ? ThemeType.Dark : ThemeType.Default;
                 UpdateChartTheme(m_SelectedTheme);
@@ -375,7 +380,9 @@ namespace XChartsDemo
 
         void UpdateChartTheme(ThemeType theme)
         {
-            m_DetailChartDescBackground.color = m_SelectedTheme == ThemeType.Dark?(Color) new Color32(16, 12, 42, 255) : Color.white;
+            m_DetailChartDescBackground.color = m_SelectedTheme == ThemeType.Dark ? (Color)new Color32(16, 12, 42, 255) : Color.white;
+            UIUtil.SetActive(m_DetailRoot, m_SelectedTheme == ThemeType.Dark, "desc/dark");
+            UIUtil.SetActive(m_DetailRoot, m_SelectedTheme != ThemeType.Dark, "desc/default");
             var charts = (m_SelectedPanel == null ? transform : m_SelectedPanel.transform).GetComponentsInChildren<BaseChart>();
             foreach (var chart in charts)
             {
