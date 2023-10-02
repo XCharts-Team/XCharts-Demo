@@ -1,5 +1,91 @@
 {
   "dependencies": {
+    "com.monitor1394.xcharts": {
+      "version": "file:XCharts",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "com.monitor1394.xcharts.bar3dchart": {
+      "version": "file:XCharts-Bar3DChart",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.monitor1394.xcharts": ">=3.8.0"
+      }
+    },
+    "com.monitor1394.xcharts.funnelchart": {
+      "version": "file:XCharts-FunnelChart",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.monitor1394.xcharts": ">=3.6.0"
+      }
+    },
+    "com.monitor1394.xcharts.ganttchart": {
+      "version": "file:XCharts-GanttChart",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.monitor1394.xcharts": ">=3.8.0"
+      }
+    },
+    "com.monitor1394.xcharts.gaugechart": {
+      "version": "file:XCharts-GaugeChart",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.monitor1394.xcharts": ">=3.8.0"
+      }
+    },
+    "com.monitor1394.xcharts.liquidchart": {
+      "version": "file:XCharts-LiquidChart",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.monitor1394.xcharts": ">=3.8.0"
+      }
+    },
+    "com.monitor1394.xcharts.pictorialbarchart": {
+      "version": "file:XCharts-PictorialBarChart",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.monitor1394.xcharts": ">=3.8.0"
+      }
+    },
+    "com.monitor1394.xcharts.pie3dchart": {
+      "version": "file:XCharts-Pie3DChart",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.monitor1394.xcharts": ">=3.8.0"
+      }
+    },
+    "com.monitor1394.xcharts.pyramidchart": {
+      "version": "file:XCharts-PyramidChart",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.monitor1394.xcharts": ">=3.6.0"
+      }
+    },
+    "com.monitor1394.xcharts.treemapchart": {
+      "version": "file:XCharts-TreemapChart",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.monitor1394.xcharts": ">=3.6.0"
+      }
+    },
+    "com.monitor1394.xcharts.ui": {
+      "version": "file:XCharts-UI",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.monitor1394.xcharts": ">=3.8.0"
+      }
+    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
@@ -19,7 +105,7 @@
       "dependencies": {
         "com.unity.ugui": "1.0.0"
       },
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.unity.com"
     },
     "com.unity.analytics": {
       "version": "3.3.5",
@@ -28,21 +114,21 @@
       "dependencies": {
         "com.unity.ugui": "1.0.0"
       },
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.unity.com"
     },
     "com.unity.collab-proxy": {
       "version": "1.2.16",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.unity.com"
     },
     "com.unity.ext.nunit": {
-      "version": "1.0.0",
-      "depth": 1,
+      "version": "1.0.6",
+      "depth": 2,
       "source": "registry",
       "dependencies": {},
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.unity.com"
     },
     "com.unity.ide.rider": {
       "version": "1.1.4",
@@ -51,14 +137,14 @@
       "dependencies": {
         "com.unity.test-framework": "1.1.1"
       },
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.unity.com"
     },
     "com.unity.ide.vscode": {
       "version": "1.2.2",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.unity.com"
     },
     "com.unity.multiplayer-hlapi": {
       "version": "1.0.6",
@@ -67,7 +153,7 @@
       "dependencies": {
         "nuget.mono-cecil": "0.1.6-preview"
       },
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.unity.com"
     },
     "com.unity.purchasing": {
       "version": "2.1.1",
@@ -76,7 +162,7 @@
       "dependencies": {
         "com.unity.ugui": "1.0.0"
       },
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {
       "version": "1.1.18",
@@ -87,7 +173,7 @@
         "com.unity.modules.imgui": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
       },
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.unity.com"
     },
     "com.unity.textmeshpro": {
       "version": "2.1.1",
@@ -96,14 +182,14 @@
       "dependencies": {
         "com.unity.ugui": "1.0.0"
       },
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.unity.com"
     },
     "com.unity.timeline": {
       "version": "1.2.17",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.unity.com"
     },
     "com.unity.ugui": {
       "version": "1.0.0",
@@ -119,14 +205,14 @@
       "depth": 0,
       "source": "registry",
       "dependencies": {},
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.unity.com"
     },
     "nuget.mono-cecil": {
       "version": "0.1.6-preview",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.unity.com"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
