@@ -56,6 +56,7 @@ namespace XChartsDemo
         [SerializeField] private Color m_ButtonHighlightColor;
         [SerializeField] private bool m_DarkMode = false;
         [SerializeField] public int selectedModuleIndex = -1;
+        [SerializeField] private int m_ExtendedChartImgColumn = 5;
         [SerializeField] private List<ChartModule> m_ChartModules = new List<ChartModule>();
 #pragma warning restore 0649
 
@@ -66,5 +67,6 @@ namespace XChartsDemo
         public Color buttonHighlightColor { get { return m_ButtonHighlightColor; } }
         public bool darkMode { get { return m_DarkMode; } }
         public List<ChartModule> chartModules { get { return m_ChartModules; } }
+        public int extendedChartImgColumn { get { return m_ExtendedChartImgColumn; } }
     }
 }

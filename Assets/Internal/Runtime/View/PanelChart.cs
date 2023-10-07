@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using XCharts.Runtime;
@@ -375,6 +377,7 @@ namespace XChartsDemo
             {
                 m_SelectedTheme = flag ? ThemeType.Dark : ThemeType.Default;
                 UpdateChartTheme(m_SelectedTheme);
+                //ExportExtendedChartImgToRepo();
             });
         }
 
@@ -403,6 +406,118 @@ namespace XChartsDemo
                 chart.AnimationReset();
                 chart.AnimationFadeIn();
             }
+        }
+
+        void ExportExtendedChartImgToRepo()
+        {
+            StartCoroutine(ExportExtendedChartImgToRepoSync());
+        }
+
+        private IEnumerator ExportExtendedChartImgToRepoSync()
+        {
+            yield return new WaitForEndOfFrame();
+            var canvas = GameObject.Find("Canvas").transform.GetComponent<Canvas>();
+            if (m_SelectedPanel == null) yield return null;
+            //foreach panel child
+            var sb = new System.Text.StringBuilder();
+            var tableColumn = config.extendedChartImgColumn;
+            for (int i = 0; i < tableColumn; i++)
+            {
+                sb.Append("|");
+            }
+            sb.Append("|\n");
+            for (int i = 0; i < tableColumn; i++)
+            {
+                sb.Append("| :--: ");
+            }
+            sb.Append("|\n");
+            var serieName = "";
+            var repoLocalPath = "";
+            for (int i = 0; i < m_SelectedPanel.transform.childCount; i++)
+            {
+                var child = m_SelectedPanel.transform.GetChild(i);
+                var rectTransform = child.GetComponent<RectTransform>();
+                var temp = rectTransform.name.Split('_');
+                serieName = temp[0].Substring(0, temp[0].Length - 2);
+                repoLocalPath = string.Format("{0}/../../XCharts/Assets/XCharts-{1}Chart", Application.dataPath, serieName);
+                if (!Directory.Exists(repoLocalPath))
+                {
+                    Debug.LogError("repoLocalPath not exist: " + repoLocalPath);
+                    continue;
+                }
+                var imgPath = repoLocalPath + "/Documentation~/zh/img";
+                if (!Directory.Exists(imgPath))
+                {
+                    Directory.CreateDirectory(imgPath);
+                }
+                var path = string.Format("{0}/{1}.png", imgPath, temp[0]);
+                path = Path.GetFullPath(path);
+                ChartHelper.SaveAsImage(rectTransform, canvas, "png", path);
+
+                var relativePath = "Documentation~/zh/img/" + temp[0] + ".png";
+                sb.Append(string.Format("|![{0}]({1}) ", temp[0], relativePath));
+                if (i > 0 && i % tableColumn == 0)
+                {
+                    sb.Append("|\n");
+                }
+            }
+            if (sb[sb.Length - 1] != '\n')
+                sb.Append("|\n");
+
+            var readmePath = Path.GetFullPath(repoLocalPath + "/README.md");
+            UpdateScreenshotInfoToReadme(readmePath, sb.ToString());
+            Debug.LogError(sb.ToString());
+        }
+
+        private static void UpdateScreenshotInfoToReadme(string readmePath, string content)
+        {
+            if (!File.Exists(readmePath))
+            {
+                Debug.LogError("Can't find readme: " + readmePath);
+                return;
+            }
+            var lines = File.ReadAllLines(readmePath);
+            var lineStart = -1;
+            var lineEnd = -1;
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                var line = lines[i];
+                if (line.Contains("## 截图"))
+                    lineStart = i;
+                else if (line.Contains("## 许可"))
+                    lineEnd = i - 1;
+            }
+            if (lineEnd < 0)
+            {
+                Debug.LogError("Can't find 【## 许可】in readme");
+                return;
+            }
+            var sb = new System.Text.StringBuilder();
+            if (lineStart < 0)
+            {
+                for (int i = 0; i < lines.Length; i++)
+                {
+                    if (i == lineEnd)
+                        sb.AppendFormat("\n## 截图\n\n{0}\n", content);
+                    else
+                        sb.AppendLine(lines[i]);
+                }
+            }
+            else
+            {
+                for (int i = 0; i < lines.Length; i++)
+                {
+                    if (i == lineStart)
+                        sb.AppendFormat("## 截图\n\n{0}\n", content);
+                    else if (i > lineStart && i <= lineEnd)
+                        continue;
+                    else
+                        sb.AppendLine(lines[i]);
+                }
+            }
+
+            File.WriteAllText(readmePath, sb.ToString());
         }
     }
 }
