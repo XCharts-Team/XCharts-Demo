@@ -2,7 +2,11 @@
 
 XCharts付费扩展图表 - 矩形树图。
 
-![treemap](Documentation~/zh/img/treemap.png)
+## 截图
+
+||||||
+| :--: | :--: | :--: | :--: | :--: |
+|![Treemap01](Documentation~/zh/img/Treemap01.png) |![Treemap02](Documentation~/zh/img/Treemap02.png) |![Treemap03](Documentation~/zh/img/Treemap03.png) |![Treemap04](Documentation~/zh/img/Treemap04.png) |
 
 ## 许可
 

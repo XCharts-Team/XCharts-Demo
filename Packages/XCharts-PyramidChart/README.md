@@ -2,7 +2,11 @@
 
 XCharts付费扩展图表 - 金字塔。
 
-![pyramid](Documentation~/zh/img/pyramid.png)
+## 截图
+
+||||||
+| :--: | :--: | :--: | :--: | :--: |
+|![Pyramid01](Documentation~/zh/img/Pyramid01.png) |![Pyramid02](Documentation~/zh/img/Pyramid02.png) |![Pyramid03](Documentation~/zh/img/Pyramid03.png) |
 
 ## 许可
 

@@ -2,7 +2,12 @@
 
 XCharts的付费扩展图表 - 3D柱图。
 
-![bar3d](Documentation~/zh/img/bar3d.png)
+## 截图
+
+||||||
+| :--: | :--: | :--: | :--: | :--: |
+|![Bar3D01](Documentation~/zh/img/Bar3D01.png) |![Bar3D02](Documentation~/zh/img/Bar3D02.png) |![Bar3D03](Documentation~/zh/img/Bar3D03.png) |![Bar3D04](Documentation~/zh/img/Bar3D04.png) |![Bar3D05](Documentation~/zh/img/Bar3D05.png) |![Bar3D06](Documentation~/zh/img/Bar3D06.png) |
+|![Bar3D07](Documentation~/zh/img/Bar3D07.png) |![Bar3D08](Documentation~/zh/img/Bar3D08.png) |![Bar3D09](Documentation~/zh/img/Bar3D09.png) |![Bar3D10](Documentation~/zh/img/Bar3D10.png) |
 
 ## 许可
 

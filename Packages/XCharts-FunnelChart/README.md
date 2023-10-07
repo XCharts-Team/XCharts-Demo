@@ -2,7 +2,12 @@
 
 XCharts的付费扩展图表 - 漏斗图。
 
-![funnel](Documentation~/zh/img/funnel.png)
+## 截图
+
+||||||
+| :--: | :--: | :--: | :--: | :--: |
+|![Funnel01](Documentation~/zh/img/Funnel01.png) |![Funnel02](Documentation~/zh/img/Funnel02.png) |![Funnel03](Documentation~/zh/img/Funnel03.png) |![Funnel04](Documentation~/zh/img/Funnel04.png) |![Funnel05](Documentation~/zh/img/Funnel05.png) |![Funnel06](Documentation~/zh/img/Funnel06.png) |
+|![Funnel07](Documentation~/zh/img/Funnel07.png) |![Funnel08](Documentation~/zh/img/Funnel08.png) |![Funnel09](Documentation~/zh/img/Funnel09.png) |
 
 ## 许可
 

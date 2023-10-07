@@ -2,7 +2,13 @@
 
 XCharts付费扩展图表 - 仪表盘。
 
-![gauge](Documentation~/zh/img/gauge.png)
+## 截图
+
+||||||
+| :--: | :--: | :--: | :--: | :--: |
+|![Gauge01](Documentation~/zh/img/Gauge01.png) |![Gauge02](Documentation~/zh/img/Gauge02.png) |![Gauge03](Documentation~/zh/img/Gauge03.png) |![Gauge04](Documentation~/zh/img/Gauge04.png) |![Gauge05](Documentation~/zh/img/Gauge05.png) |![Gauge06](Documentation~/zh/img/Gauge06.png) |
+|![Gauge07](Documentation~/zh/img/Gauge07.png) |![Gauge08](Documentation~/zh/img/Gauge08.png) |![Gauge09](Documentation~/zh/img/Gauge09.png) |![Gauge10](Documentation~/zh/img/Gauge10.png) |![Gauge11](Documentation~/zh/img/Gauge11.png) |
+|![Gauge12](Documentation~/zh/img/Gauge12.png) |![Gauge13](Documentation~/zh/img/Gauge13.png) |![Gauge14](Documentation~/zh/img/Gauge14.png) |
 
 ## 许可
 

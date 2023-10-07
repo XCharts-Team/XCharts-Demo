@@ -2,8 +2,12 @@
 
 XCharts付费扩展图表 - 甘特图。
 
-![gantt](Documentation~/zh/img/gantt.png)
+## 截图
 
+||||||
+| :--: | :--: | :--: | :--: | :--: |
+|![Gantt01](Documentation~/zh/img/Gantt01.png) |![Gantt02](Documentation~/zh/img/Gantt02.png) |![Gantt03](Documentation~/zh/img/Gantt03.png) |![Gantt04](Documentation~/zh/img/Gantt04.png) |![Gantt05](Documentation~/zh/img/Gantt05.png) |![Gantt06](Documentation~/zh/img/Gantt06.png) |
+|![Gantt07](Documentation~/zh/img/Gantt07.png) |
 
 ## 许可
 

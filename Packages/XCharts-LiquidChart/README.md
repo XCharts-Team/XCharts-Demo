@@ -2,7 +2,12 @@
 
 XCharts的付费扩展图表 - 水位图。
 
-![liquid](Documentation~/zh/img/liquid.png)
+## 截图
+
+||||||
+| :--: | :--: | :--: | :--: | :--: |
+|![Liquid01](Documentation~/zh/img/Liquid01.png) |![Liquid02](Documentation~/zh/img/Liquid02.png) |![Liquid03](Documentation~/zh/img/Liquid03.png) |![Liquid04](Documentation~/zh/img/Liquid04.png) |![Liquid05](Documentation~/zh/img/Liquid05.png) |![Liquid06](Documentation~/zh/img/Liquid06.png) |
+|![Liquid07](Documentation~/zh/img/Liquid07.png) |![Liquid08](Documentation~/zh/img/Liquid08.png) |
 
 ## 许可
 

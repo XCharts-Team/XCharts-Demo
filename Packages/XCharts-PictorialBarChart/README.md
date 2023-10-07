@@ -2,7 +2,11 @@
 
 XCharts付费扩展图表 - 象形柱图。
 
-![pictorialbar](Documentation~/zh/img/pictorialbar.png)
+## 截图
+
+||||||
+| :--: | :--: | :--: | :--: | :--: |
+|![PictorialBar01](Documentation~/zh/img/PictorialBar01.png) |![PictorialBar02](Documentation~/zh/img/PictorialBar02.png) |![PictorialBar03](Documentation~/zh/img/PictorialBar03.png) |![PictorialBar04](Documentation~/zh/img/PictorialBar04.png) |
 
 ## 许可
 
