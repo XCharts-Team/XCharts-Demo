@@ -61,7 +61,7 @@ namespace XChartsDemo
             // ChartHelper.DestroyAllChildren(chartParent);
             var names = prefab.name.Split('_');
             var chart = UIUtil.Instantiate(prefab, chartParent, prefab.name);
-            if (names.Length == 3)
+            if (names.Length >= 3)
             {
                 UIUtil.SetText(gameObject, names[1], "desc/Text");
                 UIUtil.SetText(gameObject, names[2], "desc/Text2");
