@@ -199,26 +199,26 @@
 
 |field|default|since|comment|
 |--|--|--|--|
-|supportScroll|true||是否支持滚动。
-|supportDrag|false||是否支持拖拽。
-|supportSelect|false||是否支持选中。选中行，列，单元格。
-|rowHeight|0f||行高。
-|rowGap|0f||行间距。
-|columnWidth|0f||列宽。默认0，自适应。Columns中设置有时优先用Columns中的值，没有时用这个值。
-|borderWidth|0f||边框宽度。
-|borderColor|||边框颜色。
-|minColumnWidth|100f||最小列宽。
-|minRowHeight|30f||最小行高。
-|scrollSensitivity|10f||滚动灵敏度。
-|selectColor|||选中时的颜色。
-|selectHeaderColor|||选中时表头的颜色。
-|rowBackgroundColors|||行背景颜色列表。
-|separatorStyle|||分割线样式。 [TableSeparatorStyle](#tableseparatorstyle)|
-|scrollbarStyle|||滚动条样式。 [TableScrollbarStyle](#tablescrollbarstyle)|
-|columnHeaderStyle|||默认的列头样式。 [TableColumnHeaderStyle](#tablecolumnheaderstyle)|
-|rowHeaderStyle|||行表头样式。 [TableRowHeaderStyle](#tablerowheaderstyle)|
-|columns|||列表头样式。
-|data|||表格数据。
+|supportScroll|true||whether the table support scroll.
+|supportDrag|false||whether the table support drag.
+|supportSelect|false||whether the table support select. select row, column, cell.
+|rowHeight|0f||the height of row.
+|rowGap|0f||the gap of row.
+|columnWidth|0f||the width of column. default 0, auto width. if set, it will be used first.
+|borderWidth|0f||the width of border.
+|borderColor|||the color of border.
+|minColumnWidth|100f||the min width of column.
+|minRowHeight|30f||the min height of row.
+|scrollSensitivity|10f||the scroll sensitivity.
+|selectColor|||the color of selected row, column, cell.
+|selectHeaderColor|||the color of selected header.
+|rowBackgroundColors|||the background color of row.
+|separatorStyle|||the style of separator. [TableSeparatorStyle](#tableseparatorstyle)|
+|scrollbarStyle|||the style of scrollbar. [TableScrollbarStyle](#tablescrollbarstyle)|
+|columnHeaderStyle|||the default style of column header. [TableColumnHeaderStyle](#tablecolumnheaderstyle)|
+|rowHeaderStyle|||the style of row header. [TableRowHeaderStyle](#tablerowheaderstyle)|
+|columns|||the style of column header.
+|data|||the data of table.
 
 ```mdx-code-block
 </APITable>
