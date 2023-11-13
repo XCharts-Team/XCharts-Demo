@@ -4,6 +4,31 @@
 
 > XCharts.Runtime.UI.ITableCell / Subclasses: [TableCell](#tablecell)
 
+## TableCarouselStyle
+
+> XCharts.Runtime.UI.TableCarouselStyle : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+
+表格轮播样式。
+
+```mdx-code-block
+<APITable name="TableCarouselStyle">
+```
+
+
+|field|default|since|comment|
+|--|--|--|--|
+|show|true||
+|type|||轮播类型。<br/>`TableCarouselType`:<br/>- `Pixel`: 像素轮播。<br/>- `Row`: 单行轮播。<br/>- `Page`: 分页轮播。<br/>|
+|mode|||轮播播放模式。<br/>`TableCarouselMode`:<br/>- `Loop`: 循环播放。<br/>|
+|waitTime|2000||
+|speed|100||
+|pause|false||暂停轮播。
+|hoverPause|true||鼠标悬停时是否暂停。
+
+```mdx-code-block
+</APITable>
+```
+
 ## TableCell
 
 > XCharts.Runtime.UI.TableCell : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent), [ITableCell](#itablecell)
@@ -18,9 +43,12 @@
 |field|default|since|comment|
 |--|--|--|--|
 |show|true||是否显示当前数据。
-|type|||<br/>`DataType`:<br/>- `Custom`: <br/>- `String`: <br/>- `Double`: <br/>- `Bool`: <br/>- `Sprite`: <br/>|
-|value|||
-|sprite|||图片数据。当type为Sprite时有效。
+|type|||当前数据的类型。<br/>`DataType`:<br/>- `GameObject`: <br/>- `String`: <br/>- `Double`: <br/>- `Bool`: <br/>- `Sprite`: <br/>|
+|stringValue|||当前数据的字符串值。当type为String时有效。
+|doubleValue|||
+|boolValue|||当前数据的布尔值。当type为Bool时有效。
+|gameObjectValue|||当前数据的GameObject值。当type为GameObject时有效。
+|spriteValue|||当前数据的Sprite值。当type为Sprite时有效。
 
 ```mdx-code-block
 </APITable>
@@ -66,8 +94,30 @@
 |height|50f||列表头高度。
 |backgroundColor|||列表头背景色。
 |background|||背景图片样式。
-|defaultHeaderLabelStyle|||
-|defaultDataLabelStyle|||默认的列数据文本样式。
+|defaultLabelStyle|||
+
+```mdx-code-block
+</APITable>
+```
+
+## TableColumnStyle
+
+> XCharts.Runtime.UI.TableColumnStyle : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+
+列样式。
+
+```mdx-code-block
+<APITable name="TableColumnStyle">
+```
+
+
+|field|default|since|comment|
+|--|--|--|--|
+|show|true||
+|columnWidth|0f||列宽。默认0，自适应。Columns中设置有时优先用Columns中的值，没有时用这个值。
+|minColumnWidth|100f||最小列宽。
+|defaultLabelStyle|||默认的列数据文本样式。
+|columnBackgroundColors|||列背景颜色列表。
 
 ```mdx-code-block
 </APITable>
@@ -117,6 +167,29 @@
 </APITable>
 ```
 
+## TableRowStyle
+
+> XCharts.Runtime.UI.TableRowStyle : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+
+行样式。
+
+```mdx-code-block
+<APITable name="TableRowStyle">
+```
+
+
+|field|default|since|comment|
+|--|--|--|--|
+|show|true||
+|rowHeight|0f||行高。
+|rowGap|0f||行间距。
+|minRowHeight|30f||最小行高。
+|rowBackgroundColors|||行背景颜色列表。
+
+```mdx-code-block
+</APITable>
+```
+
 ## TableScrollbarStyle
 
 > XCharts.Runtime.UI.TableScrollbarStyle : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
@@ -157,10 +230,12 @@
 |show|true||是否显示分割线。
 |vertical|true||是否显示垂直分割线。
 |verticalColumn|true||是否显示列表头的垂直分割线。
+|verticalWidth|1f||垂直分割线的宽度。
+|verticalColor|Color.clear||垂直分割线的颜色。
 |horizontal|true||是否显示水平分割线。
 |horizontalColumn|true||是否显示列表头的水平分割线。
-|width|1f||分割线宽度。
-|color|Color.clear||分割线颜色。
+|horizontalWidth|1f||水平分割线的宽度。
+|horizontalColor|Color.clear||水平分割线的颜色。
 
 ```mdx-code-block
 </APITable>
@@ -202,21 +277,18 @@
 |supportScroll|true||是否支持滚动。
 |supportDrag|false||是否支持拖拽。
 |supportSelect|false||是否支持选中。选中行，列，单元格。
-|rowHeight|0f||行高。
-|rowGap|0f||行间距。
-|columnWidth|0f||列宽。默认0，自适应。Columns中设置有时优先用Columns中的值，没有时用这个值。
 |borderWidth|0f||边框宽度。
 |borderColor|||边框颜色。
-|minColumnWidth|100f||最小列宽。
-|minRowHeight|30f||最小行高。
 |scrollSensitivity|10f||滚动灵敏度。
 |selectColor|||选中时的颜色。
 |selectHeaderColor|||选中时表头的颜色。
-|rowBackgroundColors|||行背景颜色列表。
 |separatorStyle|||分割线样式。 [TableSeparatorStyle](#tableseparatorstyle)|
 |scrollbarStyle|||滚动条样式。 [TableScrollbarStyle](#tablescrollbarstyle)|
 |columnHeaderStyle|||默认的列头样式。 [TableColumnHeaderStyle](#tablecolumnheaderstyle)|
+|columnStyle||| [TableColumnStyle](#tablecolumnstyle)|
 |rowHeaderStyle|||行表头样式。 [TableRowHeaderStyle](#tablerowheaderstyle)|
+|rowStyle|||行样式。 [TableRowStyle](#tablerowstyle)|
+|carouselStyle|||轮播样式。 [TableCarouselStyle](#tablecarouselstyle)|
 |columns|||列表头样式。
 |data|||表格数据。
 

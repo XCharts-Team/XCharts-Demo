@@ -4,6 +4,31 @@
 
 > XCharts.Runtime.UI.ITableCell / Subclasses: [TableCell](#tablecell)
 
+## TableCarouselStyle
+
+> XCharts.Runtime.UI.TableCarouselStyle : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+
+The table carousel style.
+
+```mdx-code-block
+<APITable name="TableCarouselStyle">
+```
+
+
+|field|default|since|comment|
+|--|--|--|--|
+|show|true||
+|type|||The carousel type.<br/>`TableCarouselType`:<br/>- `Pixel`: pixel carousel.<br/>- `Row`: single row carousel.<br/>- `Page`: page carousel.<br/>|
+|mode|||The play mode of carousel.<br/>`TableCarouselMode`:<br/>- `Loop`: play loop.<br/>|
+|waitTime|2000||
+|speed|100||
+|pause|false||pause carousel.
+|hoverPause|true||Whether to pause when hover.
+
+```mdx-code-block
+</APITable>
+```
+
 ## TableCell
 
 > XCharts.Runtime.UI.TableCell : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent), [ITableCell](#itablecell)
@@ -17,10 +42,13 @@
 
 |field|default|since|comment|
 |--|--|--|--|
-|show|true||是否显示当前数据。
-|type|||<br/>`DataType`:<br/>- `Custom`: <br/>- `String`: <br/>- `Double`: <br/>- `Bool`: <br/>- `Sprite`: <br/>|
-|value|||
-|sprite|||图片数据。当type为Sprite时有效。
+|show|true||whether the cell is visible.
+|type|||the type of the cell data.<br/>`DataType`:<br/>- `GameObject`: <br/>- `String`: <br/>- `Double`: <br/>- `Bool`: <br/>- `Sprite`: <br/>|
+|stringValue|||the string data. when type is String.
+|doubleValue|||
+|boolValue|||the bool data. when type is Bool.
+|gameObjectValue|||the gameobject data. when type is GameObject.
+|spriteValue|||the sprite data. when type is Sprite.
 
 ```mdx-code-block
 </APITable>
@@ -66,8 +94,30 @@
 |height|50f||列表头高度。
 |backgroundColor|||列表头背景色。
 |background|||背景图片样式。
-|defaultHeaderLabelStyle|||
-|defaultDataLabelStyle|||默认的列数据文本样式。
+|defaultLabelStyle|||
+
+```mdx-code-block
+</APITable>
+```
+
+## TableColumnStyle
+
+> XCharts.Runtime.UI.TableColumnStyle : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+
+The style of table column.
+
+```mdx-code-block
+<APITable name="TableColumnStyle">
+```
+
+
+|field|default|since|comment|
+|--|--|--|--|
+|show|true||
+|columnWidth|0f||the width of column. default 0, auto width. if set, it will be used first.
+|minColumnWidth|100f||the min width of column.
+|defaultLabelStyle|||默认的列数据文本样式。
+|columnBackgroundColors|||the background color of column.
 
 ```mdx-code-block
 </APITable>
@@ -117,6 +167,29 @@
 </APITable>
 ```
 
+## TableRowStyle
+
+> XCharts.Runtime.UI.TableRowStyle : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+
+行样式。
+
+```mdx-code-block
+<APITable name="TableRowStyle">
+```
+
+
+|field|default|since|comment|
+|--|--|--|--|
+|show|true||
+|rowHeight|0f||the height of row.
+|rowGap|0f||the gap of row.
+|minRowHeight|30f||the min height of row.
+|rowBackgroundColors|||the background color of row.
+
+```mdx-code-block
+</APITable>
+```
+
 ## TableScrollbarStyle
 
 > XCharts.Runtime.UI.TableScrollbarStyle : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
@@ -154,13 +227,15 @@
 
 |field|default|since|comment|
 |--|--|--|--|
-|show|true||是否显示分割线。
-|vertical|true||是否显示垂直分割线。
-|verticalColumn|true||是否显示列表头的垂直分割线。
-|horizontal|true||是否显示水平分割线。
-|horizontalColumn|true||是否显示列表头的水平分割线。
-|width|1f||分割线宽度。
-|color|Color.clear||分割线颜色。
+|show|true||whether to show the separator.
+|vertical|true||whether to show the vertical separator.
+|verticalColumn|true||whether to show the vertical separator of the header.
+|verticalWidth|1f||the width of vertical separator.
+|verticalColor|Color.clear||the color of vertical separator.
+|horizontal|true||whether to show the horizontal separator.
+|horizontalColumn|true||whether to show the horizontal separator of the header.
+|horizontalWidth|1f||the width of horizontal separator.
+|horizontalColor|Color.clear||the color of horizontal separator.
 
 ```mdx-code-block
 </APITable>
@@ -202,21 +277,18 @@
 |supportScroll|true||whether the table support scroll.
 |supportDrag|false||whether the table support drag.
 |supportSelect|false||whether the table support select. select row, column, cell.
-|rowHeight|0f||the height of row.
-|rowGap|0f||the gap of row.
-|columnWidth|0f||the width of column. default 0, auto width. if set, it will be used first.
 |borderWidth|0f||the width of border.
 |borderColor|||the color of border.
-|minColumnWidth|100f||the min width of column.
-|minRowHeight|30f||the min height of row.
 |scrollSensitivity|10f||the scroll sensitivity.
 |selectColor|||the color of selected row, column, cell.
 |selectHeaderColor|||the color of selected header.
-|rowBackgroundColors|||the background color of row.
 |separatorStyle|||the style of separator. [TableSeparatorStyle](#tableseparatorstyle)|
 |scrollbarStyle|||the style of scrollbar. [TableScrollbarStyle](#tablescrollbarstyle)|
 |columnHeaderStyle|||the default style of column header. [TableColumnHeaderStyle](#tablecolumnheaderstyle)|
+|columnStyle||| [TableColumnStyle](#tablecolumnstyle)|
 |rowHeaderStyle|||the style of row header. [TableRowHeaderStyle](#tablerowheaderstyle)|
+|rowStyle|||the style of row. [TableRowStyle](#tablerowstyle)|
+|carouselStyle|||the style of carousel. [TableCarouselStyle](#tablecarouselstyle)|
 |columns|||the style of column header.
 |data|||the data of table.
 
