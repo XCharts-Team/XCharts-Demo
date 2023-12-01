@@ -2,7 +2,8 @@
 
 ## Bar3D
 
-> XCharts.Runtime.Bar3Ds.Bar3D : [Serie](https://xcharts-team.github.io/docs/api#serie),[INeedSerieContainer](https://xcharts-team.github.io/docs/api#ineedseriecontainer)
+> class in XCharts.Runtime.Bar3Ds / Inherits from: [Serie](https://xcharts-team.github.io/docs/api#serie),[INeedSerieContainer](https://xcharts-team.github.io/docs/api#ineedseriecontainer)
+
 Bar3D.
 
 |public method|since|description|
@@ -12,9 +13,11 @@ Bar3D.
 
 ## Bar3DChart
 
-> XCharts.Runtime.Bar3Ds.Bar3DChart : [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
+> class in XCharts.Runtime.Bar3Ds / Inherits from: [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
+
 
 ## Bar3DStyle
 
-> XCharts.Runtime.Bar3Ds.Bar3DStyle : [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+> class in XCharts.Runtime.Bar3Ds / Inherits from: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+
 

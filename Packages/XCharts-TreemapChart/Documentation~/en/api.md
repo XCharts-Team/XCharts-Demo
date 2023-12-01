@@ -2,7 +2,8 @@
 
 ## Treemap
 
-> XCharts.Runtime.Treemaps.Treemap : [Serie](https://xcharts-team.github.io/docs/api#serie)
+> class in XCharts.Runtime.Treemaps / Inherits from: [Serie](https://xcharts-team.github.io/docs/api#serie)
+
 
 |public method|since|description|
 |--|--|--|
@@ -18,5 +19,6 @@
 
 ## TreemapChart
 
-> XCharts.Runtime.Treemaps.TreemapChart : [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
+> class in XCharts.Runtime.Treemaps / Inherits from: [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
+
 

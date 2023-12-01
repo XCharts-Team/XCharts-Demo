@@ -2,7 +2,8 @@
 
 ## Pyramid
 
-> XCharts.Runtime.Pyramids.Pyramid : [Serie](https://xcharts-team.github.io/docs/api#serie)
+> class in XCharts.Runtime.Pyramids / Inherits from: [Serie](https://xcharts-team.github.io/docs/api#serie)
+
 
 |public method|since|description|
 |--|--|--|
@@ -10,9 +11,11 @@
 
 ## PyramidChart
 
-> XCharts.Runtime.Pyramids.PyramidChart : [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
+> class in XCharts.Runtime.Pyramids / Inherits from: [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
+
 
 ## PyramidStyle
 
-> XCharts.Runtime.Pyramids.PyramidStyle : [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+> class in XCharts.Runtime.Pyramids / Inherits from: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+
 

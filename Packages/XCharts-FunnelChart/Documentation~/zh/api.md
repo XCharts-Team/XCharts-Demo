@@ -2,13 +2,15 @@
 
 ## Funnel
 
-> XCharts.Runtime.Funnels.Funnel : [Serie](https://xcharts-team.github.io/docs/api#serie)
+> class in XCharts.Runtime.Funnels / 继承自: [Serie](https://xcharts-team.github.io/docs/api#serie)
 
-|public method|since|description|
+
+|API|版本|描述|
 |--|--|--|
 |AddDefaultSerie()||public static void AddDefaultSerie(BaseChart chart, string serieName)|
 
 ## FunnelChart
 
-> XCharts.Runtime.Funnels.FunnelChart : [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
+> class in XCharts.Runtime.Funnels / 继承自: [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
+
 

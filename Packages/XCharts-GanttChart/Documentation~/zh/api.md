@@ -2,17 +2,19 @@
 
 ## Gantt
 
-> XCharts.Runtime.Gantts.Gantt : [Serie](https://xcharts-team.github.io/docs/api#serie)
+> class in XCharts.Runtime.Gantts / 继承自: [Serie](https://xcharts-team.github.io/docs/api#serie)
 
-|public method|since|description|
+
+|API|版本|描述|
 |--|--|--|
 |AddDefaultSerie()||public static void AddDefaultSerie(BaseChart chart, string serieName)|
 
 ## GanttChart
 
-> XCharts.Runtime.Gantts.GanttChart : [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
+> class in XCharts.Runtime.Gantts / 继承自: [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
 
-|public method|since|description|
+
+|API|版本|描述|
 |--|--|--|
 |GetSeriesMinMaxValue()||public override void GetSeriesMinMaxValue(Axis axis, int axisIndex, out double tempMinValue, out double tempMaxValue)|
 |InitAxisRuntimeData()||public override void InitAxisRuntimeData(Axis axis)|
@@ -23,5 +25,6 @@
 
 ## GanttStyle
 
-> XCharts.Runtime.Gantts.GanttStyle : [MainComponent](https://xcharts-team.github.io/docs/api#maincomponent)
+> class in XCharts.Runtime.Gantts / 继承自: [MainComponent](https://xcharts-team.github.io/docs/api#maincomponent)
+
 

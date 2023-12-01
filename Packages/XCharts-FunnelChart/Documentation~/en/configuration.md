@@ -2,7 +2,7 @@
 
 ## Funnel
 
-> XCharts.Runtime.Funnels.Funnel : [Serie](https://xcharts-team.github.io/docs/configuration#serie)
+> class in XCharts.Runtime.Funnels / Inherits from: [Serie](https://xcharts-team.github.io/docs/configuration#serie)
 
 ```mdx-code-block
 <APITable name="Funnel">

@@ -2,7 +2,7 @@
 
 ## Bar3D
 
-> XCharts.Runtime.Bar3Ds.Bar3D : [Serie](https://xcharts-team.github.io/docs/configuration#serie), [INeedSerieContainer](https://xcharts-team.github.io/docs/configuration#ineedseriecontainer)
+> class in XCharts.Runtime.Bar3Ds / Inherits from: [Serie](https://xcharts-team.github.io/docs/configuration#serie), [INeedSerieContainer](https://xcharts-team.github.io/docs/configuration#ineedseriecontainer)
 
 Bar3D.
 
@@ -22,7 +22,7 @@ Bar3D.
 
 ## Bar3DStyle
 
-> XCharts.Runtime.Bar3Ds.Bar3DStyle : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+> class in XCharts.Runtime.Bar3Ds / Inherits from: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
 
 ```mdx-code-block
 <APITable name="Bar3DStyle">

@@ -2,7 +2,7 @@
 
 ## Pyramid
 
-> XCharts.Runtime.Pyramids.Pyramid : [Serie](https://xcharts-team.github.io/docs/configuration#serie)
+> class in XCharts.Runtime.Pyramids / Inherits from: [Serie](https://xcharts-team.github.io/docs/configuration#serie)
 
 ```mdx-code-block
 <APITable name="Pyramid">
@@ -19,7 +19,7 @@
 
 ## PyramidStyle
 
-> XCharts.Runtime.Pyramids.PyramidStyle : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+> class in XCharts.Runtime.Pyramids / Inherits from: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
 
 ```mdx-code-block
 <APITable name="PyramidStyle">

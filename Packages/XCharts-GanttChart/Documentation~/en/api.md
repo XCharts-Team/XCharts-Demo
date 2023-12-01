@@ -2,7 +2,8 @@
 
 ## Gantt
 
-> XCharts.Runtime.Gantts.Gantt : [Serie](https://xcharts-team.github.io/docs/api#serie)
+> class in XCharts.Runtime.Gantts / Inherits from: [Serie](https://xcharts-team.github.io/docs/api#serie)
+
 
 |public method|since|description|
 |--|--|--|
@@ -10,7 +11,8 @@
 
 ## GanttChart
 
-> XCharts.Runtime.Gantts.GanttChart : [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
+> class in XCharts.Runtime.Gantts / Inherits from: [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
+
 
 |public method|since|description|
 |--|--|--|
@@ -23,5 +25,6 @@
 
 ## GanttStyle
 
-> XCharts.Runtime.Gantts.GanttStyle : [MainComponent](https://xcharts-team.github.io/docs/api#maincomponent)
+> class in XCharts.Runtime.Gantts / Inherits from: [MainComponent](https://xcharts-team.github.io/docs/api#maincomponent)
+
 

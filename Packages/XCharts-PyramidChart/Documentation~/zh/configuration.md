@@ -2,14 +2,13 @@
 
 ## Pyramid
 
-> XCharts.Runtime.Pyramids.Pyramid : [Serie](https://xcharts-team.github.io/docs/configuration#serie)
+> class in XCharts.Runtime.Pyramids / 继承自: [Serie](https://xcharts-team.github.io/docs/configuration#serie)
 
 ```mdx-code-block
 <APITable name="Pyramid">
 ```
 
-
-|field|default|since|comment|
+|参数|默认|版本|描述|
 |--|--|--|--|
 |pyramidStyle||| [PyramidStyle](#pyramidstyle)|
 
@@ -19,14 +18,13 @@
 
 ## PyramidStyle
 
-> XCharts.Runtime.Pyramids.PyramidStyle : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+> class in XCharts.Runtime.Pyramids / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
 
 ```mdx-code-block
 <APITable name="PyramidStyle">
 ```
 
-
-|field|default|since|comment|
+|参数|默认|版本|描述|
 |--|--|--|--|
 |show|true||
 |3D|true||

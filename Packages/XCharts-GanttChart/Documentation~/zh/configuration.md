@@ -2,14 +2,13 @@
 
 ## Gantt
 
-> XCharts.Runtime.Gantts.Gantt : [Serie](https://xcharts-team.github.io/docs/configuration#serie)
+> class in XCharts.Runtime.Gantts / 继承自: [Serie](https://xcharts-team.github.io/docs/configuration#serie)
 
 ```mdx-code-block
 <APITable name="Gantt">
 ```
 
-
-|field|default|since|comment|
+|参数|默认|版本|描述|
 |--|--|--|--|
 |disableDrag|||
 
@@ -19,14 +18,13 @@
 
 ## GanttStyle
 
-> XCharts.Runtime.Gantts.GanttStyle : [MainComponent](https://xcharts-team.github.io/docs/configuration#maincomponent)
+> class in XCharts.Runtime.Gantts / 继承自: [MainComponent](https://xcharts-team.github.io/docs/configuration#maincomponent)
 
 ```mdx-code-block
 <APITable name="GanttStyle">
 ```
 
-
-|field|default|since|comment|
+|参数|默认|版本|描述|
 |--|--|--|--|
 |show|true||
 |ganttType|||甘特图类型。<br/>`GanttType`:<br/>- `Monomial`: 单项甘特图。每个数据项都是单独的一条进度。<br/>- `Multinomial`: 多项甘特图。每个数据项只是一条进度里的一段。<br/>|

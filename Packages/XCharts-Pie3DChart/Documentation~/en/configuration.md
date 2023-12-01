@@ -2,7 +2,7 @@
 
 ## Pie3D
 
-> XCharts.Runtime.Pie3Ds.Pie3D : [Serie](https://xcharts-team.github.io/docs/configuration#serie)
+> class in XCharts.Runtime.Pie3Ds / Inherits from: [Serie](https://xcharts-team.github.io/docs/configuration#serie)
 
 ```mdx-code-block
 <APITable name="Pie3D">
@@ -19,7 +19,7 @@
 
 ## Pie3DStyle
 
-> XCharts.Runtime.Pie3Ds.Pie3DStyle : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+> class in XCharts.Runtime.Pie3Ds / Inherits from: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
 
 Pie 3d style.
 

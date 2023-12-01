@@ -2,7 +2,7 @@
 
 ## Liquid
 
-> XCharts.Runtime.Liquids.Liquid : [Serie](https://xcharts-team.github.io/docs/configuration#serie), [INeedSerieContainer](https://xcharts-team.github.io/docs/configuration#ineedseriecontainer)
+> class in XCharts.Runtime.Liquids / Inherits from: [Serie](https://xcharts-team.github.io/docs/configuration#serie), [INeedSerieContainer](https://xcharts-team.github.io/docs/configuration#ineedseriecontainer)
 
 ```mdx-code-block
 <APITable name="Liquid">
@@ -22,7 +22,7 @@
 
 ## Vessel
 
-> XCharts.Runtime.Liquids.Vessel : [MainComponent](https://xcharts-team.github.io/docs/configuration#maincomponent), [ISerieContainer](https://xcharts-team.github.io/docs/configuration#iseriecontainer), [IUpdateRuntimeData](https://xcharts-team.github.io/docs/configuration#iupdateruntimedata)
+> class in XCharts.Runtime.Liquids / Inherits from: [MainComponent](https://xcharts-team.github.io/docs/configuration#maincomponent), [ISerieContainer](https://xcharts-team.github.io/docs/configuration#iseriecontainer), [IUpdateRuntimeData](https://xcharts-team.github.io/docs/configuration#iupdateruntimedata)
 
 Vessel component for liquid chart. There can be multiple vessels in a Chart, which can be matched by vesselIndex in Serie.
 

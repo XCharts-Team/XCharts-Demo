@@ -33,6 +33,7 @@ namespace XChartsDemo
             m_TabButtonList.Add(tab2);
             m_TabButtonList.Add(tab3);
             m_TabButtonList.Add(tab4);
+            SwitchTab(0);
             UpdateTabButtonStatus();
         }
 
@@ -44,6 +45,7 @@ namespace XChartsDemo
             {
                 UIUtil.SetActive(m_PanelHomePage.gameObject, true);
                 UIUtil.SetActive(m_PanelChart.gameObject, false);
+                m_PanelChart.SwitchTab(ChartType.Homepage);
             }
             else
             {

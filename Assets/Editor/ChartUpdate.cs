@@ -60,6 +60,19 @@ public static class ChartUpdate
         AssetDatabase.Refresh();
     }
 
+    [MenuItem("Assets/XCharts/CopyChart")]
+    public static void CopySelectedChart()
+    {
+        foreach (var obj in Selection.objects)
+        {
+            var assetPath = AssetDatabase.GetAssetPath(obj);
+            var newPath = assetPath.Replace(".prefab", "_copy.prefab");
+            AssetDatabase.CopyAsset(assetPath, newPath);
+        }
+        AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
+    }
+
     private static void RebuildChartPrefab(Object obj)
     {
         var prefab = PrefabUtility.InstantiatePrefab(obj) as GameObject;

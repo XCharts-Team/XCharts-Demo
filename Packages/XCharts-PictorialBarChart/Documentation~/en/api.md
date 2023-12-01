@@ -2,7 +2,8 @@
 
 ## PictorialBar
 
-> XCharts.Runtime.PictorialBars.PictorialBar : [Serie](https://xcharts-team.github.io/docs/api#serie),[INeedSerieContainer](https://xcharts-team.github.io/docs/api#ineedseriecontainer)
+> class in XCharts.Runtime.PictorialBars / Inherits from: [Serie](https://xcharts-team.github.io/docs/api#serie),[INeedSerieContainer](https://xcharts-team.github.io/docs/api#ineedseriecontainer)
+
 
 |public method|since|description|
 |--|--|--|
@@ -11,5 +12,6 @@
 
 ## PictorialBarChart
 
-> XCharts.Runtime.PictorialBars.PictorialBarChart : [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
+> class in XCharts.Runtime.PictorialBars / Inherits from: [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
+
 

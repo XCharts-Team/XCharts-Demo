@@ -2,9 +2,10 @@
 
 ## Treemap
 
-> XCharts.Runtime.Treemaps.Treemap : [Serie](https://xcharts-team.github.io/docs/api#serie)
+> class in XCharts.Runtime.Treemaps / 继承自: [Serie](https://xcharts-team.github.io/docs/api#serie)
 
-|public method|since|description|
+
+|API|版本|描述|
 |--|--|--|
 |AddDefaultSerie()||public static void AddDefaultSerie(BaseChart chart, string serieName)|
 |CanGoUpALevel()||public bool CanGoUpALevel()<br/>是否可以返回上一层 |
@@ -18,5 +19,6 @@
 
 ## TreemapChart
 
-> XCharts.Runtime.Treemaps.TreemapChart : [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
+> class in XCharts.Runtime.Treemaps / 继承自: [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
+
 

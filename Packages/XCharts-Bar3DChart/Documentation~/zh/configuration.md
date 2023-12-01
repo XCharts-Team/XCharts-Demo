@@ -2,7 +2,7 @@
 
 ## Bar3D
 
-> XCharts.Runtime.Bar3Ds.Bar3D : [Serie](https://xcharts-team.github.io/docs/configuration#serie), [INeedSerieContainer](https://xcharts-team.github.io/docs/configuration#ineedseriecontainer)
+> class in XCharts.Runtime.Bar3Ds / 继承自: [Serie](https://xcharts-team.github.io/docs/configuration#serie), [INeedSerieContainer](https://xcharts-team.github.io/docs/configuration#ineedseriecontainer)
 
 3D柱图。支持立方柱和圆柱。可水平排列和垂直排列。
 
@@ -10,8 +10,7 @@
 <APITable name="Bar3D">
 ```
 
-
-|field|default|since|comment|
+|参数|默认|版本|描述|
 |--|--|--|--|
 |bar3DType||v3.1.0|<br/>`Bar3DType`:<br/>- `Cube`: 立方柱。<br/>- `Cylinder`: 圆柱。<br/>|
 |bar3DStyle||| [Bar3DStyle](#bar3dstyle)|
@@ -22,14 +21,13 @@
 
 ## Bar3DStyle
 
-> XCharts.Runtime.Bar3Ds.Bar3DStyle : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+> class in XCharts.Runtime.Bar3Ds / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
 
 ```mdx-code-block
 <APITable name="Bar3DStyle">
 ```
 
-
-|field|default|since|comment|
+|参数|默认|版本|描述|
 |--|--|--|--|
 |show|true||
 |verticalArrange|false||是否垂直排列。

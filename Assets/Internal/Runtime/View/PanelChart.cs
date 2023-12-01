@@ -53,8 +53,8 @@ namespace XChartsDemo
             m_DetailRoot.SetActive(false);
             m_DetailChartRoot = transform.Find("chart_detail/chart").gameObject;
             m_DetailChartDescBackground = transform.Find("chart_detail/desc").GetComponent<Image>();
-            UIUtil.SetButton(gameObject, "chart_detail/btn_next", delegate() { NextDetailChart(); });
-            UIUtil.SetButton(gameObject, "chart_detail/btn_last", delegate() { LastDetailChart(); });
+            UIUtil.SetButton(gameObject, "chart_detail/btn_next", delegate () { NextDetailChart(); });
+            UIUtil.SetButton(gameObject, "chart_detail/btn_last", delegate () { LastDetailChart(); });
             InitThemeButton();
             InitModuleButton();
             InitChartList(true);
@@ -185,7 +185,7 @@ namespace XChartsDemo
                 module.button = btn.GetComponent<Button>();
                 module.button.transform.Find("Text").GetComponent<Text>().text = module.name.Replace("\\n", "\n");
                 module.button.transform.Find("SubText").GetComponent<Text>().text = module.subName.Replace("\\n", "\n");
-                module.button.onClick.AddListener(delegate()
+                module.button.onClick.AddListener(delegate ()
                 {
                     ClickModule(module);
                 });
@@ -219,7 +219,7 @@ namespace XChartsDemo
                 }
                 if (firstInit)
                     module.initedCount = 0;
-                module.panel.SetActive(module.runtimeSelected);
+                module.panel.SetActive(module.runtimeSelected && m_ChartType != ChartType.Homepage);
                 InitChartList(module, firstInit);
             }
         }
@@ -269,7 +269,7 @@ namespace XChartsDemo
                 module.chartThumbs.Add(thumb);
                 thumb.index = index;
                 thumb.BindPrefab(prefab);
-                thumb.AddBtnListener(delegate()
+                thumb.AddBtnListener(delegate ()
                 {
                     m_SelectedPanel = m_DetailChartRoot;
                     m_SelectedThumb = thumb;
@@ -283,6 +283,7 @@ namespace XChartsDemo
                     {
                         showTitle = names[3] == "1";
                     }
+                    showTitle = false; //暂时不显示title
                     UIUtil.SetActive(m_DetailRoot, showTitle, "desc");
                     UIUtil.SetText(m_DetailRoot, names[1], "desc/dark/Text");
                     UIUtil.SetText(m_DetailRoot, names[2], "desc/dark/Text2");
@@ -350,7 +351,7 @@ namespace XChartsDemo
             }
             selectedModuleIndex = selectedModule.index;
             selectedModule.runtimeSelected = true;
-            m_DetailRoot.SetActive(false);
+            m_DetailRoot?.SetActive(false);
             foreach (var module in config.chartModules)
             {
                 if (module.index != selectedModuleIndex)
@@ -366,7 +367,7 @@ namespace XChartsDemo
                         module.panel.SetActive(true);
                 }
             }
-            if (selectedModule.panel != null)
+            if (selectedModule.panel != null && m_ScrollRect != null)
                 m_ScrollRect.content = selectedModule.panel.GetComponent<RectTransform>();
             SetChartRootInfo(selectedModule);
             UpdateChartTheme(m_SelectedTheme);
@@ -379,7 +380,7 @@ namespace XChartsDemo
             m_DarkThemeToggle = transform.Find("chart_theme/dark").GetComponent<Toggle>();
             m_DarkThemeToggle.isOn = config.darkMode;
 
-            m_DarkThemeToggle.onValueChanged.AddListener(delegate(bool flag)
+            m_DarkThemeToggle.onValueChanged.AddListener(delegate (bool flag)
             {
                 m_SelectedTheme = flag ? ThemeType.Dark : ThemeType.Default;
                 UpdateChartTheme(m_SelectedTheme);
@@ -389,7 +390,7 @@ namespace XChartsDemo
 
         void UpdateChartTheme(ThemeType theme)
         {
-            m_DetailChartDescBackground.color = m_SelectedTheme == ThemeType.Dark ? (Color) new Color32(16, 12, 42, 255) : Color.white;
+            m_DetailChartDescBackground.color = m_SelectedTheme == ThemeType.Dark ? (Color)new Color32(16, 12, 42, 255) : Color.white;
             UIUtil.SetActive(m_DetailRoot, m_SelectedTheme == ThemeType.Dark, "desc/dark");
             UIUtil.SetActive(m_DetailRoot, m_SelectedTheme != ThemeType.Dark, "desc/default");
             var charts = (m_SelectedPanel == null ? transform : m_SelectedPanel.transform).GetComponentsInChildren<BaseChart>();

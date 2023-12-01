@@ -2,17 +2,20 @@
 
 ## ITableCell
 
-> XCharts.Runtime.UI.ITableCell / Subclasses: [TableCell](#tablecell) 
+> class in XCharts.Runtime.UI / 子类: [TableCell](#tablecell) 
+
 
 ## StatisticContext
 
-> XCharts.Runtime.UI.StatisticContext
+> class in XCharts.Runtime.UI
+
 
 ## StatisticHelper
 
-> XCharts.Runtime.UI.StatisticHelper
+> class in XCharts.Runtime.UI
 
-|public method|since|description|
+
+|API|版本|描述|
 |--|--|--|
 |GetContentPosition()||public static Vector3 GetContentPosition(UIStatistic statistic)|
 |GetTitleContent()||public static string GetTitleContent(UIStatistic statistic, double value)|
@@ -20,48 +23,56 @@
 
 ## TableCarouselContext
 
-> XCharts.Runtime.UI.TableCarouselContext
+> class in XCharts.Runtime.UI
+
 
 ## TableCarouselStyle
 
-> XCharts.Runtime.UI.TableCarouselStyle : [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+> class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+
 表格轮播样式。
 
 ## TableCell
 
-> XCharts.Runtime.UI.TableCell : [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent),[ITableCell](#itablecell)
+> class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent),[ITableCell](#itablecell)
+
 表格的单元格数据。
 
-|public method|since|description|
+|API|版本|描述|
 |--|--|--|
 |GetContent()||public string GetContent()<br/>获取当前数据的内容。 |
 
 ## TableColumn
 
-> XCharts.Runtime.UI.TableColumn : [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+> class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+
 列表头内容和样式。
 
 ## TableColumnHeaderStyle
 
-> XCharts.Runtime.UI.TableColumnHeaderStyle : [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+> class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+
 列表头样式。
 
 ## TableColumnStyle
 
-> XCharts.Runtime.UI.TableColumnStyle : [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+> class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+
 列样式。
 
 ## TableContext
 
-> XCharts.Runtime.UI.TableContext
+> class in XCharts.Runtime.UI
+
 表格运行时上下文。
 
 ## TableHelper
 
-> XCharts.Runtime.UI.TableHelper
+> class in XCharts.Runtime.UI
+
 表格帮助类。
 
-|public method|since|description|
+|API|版本|描述|
 |--|--|--|
 |ClampVectorMin()||public static void ClampVectorMin(float minX, ref Vector3 p1, ref Vector3 p2, ref Vector3 p3, ref Vector3 p4)|
 |GetAllColumnWidth()||public static float GetAllColumnWidth(UITable table)|
@@ -98,53 +109,61 @@
 
 ## TableRow
 
-> XCharts.Runtime.UI.TableRow : [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+> class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+
 表格的行数据。
 
 ## TableRowHeaderStyle
 
-> XCharts.Runtime.UI.TableRowHeaderStyle : [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+> class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+
 行表头样式。
 
 ## TableRowStyle
 
-> XCharts.Runtime.UI.TableRowStyle : [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+> class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+
 行样式。
 
 ## TableScrollbarStyle
 
-> XCharts.Runtime.UI.TableScrollbarStyle : [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+> class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+
 表格滚动条样式。
 
 ## TableSeparatorStyle
 
-> XCharts.Runtime.UI.TableSeparatorStyle : [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+> class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+
 表格分割线样式。
 
-|public method|since|description|
+|API|版本|描述|
 |--|--|--|
 |IsNeedDrawHorizontalSeparator()||public bool IsNeedDrawHorizontalSeparator()<br/>是否需要绘制水平分割线。 |
 |IsNeedDrawVerticalSeparator()||public bool IsNeedDrawVerticalSeparator()<br/>是否需要绘制垂直分割线。 |
 
 ## UIProgress
 
-> XCharts.Runtime.UI.UIProgress : [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
+> class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
+
 
 ## UIStatistic
 
-> XCharts.Runtime.UI.UIStatistic : [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
+> class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
+
 统计数值UI组件。 用于展示统计数值。当需要突出某个或某组数字时，或展示带描述的统计类数据时使用。
 
-|public method|since|description|
+|API|版本|描述|
 |--|--|--|
 |GetCurrentValue()||public double GetCurrentValue(float animationDuration)<br/>获取当前时刻的数值。当有变更动画时，返回动画过程中的数值。 |
 
 ## UITable
 
-> XCharts.Runtime.UI.UITable : [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
+> class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
+
 表格UI组件。 用于展示行列数据。
 
-|public method|since|description|
+|API|版本|描述|
 |--|--|--|
 |AddColumn()||public void AddColumn(string title, List&lt;double&gt; data)<br/>添加一列double类型数据。 |
 |AddColumn()||public void AddColumn(string title, List&lt;Sprite&gt; data)<br/>添加一列Sprite类型数据。 |
@@ -156,6 +175,8 @@
 |AddRow()||public void AddRow(params string[] row)<br/>添加一行数据。 |
 |ClearColumns()||public void ClearColumns()<br/>清除Columns数据。 |
 |ClearData()||public void ClearData()<br/>清除Data数据。 |
+|GetContent()||public string GetContent(int row, int column)<br/>获取指定行列的单元格内容。 |
+|GetData()||public TableCell GetData(int row, int column)<br/>获取指定行列的单元格数据。 |
 |OnDrag()||public override void OnDrag(PointerEventData eventData)|
 |OnPointerClick()||public override void OnPointerClick(PointerEventData eventData)|
 |OnScroll()||public override void OnScroll(PointerEventData eventData)|
@@ -166,8 +187,8 @@
 |SetColumns()||public void SetColumns(List&lt;string&gt; columns)<br/>设置列表头数据。 |
 |SetColumnsAndData()||public void SetColumnsAndData(List&lt;string&gt; columns, List&lt;List&lt;string&gt;&gt; rows)<br/>设置Columns和Data数据。 |
 |SetData()||public void SetData(List&lt;List&lt;string&gt;&gt; rows)<br/>设置Data数据。 |
-|UpdateCell()||public void UpdateCell(int row, int column, double value)|
-|UpdateCell()||public void UpdateCell(int row, int column, Sprite value)|
+|UpdateCell()||public void UpdateCell(int row, int column, double value)<br/>更新一个单元格数据。 |
+|UpdateCell()||public void UpdateCell(int row, int column, Sprite value)<br/>更新一个单元格数据。 |
 |UpdateCell()||public void UpdateCell(int row, int column, string value)<br/>更新一个单元格数据。 |
 |UpdateColumn()||public void UpdateColumn(int columnIndex, List&lt;double&gt; column)<br/>更新指定索引的列数据。 |
 |UpdateColumn()||public void UpdateColumn(int columnIndex, List&lt;Sprite&gt; column)<br/>更新指定索引的列数据。 |
@@ -180,6 +201,7 @@
 
 ## UITimePicker
 
-> XCharts.Runtime.UI.UITimePicker : [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
+> class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
+
 时间选择UI组件。 输入或选择时间的控件。当用户需要输入一个时间，可以点击标准输入框，弹出时间面板进行选择。
 

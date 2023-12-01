@@ -2,7 +2,7 @@
 
 ## Gauge
 
-> XCharts.Runtime.Gauges.Gauge : [Serie](https://xcharts-team.github.io/docs/configuration#serie)
+> class in XCharts.Runtime.Gauges / Inherits from: [Serie](https://xcharts-team.github.io/docs/configuration#serie)
 
 ```mdx-code-block
 <APITable name="Gauge">
@@ -23,7 +23,7 @@
 
 ## GaugeAnchor
 
-> XCharts.Runtime.Gauges.GaugeAnchor : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+> class in XCharts.Runtime.Gauges / Inherits from: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
 
 ```mdx-code-block
 <APITable name="GaugeAnchor">
@@ -48,7 +48,7 @@
 
 ## GaugeAxis
 
-> XCharts.Runtime.Gauges.GaugeAxis : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+> class in XCharts.Runtime.Gauges / Inherits from: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
 
 Settings related to gauge axis line.
 
@@ -75,7 +75,7 @@ Settings related to gauge axis line.
 
 ## GaugeAxisLine
 
-> XCharts.Runtime.Gauges.GaugeAxisLine : [BaseLine](https://xcharts-team.github.io/docs/configuration#baseline)
+> class in XCharts.Runtime.Gauges / Inherits from: [BaseLine](https://xcharts-team.github.io/docs/configuration#baseline)
 
 ```mdx-code-block
 <APITable name="GaugeAxisLine">
@@ -94,7 +94,7 @@ Settings related to gauge axis line.
 
 ## GaugePointer
 
-> XCharts.Runtime.Gauges.GaugePointer : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+> class in XCharts.Runtime.Gauges / Inherits from: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
 
 Settings related to gauge pointer.
 

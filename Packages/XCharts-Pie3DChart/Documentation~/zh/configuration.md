@@ -2,14 +2,13 @@
 
 ## Pie3D
 
-> XCharts.Runtime.Pie3Ds.Pie3D : [Serie](https://xcharts-team.github.io/docs/configuration#serie)
+> class in XCharts.Runtime.Pie3Ds / 继承自: [Serie](https://xcharts-team.github.io/docs/configuration#serie)
 
 ```mdx-code-block
 <APITable name="Pie3D">
 ```
 
-
-|field|default|since|comment|
+|参数|默认|版本|描述|
 |--|--|--|--|
 |pie3DStyle||| [Pie3DStyle](#pie3dstyle)|
 
@@ -19,7 +18,7 @@
 
 ## Pie3DStyle
 
-> XCharts.Runtime.Pie3Ds.Pie3DStyle : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+> class in XCharts.Runtime.Pie3Ds / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
 
 3D饼图样式。
 
@@ -27,8 +26,7 @@
 <APITable name="Pie3DStyle">
 ```
 
-
-|field|default|since|comment|
+|参数|默认|版本|描述|
 |--|--|--|--|
 |show|true||
 |ellipseMinorAxis|0.65f||椭圆的短轴长度。当为0-1的浮点数时为长轴的百分比。

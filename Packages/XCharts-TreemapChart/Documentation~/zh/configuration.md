@@ -2,14 +2,13 @@
 
 ## Treemap
 
-> XCharts.Runtime.Treemaps.Treemap : [Serie](https://xcharts-team.github.io/docs/configuration#serie)
+> class in XCharts.Runtime.Treemaps / 继承自: [Serie](https://xcharts-team.github.io/docs/configuration#serie)
 
 ```mdx-code-block
 <APITable name="Treemap">
 ```
 
-
-|field|default|since|comment|
+|参数|默认|版本|描述|
 |--|--|--|--|
 |leafDepth|0||默认显示的几层节点。默认为0时表示尽可能展示多层节点，设置大于0时，下钻功能开启，需要点击后才展示子节点。
 |visualDimension|0||用于计算占比的数据维数。

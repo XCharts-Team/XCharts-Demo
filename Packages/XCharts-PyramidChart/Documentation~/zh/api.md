@@ -2,17 +2,20 @@
 
 ## Pyramid
 
-> XCharts.Runtime.Pyramids.Pyramid : [Serie](https://xcharts-team.github.io/docs/api#serie)
+> class in XCharts.Runtime.Pyramids / 继承自: [Serie](https://xcharts-team.github.io/docs/api#serie)
 
-|public method|since|description|
+
+|API|版本|描述|
 |--|--|--|
 |AddDefaultSerie()||public static void AddDefaultSerie(BaseChart chart, string serieName)|
 
 ## PyramidChart
 
-> XCharts.Runtime.Pyramids.PyramidChart : [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
+> class in XCharts.Runtime.Pyramids / 继承自: [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
+
 
 ## PyramidStyle
 
-> XCharts.Runtime.Pyramids.PyramidStyle : [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+> class in XCharts.Runtime.Pyramids / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+
 

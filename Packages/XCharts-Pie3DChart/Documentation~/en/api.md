@@ -2,7 +2,8 @@
 
 ## Pie3D
 
-> XCharts.Runtime.Pie3Ds.Pie3D : [Serie](https://xcharts-team.github.io/docs/api#serie)
+> class in XCharts.Runtime.Pie3Ds / Inherits from: [Serie](https://xcharts-team.github.io/docs/api#serie)
+
 
 |public method|since|description|
 |--|--|--|
@@ -11,12 +12,14 @@
 
 ## Pie3DChart
 
-> XCharts.Runtime.Pie3Ds.Pie3DChart : [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
+> class in XCharts.Runtime.Pie3Ds / Inherits from: [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
+
 3D pie.
 
 ## Pie3DSlice
 
-> XCharts.Runtime.Pie3Ds.Pie3DSlice
+> class in XCharts.Runtime.Pie3Ds
+
 Slice of pie.
 
 |public method|since|description|
@@ -31,6 +34,7 @@ Slice of pie.
 
 ## Pie3DStyle
 
-> XCharts.Runtime.Pie3Ds.Pie3DStyle : [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+> class in XCharts.Runtime.Pie3Ds / Inherits from: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+
 Pie 3d style.
 

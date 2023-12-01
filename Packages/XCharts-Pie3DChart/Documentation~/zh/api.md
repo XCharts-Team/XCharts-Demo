@@ -2,24 +2,27 @@
 
 ## Pie3D
 
-> XCharts.Runtime.Pie3Ds.Pie3D : [Serie](https://xcharts-team.github.io/docs/api#serie)
+> class in XCharts.Runtime.Pie3Ds / 继承自: [Serie](https://xcharts-team.github.io/docs/api#serie)
 
-|public method|since|description|
+
+|API|版本|描述|
 |--|--|--|
 |AddDefaultSerie()||public static Serie AddDefaultSerie(BaseChart chart, string serieName)|
 |ConvertSerie()||public static Pie3D ConvertSerie(Serie serie)|
 
 ## Pie3DChart
 
-> XCharts.Runtime.Pie3Ds.Pie3DChart : [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
+> class in XCharts.Runtime.Pie3Ds / 继承自: [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
+
 3D饼图。
 
 ## Pie3DSlice
 
-> XCharts.Runtime.Pie3Ds.Pie3DSlice
+> class in XCharts.Runtime.Pie3Ds
+
 3D饼图的切块。
 
-|public method|since|description|
+|API|版本|描述|
 |--|--|--|
 |Contains()||public bool Contains(float angle)|
 |IsInPolygon()||public bool IsInPolygon(Vector2 p)|
@@ -31,6 +34,7 @@
 
 ## Pie3DStyle
 
-> XCharts.Runtime.Pie3Ds.Pie3DStyle : [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+> class in XCharts.Runtime.Pie3Ds / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+
 3D饼图样式。
 

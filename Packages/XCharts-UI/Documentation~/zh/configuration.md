@@ -2,11 +2,11 @@
 
 ## ITableCell
 
-> XCharts.Runtime.UI.ITableCell / Subclasses: [TableCell](#tablecell)
+> class in XCharts.Runtime.UI / 子类: [TableCell](#tablecell)
 
 ## TableCarouselStyle
 
-> XCharts.Runtime.UI.TableCarouselStyle : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+> class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
 
 表格轮播样式。
 
@@ -14,14 +14,13 @@
 <APITable name="TableCarouselStyle">
 ```
 
-
-|field|default|since|comment|
+|参数|默认|版本|描述|
 |--|--|--|--|
 |show|true||
 |type|||轮播类型。<br/>`TableCarouselType`:<br/>- `Pixel`: 像素轮播。<br/>- `Row`: 单行轮播。<br/>- `Page`: 分页轮播。<br/>|
 |mode|||轮播播放模式。<br/>`TableCarouselMode`:<br/>- `Loop`: 循环播放。<br/>|
-|waitTime|2000||
-|speed|100||
+|waitTime|2000||轮播等待时间（ms）。
+|speed|100||轮播速度。
 |pause|false||暂停轮播。
 |hoverPause|true||鼠标悬停时是否暂停。
 
@@ -31,7 +30,7 @@
 
 ## TableCell
 
-> XCharts.Runtime.UI.TableCell : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent), [ITableCell](#itablecell)
+> class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent), [ITableCell](#itablecell)
 
 表格的单元格数据。
 
@@ -39,13 +38,12 @@
 <APITable name="TableCell">
 ```
 
-
-|field|default|since|comment|
+|参数|默认|版本|描述|
 |--|--|--|--|
 |show|true||是否显示当前数据。
 |type|||当前数据的类型。<br/>`DataType`:<br/>- `GameObject`: <br/>- `String`: <br/>- `Double`: <br/>- `Bool`: <br/>- `Sprite`: <br/>|
 |stringValue|||当前数据的字符串值。当type为String时有效。
-|doubleValue|||
+|doubleValue|||当前数据的双精度值。当type为Double时有效。
 |boolValue|||当前数据的布尔值。当type为Bool时有效。
 |gameObjectValue|||当前数据的GameObject值。当type为GameObject时有效。
 |spriteValue|||当前数据的Sprite值。当type为Sprite时有效。
@@ -56,7 +54,7 @@
 
 ## TableColumn
 
-> XCharts.Runtime.UI.TableColumn : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+> class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
 
 列表头内容和样式。
 
@@ -64,8 +62,7 @@
 <APITable name="TableColumn">
 ```
 
-
-|field|default|since|comment|
+|参数|默认|版本|描述|
 |--|--|--|--|
 |show|true||是否显示列表头。
 |content|||列表头内容。
@@ -79,7 +76,7 @@
 
 ## TableColumnHeaderStyle
 
-> XCharts.Runtime.UI.TableColumnHeaderStyle : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+> class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
 
 列表头样式。
 
@@ -87,8 +84,7 @@
 <APITable name="TableColumnHeaderStyle">
 ```
 
-
-|field|default|since|comment|
+|参数|默认|版本|描述|
 |--|--|--|--|
 |show|true||是否显示列表头。
 |height|50f||列表头高度。
@@ -102,7 +98,7 @@
 
 ## TableColumnStyle
 
-> XCharts.Runtime.UI.TableColumnStyle : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+> class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
 
 列样式。
 
@@ -110,10 +106,9 @@
 <APITable name="TableColumnStyle">
 ```
 
-
-|field|default|since|comment|
+|参数|默认|版本|描述|
 |--|--|--|--|
-|show|true||
+|show|true||是否显示列。
 |columnWidth|0f||列宽。默认0，自适应。Columns中设置有时优先用Columns中的值，没有时用这个值。
 |minColumnWidth|100f||最小列宽。
 |defaultLabelStyle|||默认的列数据文本样式。
@@ -125,7 +120,7 @@
 
 ## TableRow
 
-> XCharts.Runtime.UI.TableRow : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+> class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
 
 表格的行数据。
 
@@ -133,8 +128,7 @@
 <APITable name="TableRow">
 ```
 
-
-|field|default|since|comment|
+|参数|默认|版本|描述|
 |--|--|--|--|
 |show|true||是否显示当前行。
 |name|||行名称。可用于显示在行表头，用通配符{name}。
@@ -147,7 +141,7 @@
 
 ## TableRowHeaderStyle
 
-> XCharts.Runtime.UI.TableRowHeaderStyle : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+> class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
 
 行表头样式。
 
@@ -155,8 +149,7 @@
 <APITable name="TableRowHeaderStyle">
 ```
 
-
-|field|default|since|comment|
+|参数|默认|版本|描述|
 |--|--|--|--|
 |show|true||是否显示行表头。
 |width|100f||宽度。
@@ -169,7 +162,7 @@
 
 ## TableRowStyle
 
-> XCharts.Runtime.UI.TableRowStyle : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+> class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
 
 行样式。
 
@@ -177,10 +170,9 @@
 <APITable name="TableRowStyle">
 ```
 
-
-|field|default|since|comment|
+|参数|默认|版本|描述|
 |--|--|--|--|
-|show|true||
+|show|true||是否显示行。
 |rowHeight|0f||行高。
 |rowGap|0f||行间距。
 |minRowHeight|30f||最小行高。
@@ -192,7 +184,7 @@
 
 ## TableScrollbarStyle
 
-> XCharts.Runtime.UI.TableScrollbarStyle : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+> class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
 
 表格滚动条样式。
 
@@ -200,10 +192,9 @@
 <APITable name="TableScrollbarStyle">
 ```
 
-
-|field|default|since|comment|
+|参数|默认|版本|描述|
 |--|--|--|--|
-|show|false||是否显示滚动条。
+|show|false||是否开启滚动条。
 |horizontal|false||是否显示水平滚动条。
 |vertical|true||是否显示垂直滚动条。
 |width|5||滚动条宽度。
@@ -216,7 +207,7 @@
 
 ## TableSeparatorStyle
 
-> XCharts.Runtime.UI.TableSeparatorStyle : [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+> class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
 
 表格分割线样式。
 
@@ -224,8 +215,7 @@
 <APITable name="TableSeparatorStyle">
 ```
 
-
-|field|default|since|comment|
+|参数|默认|版本|描述|
 |--|--|--|--|
 |show|true||是否显示分割线。
 |vertical|true||是否显示垂直分割线。
@@ -243,7 +233,7 @@
 
 ## UIStatistic
 
-> XCharts.Runtime.UI.UIStatistic : [UIComponent](https://xcharts-team.github.io/docs/configuration#uicomponent)
+> class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/configuration#uicomponent)
 
 统计数值UI组件。 用于展示统计数值。当需要突出某个或某组数字时，或展示带描述的统计类数据时使用。
 
@@ -251,8 +241,7 @@
 <APITable name="UIStatistic">
 ```
 
-
-|field|default|since|comment|
+|参数|默认|版本|描述|
 |--|--|--|--|
 |valueLabelStyle|||
 |animationStyle|||起始动画。
@@ -263,7 +252,7 @@
 
 ## UITable
 
-> XCharts.Runtime.UI.UITable : [UIComponent](https://xcharts-team.github.io/docs/configuration#uicomponent)
+> class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/configuration#uicomponent)
 
 表格UI组件。 用于展示行列数据。
 
@@ -271,8 +260,7 @@
 <APITable name="UITable">
 ```
 
-
-|field|default|since|comment|
+|参数|默认|版本|描述|
 |--|--|--|--|
 |supportScroll|true||是否支持滚动。
 |supportDrag|false||是否支持拖拽。
@@ -298,7 +286,7 @@
 
 ## UITimePicker
 
-> XCharts.Runtime.UI.UITimePicker : [UIComponent](https://xcharts-team.github.io/docs/configuration#uicomponent)
+> class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/configuration#uicomponent)
 
 时间选择UI组件。 输入或选择时间的控件。当用户需要输入一个时间，可以点击标准输入框，弹出时间面板进行选择。
 

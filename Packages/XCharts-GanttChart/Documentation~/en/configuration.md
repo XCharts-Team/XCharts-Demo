@@ -2,7 +2,7 @@
 
 ## Gantt
 
-> XCharts.Runtime.Gantts.Gantt : [Serie](https://xcharts-team.github.io/docs/configuration#serie)
+> class in XCharts.Runtime.Gantts / Inherits from: [Serie](https://xcharts-team.github.io/docs/configuration#serie)
 
 ```mdx-code-block
 <APITable name="Gantt">
@@ -19,7 +19,7 @@
 
 ## GanttStyle
 
-> XCharts.Runtime.Gantts.GanttStyle : [MainComponent](https://xcharts-team.github.io/docs/configuration#maincomponent)
+> class in XCharts.Runtime.Gantts / Inherits from: [MainComponent](https://xcharts-team.github.io/docs/configuration#maincomponent)
 
 ```mdx-code-block
 <APITable name="GanttStyle">

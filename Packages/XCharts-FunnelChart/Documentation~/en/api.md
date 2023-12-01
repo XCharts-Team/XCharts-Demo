@@ -2,7 +2,8 @@
 
 ## Funnel
 
-> XCharts.Runtime.Funnels.Funnel : [Serie](https://xcharts-team.github.io/docs/api#serie)
+> class in XCharts.Runtime.Funnels / Inherits from: [Serie](https://xcharts-team.github.io/docs/api#serie)
+
 
 |public method|since|description|
 |--|--|--|
@@ -10,5 +11,6 @@
 
 ## FunnelChart
 
-> XCharts.Runtime.Funnels.FunnelChart : [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
+> class in XCharts.Runtime.Funnels / Inherits from: [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
+
 

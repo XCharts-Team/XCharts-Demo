@@ -22,6 +22,7 @@ slug: /api
 - [AreaStyle](#areastyle)
 - [ArrowStyle](#arrowstyle)
 - [Axis](#axis)
+- [AxisAnimation](#axisanimation)
 - [AxisContext](#axiscontext)
 - [AxisHandler&lt;T&gt;](#axishandlert)
 - [AxisHelper](#axishelper)
@@ -236,7 +237,8 @@ slug: /api
 
 ## AngleAxis
 
-> XCharts.Runtime.AngleAxis : [Axis](#axis)
+> class in XCharts.Runtime / Inherits from: [Axis](#axis)
+
 Angle axis of Polar Coordinate.
 
 |public method|since|description|
@@ -247,7 +249,8 @@ Angle axis of Polar Coordinate.
 
 ## AngleAxisTheme
 
-> XCharts.Runtime.AngleAxisTheme : [BaseAxisTheme](#baseaxistheme)
+> class in XCharts.Runtime / Inherits from: [BaseAxisTheme](#baseaxistheme)
+
 
 |public method|since|description|
 |--|--|--|
@@ -255,32 +258,50 @@ Angle axis of Polar Coordinate.
 
 ## AnimationAddition
 
-> XCharts.Runtime.AnimationAddition : [AnimationInfo](#animationinfo)
+> class in XCharts.Runtime / Inherits from: [AnimationInfo](#animationinfo)
+
+> Since `v3.8.0`
+
 Data addition animation.
 
 ## AnimationChange
 
-> XCharts.Runtime.AnimationChange : [AnimationInfo](#animationinfo)
+> class in XCharts.Runtime / Inherits from: [AnimationInfo](#animationinfo)
+
+> Since `v3.8.0`
+
 Data change animation.
 
 ## AnimationFadeIn
 
-> XCharts.Runtime.AnimationFadeIn : [AnimationInfo](#animationinfo)
+> class in XCharts.Runtime / Inherits from: [AnimationInfo](#animationinfo)
+
+> Since `v3.8.0`
+
 Fade in animation.
 
 ## AnimationFadeOut
 
-> XCharts.Runtime.AnimationFadeOut : [AnimationInfo](#animationinfo)
+> class in XCharts.Runtime / Inherits from: [AnimationInfo](#animationinfo)
+
+> Since `v3.8.0`
+
 Fade out animation.
 
 ## AnimationHiding
 
-> XCharts.Runtime.AnimationHiding : [AnimationInfo](#animationinfo)
+> class in XCharts.Runtime / Inherits from: [AnimationInfo](#animationinfo)
+
+> Since `v3.8.0`
+
 Data hiding animation.
 
 ## AnimationInfo
 
-> XCharts.Runtime.AnimationInfo / Subclasses: [AnimationFadeIn](#animationfadein),[AnimationFadeOut](#animationfadeout),[AnimationChange](#animationchange),[AnimationAddition](#animationaddition),[AnimationHiding](#animationhiding),[AnimationInteraction](#animationinteraction) 
+> class in XCharts.Runtime / Subclasses: [AnimationFadeIn](#animationfadein),[AnimationFadeOut](#animationfadeout),[AnimationChange](#animationchange),[AnimationAddition](#animationaddition),[AnimationHiding](#animationhiding),[AnimationInteraction](#animationinteraction) 
+
+> Since `v3.8.0`
+
 the animation info.
 
 |public method|since|description|
@@ -298,11 +319,15 @@ the animation info.
 
 ## AnimationInfoContext
 
-> XCharts.Runtime.AnimationInfoContext
+> class in XCharts.Runtime
+
 
 ## AnimationInteraction
 
-> XCharts.Runtime.AnimationInteraction : [AnimationInfo](#animationinfo)
+> class in XCharts.Runtime / Inherits from: [AnimationInfo](#animationinfo)
+
+> Since `v3.8.0`
+
 Interactive animation of charts.
 
 |public method|since|description|
@@ -314,7 +339,8 @@ Interactive animation of charts.
 
 ## AnimationStyle
 
-> XCharts.Runtime.AnimationStyle : [ChildComponent](#childcomponent)
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent)
+
 the animation of serie. support animation type: fadeIn, fadeOut, change, addition.
 
 |public method|since|description|
@@ -353,7 +379,8 @@ the animation of serie. support animation type: fadeIn, fadeOut, change, additio
 
 ## AnimationStyleHelper
 
-> XCharts.Runtime.AnimationStyleHelper
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -364,7 +391,8 @@ the animation of serie. support animation type: fadeIn, fadeOut, change, additio
 
 ## AreaStyle
 
-> XCharts.Runtime.AreaStyle : [ChildComponent](#childcomponent),[ISerieComponent](#iseriecomponent),[ISerieDataComponent](#iseriedatacomponent)
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent),[ISerieComponent](#iseriecomponent),[ISerieDataComponent](#iseriedatacomponent)
+
 The style of area.
 
 |public method|since|description|
@@ -374,7 +402,8 @@ The style of area.
 
 ## ArrowStyle
 
-> XCharts.Runtime.ArrowStyle : [ChildComponent](#childcomponent)
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent)
+
 
 |public method|since|description|
 |--|--|--|
@@ -384,7 +413,8 @@ The style of area.
 
 ## Axis
 
-> XCharts.Runtime.Axis : [MainComponent](#maincomponent) / Subclasses: [AngleAxis](#angleaxis),[ParallelAxis](#parallelaxis),[RadiusAxis](#radiusaxis),[SingleAxis](#singleaxis),[XAxis](#xaxis),[YAxis](#yaxis) 
+> class in XCharts.Runtime / Inherits from: [MainComponent](#maincomponent) / Subclasses: [AngleAxis](#angleaxis),[ParallelAxis](#parallelaxis),[RadiusAxis](#radiusaxis),[SingleAxis](#singleaxis),[XAxis](#xaxis),[YAxis](#yaxis) 
+
 The axis in rectangular coordinate.
 
 |public method|since|description|
@@ -422,17 +452,33 @@ The axis in rectangular coordinate.
 |UpdateIcon()||public void UpdateIcon(int index, Sprite icon)<br/>更新图标 |
 |UpdateZeroOffset()||public void UpdateZeroOffset(float axisLength)|
 
+## AxisAnimation
+
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent)
+
+> Since `v3.9.0`
+
+animation style of axis.
+
+|public method|since|description|
+|--|--|--|
+|Clone()||public AxisAnimation Clone()|
+|Copy()||public void Copy(AxisAnimation animation)|
+
 ## AxisContext
 
-> XCharts.Runtime.AxisContext : [MainComponentContext](#maincomponentcontext)
+> class in XCharts.Runtime / Inherits from: [MainComponentContext](#maincomponentcontext)
+
 
 ## AxisHandler&lt;T&gt;
 
-> XCharts.AxisHandler&lt;T&gt; : [MainComponentHandler](#maincomponenthandler)
+> class in XCharts / Inherits from: [MainComponentHandler](#maincomponenthandler)
+
 
 ## AxisHelper
 
-> XCharts.Runtime.AxisHelper
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -460,7 +506,8 @@ The axis in rectangular coordinate.
 
 ## AxisLabel
 
-> XCharts.Runtime.AxisLabel : [LabelStyle](#labelstyle)
+> class in XCharts.Runtime / Inherits from: [LabelStyle](#labelstyle)
+
 Settings related to axis label.
 
 |public method|since|description|
@@ -475,7 +522,8 @@ Settings related to axis label.
 
 ## AxisLine
 
-> XCharts.Runtime.AxisLine : [BaseLine](#baseline)
+> class in XCharts.Runtime / Inherits from: [BaseLine](#baseline)
+
 Settings related to axis line.
 
 |public method|since|description|
@@ -485,7 +533,10 @@ Settings related to axis line.
 
 ## AxisMinorSplitLine
 
-> XCharts.Runtime.AxisMinorSplitLine : [BaseLine](#baseline)
+> class in XCharts.Runtime / Inherits from: [BaseLine](#baseline)
+
+> Since `v3.2.0`
+
 Minor split line of axis in grid area.
 
 |public method|since|description|
@@ -496,7 +547,10 @@ Minor split line of axis in grid area.
 
 ## AxisMinorTick
 
-> XCharts.Runtime.AxisMinorTick : [BaseLine](#baseline)
+> class in XCharts.Runtime / Inherits from: [BaseLine](#baseline)
+
+> Since `v3.2.0`
+
 Settings related to axis minor tick.
 
 |public method|since|description|
@@ -507,7 +561,8 @@ Settings related to axis minor tick.
 
 ## AxisName
 
-> XCharts.Runtime.AxisName : [ChildComponent](#childcomponent)
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent)
+
 the name of axis.
 
 |public method|since|description|
@@ -517,7 +572,8 @@ the name of axis.
 
 ## AxisSplitArea
 
-> XCharts.Runtime.AxisSplitArea : [ChildComponent](#childcomponent)
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent)
+
 Split area of axis in grid area, not shown by default.
 
 |public method|since|description|
@@ -528,7 +584,8 @@ Split area of axis in grid area, not shown by default.
 
 ## AxisSplitLine
 
-> XCharts.Runtime.AxisSplitLine : [BaseLine](#baseline)
+> class in XCharts.Runtime / Inherits from: [BaseLine](#baseline)
+
 Split line of axis in grid area.
 
 |public method|since|description|
@@ -539,7 +596,8 @@ Split line of axis in grid area.
 
 ## AxisTheme
 
-> XCharts.Runtime.AxisTheme : [BaseAxisTheme](#baseaxistheme)
+> class in XCharts.Runtime / Inherits from: [BaseAxisTheme](#baseaxistheme)
+
 
 |public method|since|description|
 |--|--|--|
@@ -547,7 +605,8 @@ Split line of axis in grid area.
 
 ## AxisTick
 
-> XCharts.Runtime.AxisTick : [BaseLine](#baseline)
+> class in XCharts.Runtime / Inherits from: [BaseLine](#baseline)
+
 Settings related to axis tick.
 
 |public method|since|description|
@@ -557,7 +616,8 @@ Settings related to axis tick.
 
 ## Background
 
-> XCharts.Runtime.Background : [MainComponent](#maincomponent)
+> class in XCharts.Runtime / Inherits from: [MainComponent](#maincomponent)
+
 Background component.
 
 |public method|since|description|
@@ -566,7 +626,8 @@ Background component.
 
 ## Bar
 
-> XCharts.Runtime.Bar : [Serie](#serie),[INeedSerieContainer](#ineedseriecontainer)
+> class in XCharts.Runtime / Inherits from: [Serie](#serie),[INeedSerieContainer](#ineedseriecontainer)
+
 
 |public method|since|description|
 |--|--|--|
@@ -575,11 +636,13 @@ Background component.
 
 ## BarChart
 
-> XCharts.Runtime.BarChart : [BaseChart](#basechart)
+> class in XCharts.Runtime / Inherits from: [BaseChart](#basechart)
+
 
 ## BaseAxisTheme
 
-> XCharts.Runtime.BaseAxisTheme : [ComponentTheme](#componenttheme) / Subclasses: [AxisTheme](#axistheme),[RadiusAxisTheme](#radiusaxistheme),[AngleAxisTheme](#angleaxistheme),[PolarAxisTheme](#polaraxistheme),[RadarAxisTheme](#radaraxistheme) 
+> class in XCharts.Runtime / Inherits from: [ComponentTheme](#componenttheme) / Subclasses: [AxisTheme](#axistheme),[RadiusAxisTheme](#radiusaxistheme),[AngleAxisTheme](#angleaxistheme),[PolarAxisTheme](#polaraxistheme),[RadarAxisTheme](#radaraxistheme) 
+
 
 |public method|since|description|
 |--|--|--|
@@ -588,7 +651,8 @@ Background component.
 
 ## BaseChart
 
-> XCharts.Runtime.BaseChart : [BaseGraph](#basegraph),[ISerializationCallbackReceiver](https://docs.unity3d.com/ScriptReference/30_search.html?q=iserializationcallbackreceiver) / Subclasses: [BarChart](#barchart),[CandlestickChart](#candlestickchart),[HeatmapChart](#heatmapchart),[LineChart](#linechart),[ParallelChart](#parallelchart),[PieChart](#piechart),[PolarChart](#polarchart),[RadarChart](#radarchart),[RingChart](#ringchart),[ScatterChart](#scatterchart),[SimplifiedBarChart](#simplifiedbarchart),[SimplifiedCandlestickChart](#simplifiedcandlestickchart),[SimplifiedLineChart](#simplifiedlinechart) 
+> class in XCharts.Runtime / Inherits from: [BaseGraph](#basegraph),[ISerializationCallbackReceiver](https://docs.unity3d.com/ScriptReference/30_search.html?q=iserializationcallbackreceiver) / Subclasses: [BarChart](#barchart),[CandlestickChart](#candlestickchart),[HeatmapChart](#heatmapchart),[LineChart](#linechart),[ParallelChart](#parallelchart),[PieChart](#piechart),[PolarChart](#polarchart),[RadarChart](#radarchart),[RingChart](#ringchart),[ScatterChart](#scatterchart),[SimplifiedBarChart](#simplifiedbarchart),[SimplifiedCandlestickChart](#simplifiedcandlestickchart),[SimplifiedLineChart](#simplifiedlinechart) 
+
 
 |public method|since|description|
 |--|--|--|
@@ -779,7 +843,8 @@ Background component.
 
 ## BaseGraph
 
-> XCharts.Runtime.BaseGraph : [MaskableGraphic](https://docs.unity3d.com/ScriptReference/30_search.html?q=maskablegraphic),[IPointerDownHandler](https://docs.unity3d.com/ScriptReference/30_search.html?q=ipointerdownhandler),[IPointerUpHandler](https://docs.unity3d.com/ScriptReference/30_search.html?q=ipointeruphandler),[](#) / Subclasses: [BaseChart](#basechart),[UIComponent](#uicomponent) 
+> class in XCharts.Runtime / Inherits from: [MaskableGraphic](https://docs.unity3d.com/ScriptReference/30_search.html?q=maskablegraphic),[IPointerDownHandler](https://docs.unity3d.com/ScriptReference/30_search.html?q=ipointerdownhandler),[IPointerUpHandler](https://docs.unity3d.com/ScriptReference/30_search.html?q=ipointeruphandler),[](#) / Subclasses: [BaseChart](#basechart),[UIComponent](#uicomponent) 
+
 
 |public method|since|description|
 |--|--|--|
@@ -814,7 +879,8 @@ Background component.
 
 ## BaseLine
 
-> XCharts.Runtime.BaseLine : [ChildComponent](#childcomponent) / Subclasses: [AxisLine](#axisline),[AxisMinorSplitLine](#axisminorsplitline),[AxisMinorTick](#axisminortick),[AxisSplitLine](#axissplitline),[AxisTick](#axistick) 
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent) / Subclasses: [AxisLine](#axisline),[AxisMinorSplitLine](#axisminorsplitline),[AxisMinorTick](#axisminortick),[AxisSplitLine](#axissplitline),[AxisTick](#axistick) 
+
 Settings related to base line.
 
 |public method|since|description|
@@ -829,11 +895,13 @@ Settings related to base line.
 
 ## BaseScatter
 
-> XCharts.Runtime.BaseScatter : [Serie](#serie),[INeedSerieContainer](#ineedseriecontainer) / Subclasses: [EffectScatter](#effectscatter),[Scatter](#scatter) 
+> class in XCharts.Runtime / Inherits from: [Serie](#serie),[INeedSerieContainer](#ineedseriecontainer) / Subclasses: [EffectScatter](#effectscatter),[Scatter](#scatter) 
+
 
 ## BaseSerie
 
-> XCharts.Runtime.BaseSerie / Subclasses: [Serie](#serie) 
+> class in XCharts.Runtime / Subclasses: [Serie](#serie) 
+
 
 |public method|since|description|
 |--|--|--|
@@ -856,12 +924,16 @@ Settings related to base line.
 
 ## BlurStyle
 
-> XCharts.Runtime.BlurStyle : [StateStyle](#statestyle),[ISerieComponent](#iseriecomponent),[ISerieDataComponent](#iseriedatacomponent)
+> class in XCharts.Runtime / Inherits from: [StateStyle](#statestyle),[ISerieComponent](#iseriecomponent),[ISerieDataComponent](#iseriedatacomponent)
+
+> Since `v3.2.0`
+
 Configurations of blur state.
 
 ## CalendarCoord
 
-> XCharts.Runtime.CalendarCoord : [CoordSystem](#coordsystem),[IUpdateRuntimeData](#iupdateruntimedata),[ISerieContainer](#iseriecontainer)
+> class in XCharts.Runtime / Inherits from: [CoordSystem](#coordsystem),[IUpdateRuntimeData](#iupdateruntimedata),[ISerieContainer](#iseriecontainer)
+
 
 |public method|since|description|
 |--|--|--|
@@ -870,7 +942,8 @@ Configurations of blur state.
 
 ## Candlestick
 
-> XCharts.Runtime.Candlestick : [Serie](#serie),[INeedSerieContainer](#ineedseriecontainer)
+> class in XCharts.Runtime / Inherits from: [Serie](#serie),[INeedSerieContainer](#ineedseriecontainer)
+
 
 |public method|since|description|
 |--|--|--|
@@ -878,11 +951,13 @@ Configurations of blur state.
 
 ## CandlestickChart
 
-> XCharts.Runtime.CandlestickChart : [BaseChart](#basechart)
+> class in XCharts.Runtime / Inherits from: [BaseChart](#basechart)
+
 
 ## ChartCached
 
-> XCharts.Runtime.ChartCached
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -890,20 +965,24 @@ Configurations of blur state.
 |ColorToStr()||public static string ColorToStr(Color color)|
 |FloatToStr()||public static string FloatToStr(double value, string numericFormatter = "F", int precision = 0)|
 |GetSerieLabelName()||public static string GetSerieLabelName(string prefix, int i, int j)|
+|GetString()||public static string GetString(string prefix, int suffix)|
 |IntToStr()||public static string IntToStr(int value, string numericFormatter = "")|
 |NumberToStr()||public static string NumberToStr(double value, string formatter)|
 
 ## ChartConst
 
-> XCharts.Runtime.ChartConst
+> class in XCharts.Runtime
+
 
 ## ChartDrawer
 
-> XCharts.Runtime.ChartDrawer
+> class in XCharts.Runtime
+
 
 ## ChartHelper
 
-> XCharts.Runtime.ChartHelper
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -972,7 +1051,8 @@ Configurations of blur state.
 
 ## ChartLabel
 
-> XCharts.Runtime.ChartLabel : [Image](https://docs.unity3d.com/ScriptReference/30_search.html?q=image)
+> class in XCharts.Runtime / Inherits from: [Image](https://docs.unity3d.com/ScriptReference/30_search.html?q=image)
+
 
 |public method|since|description|
 |--|--|--|
@@ -1001,7 +1081,8 @@ Configurations of blur state.
 
 ## ChartObject
 
-> XCharts.Runtime.ChartObject
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -1009,7 +1090,8 @@ Configurations of blur state.
 
 ## ChartText
 
-> XCharts.Runtime.ChartText
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -1037,7 +1119,8 @@ Configurations of blur state.
 
 ## CheckHelper
 
-> XCharts.Runtime.CheckHelper
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -1046,7 +1129,8 @@ Configurations of blur state.
 
 ## ChildComponent
 
-> XCharts.Runtime.ChildComponent / Subclasses: [AnimationStyle](#animationstyle),[AxisName](#axisname),[AxisSplitArea](#axissplitarea),[AreaStyle](#areastyle),[ArrowStyle](#arrowstyle),[BaseLine](#baseline),[IconStyle](#iconstyle),[ImageStyle](#imagestyle),[ItemStyle](#itemstyle),[Level](#level),[LevelStyle](#levelstyle),[LineArrow](#linearrow),[LineStyle](#linestyle),[Location](#location),[MLValue](#mlvalue),[MarqueeStyle](#marqueestyle),[Padding](#padding),[StageColor](#stagecolor),[SymbolStyle](#symbolstyle),[TextLimit](#textlimit),[TextStyle](#textstyle),[CommentItem](#commentitem),[CommentMarkStyle](#commentmarkstyle),[LabelLine](#labelline),[LabelStyle](#labelstyle),[MarkAreaData](#markareadata),[MarkLineData](#marklinedata),[StateStyle](#statestyle),[VisualMapRange](#visualmaprange),[UIComponentTheme](#uicomponenttheme),[SerieData](#seriedata),[ComponentTheme](#componenttheme),[SerieTheme](#serietheme),[ThemeStyle](#themestyle) 
+> class in XCharts.Runtime / Subclasses: [AnimationStyle](#animationstyle),[AxisAnimation](#axisanimation),[AxisName](#axisname),[AxisSplitArea](#axissplitarea),[AreaStyle](#areastyle),[ArrowStyle](#arrowstyle),[BaseLine](#baseline),[IconStyle](#iconstyle),[ImageStyle](#imagestyle),[ItemStyle](#itemstyle),[Level](#level),[LevelStyle](#levelstyle),[LineArrow](#linearrow),[LineStyle](#linestyle),[Location](#location),[MLValue](#mlvalue),[MarqueeStyle](#marqueestyle),[Padding](#padding),[StageColor](#stagecolor),[SymbolStyle](#symbolstyle),[TextLimit](#textlimit),[TextStyle](#textstyle),[CommentItem](#commentitem),[CommentMarkStyle](#commentmarkstyle),[LabelLine](#labelline),[LabelStyle](#labelstyle),[MarkAreaData](#markareadata),[MarkLineData](#marklinedata),[StateStyle](#statestyle),[VisualMapRange](#visualmaprange),[UIComponentTheme](#uicomponenttheme),[SerieData](#seriedata),[ComponentTheme](#componenttheme),[SerieTheme](#serietheme),[ThemeStyle](#themestyle) 
+
 
 |public method|since|description|
 |--|--|--|
@@ -1063,7 +1147,8 @@ Configurations of blur state.
 
 ## ColorUtil
 
-> XCharts.Runtime.ColorUtil
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -1071,7 +1156,8 @@ Configurations of blur state.
 
 ## Comment
 
-> XCharts.Runtime.Comment : [MainComponent](#maincomponent),[IPropertyChanged](#ipropertychanged)
+> class in XCharts.Runtime / Inherits from: [MainComponent](#maincomponent),[IPropertyChanged](#ipropertychanged)
+
 comment of chart.
 
 |public method|since|description|
@@ -1082,17 +1168,20 @@ comment of chart.
 
 ## CommentItem
 
-> XCharts.Runtime.CommentItem : [ChildComponent](#childcomponent)
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent)
+
 comment of chart.
 
 ## CommentMarkStyle
 
-> XCharts.Runtime.CommentMarkStyle : [ChildComponent](#childcomponent)
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent)
+
 the comment mark style.
 
 ## ComponentHandlerAttribute
 
-> XCharts.Runtime.ComponentHandlerAttribute : [Attribute](https://docs.unity3d.com/ScriptReference/30_search.html?q=attribute)
+> class in XCharts.Runtime / Inherits from: [Attribute](https://docs.unity3d.com/ScriptReference/30_search.html?q=attribute)
+
 
 |public method|since|description|
 |--|--|--|
@@ -1101,7 +1190,8 @@ the comment mark style.
 
 ## ComponentHelper
 
-> XCharts.Runtime.ComponentHelper
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -1113,7 +1203,8 @@ the comment mark style.
 
 ## ComponentTheme
 
-> XCharts.Runtime.ComponentTheme : [ChildComponent](#childcomponent) / Subclasses: [BaseAxisTheme](#baseaxistheme),[DataZoomTheme](#datazoomtheme),[LegendTheme](#legendtheme),[SubTitleTheme](#subtitletheme),[TitleTheme](#titletheme),[TooltipTheme](#tooltiptheme),[VisualMapTheme](#visualmaptheme) 
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent) / Subclasses: [BaseAxisTheme](#baseaxistheme),[DataZoomTheme](#datazoomtheme),[LegendTheme](#legendtheme),[SubTitleTheme](#subtitletheme),[TitleTheme](#titletheme),[TooltipTheme](#tooltiptheme),[VisualMapTheme](#visualmaptheme) 
+
 
 |public method|since|description|
 |--|--|--|
@@ -1123,7 +1214,8 @@ the comment mark style.
 
 ## CoordOptionsAttribute
 
-> XCharts.Runtime.CoordOptionsAttribute : [Attribute](https://docs.unity3d.com/ScriptReference/30_search.html?q=attribute)
+> class in XCharts.Runtime / Inherits from: [Attribute](https://docs.unity3d.com/ScriptReference/30_search.html?q=attribute)
+
 
 |public method|since|description|
 |--|--|--|
@@ -1135,12 +1227,14 @@ the comment mark style.
 
 ## CoordSystem
 
-> XCharts.Runtime.CoordSystem : [MainComponent](#maincomponent) / Subclasses: [RadarCoord](#radarcoord),[CalendarCoord](#calendarcoord),[GridCoord](#gridcoord),[ParallelCoord](#parallelcoord),[PolarCoord](#polarcoord),[SingleAxisCoord](#singleaxiscoord) 
+> class in XCharts.Runtime / Inherits from: [MainComponent](#maincomponent) / Subclasses: [RadarCoord](#radarcoord),[CalendarCoord](#calendarcoord),[GridCoord](#gridcoord),[ParallelCoord](#parallelcoord),[PolarCoord](#polarcoord),[SingleAxisCoord](#singleaxiscoord) 
+
 Coordinate system component.
 
 ## DataZoom
 
-> XCharts.Runtime.DataZoom : [MainComponent](#maincomponent),[IUpdateRuntimeData](#iupdateruntimedata)
+> class in XCharts.Runtime / Inherits from: [MainComponent](#maincomponent),[IUpdateRuntimeData](#iupdateruntimedata)
+
 DataZoom component is used for zooming a specific area, which enables user to investigate data in detail, or get an overview of the data, or get rid of outlier points.
 
 |public method|since|description|
@@ -1163,11 +1257,13 @@ DataZoom component is used for zooming a specific area, which enables user to in
 
 ## DataZoomContext
 
-> XCharts.Runtime.DataZoomContext : [MainComponentContext](#maincomponentcontext)
+> class in XCharts.Runtime / Inherits from: [MainComponentContext](#maincomponentcontext)
+
 
 ## DataZoomHelper
 
-> XCharts.Runtime.DataZoomHelper
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -1176,7 +1272,8 @@ DataZoom component is used for zooming a specific area, which enables user to in
 
 ## DataZoomTheme
 
-> XCharts.Runtime.DataZoomTheme : [ComponentTheme](#componenttheme)
+> class in XCharts.Runtime / Inherits from: [ComponentTheme](#componenttheme)
+
 
 |public method|since|description|
 |--|--|--|
@@ -1185,7 +1282,8 @@ DataZoom component is used for zooming a specific area, which enables user to in
 
 ## DateTimeUtil
 
-> XCharts.Runtime.DateTimeUtil
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -1195,7 +1293,8 @@ DataZoom component is used for zooming a specific area, which enables user to in
 
 ## DebugInfo
 
-> XCharts.Runtime.DebugInfo
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -1204,7 +1303,8 @@ DataZoom component is used for zooming a specific area, which enables user to in
 
 ## DefaultAnimationAttribute
 
-> XCharts.Runtime.DefaultAnimationAttribute : [Attribute](https://docs.unity3d.com/ScriptReference/30_search.html?q=attribute)
+> class in XCharts.Runtime / Inherits from: [Attribute](https://docs.unity3d.com/ScriptReference/30_search.html?q=attribute)
+
 
 |public method|since|description|
 |--|--|--|
@@ -1213,7 +1313,8 @@ DataZoom component is used for zooming a specific area, which enables user to in
 
 ## DefaultTooltipAttribute
 
-> XCharts.Runtime.DefaultTooltipAttribute : [Attribute](https://docs.unity3d.com/ScriptReference/30_search.html?q=attribute)
+> class in XCharts.Runtime / Inherits from: [Attribute](https://docs.unity3d.com/ScriptReference/30_search.html?q=attribute)
+
 
 |public method|since|description|
 |--|--|--|
@@ -1221,7 +1322,8 @@ DataZoom component is used for zooming a specific area, which enables user to in
 
 ## DefineSymbolsUtil
 
-> XCharts.Runtime.DefineSymbolsUtil
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -1230,7 +1332,8 @@ DataZoom component is used for zooming a specific area, which enables user to in
 
 ## EffectScatter
 
-> XCharts.Runtime.EffectScatter : [BaseScatter](#basescatter)
+> class in XCharts.Runtime / Inherits from: [BaseScatter](#basescatter)
+
 
 |public method|since|description|
 |--|--|--|
@@ -1238,12 +1341,16 @@ DataZoom component is used for zooming a specific area, which enables user to in
 
 ## EmphasisStyle
 
-> XCharts.Runtime.EmphasisStyle : [StateStyle](#statestyle),[ISerieComponent](#iseriecomponent),[ISerieDataComponent](#iseriedatacomponent)
+> class in XCharts.Runtime / Inherits from: [StateStyle](#statestyle),[ISerieComponent](#iseriecomponent),[ISerieDataComponent](#iseriedatacomponent)
+
+> Since `v3.2.0`
+
 Configurations of emphasis state.
 
 ## EndLabelStyle
 
-> XCharts.Runtime.EndLabelStyle : [LabelStyle](#labelstyle)
+> class in XCharts.Runtime / Inherits from: [LabelStyle](#labelstyle)
+
 
 |public method|since|description|
 |--|--|--|
@@ -1251,7 +1358,8 @@ Configurations of emphasis state.
 
 ## FormatterHelper
 
-> XCharts.Runtime.FormatterHelper
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -1263,7 +1371,8 @@ Configurations of emphasis state.
 
 ## GridCoord
 
-> XCharts.Runtime.GridCoord : [CoordSystem](#coordsystem),[IUpdateRuntimeData](#iupdateruntimedata),[ISerieContainer](#iseriecontainer)
+> class in XCharts.Runtime / Inherits from: [CoordSystem](#coordsystem),[IUpdateRuntimeData](#iupdateruntimedata),[ISerieContainer](#iseriecontainer)
+
 Grid component.
 
 |public method|since|description|
@@ -1283,11 +1392,15 @@ Grid component.
 
 ## GridCoordContext
 
-> XCharts.Runtime.GridCoordContext : [MainComponentContext](#maincomponentcontext)
+> class in XCharts.Runtime / Inherits from: [MainComponentContext](#maincomponentcontext)
+
 
 ## GridLayout
 
-> XCharts.Runtime.GridLayout : [MainComponent](#maincomponent),[IUpdateRuntimeData](#iupdateruntimedata)
+> class in XCharts.Runtime / Inherits from: [MainComponent](#maincomponent),[IUpdateRuntimeData](#iupdateruntimedata)
+
+> Since `v3.8.0`
+
 Grid layout component. Used to manage the layout of multiple `GridCoord`, and the number of rows and columns of the grid can be controlled by `row` and `column`.
 
 |public method|since|description|
@@ -1296,11 +1409,13 @@ Grid layout component. Used to manage the layout of multiple `GridCoord`, and th
 
 ## GridLayoutContext
 
-> XCharts.Runtime.GridLayoutContext : [MainComponentContext](#maincomponentcontext)
+> class in XCharts.Runtime / Inherits from: [MainComponentContext](#maincomponentcontext)
+
 
 ## Heatmap
 
-> XCharts.Runtime.Heatmap : [Serie](#serie),[INeedSerieContainer](#ineedseriecontainer)
+> class in XCharts.Runtime / Inherits from: [Serie](#serie),[INeedSerieContainer](#ineedseriecontainer)
+
 
 |public method|since|description|
 |--|--|--|
@@ -1308,11 +1423,13 @@ Grid layout component. Used to manage the layout of multiple `GridCoord`, and th
 
 ## HeatmapChart
 
-> XCharts.Runtime.HeatmapChart : [BaseChart](#basechart)
+> class in XCharts.Runtime / Inherits from: [BaseChart](#basechart)
+
 
 ## IconStyle
 
-> XCharts.Runtime.IconStyle : [ChildComponent](#childcomponent)
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent)
+
 
 |public method|since|description|
 |--|--|--|
@@ -1322,7 +1439,8 @@ Grid layout component. Used to manage the layout of multiple `GridCoord`, and th
 
 ## IgnoreDoc
 
-> XCharts.Runtime.IgnoreDoc : [Attribute](https://docs.unity3d.com/ScriptReference/30_search.html?q=attribute)
+> class in XCharts.Runtime / Inherits from: [Attribute](https://docs.unity3d.com/ScriptReference/30_search.html?q=attribute)
+
 
 |public method|since|description|
 |--|--|--|
@@ -1330,7 +1448,8 @@ Grid layout component. Used to manage the layout of multiple `GridCoord`, and th
 
 ## ImageStyle
 
-> XCharts.Runtime.ImageStyle : [ChildComponent](#childcomponent),[ISerieComponent](#iseriecomponent),[ISerieDataComponent](#iseriedatacomponent)
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent),[ISerieComponent](#iseriecomponent),[ISerieDataComponent](#iseriedatacomponent)
+
 
 |public method|since|description|
 |--|--|--|
@@ -1340,7 +1459,8 @@ Grid layout component. Used to manage the layout of multiple `GridCoord`, and th
 
 ## Indicator
 
-> XCharts.Runtime.Indicator
+> class in XCharts.Runtime
+
 Indicator of radar chart, which is used to assign multiple variables(dimensions) in radar chart.
 
 |public method|since|description|
@@ -1364,11 +1484,13 @@ Indicator of radar chart, which is used to assign multiple variables(dimensions)
 
 ## INeedSerieContainer
 
-> XCharts.Runtime.INeedSerieContainer / Subclasses: [Bar](#bar),[SimplifiedBar](#simplifiedbar),[Candlestick](#candlestick),[SimplifiedCandlestick](#simplifiedcandlestick),[Heatmap](#heatmap),[Line](#line),[SimplifiedLine](#simplifiedline),[Parallel](#parallel),[Radar](#radar),[BaseScatter](#basescatter) 
+> class in XCharts.Runtime / Subclasses: [Bar](#bar),[SimplifiedBar](#simplifiedbar),[Candlestick](#candlestick),[SimplifiedCandlestick](#simplifiedcandlestick),[Heatmap](#heatmap),[Line](#line),[SimplifiedLine](#simplifiedline),[Parallel](#parallel),[Radar](#radar),[BaseScatter](#basescatter) 
+
 
 ## InputHelper
 
-> XCharts.Runtime.InputHelper
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -1377,7 +1499,8 @@ Indicator of radar chart, which is used to assign multiple variables(dimensions)
 
 ## InteractData
 
-> XCharts.Runtime.InteractData
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -1400,30 +1523,36 @@ Indicator of radar chart, which is used to assign multiple variables(dimensions)
 
 ## IPropertyChanged
 
-> XCharts.Runtime.IPropertyChanged / Subclasses: [Location](#location),[Comment](#comment),[Legend](#legend),[Title](#title) 
+> class in XCharts.Runtime / Subclasses: [Location](#location),[Comment](#comment),[Legend](#legend),[Title](#title) 
+
 属性变更接口
 
 ## ISerieComponent
 
-> XCharts.Runtime.ISerieComponent / Subclasses: [AreaStyle](#areastyle),[ImageStyle](#imagestyle),[LineArrow](#linearrow),[LabelLine](#labelline),[LabelStyle](#labelstyle),[BlurStyle](#blurstyle),[EmphasisStyle](#emphasisstyle),[SelectStyle](#selectstyle),[TitleStyle](#titlestyle) 
+> class in XCharts.Runtime / Subclasses: [AreaStyle](#areastyle),[ImageStyle](#imagestyle),[LineArrow](#linearrow),[LabelLine](#labelline),[LabelStyle](#labelstyle),[BlurStyle](#blurstyle),[EmphasisStyle](#emphasisstyle),[SelectStyle](#selectstyle),[TitleStyle](#titlestyle) 
+
 The interface for serie component.
 
 ## ISerieContainer
 
-> XCharts.Runtime.ISerieContainer / Subclasses: [RadarCoord](#radarcoord),[CalendarCoord](#calendarcoord),[GridCoord](#gridcoord),[ParallelCoord](#parallelcoord),[PolarCoord](#polarcoord) 
+> class in XCharts.Runtime / Subclasses: [RadarCoord](#radarcoord),[CalendarCoord](#calendarcoord),[GridCoord](#gridcoord),[ParallelCoord](#parallelcoord),[PolarCoord](#polarcoord) 
+
 
 ## ISerieDataComponent
 
-> XCharts.Runtime.ISerieDataComponent / Subclasses: [AreaStyle](#areastyle),[ImageStyle](#imagestyle),[ItemStyle](#itemstyle),[LineStyle](#linestyle),[SerieSymbol](#seriesymbol),[LabelLine](#labelline),[LabelStyle](#labelstyle),[BlurStyle](#blurstyle),[EmphasisStyle](#emphasisstyle),[SelectStyle](#selectstyle),[TitleStyle](#titlestyle) 
+> class in XCharts.Runtime / Subclasses: [AreaStyle](#areastyle),[ImageStyle](#imagestyle),[ItemStyle](#itemstyle),[LineStyle](#linestyle),[SerieSymbol](#seriesymbol),[LabelLine](#labelline),[LabelStyle](#labelstyle),[BlurStyle](#blurstyle),[EmphasisStyle](#emphasisstyle),[SelectStyle](#selectstyle),[TitleStyle](#titlestyle) 
+
 The interface for serie data component.
 
 ## ISimplifiedSerie
 
-> XCharts.Runtime.ISimplifiedSerie / Subclasses: [SimplifiedBar](#simplifiedbar),[SimplifiedCandlestick](#simplifiedcandlestick),[SimplifiedLine](#simplifiedline) 
+> class in XCharts.Runtime / Subclasses: [SimplifiedBar](#simplifiedbar),[SimplifiedCandlestick](#simplifiedcandlestick),[SimplifiedLine](#simplifiedline) 
+
 
 ## ItemStyle
 
-> XCharts.Runtime.ItemStyle : [ChildComponent](#childcomponent),[ISerieDataComponent](#iseriedatacomponent)
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent),[ISerieDataComponent](#iseriedatacomponent)
+
 图形样式。
 
 |public method|since|description|
@@ -1443,11 +1572,13 @@ The interface for serie data component.
 
 ## IUpdateRuntimeData
 
-> XCharts.Runtime.IUpdateRuntimeData / Subclasses: [SingleAxis](#singleaxis),[DataZoom](#datazoom),[CalendarCoord](#calendarcoord),[GridCoord](#gridcoord),[GridLayout](#gridlayout),[ParallelCoord](#parallelcoord) 
+> class in XCharts.Runtime / Subclasses: [SingleAxis](#singleaxis),[DataZoom](#datazoom),[CalendarCoord](#calendarcoord),[GridCoord](#gridcoord),[GridLayout](#gridlayout),[ParallelCoord](#parallelcoord) 
+
 
 ## LabelLine
 
-> XCharts.Runtime.LabelLine : [ChildComponent](#childcomponent),[ISerieComponent](#iseriecomponent),[ISerieDataComponent](#iseriedatacomponent)
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent),[ISerieComponent](#iseriecomponent),[ISerieDataComponent](#iseriedatacomponent)
+
 标签的引导线
 
 |public method|since|description|
@@ -1458,7 +1589,8 @@ The interface for serie data component.
 
 ## LabelStyle
 
-> XCharts.Runtime.LabelStyle : [ChildComponent](#childcomponent),[ISerieComponent](#iseriecomponent),[ISerieDataComponent](#iseriedatacomponent) / Subclasses: [AxisLabel](#axislabel),[EndLabelStyle](#endlabelstyle),[TitleStyle](#titlestyle) 
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent),[ISerieComponent](#iseriecomponent),[ISerieDataComponent](#iseriedatacomponent) / Subclasses: [AxisLabel](#axislabel),[EndLabelStyle](#endlabelstyle),[TitleStyle](#titlestyle) 
+
 Text label of chart, to explain some data information about graphic item like value, name and so on.
 
 |public method|since|description|
@@ -1472,12 +1604,13 @@ Text label of chart, to explain some data information about graphic item like va
 |GetOffset()||public Vector3 GetOffset(float radius)|
 |IsAutoSize()||public bool IsAutoSize()|
 |IsDefaultPosition()||public bool IsDefaultPosition(Position position)|
-|IsInside()||public bool IsInside()|
+|IsInside()||public bool IsInside()<br/>whether the label is inside. |
 |Reset()||public void Reset()|
 
 ## Lang
 
-> XCharts.Runtime.Lang : [ScriptableObject](https://docs.unity3d.com/ScriptReference/30_search.html?q=scriptableobject)
+> class in XCharts.Runtime / Inherits from: [ScriptableObject](https://docs.unity3d.com/ScriptReference/30_search.html?q=scriptableobject)
+
 Language.
 
 |public method|since|description|
@@ -1488,11 +1621,13 @@ Language.
 
 ## LangCandlestick
 
-> XCharts.Runtime.LangCandlestick
+> class in XCharts.Runtime
+
 
 ## LangTime
 
-> XCharts.Runtime.LangTime
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -1504,7 +1639,8 @@ Language.
 
 ## LayerHelper
 
-> XCharts.Runtime.LayerHelper
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -1513,7 +1649,8 @@ Language.
 
 ## Legend
 
-> XCharts.Runtime.Legend : [MainComponent](#maincomponent),[IPropertyChanged](#ipropertychanged)
+> class in XCharts.Runtime / Inherits from: [MainComponent](#maincomponent),[IPropertyChanged](#ipropertychanged)
+
 Legend component.The legend component shows different sets of tags, colors, and names. You can control which series are not displayed by clicking on the legend.
 
 |public method|since|description|
@@ -1536,11 +1673,13 @@ Legend component.The legend component shows different sets of tags, colors, and 
 
 ## LegendContext
 
-> XCharts.Runtime.LegendContext : [MainComponentContext](#maincomponentcontext)
+> class in XCharts.Runtime / Inherits from: [MainComponentContext](#maincomponentcontext)
+
 
 ## LegendHelper
 
-> XCharts.Runtime.LegendHelper
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -1553,7 +1692,8 @@ Legend component.The legend component shows different sets of tags, colors, and 
 
 ## LegendItem
 
-> XCharts.Runtime.LegendItem
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -1578,7 +1718,8 @@ Legend component.The legend component shows different sets of tags, colors, and 
 
 ## LegendTheme
 
-> XCharts.Runtime.LegendTheme : [ComponentTheme](#componenttheme)
+> class in XCharts.Runtime / Inherits from: [ComponentTheme](#componenttheme)
+
 
 |public method|since|description|
 |--|--|--|
@@ -1587,15 +1728,18 @@ Legend component.The legend component shows different sets of tags, colors, and 
 
 ## Level
 
-> XCharts.Runtime.Level : [ChildComponent](#childcomponent)
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent)
+
 
 ## LevelStyle
 
-> XCharts.Runtime.LevelStyle : [ChildComponent](#childcomponent)
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent)
+
 
 ## Line
 
-> XCharts.Runtime.Line : [Serie](#serie),[INeedSerieContainer](#ineedseriecontainer)
+> class in XCharts.Runtime / Inherits from: [Serie](#serie),[INeedSerieContainer](#ineedseriecontainer)
+
 
 |public method|since|description|
 |--|--|--|
@@ -1604,15 +1748,18 @@ Legend component.The legend component shows different sets of tags, colors, and 
 
 ## LineArrow
 
-> XCharts.Runtime.LineArrow : [ChildComponent](#childcomponent),[ISerieComponent](#iseriecomponent)
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent),[ISerieComponent](#iseriecomponent)
+
 
 ## LineChart
 
-> XCharts.Runtime.LineChart : [BaseChart](#basechart)
+> class in XCharts.Runtime / Inherits from: [BaseChart](#basechart)
+
 
 ## LineStyle
 
-> XCharts.Runtime.LineStyle : [ChildComponent](#childcomponent),[ISerieDataComponent](#iseriedatacomponent)
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent),[ISerieDataComponent](#iseriedatacomponent)
+
 The style of line.
 
 |public method|since|description|
@@ -1634,7 +1781,8 @@ The style of line.
 
 ## ListFor
 
-> XCharts.Runtime.ListFor : [Attribute](https://docs.unity3d.com/ScriptReference/30_search.html?q=attribute) / Subclasses: [ListForComponent](#listforcomponent),[ListForSerie](#listforserie) 
+> class in XCharts.Runtime / Inherits from: [Attribute](https://docs.unity3d.com/ScriptReference/30_search.html?q=attribute) / Subclasses: [ListForComponent](#listforcomponent),[ListForSerie](#listforserie) 
+
 
 |public method|since|description|
 |--|--|--|
@@ -1642,7 +1790,8 @@ The style of line.
 
 ## ListForComponent
 
-> XCharts.Runtime.ListForComponent : [ListFor](#listfor)
+> class in XCharts.Runtime / Inherits from: [ListFor](#listfor)
+
 
 |public method|since|description|
 |--|--|--|
@@ -1650,7 +1799,8 @@ The style of line.
 
 ## ListForSerie
 
-> XCharts.Runtime.ListForSerie : [ListFor](#listfor)
+> class in XCharts.Runtime / Inherits from: [ListFor](#listfor)
+
 
 |public method|since|description|
 |--|--|--|
@@ -1658,7 +1808,8 @@ The style of line.
 
 ## Location
 
-> XCharts.Runtime.Location : [ChildComponent](#childcomponent),[IPropertyChanged](#ipropertychanged)
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent),[IPropertyChanged](#ipropertychanged)
+
 Location type. Quick to set the general location.
 
 |public method|since|description|
@@ -1672,7 +1823,8 @@ Location type. Quick to set the general location.
 
 ## MainComponent
 
-> XCharts.Runtime.MainComponent : [IComparable](https://docs.unity3d.com/ScriptReference/30_search.html?q=icomparable) / Subclasses: [Axis](#axis),[Background](#background),[Comment](#comment),[DataZoom](#datazoom),[Legend](#legend),[MarkArea](#markarea),[MarkLine](#markline),[Settings](#settings),[Title](#title),[Tooltip](#tooltip),[VisualMap](#visualmap),[GridLayout](#gridlayout),[CoordSystem](#coordsystem) 
+> class in XCharts.Runtime / Inherits from: [IComparable](https://docs.unity3d.com/ScriptReference/30_search.html?q=icomparable) / Subclasses: [Axis](#axis),[Background](#background),[Comment](#comment),[DataZoom](#datazoom),[Legend](#legend),[MarkArea](#markarea),[MarkLine](#markline),[Settings](#settings),[Title](#title),[Tooltip](#tooltip),[VisualMap](#visualmap),[GridLayout](#gridlayout),[CoordSystem](#coordsystem) 
+
 
 |public method|since|description|
 |--|--|--|
@@ -1690,14 +1842,17 @@ Location type. Quick to set the general location.
 
 ## MainComponentContext
 
-> XCharts.Runtime.MainComponentContext / Subclasses: [AxisContext](#axiscontext),[DataZoomContext](#datazoomcontext),[LegendContext](#legendcontext),[RadarCoordContext](#radarcoordcontext),[VisualMapContext](#visualmapcontext),[GridCoordContext](#gridcoordcontext),[GridLayoutContext](#gridlayoutcontext),[ParallelCoordContext](#parallelcoordcontext),[PolarCoordContext](#polarcoordcontext) 
+> class in XCharts.Runtime / Subclasses: [AxisContext](#axiscontext),[DataZoomContext](#datazoomcontext),[LegendContext](#legendcontext),[RadarCoordContext](#radarcoordcontext),[VisualMapContext](#visualmapcontext),[GridCoordContext](#gridcoordcontext),[GridLayoutContext](#gridlayoutcontext),[ParallelCoordContext](#parallelcoordcontext),[PolarCoordContext](#polarcoordcontext) 
+
 
 ## MainComponentHandler
 
-> XCharts.Runtime.MainComponentHandler / Subclasses: [AxisHandler&lt;T&gt;](#axishandlert),[MainComponentHandler&lt;T&gt;](#maincomponenthandlert) 
+> class in XCharts.Runtime / Subclasses: [AxisHandler&lt;T&gt;](#axishandlert),[MainComponentHandler&lt;T&gt;](#maincomponenthandlert) 
+
 
 |public method|since|description|
 |--|--|--|
+|BeforceSerieUpdate()||public virtual void BeforceSerieUpdate() { }|
 |CheckComponent()||public virtual void CheckComponent(StringBuilder sb) { }|
 |DrawBase()||public virtual void DrawBase(VertexHelper vh) { }|
 |DrawTop()||public virtual void DrawTop(VertexHelper vh) { }|
@@ -1718,11 +1873,13 @@ Location type. Quick to set the general location.
 
 ## MainComponentHandler&lt;T&gt;
 
-> XCharts.Runtime.MainComponentHandler&lt;T&gt; : [MainComponentHandler](#maincomponenthandler)
+> class in XCharts.Runtime / Inherits from: [MainComponentHandler](#maincomponenthandler)
+
 
 ## MarkArea
 
-> XCharts.Runtime.MarkArea : [MainComponent](#maincomponent)
+> class in XCharts.Runtime / Inherits from: [MainComponent](#maincomponent)
+
 Used to mark an area in chart. For example, mark a time interval.
 
 |public method|since|description|
@@ -1731,12 +1888,14 @@ Used to mark an area in chart. For example, mark a time interval.
 
 ## MarkAreaData
 
-> XCharts.Runtime.MarkAreaData : [ChildComponent](#childcomponent)
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent)
+
 标域的数据。
 
 ## MarkLine
 
-> XCharts.Runtime.MarkLine : [MainComponent](#maincomponent)
+> class in XCharts.Runtime / Inherits from: [MainComponent](#maincomponent)
+
 Use a line in the chart to illustrate.
 
 |public method|since|description|
@@ -1745,12 +1904,18 @@ Use a line in the chart to illustrate.
 
 ## MarkLineData
 
-> XCharts.Runtime.MarkLineData : [ChildComponent](#childcomponent)
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent)
+
+> Since `v3.9.0`
+
 Data of marking line.
 
 ## MarqueeStyle
 
-> XCharts.Runtime.MarqueeStyle : [ChildComponent](#childcomponent)
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent)
+
+> Since `v3.5.0`
+
 Marquee style. It can be used for the DataZoom component. 选取框样式。可用于DataZoom组件。
 
 |public method|since|description|
@@ -1761,7 +1926,8 @@ Marquee style. It can be used for the DataZoom component. 选取框样式。可�
 
 ## MathUtil
 
-> XCharts.Runtime.MathUtil
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -1775,7 +1941,10 @@ Marquee style. It can be used for the DataZoom component. 选取框样式。可�
 
 ## MLValue
 
-> XCharts.Runtime.MLValue : [ChildComponent](#childcomponent)
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent)
+
+> Since `v3.8.0`
+
 多样式数值。
 
 |public method|since|description|
@@ -1786,11 +1955,13 @@ Marquee style. It can be used for the DataZoom component. 选取框样式。可�
 
 ## MonoBehaviour
 
-> .MonoBehaviour / Subclasses: [XLog](#xlog) 
+> class in  / Subclasses: [XLog](#xlog) 
+
 
 ## ObjectPool&lt;T&gt; where T
 
-> XCharts.Runtime.ObjectPool&lt;T&gt; where T : [new()](#new())
+> class in XCharts.Runtime / Inherits from: [new()](#new())
+
 
 |public method|since|description|
 |--|--|--|
@@ -1802,7 +1973,8 @@ Marquee style. It can be used for the DataZoom component. 选取框样式。可�
 
 ## Padding
 
-> XCharts.Runtime.Padding : [ChildComponent](#childcomponent) / Subclasses: [TextPadding](#textpadding) 
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent) / Subclasses: [TextPadding](#textpadding) 
+
 padding setting of item or text.
 
 |public method|since|description|
@@ -1813,7 +1985,8 @@ padding setting of item or text.
 
 ## Painter
 
-> XCharts.Runtime.Painter : [MaskableGraphic](https://docs.unity3d.com/ScriptReference/30_search.html?q=maskablegraphic)
+> class in XCharts.Runtime / Inherits from: [MaskableGraphic](https://docs.unity3d.com/ScriptReference/30_search.html?q=maskablegraphic)
+
 
 |public method|since|description|
 |--|--|--|
@@ -1825,7 +1998,8 @@ padding setting of item or text.
 
 ## Parallel
 
-> XCharts.Runtime.Parallel : [Serie](#serie),[INeedSerieContainer](#ineedseriecontainer)
+> class in XCharts.Runtime / Inherits from: [Serie](#serie),[INeedSerieContainer](#ineedseriecontainer)
+
 
 |public method|since|description|
 |--|--|--|
@@ -1833,7 +2007,8 @@ padding setting of item or text.
 
 ## ParallelAxis
 
-> XCharts.Runtime.ParallelAxis : [Axis](#axis)
+> class in XCharts.Runtime / Inherits from: [Axis](#axis)
+
 
 |public method|since|description|
 |--|--|--|
@@ -1841,11 +2016,13 @@ padding setting of item or text.
 
 ## ParallelChart
 
-> XCharts.Runtime.ParallelChart : [BaseChart](#basechart)
+> class in XCharts.Runtime / Inherits from: [BaseChart](#basechart)
+
 
 ## ParallelCoord
 
-> XCharts.Runtime.ParallelCoord : [CoordSystem](#coordsystem),[IUpdateRuntimeData](#iupdateruntimedata),[ISerieContainer](#iseriecontainer)
+> class in XCharts.Runtime / Inherits from: [CoordSystem](#coordsystem),[IUpdateRuntimeData](#iupdateruntimedata),[ISerieContainer](#iseriecontainer)
+
 Grid component.
 
 |public method|since|description|
@@ -1857,11 +2034,13 @@ Grid component.
 
 ## ParallelCoordContext
 
-> XCharts.Runtime.ParallelCoordContext : [MainComponentContext](#maincomponentcontext)
+> class in XCharts.Runtime / Inherits from: [MainComponentContext](#maincomponentcontext)
+
 
 ## Pie
 
-> XCharts.Runtime.Pie : [Serie](#serie)
+> class in XCharts.Runtime / Inherits from: [Serie](#serie)
+
 
 |public method|since|description|
 |--|--|--|
@@ -1870,11 +2049,13 @@ Grid component.
 
 ## PieChart
 
-> XCharts.Runtime.PieChart : [BaseChart](#basechart)
+> class in XCharts.Runtime / Inherits from: [BaseChart](#basechart)
+
 
 ## PolarAxisTheme
 
-> XCharts.Runtime.PolarAxisTheme : [BaseAxisTheme](#baseaxistheme)
+> class in XCharts.Runtime / Inherits from: [BaseAxisTheme](#baseaxistheme)
+
 
 |public method|since|description|
 |--|--|--|
@@ -1882,11 +2063,13 @@ Grid component.
 
 ## PolarChart
 
-> XCharts.Runtime.PolarChart : [BaseChart](#basechart)
+> class in XCharts.Runtime / Inherits from: [BaseChart](#basechart)
+
 
 ## PolarCoord
 
-> XCharts.Runtime.PolarCoord : [CoordSystem](#coordsystem),[ISerieContainer](#iseriecontainer)
+> class in XCharts.Runtime / Inherits from: [CoordSystem](#coordsystem),[ISerieContainer](#iseriecontainer)
+
 Polar coordinate can be used in scatter and line chart. Every polar coordinate has an angleAxis and a radiusAxis.
 
 |public method|since|description|
@@ -1896,11 +2079,13 @@ Polar coordinate can be used in scatter and line chart. Every polar coordinate h
 
 ## PolarCoordContext
 
-> XCharts.Runtime.PolarCoordContext : [MainComponentContext](#maincomponentcontext)
+> class in XCharts.Runtime / Inherits from: [MainComponentContext](#maincomponentcontext)
+
 
 ## PropertyUtil
 
-> XCharts.Runtime.PropertyUtil
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -1911,7 +2096,8 @@ Polar coordinate can be used in scatter and line chart. Every polar coordinate h
 
 ## Radar
 
-> XCharts.Runtime.Radar : [Serie](#serie),[INeedSerieContainer](#ineedseriecontainer)
+> class in XCharts.Runtime / Inherits from: [Serie](#serie),[INeedSerieContainer](#ineedseriecontainer)
+
 
 |public method|since|description|
 |--|--|--|
@@ -1919,7 +2105,8 @@ Polar coordinate can be used in scatter and line chart. Every polar coordinate h
 
 ## RadarAxisTheme
 
-> XCharts.Runtime.RadarAxisTheme : [BaseAxisTheme](#baseaxistheme)
+> class in XCharts.Runtime / Inherits from: [BaseAxisTheme](#baseaxistheme)
+
 
 |public method|since|description|
 |--|--|--|
@@ -1927,20 +2114,24 @@ Polar coordinate can be used in scatter and line chart. Every polar coordinate h
 
 ## RadarChart
 
-> XCharts.Runtime.RadarChart : [BaseChart](#basechart)
+> class in XCharts.Runtime / Inherits from: [BaseChart](#basechart)
+
 
 ## RadarCoord
 
-> XCharts.Runtime.RadarCoord : [CoordSystem](#coordsystem),[ISerieContainer](#iseriecontainer)
+> class in XCharts.Runtime / Inherits from: [CoordSystem](#coordsystem),[ISerieContainer](#iseriecontainer)
+
 Radar coordinate conponnet for radar charts. 雷达图坐标系组件，只适用于雷达图。
 
 ## RadarCoordContext
 
-> XCharts.Runtime.RadarCoordContext : [MainComponentContext](#maincomponentcontext)
+> class in XCharts.Runtime / Inherits from: [MainComponentContext](#maincomponentcontext)
+
 
 ## RadiusAxis
 
-> XCharts.Runtime.RadiusAxis : [Axis](#axis)
+> class in XCharts.Runtime / Inherits from: [Axis](#axis)
+
 Radial axis of polar coordinate.
 
 |public method|since|description|
@@ -1949,7 +2140,8 @@ Radial axis of polar coordinate.
 
 ## RadiusAxisTheme
 
-> XCharts.Runtime.RadiusAxisTheme : [BaseAxisTheme](#baseaxistheme)
+> class in XCharts.Runtime / Inherits from: [BaseAxisTheme](#baseaxistheme)
+
 
 |public method|since|description|
 |--|--|--|
@@ -1957,7 +2149,8 @@ Radial axis of polar coordinate.
 
 ## ReflectionUtil
 
-> XCharts.Runtime.ReflectionUtil
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -1970,7 +2163,8 @@ Radial axis of polar coordinate.
 
 ## RequireChartComponentAttribute
 
-> XCharts.Runtime.RequireChartComponentAttribute : [Attribute](https://docs.unity3d.com/ScriptReference/30_search.html?q=attribute)
+> class in XCharts.Runtime / Inherits from: [Attribute](https://docs.unity3d.com/ScriptReference/30_search.html?q=attribute)
+
 
 |public method|since|description|
 |--|--|--|
@@ -1980,7 +2174,8 @@ Radial axis of polar coordinate.
 
 ## Ring
 
-> XCharts.Runtime.Ring : [Serie](#serie)
+> class in XCharts.Runtime / Inherits from: [Serie](#serie)
+
 
 |public method|since|description|
 |--|--|--|
@@ -1989,11 +2184,13 @@ Radial axis of polar coordinate.
 
 ## RingChart
 
-> XCharts.Runtime.RingChart : [BaseChart](#basechart)
+> class in XCharts.Runtime / Inherits from: [BaseChart](#basechart)
+
 
 ## RuntimeUtil
 
-> XCharts.Runtime.RuntimeUtil
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -2006,7 +2203,8 @@ Radial axis of polar coordinate.
 
 ## Scatter
 
-> XCharts.Runtime.Scatter : [BaseScatter](#basescatter)
+> class in XCharts.Runtime / Inherits from: [BaseScatter](#basescatter)
+
 
 |public method|since|description|
 |--|--|--|
@@ -2014,16 +2212,21 @@ Radial axis of polar coordinate.
 
 ## ScatterChart
 
-> XCharts.Runtime.ScatterChart : [BaseChart](#basechart)
+> class in XCharts.Runtime / Inherits from: [BaseChart](#basechart)
+
 
 ## SelectStyle
 
-> XCharts.Runtime.SelectStyle : [StateStyle](#statestyle),[ISerieComponent](#iseriecomponent),[ISerieDataComponent](#iseriedatacomponent)
+> class in XCharts.Runtime / Inherits from: [StateStyle](#statestyle),[ISerieComponent](#iseriecomponent),[ISerieDataComponent](#iseriedatacomponent)
+
+> Since `v3.2.0`
+
 Configurations of select state.
 
 ## Serie
 
-> XCharts.Runtime.Serie : [BaseSerie](#baseserie),[IComparable](https://docs.unity3d.com/ScriptReference/30_search.html?q=icomparable) / Subclasses: [SerieHandler&lt;T&gt;](#seriehandlert),[Bar](#bar),[SimplifiedBar](#simplifiedbar),[Candlestick](#candlestick),[SimplifiedCandlestick](#simplifiedcandlestick),[Heatmap](#heatmap),[Line](#line),[SimplifiedLine](#simplifiedline),[Parallel](#parallel),[Pie](#pie),[Radar](#radar),[Ring](#ring),[BaseScatter](#basescatter) 
+> class in XCharts.Runtime / Inherits from: [BaseSerie](#baseserie),[IComparable](https://docs.unity3d.com/ScriptReference/30_search.html?q=icomparable) / Subclasses: [SerieHandler&lt;T&gt;](#seriehandlert),[Bar](#bar),[SimplifiedBar](#simplifiedbar),[Candlestick](#candlestick),[SimplifiedCandlestick](#simplifiedcandlestick),[Heatmap](#heatmap),[Line](#line),[SimplifiedLine](#simplifiedline),[Parallel](#parallel),[Pie](#pie),[Radar](#radar),[Ring](#ring),[BaseScatter](#basescatter) 
+
 系列。系列一般由数据和配置组成，用来表示具体的图表图形，如折线图的一条折线，柱图的一组柱子等。一个图表中可以包含多个不同类型的系列。
 
 |public method|since|description|
@@ -2104,7 +2307,8 @@ Configurations of select state.
 
 ## SerieComponentAttribute
 
-> XCharts.Runtime.SerieComponentAttribute : [Attribute](https://docs.unity3d.com/ScriptReference/30_search.html?q=attribute)
+> class in XCharts.Runtime / Inherits from: [Attribute](https://docs.unity3d.com/ScriptReference/30_search.html?q=attribute)
+
 The attribute for serie component.
 
 |public method|since|description|
@@ -2122,11 +2326,13 @@ The attribute for serie component.
 
 ## SerieContext
 
-> XCharts.Runtime.SerieContext
+> class in XCharts.Runtime
+
 
 ## SerieConvertAttribute
 
-> XCharts.Runtime.SerieConvertAttribute : [Attribute](https://docs.unity3d.com/ScriptReference/30_search.html?q=attribute)
+> class in XCharts.Runtime / Inherits from: [Attribute](https://docs.unity3d.com/ScriptReference/30_search.html?q=attribute)
+
 The attribute for which serie types can be converted to.
 
 |public method|since|description|
@@ -2140,7 +2346,8 @@ The attribute for which serie types can be converted to.
 
 ## SerieData
 
-> XCharts.Runtime.SerieData : [ChildComponent](#childcomponent)
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent)
+
 A data item of serie.
 
 |public method|since|description|
@@ -2185,7 +2392,8 @@ A data item of serie.
 
 ## SerieDataComponentAttribute
 
-> XCharts.Runtime.SerieDataComponentAttribute : [Attribute](https://docs.unity3d.com/ScriptReference/30_search.html?q=attribute)
+> class in XCharts.Runtime / Inherits from: [Attribute](https://docs.unity3d.com/ScriptReference/30_search.html?q=attribute)
+
 The attribute for serie data component.
 
 |public method|since|description|
@@ -2203,7 +2411,8 @@ The attribute for serie data component.
 
 ## SerieDataContext
 
-> XCharts.Runtime.SerieDataContext
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -2211,7 +2420,8 @@ The attribute for serie data component.
 
 ## SerieDataExtraFieldAttribute
 
-> XCharts.Runtime.SerieDataExtraFieldAttribute : [Attribute](https://docs.unity3d.com/ScriptReference/30_search.html?q=attribute)
+> class in XCharts.Runtime / Inherits from: [Attribute](https://docs.unity3d.com/ScriptReference/30_search.html?q=attribute)
+
 
 |public method|since|description|
 |--|--|--|
@@ -2227,7 +2437,8 @@ The attribute for serie data component.
 
 ## SerieEventData
 
-> XCharts.Runtime.SerieEventData
+> class in XCharts.Runtime
+
 the data of serie event.
 
 |public method|since|description|
@@ -2236,7 +2447,8 @@ the data of serie event.
 
 ## SerieEventDataPool
 
-> XCharts.Runtime.SerieEventDataPool
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -2245,7 +2457,8 @@ the data of serie event.
 
 ## SerieHandler
 
-> XCharts.Runtime.SerieHandler
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -2278,11 +2491,13 @@ the data of serie event.
 
 ## SerieHandler where T
 
-> .SerieHandler where T / Subclasses: [SerieHandler&lt;T&gt;](#seriehandlert) 
+> class in  / Subclasses: [SerieHandler&lt;T&gt;](#seriehandlert) 
+
 
 ## SerieHandler&lt;T&gt;
 
-> XCharts.Runtime.SerieHandler&lt;T&gt; : [SerieHandler where T](#seriehandler where t),[Serie](#serie)
+> class in XCharts.Runtime / Inherits from: [SerieHandler where T](#seriehandler where t),[Serie](#serie)
+
 
 |public method|since|description|
 |--|--|--|
@@ -2310,7 +2525,8 @@ the data of serie event.
 
 ## SerieHandlerAttribute
 
-> XCharts.Runtime.SerieHandlerAttribute : [Attribute](https://docs.unity3d.com/ScriptReference/30_search.html?q=attribute)
+> class in XCharts.Runtime / Inherits from: [Attribute](https://docs.unity3d.com/ScriptReference/30_search.html?q=attribute)
+
 
 |public method|since|description|
 |--|--|--|
@@ -2319,7 +2535,8 @@ the data of serie event.
 
 ## SerieHelper
 
-> XCharts.Runtime.SerieHelper
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -2363,7 +2580,8 @@ the data of serie event.
 
 ## SerieLabelHelper
 
-> XCharts.Runtime.SerieLabelHelper
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -2373,7 +2591,8 @@ the data of serie event.
 
 ## SerieLabelPool
 
-> XCharts.Runtime.SerieLabelPool
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -2383,17 +2602,20 @@ the data of serie event.
 
 ## SerieParams
 
-> XCharts.Runtime.SerieParams
+> class in XCharts.Runtime
+
 
 ## SeriesHelper
 
-> XCharts.Runtime.SeriesHelper
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
 |GetLastStackSerie()||public static Serie GetLastStackSerie(List&lt;Serie&gt; series, Serie serie)<br/>获得上一个同堆叠且显示的serie。 |
 |GetLegalSerieNameList()||public static List&lt;string&gt; GetLegalSerieNameList(List&lt;Serie&gt; series)|
 |GetMaxSerieDataCount()||public static int GetMaxSerieDataCount(List&lt;Serie&gt; series)|
+|GetMinAnimationDuration()||public static float GetMinAnimationDuration(List&lt;Serie&gt; series)|
 |GetNameColor()||public static Color GetNameColor(BaseChart chart, int index, string name)|
 |GetStackSeries()||public static void GetStackSeries(List&lt;Serie&gt; series, ref Dictionary&lt;int, List&lt;Serie&gt;&gt; stackSeries)<br/>获得堆叠系列列表 |
 |IsAnyClipSerie()||public static bool IsAnyClipSerie(List&lt;Serie&gt; series)<br/>是否有需裁剪的serie。 |
@@ -2407,7 +2629,8 @@ the data of serie event.
 
 ## SerieSymbol
 
-> XCharts.Runtime.SerieSymbol : [SymbolStyle](#symbolstyle),[ISerieDataComponent](#iseriedatacomponent)
+> class in XCharts.Runtime / Inherits from: [SymbolStyle](#symbolstyle),[ISerieDataComponent](#iseriedatacomponent)
+
 系列数据项的标记的图形
 
 |public method|since|description|
@@ -2418,7 +2641,8 @@ the data of serie event.
 
 ## SerieTheme
 
-> XCharts.Runtime.SerieTheme : [ChildComponent](#childcomponent)
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent)
+
 
 |public method|since|description|
 |--|--|--|
@@ -2427,7 +2651,8 @@ the data of serie event.
 
 ## Settings
 
-> XCharts.Runtime.Settings : [MainComponent](#maincomponent)
+> class in XCharts.Runtime / Inherits from: [MainComponent](#maincomponent)
+
 Global parameter setting component. The default value can be used in general, and can be adjusted when necessary.
 
 |public method|since|description|
@@ -2437,7 +2662,8 @@ Global parameter setting component. The default value can be used in general, an
 
 ## SimplifiedBar
 
-> XCharts.Runtime.SimplifiedBar : [Serie](#serie),[INeedSerieContainer](#ineedseriecontainer),[ISimplifiedSerie](#isimplifiedserie)
+> class in XCharts.Runtime / Inherits from: [Serie](#serie),[INeedSerieContainer](#ineedseriecontainer),[ISimplifiedSerie](#isimplifiedserie)
+
 
 |public method|since|description|
 |--|--|--|
@@ -2446,11 +2672,13 @@ Global parameter setting component. The default value can be used in general, an
 
 ## SimplifiedBarChart
 
-> XCharts.Runtime.SimplifiedBarChart : [BaseChart](#basechart)
+> class in XCharts.Runtime / Inherits from: [BaseChart](#basechart)
+
 
 ## SimplifiedCandlestick
 
-> XCharts.Runtime.SimplifiedCandlestick : [Serie](#serie),[INeedSerieContainer](#ineedseriecontainer),[ISimplifiedSerie](#isimplifiedserie)
+> class in XCharts.Runtime / Inherits from: [Serie](#serie),[INeedSerieContainer](#ineedseriecontainer),[ISimplifiedSerie](#isimplifiedserie)
+
 
 |public method|since|description|
 |--|--|--|
@@ -2459,11 +2687,13 @@ Global parameter setting component. The default value can be used in general, an
 
 ## SimplifiedCandlestickChart
 
-> XCharts.Runtime.SimplifiedCandlestickChart : [BaseChart](#basechart)
+> class in XCharts.Runtime / Inherits from: [BaseChart](#basechart)
+
 
 ## SimplifiedLine
 
-> XCharts.Runtime.SimplifiedLine : [Serie](#serie),[INeedSerieContainer](#ineedseriecontainer),[ISimplifiedSerie](#isimplifiedserie)
+> class in XCharts.Runtime / Inherits from: [Serie](#serie),[INeedSerieContainer](#ineedseriecontainer),[ISimplifiedSerie](#isimplifiedserie)
+
 
 |public method|since|description|
 |--|--|--|
@@ -2472,11 +2702,13 @@ Global parameter setting component. The default value can be used in general, an
 
 ## SimplifiedLineChart
 
-> XCharts.Runtime.SimplifiedLineChart : [BaseChart](#basechart)
+> class in XCharts.Runtime / Inherits from: [BaseChart](#basechart)
+
 
 ## Since
 
-> XCharts.Runtime.Since : [Attribute](https://docs.unity3d.com/ScriptReference/30_search.html?q=attribute)
+> class in XCharts.Runtime / Inherits from: [Attribute](https://docs.unity3d.com/ScriptReference/30_search.html?q=attribute)
+
 
 |public method|since|description|
 |--|--|--|
@@ -2484,7 +2716,8 @@ Global parameter setting component. The default value can be used in general, an
 
 ## SingleAxis
 
-> XCharts.Runtime.SingleAxis : [Axis](#axis),[IUpdateRuntimeData](#iupdateruntimedata)
+> class in XCharts.Runtime / Inherits from: [Axis](#axis),[IUpdateRuntimeData](#iupdateruntimedata)
+
 Single axis.
 
 |public method|since|description|
@@ -2494,11 +2727,13 @@ Single axis.
 
 ## SingleAxisCoord
 
-> XCharts.Runtime.SingleAxisCoord : [CoordSystem](#coordsystem)
+> class in XCharts.Runtime / Inherits from: [CoordSystem](#coordsystem)
+
 
 ## StageColor
 
-> XCharts.Runtime.StageColor : [ChildComponent](#childcomponent)
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent)
+
 
 |public method|since|description|
 |--|--|--|
@@ -2506,7 +2741,10 @@ Single axis.
 
 ## StateStyle
 
-> XCharts.Runtime.StateStyle : [ChildComponent](#childcomponent) / Subclasses: [BlurStyle](#blurstyle),[EmphasisStyle](#emphasisstyle),[SelectStyle](#selectstyle) 
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent) / Subclasses: [BlurStyle](#blurstyle),[EmphasisStyle](#emphasisstyle),[SelectStyle](#selectstyle) 
+
+> Since `v3.2.0`
+
 the state style of serie.
 
 |public method|since|description|
@@ -2517,7 +2755,8 @@ the state style of serie.
 
 ## SubTitleTheme
 
-> XCharts.Runtime.SubTitleTheme : [ComponentTheme](#componenttheme)
+> class in XCharts.Runtime / Inherits from: [ComponentTheme](#componenttheme)
+
 
 |public method|since|description|
 |--|--|--|
@@ -2525,7 +2764,8 @@ the state style of serie.
 
 ## SVG
 
-> XUGL.SVG
+> class in XUGL
+
 
 |public method|since|description|
 |--|--|--|
@@ -2535,11 +2775,13 @@ the state style of serie.
 
 ## SVGImage
 
-> XCharts.Runtime.SVGImage : [MaskableGraphic](https://docs.unity3d.com/ScriptReference/30_search.html?q=maskablegraphic)
+> class in XCharts.Runtime / Inherits from: [MaskableGraphic](https://docs.unity3d.com/ScriptReference/30_search.html?q=maskablegraphic)
+
 
 ## SVGPath
 
-> XUGL.SVGPath
+> class in XUGL
+
 
 |public method|since|description|
 |--|--|--|
@@ -2549,7 +2791,8 @@ the state style of serie.
 
 ## SVGPathSeg
 
-> XUGL.SVGPathSeg
+> class in XUGL
+
 
 |public method|since|description|
 |--|--|--|
@@ -2557,7 +2800,8 @@ the state style of serie.
 
 ## SymbolStyle
 
-> XCharts.Runtime.SymbolStyle : [ChildComponent](#childcomponent) / Subclasses: [SerieSymbol](#seriesymbol) 
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent) / Subclasses: [SerieSymbol](#seriesymbol) 
+
 系列数据项的标记的图形
 
 |public method|since|description|
@@ -2567,7 +2811,8 @@ the state style of serie.
 
 ## TextLimit
 
-> XCharts.Runtime.TextLimit : [ChildComponent](#childcomponent)
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent)
+
 Text character limitation and adaptation component. When the length of the text exceeds the set length, it is cropped and suffixes are appended to the end.Only valid in the category axis.
 
 |public method|since|description|
@@ -2579,7 +2824,8 @@ Text character limitation and adaptation component. When the length of the text 
 
 ## TextPadding
 
-> XCharts.Runtime.TextPadding : [Padding](#padding)
+> class in XCharts.Runtime / Inherits from: [Padding](#padding)
+
 Settings related to text.
 
 |public method|since|description|
@@ -2589,7 +2835,8 @@ Settings related to text.
 
 ## TextStyle
 
-> XCharts.Runtime.TextStyle : [ChildComponent](#childcomponent)
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent)
+
 Settings related to text.
 
 |public method|since|description|
@@ -2607,7 +2854,8 @@ Settings related to text.
 
 ## Theme
 
-> XCharts.Runtime.Theme : [ScriptableObject](https://docs.unity3d.com/ScriptReference/30_search.html?q=scriptableobject)
+> class in XCharts.Runtime / Inherits from: [ScriptableObject](https://docs.unity3d.com/ScriptReference/30_search.html?q=scriptableobject)
+
 Theme.
 
 |public method|since|description|
@@ -2630,7 +2878,8 @@ Theme.
 
 ## ThemeStyle
 
-> XCharts.Runtime.ThemeStyle : [ChildComponent](#childcomponent)
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent)
+
 Theme.
 
 |public method|since|description|
@@ -2644,7 +2893,8 @@ Theme.
 
 ## Title
 
-> XCharts.Runtime.Title : [MainComponent](#maincomponent),[IPropertyChanged](#ipropertychanged)
+> class in XCharts.Runtime / Inherits from: [MainComponent](#maincomponent),[IPropertyChanged](#ipropertychanged)
+
 Title component, including main title and subtitle.
 
 |public method|since|description|
@@ -2654,12 +2904,14 @@ Title component, including main title and subtitle.
 
 ## TitleStyle
 
-> XCharts.Runtime.TitleStyle : [LabelStyle](#labelstyle),[ISerieDataComponent](#iseriedatacomponent),[ISerieComponent](#iseriecomponent)
+> class in XCharts.Runtime / Inherits from: [LabelStyle](#labelstyle),[ISerieDataComponent](#iseriedatacomponent),[ISerieComponent](#iseriecomponent)
+
 the title of serie.
 
 ## TitleTheme
 
-> XCharts.Runtime.TitleTheme : [ComponentTheme](#componenttheme)
+> class in XCharts.Runtime / Inherits from: [ComponentTheme](#componenttheme)
+
 
 |public method|since|description|
 |--|--|--|
@@ -2667,7 +2919,8 @@ the title of serie.
 
 ## Tooltip
 
-> XCharts.Runtime.Tooltip : [MainComponent](#maincomponent)
+> class in XCharts.Runtime / Inherits from: [MainComponent](#maincomponent)
+
 Tooltip component.
 
 |public method|since|description|
@@ -2690,15 +2943,18 @@ Tooltip component.
 
 ## TooltipContext
 
-> XCharts.Runtime.TooltipContext
+> class in XCharts.Runtime
+
 
 ## TooltipData
 
-> XCharts.Runtime.TooltipData
+> class in XCharts.Runtime
+
 
 ## TooltipHelper
 
-> XCharts.Runtime.TooltipHelper
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -2709,7 +2965,8 @@ Tooltip component.
 
 ## TooltipTheme
 
-> XCharts.Runtime.TooltipTheme : [ComponentTheme](#componenttheme)
+> class in XCharts.Runtime / Inherits from: [ComponentTheme](#componenttheme)
+
 
 |public method|since|description|
 |--|--|--|
@@ -2718,7 +2975,8 @@ Tooltip component.
 
 ## TooltipView
 
-> XCharts.Runtime.TooltipView
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -2732,11 +2990,13 @@ Tooltip component.
 
 ## TooltipViewItem
 
-> XCharts.Runtime.TooltipViewItem
+> class in XCharts.Runtime
+
 
 ## UGL
 
-> XUGL.UGL
+> class in XUGL
+
 UGUI Graphics Library.
 
 |public method|since|description|
@@ -2767,11 +3027,13 @@ UGUI Graphics Library.
 
 ## UGLExample
 
-> XUGL.UGLExample : [MaskableGraphic](https://docs.unity3d.com/ScriptReference/30_search.html?q=maskablegraphic)
+> class in XUGL / Inherits from: [MaskableGraphic](https://docs.unity3d.com/ScriptReference/30_search.html?q=maskablegraphic)
+
 
 ## UGLHelper
 
-> XUGL.UGLHelper
+> class in XUGL
+
 
 |public method|since|description|
 |--|--|--|
@@ -2801,23 +3063,26 @@ UGUI Graphics Library.
 
 ## UIComponent
 
-> XCharts.Runtime.UIComponent : [BaseGraph](#basegraph)
+> class in XCharts.Runtime / Inherits from: [BaseGraph](#basegraph)
+
 UI组件基类。
 
 |public method|since|description|
 |--|--|--|
 |SetAllDirty()||public override void SetAllDirty()|
-|SetDataDirty()|v3.8.2|public void SetDataDirty()|
+|SetDataDirty()|v3.9.0|public void SetDataDirty()|
 |SetVerticesDirty()||public override void SetVerticesDirty()|
 |UpdateTheme()||public bool UpdateTheme(ThemeType theme)<br/>Update chart theme. |
 
 ## UIComponentTheme
 
-> XCharts.Runtime.UIComponentTheme : [ChildComponent](#childcomponent)
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent)
+
 
 ## UIHelper
 
-> XCharts.Runtime.UIHelper
+> class in XCharts.Runtime
+
 UI帮助类。
 
 |public method|since|description|
@@ -2826,7 +3091,8 @@ UI帮助类。
 
 ## VisualMap
 
-> XCharts.Runtime.VisualMap : [MainComponent](#maincomponent)
+> class in XCharts.Runtime / Inherits from: [MainComponent](#maincomponent)
+
 VisualMap component. Mapping data to visual elements such as colors.
 
 |public method|since|description|
@@ -2847,11 +3113,13 @@ VisualMap component. Mapping data to visual elements such as colors.
 
 ## VisualMapContext
 
-> XCharts.Runtime.VisualMapContext : [MainComponentContext](#maincomponentcontext)
+> class in XCharts.Runtime / Inherits from: [MainComponentContext](#maincomponentcontext)
+
 
 ## VisualMapHelper
 
-> XCharts.Runtime.VisualMapHelper
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -2864,7 +3132,8 @@ VisualMap component. Mapping data to visual elements such as colors.
 
 ## VisualMapRange
 
-> XCharts.Runtime.VisualMapRange : [ChildComponent](#childcomponent)
+> class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent)
+
 
 |public method|since|description|
 |--|--|--|
@@ -2872,7 +3141,8 @@ VisualMap component. Mapping data to visual elements such as colors.
 
 ## VisualMapTheme
 
-> XCharts.Runtime.VisualMapTheme : [ComponentTheme](#componenttheme)
+> class in XCharts.Runtime / Inherits from: [ComponentTheme](#componenttheme)
+
 
 |public method|since|description|
 |--|--|--|
@@ -2881,7 +3151,8 @@ VisualMap component. Mapping data to visual elements such as colors.
 
 ## XAxis
 
-> XCharts.Runtime.XAxis : [Axis](#axis)
+> class in XCharts.Runtime / Inherits from: [Axis](#axis)
+
 The x axis in cartesian(rectangular) coordinate.
 
 |public method|since|description|
@@ -2890,7 +3161,8 @@ The x axis in cartesian(rectangular) coordinate.
 
 ## XChartsMgr
 
-> XCharts.Runtime.XChartsMgr
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -2907,7 +3179,8 @@ The x axis in cartesian(rectangular) coordinate.
 
 ## XCResourceImporterWindow
 
-> XCharts.Runtime.XCResourceImporterWindow : [UnityEditor.EditorWindow](https://docs.unity3d.com/ScriptReference/30_search.html?q=unityeditor.editorwindow)
+> class in XCharts.Runtime / Inherits from: [UnityEditor.EditorWindow](https://docs.unity3d.com/ScriptReference/30_search.html?q=unityeditor.editorwindow)
+
 
 |public method|since|description|
 |--|--|--|
@@ -2915,7 +3188,8 @@ The x axis in cartesian(rectangular) coordinate.
 
 ## XCResourcesImporter
 
-> XCharts.Runtime.XCResourcesImporter
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -2925,7 +3199,8 @@ The x axis in cartesian(rectangular) coordinate.
 
 ## XCSettings
 
-> XCharts.Runtime.XCSettings : [ScriptableObject](https://docs.unity3d.com/ScriptReference/30_search.html?q=scriptableobject)
+> class in XCharts.Runtime / Inherits from: [ScriptableObject](https://docs.unity3d.com/ScriptReference/30_search.html?q=scriptableobject)
+
 
 |public method|since|description|
 |--|--|--|
@@ -2935,7 +3210,8 @@ The x axis in cartesian(rectangular) coordinate.
 
 ## XCThemeMgr
 
-> XCharts.Runtime.XCThemeMgr
+> class in XCharts.Runtime
+
 
 |public method|since|description|
 |--|--|--|
@@ -2956,7 +3232,8 @@ The x axis in cartesian(rectangular) coordinate.
 
 ## XLog
 
-> XCharts.Runtime.XLog : [MonoBehaviour](#monobehaviour)
+> class in XCharts.Runtime / Inherits from: [MonoBehaviour](#monobehaviour)
+
 Log system. Used to output logs with date and log type, support output to file, support custom output log type.
 
 |public method|since|description|
@@ -2979,7 +3256,8 @@ Log system. Used to output logs with date and log type, support output to file, 
 
 ## YAxis
 
-> XCharts.Runtime.YAxis : [Axis](#axis)
+> class in XCharts.Runtime / Inherits from: [Axis](#axis)
+
 The x axis in cartesian(rectangular) coordinate.
 
 |public method|since|description|

@@ -2,28 +2,32 @@
 
 ## Liquid
 
-> XCharts.Runtime.Liquids.Liquid : [Serie](https://xcharts-team.github.io/docs/api#serie),[INeedSerieContainer](https://xcharts-team.github.io/docs/api#ineedseriecontainer)
+> class in XCharts.Runtime.Liquids / 继承自: [Serie](https://xcharts-team.github.io/docs/api#serie),[INeedSerieContainer](https://xcharts-team.github.io/docs/api#ineedseriecontainer)
 
-|public method|since|description|
+
+|API|版本|描述|
 |--|--|--|
 |AddDefaultSerie()||public static Serie AddDefaultSerie(BaseChart chart, string serieName)|
 
 ## LiquidChart
 
-> XCharts.Runtime.Liquids.LiquidChart : [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
+> class in XCharts.Runtime.Liquids / 继承自: [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
+
 水位图
 
 ## Vessel
 
-> XCharts.Runtime.Liquids.Vessel : [MainComponent](https://xcharts-team.github.io/docs/api#maincomponent),[ISerieContainer](https://xcharts-team.github.io/docs/api#iseriecontainer),[IUpdateRuntimeData](https://xcharts-team.github.io/docs/api#iupdateruntimedata)
+> class in XCharts.Runtime.Liquids / 继承自: [MainComponent](https://xcharts-team.github.io/docs/api#maincomponent),[ISerieContainer](https://xcharts-team.github.io/docs/api#iseriecontainer),[IUpdateRuntimeData](https://xcharts-team.github.io/docs/api#iupdateruntimedata)
+
 容器组件。 一般用于LiquidChart。一个Chart中可以有多个Vessel，Serie中用vesselIndex来对应。
 
-|public method|since|description|
+|API|版本|描述|
 |--|--|--|
 |IsPointerEnter()||public bool IsPointerEnter()|
 |UpdateRuntimeData()||public void UpdateRuntimeData(BaseChart chart)|
 
 ## VesselContext
 
-> XCharts.Runtime.Liquids.VesselContext : [MainComponentContext](https://xcharts-team.github.io/docs/api#maincomponentcontext)
+> class in XCharts.Runtime.Liquids / 继承自: [MainComponentContext](https://xcharts-team.github.io/docs/api#maincomponentcontext)
+
 

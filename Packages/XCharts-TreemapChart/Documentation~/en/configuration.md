@@ -2,7 +2,7 @@
 
 ## Treemap
 
-> XCharts.Runtime.Treemaps.Treemap : [Serie](https://xcharts-team.github.io/docs/configuration#serie)
+> class in XCharts.Runtime.Treemaps / Inherits from: [Serie](https://xcharts-team.github.io/docs/configuration#serie)
 
 ```mdx-code-block
 <APITable name="Treemap">

@@ -798,7 +798,6 @@ namespace XCharts.Runtime
         /// <summary>
         /// 忽略数据时折线是断开还是连接。默认false为连接。
         /// </summary>
-        /// <value></value>
         public bool ignoreLineBreak
         {
             get { return m_IgnoreLineBreak; }
@@ -1700,8 +1699,7 @@ namespace XCharts.Runtime
         /// <param name="value"></param>
         public bool UpdateYData(int index, double value)
         {
-            UpdateData(index, 1, value);
-            return true;
+            return UpdateData(index, 1, value);
         }
 
         /// <summary>

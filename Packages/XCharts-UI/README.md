@@ -14,8 +14,9 @@
 
 ## 更新日志
 
-## v3.8.2
+## v3.9.0
 
+* (2023.11.14) 增加`UITable`的`GetData()`和`GetContent()`接口
 * (2023.11.12) 增加`UITable`的`onTableClick`点击表格回调
 * (2023.11.11) 重构`UITable`的`SeparatorStyle`，可分开设置行列的分割线
 * (2023.11.05) 增加`UITable`的`ColumnStyle`，重构Column相关参数

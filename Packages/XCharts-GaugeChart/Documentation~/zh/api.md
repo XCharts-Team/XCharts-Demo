@@ -2,9 +2,10 @@
 
 ## Gauge
 
-> XCharts.Runtime.Gauges.Gauge : [Serie](https://xcharts-team.github.io/docs/api#serie)
+> class in XCharts.Runtime.Gauges / 继承自: [Serie](https://xcharts-team.github.io/docs/api#serie)
 
-|public method|since|description|
+
+|API|版本|描述|
 |--|--|--|
 |AddDefaultSerie()||public static void AddDefaultSerie(BaseChart chart, string serieName)|
 |ClearComponentDirty()||public override void ClearComponentDirty()|
@@ -13,18 +14,20 @@
 
 ## GaugeAnchor
 
-> XCharts.Runtime.Gauges.GaugeAnchor : [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+> class in XCharts.Runtime.Gauges / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
 
-|public method|since|description|
+
+|API|版本|描述|
 |--|--|--|
 |GetPosition()||public Vector3 GetPosition(Vector3 center, float radius)|
 
 ## GaugeAxis
 
-> XCharts.Runtime.Gauges.GaugeAxis : [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+> class in XCharts.Runtime.Gauges / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+
 仪表盘轴线相关设置。
 
-|public method|since|description|
+|API|版本|描述|
 |--|--|--|
 |AddLabelObject()||public void AddLabelObject(ChartLabel label)|
 |ClearLabelObject()||public void ClearLabelObject()|
@@ -38,18 +41,21 @@
 
 ## GaugeAxisLine
 
-> XCharts.Runtime.Gauges.GaugeAxisLine : [BaseLine](https://xcharts-team.github.io/docs/api#baseline)
+> class in XCharts.Runtime.Gauges / 继承自: [BaseLine](https://xcharts-team.github.io/docs/api#baseline)
 
-|public method|since|description|
+
+|API|版本|描述|
 |--|--|--|
 |GaugeAxisLine()||public GaugeAxisLine(bool show) : base(show)|
 
 ## GaugeChart
 
-> XCharts.Runtime.Gauges.GaugeChart : [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
+> class in XCharts.Runtime.Gauges / 继承自: [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
+
 
 ## GaugePointer
 
-> XCharts.Runtime.Gauges.GaugePointer : [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+> class in XCharts.Runtime.Gauges / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+
 仪表盘指针相关设置。
 
