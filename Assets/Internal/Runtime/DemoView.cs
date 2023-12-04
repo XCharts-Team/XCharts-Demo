@@ -6,7 +6,7 @@ using XCharts.Runtime;
 namespace XChartsDemo
 {
     [DisallowMultipleComponent]
-    [ExecuteInEditMode]
+    //[ExecuteInEditMode]
     internal class DemoView : MonoBehaviour
     {
         [SerializeField] private int m_TabIndex = -1;
@@ -33,6 +33,10 @@ namespace XChartsDemo
             m_TabButtonList.Add(tab2);
             m_TabButtonList.Add(tab3);
             m_TabButtonList.Add(tab4);
+        }
+
+        private void Start()
+        {
             SwitchTab(0);
             UpdateTabButtonStatus();
         }
