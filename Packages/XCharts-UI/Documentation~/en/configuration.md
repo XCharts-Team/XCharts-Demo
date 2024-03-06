@@ -93,8 +93,10 @@ the style of the table column header.
 |show|true||whether the column header is visible.
 |height|50f||the height of the column header.
 |backgroundColor|||the background color of the column header.
+|opaque|true|v3.10.0|whether the column header is opaque.
 |background|||the background style of the column header.
 |defaultLabelStyle|||
+|borderStyle||v3.10.0|the border style of the column header.
 
 ```mdx-code-block
 </APITable>
@@ -184,6 +186,7 @@ The style of table row.
 |rowHeight|0f||the height of row.
 |rowGap|0f||the gap of row.
 |minRowHeight|30f||the min height of row.
+|borderStyle||v3.10.0|the border style of row.
 |rowBackgroundColors|||the background color of row.
 
 ```mdx-code-block
@@ -206,9 +209,10 @@ the style of the table carousel.
 |show|false||whether the scrollbar is enable.
 |horizontal|false||whether to show the horizontal scrollbar.
 |vertical|true||whether to show the vertical scrollbar.
-|width|5||the width of the scrollbar.
+|width|10||the width of the scrollbar.
 |backgroundColor|||the background color of the scrollbar.
 |color|||the color of the scrollbar.
+|borderStyle||v3.10.0|the border style of the scrollbar.
 
 ```mdx-code-block
 </APITable>
@@ -240,6 +244,12 @@ the style of the table separator.
 ```mdx-code-block
 </APITable>
 ```
+
+## UIImage
+
+> class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.github.io/docs/configuration#uicomponent)
+
+ui component of image. 图片UI组件。
 
 ## UIStatistic
 
@@ -276,16 +286,15 @@ the style of the table separator.
 |--|--|--|--|
 |supportScroll|true||whether the table support scroll.
 |supportDrag|false||whether the table support drag.
-|supportSelect|false||whether the table support select. select row, column, cell.
-|borderWidth|0f||the width of border.
-|borderColor|||the color of border.
+|supportSelect|true||whether the table support select. select row, column, cell.
 |scrollSensitivity|10f||the scroll sensitivity.
 |selectColor|||the color of selected row, column, cell.
 |selectHeaderColor|||the color of selected header.
+|borderStyle|||the border style of table.
 |separatorStyle|||the style of separator. [TableSeparatorStyle](#tableseparatorstyle)|
 |scrollbarStyle|||the style of scrollbar. [TableScrollbarStyle](#tablescrollbarstyle)|
 |columnHeaderStyle|||the default style of column header. [TableColumnHeaderStyle](#tablecolumnheaderstyle)|
-|columnStyle||| [TableColumnStyle](#tablecolumnstyle)|
+|columnStyle|||the column style of table. [TableColumnStyle](#tablecolumnstyle)|
 |rowHeaderStyle|||the style of row header. [TableRowHeaderStyle](#tablerowheaderstyle)|
 |rowStyle|||the style of row. [TableRowStyle](#tablerowstyle)|
 |carouselStyle|||the style of carousel. [TableCarouselStyle](#tablecarouselstyle)|

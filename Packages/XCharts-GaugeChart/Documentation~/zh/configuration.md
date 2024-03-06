@@ -4,6 +4,8 @@
 
 > class in XCharts.Runtime.Gauges / 继承自: [Serie](https://xcharts-team.github.io/docs/configuration#serie)
 
+仪表盘系列数据。
+
 ```mdx-code-block
 <APITable name="Gauge">
 ```

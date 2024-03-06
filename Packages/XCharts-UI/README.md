@@ -7,12 +7,26 @@
 * [UITable 表格](Documentation~/zh/ui_table.md)
 * [UIStatistic 统计数值](Documentation~/zh/ui_statistic.md)
 
+## 示例演示
+
+Demo仓库：[XCharts-UI-Demo](https://github.com/XCharts-Team/XCharts-UI-Demo)
+
 ## 如何使用
 
 * 使用该仓库前先确保项目里已有对应版本的XCharts。
 * 下载本仓库放入Assets下或者通过Package Manager导入。
 
 ## 更新日志
+
+## v3.10.0
+
+* (2024.01.16) 增加`UIImage`图片组件
+* (2024.01.16) 优化`Background`组件，可设置圆角和边框
+* (2024.01.03) 增加`UITable`的`carouselStyle`的`hoverPause`
+* (2024.01.02) 增加`UITable`的`scrollStyle`的`borderStyle`
+* (2024.01.02) 增加`UITable`的`columnHeadStyle`的`opaque`
+* (2024.01.01) 调整`UITable`的`border`边框相关设置，用`BorderStyle`代替
+* (2023.12.22) 增加`UITable`的行边框
 
 ## v3.9.0
 

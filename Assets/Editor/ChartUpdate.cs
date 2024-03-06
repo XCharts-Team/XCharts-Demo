@@ -48,6 +48,20 @@ public static class ChartUpdate
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
     }
+    [MenuItem("Tools/SetAllBackgroundComponent")]
+    public static void SetAllBackgroundComponent()
+    {
+        var files = new DirectoryInfo(Application.dataPath).GetFiles("*.prefab", SearchOption.AllDirectories);
+        foreach (var file in files)
+        {
+            var index = file.FullName.IndexOf("Assets/");
+            var assetPath = file.FullName.Substring(index);
+            var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(assetPath);
+            SetBackgroundComponent(prefab);
+        }
+        AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
+    }
 
     [MenuItem("Assets/XCharts/RebuildChart")]
     public static void RebuildSelectedChart()
@@ -55,6 +69,17 @@ public static class ChartUpdate
         foreach (var obj in Selection.objects)
         {
             RebuildChartPrefab(obj);
+        }
+        AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
+    }
+
+    [MenuItem("Assets/XCharts/SetBackgroundComponent")]
+    public static void SetBackgroundComponent()
+    {
+        foreach (var obj in Selection.objects)
+        {
+            SetBackgroundComponent(obj);
         }
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
@@ -81,8 +106,33 @@ public static class ChartUpdate
             var chart = prefab.GetComponent<BaseChart>();
             if (chart != null)
             {
-                Debug.LogError("RebuildChartPrefab:" + AssetDatabase.GetAssetPath(prefab) + "," + chart);
+                Debug.Log("RebuildChartPrefab:" + AssetDatabase.GetAssetPath(prefab) + "," + chart);
                 chart.RebuildChartObject();
+#if UNITY_2018_3_OR_NEWER
+                PrefabUtility.SaveAsPrefabAsset(prefab, AssetDatabase.GetAssetPath(obj));
+#else
+                PrefabUtility.ReplacePrefab(prefab, obj, ReplacePrefabOptions.ConnectToPrefab);
+#endif
+                GameObject.DestroyImmediate(prefab);
+            }
+        }
+    }
+
+    private static void SetBackgroundComponent(Object obj)
+    {
+        var prefab = PrefabUtility.InstantiatePrefab(obj) as GameObject;
+        if (prefab != null)
+        {
+            var chart = prefab.GetComponent<BaseChart>();
+            if (chart != null)
+            {
+                Debug.Log("SetBackgroundComponent:" + AssetDatabase.GetAssetPath(prefab) + "," + chart);
+                var background = chart.AddChartComponent<Background>();
+                if (background == null) return;
+                background.show = true;
+                background.borderStyle.show = true;
+                background.borderStyle.roundedCorner = true;
+                background.borderStyle.cornerRadius = new float[4] { 20, 20, 20, 20 };
 #if UNITY_2018_3_OR_NEWER
                 PrefabUtility.SaveAsPrefabAsset(prefab, AssetDatabase.GetAssetPath(obj));
 #else

@@ -12,6 +12,10 @@ XCharts付费扩展图表 - 金字塔。
 
 扩展图表，需付费购买后才获得使用许可。
 
+## 示例
+
+Demo仓库：[XCharts-PyramidChart-Demo](https://github.com/XCharts-Team/XCharts-PyramidChart-Demo)
+
 ## 教程
 
 [扩展图表如何导入Demo项目或导入自己项目](https://github.com/XCharts-Team/XCharts-Demo)
@@ -22,6 +26,10 @@ XCharts付费扩展图表 - 金字塔。
 [配置项手册](Documentation~/zh/configuration.md)  
 
 ## 日志
+
+### v3.10.0
+
+* (2024.01.21) 增加`Pyramid`的更多创建默认图表的快捷方式和API
 
 ### v3.9.0
 

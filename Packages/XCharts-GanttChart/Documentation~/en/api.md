@@ -7,7 +7,9 @@
 
 |public method|since|description|
 |--|--|--|
+|AddDefaultCategorySerie()||public static void AddDefaultCategorySerie(BaseChart chart, string serieName)|
 |AddDefaultSerie()||public static void AddDefaultSerie(BaseChart chart, string serieName)|
+|AddDefaultValueSerie()||public static void AddDefaultValueSerie(BaseChart chart, string serieName)|
 
 ## GanttChart
 
@@ -16,6 +18,10 @@
 
 |public method|since|description|
 |--|--|--|
+|DefaultCategoryAxisGanttChart()||public void DefaultCategoryAxisGanttChart()<br/>generate default category axis gantt chart. |
+|DefaultMonomialGroupGanttChart()||public void DefaultMonomialGroupGanttChart()<br/>generate default monomial group gantt chart. |
+|DefaultMultinomialGroupGanttChart()||public void DefaultMultinomialGroupGanttChart()<br/>generate default multinomial group gantt chart. |
+|DefaultValueAxisGanttChart()||public void DefaultValueAxisGanttChart()<br/>generate default value axis gantt chart. |
 |GetSeriesMinMaxValue()||public override void GetSeriesMinMaxValue(Axis axis, int axisIndex, out double tempMinValue, out double tempMaxValue)|
 |InitAxisRuntimeData()||public override void InitAxisRuntimeData(Axis axis)|
 |OnBeginDrag()||public override void OnBeginDrag(PointerEventData eventData)|

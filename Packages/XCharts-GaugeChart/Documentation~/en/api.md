@@ -4,6 +4,7 @@
 
 > class in XCharts.Runtime.Gauges / Inherits from: [Serie](https://xcharts-team.github.io/docs/api#serie)
 
+serie of gauge chart.
 
 |public method|since|description|
 |--|--|--|
@@ -52,6 +53,19 @@ Settings related to gauge axis line.
 
 > class in XCharts.Runtime.Gauges / Inherits from: [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
 
+Gauge chart.
+
+|public method|since|description|
+|--|--|--|
+|DefaultBarometerGaugeChart()||public void DefaultBarometerGaugeChart()<br/>generate barometer gauge chart. |
+|DefaultClockGaugeChart()||public void DefaultClockGaugeChart()<br/>generate clock gauge chart. |
+|DefaultMultipleGaugeChart()||public void DefaultMultipleGaugeChart()<br/>generate multiple gauge chart. |
+|DefaultProgressGaugeChart()||public void DefaultProgressGaugeChart()<br/>generate progress gauge chart. |
+|DefaultRangeClockGaugeChart()||public void DefaultRangeClockGaugeChart()|
+|DefaultSectionGaugeChart()||public void DefaultSectionGaugeChart()<br/>generate section gauge chart. |
+|UpdateClockTime()||public void UpdateClockTime()<br/>update clock time. |
+|UpdateClockTime()||public void UpdateClockTime(double hour, double minute, double second)<br/>update clock time. |
+|UpdatePointerValue()||public void UpdatePointerValue(double value)<br/>update pointer value. |
 
 ## GaugePointer
 

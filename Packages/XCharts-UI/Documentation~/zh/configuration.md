@@ -89,8 +89,10 @@
 |show|true||是否显示列表头。
 |height|50f||列表头高度。
 |backgroundColor|||列表头背景色。
+|opaque|true|v3.10.0|列表头是否不透明。
 |background|||背景图片样式。
 |defaultLabelStyle|||
+|borderStyle||v3.10.0|列表头边框样式。
 
 ```mdx-code-block
 </APITable>
@@ -176,6 +178,7 @@
 |rowHeight|0f||行高。
 |rowGap|0f||行间距。
 |minRowHeight|30f||最小行高。
+|borderStyle||v3.10.0|行边框样式。
 |rowBackgroundColors|||行背景颜色列表。
 
 ```mdx-code-block
@@ -197,9 +200,10 @@
 |show|false||是否开启滚动条。
 |horizontal|false||是否显示水平滚动条。
 |vertical|true||是否显示垂直滚动条。
-|width|5||滚动条宽度。
+|width|10||滚动条宽度。
 |backgroundColor|||滚动条背景色。
 |color|||滚动条颜色。
+|borderStyle||v3.10.0|滚动条的边框样式。
 
 ```mdx-code-block
 </APITable>
@@ -230,6 +234,12 @@
 ```mdx-code-block
 </APITable>
 ```
+
+## UIImage
+
+> class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/configuration#uicomponent)
+
+ui component of image. 图片UI组件。
 
 ## UIStatistic
 
@@ -264,16 +274,15 @@
 |--|--|--|--|
 |supportScroll|true||是否支持滚动。
 |supportDrag|false||是否支持拖拽。
-|supportSelect|false||是否支持选中。选中行，列，单元格。
-|borderWidth|0f||边框宽度。
-|borderColor|||边框颜色。
+|supportSelect|true||是否支持选中。选中行，列，单元格。
 |scrollSensitivity|10f||滚动灵敏度。
 |selectColor|||选中时的颜色。
 |selectHeaderColor|||选中时表头的颜色。
+|borderStyle|||表格边框样式。
 |separatorStyle|||分割线样式。 [TableSeparatorStyle](#tableseparatorstyle)|
 |scrollbarStyle|||滚动条样式。 [TableScrollbarStyle](#tablescrollbarstyle)|
 |columnHeaderStyle|||默认的列头样式。 [TableColumnHeaderStyle](#tablecolumnheaderstyle)|
-|columnStyle||| [TableColumnStyle](#tablecolumnstyle)|
+|columnStyle|||列样式。 [TableColumnStyle](#tablecolumnstyle)|
 |rowHeaderStyle|||行表头样式。 [TableRowHeaderStyle](#tablerowheaderstyle)|
 |rowStyle|||行样式。 [TableRowStyle](#tablerowstyle)|
 |carouselStyle|||轮播样式。 [TableCarouselStyle](#tablecarouselstyle)|

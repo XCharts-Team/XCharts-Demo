@@ -4,6 +4,7 @@
 
 > class in XCharts.Runtime.Pie3Ds / 继承自: [Serie](https://xcharts-team.github.io/docs/api#serie)
 
+3D饼图系列。
 
 |API|版本|描述|
 |--|--|--|
@@ -15,6 +16,12 @@
 > class in XCharts.Runtime.Pie3Ds / 继承自: [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
 
 3D饼图。
+
+|API|版本|描述|
+|--|--|--|
+|DefaultAutoHeightPie3DChart()||public void DefaultAutoHeightPie3DChart()<br/>生成默认3D自动高度饼图。 |
+|DefaultDonutPie3DChart()||public void DefaultDonutPie3DChart()<br/>生成默认3D甜甜圈饼图。 |
+|DefaultEllipsePie3DChart()||public void DefaultEllipsePie3DChart()<br/>生成默认2D椭圆饼图。 |
 
 ## Pie3DSlice
 

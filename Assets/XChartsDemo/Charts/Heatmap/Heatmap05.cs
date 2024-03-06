@@ -66,8 +66,8 @@ namespace XCharts.Demo
             {
                 // var xIndex = Mathf.CeilToInt(((float) (info.carat / xAxis.max) * xCount) - 1);
                 // var yIndex = Mathf.CeilToInt(((float) (info.price / yAxis.max) * yCount) - 1);
-                var xIndex = AxisHelper.GetAxisValueSplitIndex(xAxis, info.carat, xCount);
-                var yIndex = AxisHelper.GetAxisValueSplitIndex(yAxis, info.price, xCount);
+                var xIndex = AxisHelper.GetAxisValueSplitIndex(xAxis, info.carat, false, xCount);
+                var yIndex = AxisHelper.GetAxisValueSplitIndex(yAxis, info.price, false, xCount);
                 var key = xIndex * 1000 + yIndex;
                 if (!dict.TryGetValue(key, out var value))
                 {

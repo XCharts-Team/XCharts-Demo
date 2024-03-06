@@ -15,6 +15,12 @@
 
 水位图
 
+|public method|since|description|
+|--|--|--|
+|DefaultCapsuleLiquidChart()||public void DefaultCapsuleLiquidChart()<br/>generate default capsule liquid chart. 生成默认的胶囊形水位图。 |
+|DefaultRectLiquidChart()||public void DefaultRectLiquidChart()<br/>generate default rect liquid chart. 生成默认的矩形水位图。 |
+|DefaultRoundRectLiquidChart()||public void DefaultRoundRectLiquidChart()<br/>generate default round rect liquid chart. 生成默认的圆角矩形水位图。 |
+
 ## Vessel
 
 > class in XCharts.Runtime.Liquids / Inherits from: [MainComponent](https://xcharts-team.github.io/docs/api#maincomponent),[ISerieContainer](https://xcharts-team.github.io/docs/api#iseriecontainer),[IUpdateRuntimeData](https://xcharts-team.github.io/docs/api#iupdateruntimedata)

@@ -4,6 +4,7 @@
 
 > class in XCharts.Runtime.Gauges / 继承自: [Serie](https://xcharts-team.github.io/docs/api#serie)
 
+仪表盘系列数据。
 
 |API|版本|描述|
 |--|--|--|
@@ -52,6 +53,19 @@
 
 > class in XCharts.Runtime.Gauges / 继承自: [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
 
+仪表盘。
+
+|API|版本|描述|
+|--|--|--|
+|DefaultBarometerGaugeChart()||public void DefaultBarometerGaugeChart()<br/>生成气压计仪表盘。 |
+|DefaultClockGaugeChart()||public void DefaultClockGaugeChart()<br/>生成时钟仪表盘。 |
+|DefaultMultipleGaugeChart()||public void DefaultMultipleGaugeChart()<br/>生成多仪表盘。 |
+|DefaultProgressGaugeChart()||public void DefaultProgressGaugeChart()<br/>生成进度仪表盘。 |
+|DefaultRangeClockGaugeChart()||public void DefaultRangeClockGaugeChart()|
+|DefaultSectionGaugeChart()||public void DefaultSectionGaugeChart()<br/>生成分段仪表盘。 |
+|UpdateClockTime()||public void UpdateClockTime()<br/>更新时钟时间。 |
+|UpdateClockTime()||public void UpdateClockTime(double hour, double minute, double second)<br/>更新时钟时间。 |
+|UpdatePointerValue()||public void UpdatePointerValue(double value)<br/>更新指针值。 |
 
 ## GaugePointer
 

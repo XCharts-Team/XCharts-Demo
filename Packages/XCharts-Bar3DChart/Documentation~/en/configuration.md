@@ -45,6 +45,9 @@ Bar3D.
 |topColor||v3.6.0|
 |bottomColor||v3.6.0|
 |sideColor||v3.6.0|
+|occludedAreaBorder||v3.10.0|Whether to show the border of occluded area.
+|occludedAreaBorderDash||v3.10.0|Whether to show dash border of occluded area.
+|borderDash||v3.10.0|wherther to show dash border.
 
 ```mdx-code-block
 </APITable>

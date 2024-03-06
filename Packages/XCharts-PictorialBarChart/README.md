@@ -12,6 +12,10 @@ XCharts付费扩展图表 - 象形柱图。
 
 扩展图表，需付费购买后才获得使用许可。
 
+## 示例
+
+Demo仓库：[XCharts-PictorialBarChart-Demo](https://github.com/XCharts-Team/XCharts-PictorialBarChart-Demo)
+
 ## 教程
 
 [扩展图表如何导入Demo项目或导入自己项目](https://github.com/XCharts-Team/XCharts-Demo)
@@ -22,6 +26,10 @@ XCharts付费扩展图表 - 象形柱图。
 [配置项手册](Documentation~/zh/configuration.md)  
 
 ## 日志
+
+### v3.10.0
+
+* (2023.12.19) 调整`Border`相关代码
 
 ### v3.9.0
 

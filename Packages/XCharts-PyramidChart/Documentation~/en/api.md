@@ -14,6 +14,10 @@
 > class in XCharts.Runtime.Pyramids / Inherits from: [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
 
 
+|public method|since|description|
+|--|--|--|
+|Default2DPyramidChart()||public void Default2DPyramidChart()<br/>generate default 2d pyramid chart. |
+
 ## PyramidStyle
 
 > class in XCharts.Runtime.Pyramids / Inherits from: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)

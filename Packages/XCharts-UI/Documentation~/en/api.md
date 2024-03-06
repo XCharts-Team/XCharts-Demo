@@ -142,6 +142,12 @@ the style of the table separator.
 |IsNeedDrawHorizontalSeparator()||public bool IsNeedDrawHorizontalSeparator()<br/>whether to need to draw the horizontal separator. |
 |IsNeedDrawVerticalSeparator()||public bool IsNeedDrawVerticalSeparator()<br/>whether to need to draw the vertical separator. |
 
+## UIImage
+
+> class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
+
+ui component of image. 图片UI组件。
+
 ## UIProgress
 
 > class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
@@ -156,6 +162,11 @@ the style of the table separator.
 |public method|since|description|
 |--|--|--|
 |GetCurrentValue()||public double GetCurrentValue(float animationDuration)<br/>获取当前时刻的数值。当有变更动画时，返回动画过程中的数值。 |
+
+## UISvgImage
+
+> class in XCharts.Runtime / Inherits from: [MaskableGraphic](https://docs.unity3d.com/ScriptReference/30_search.html?q=maskablegraphic)
+
 
 ## UITable
 
@@ -179,6 +190,8 @@ the style of the table separator.
 |GetData()||public TableCell GetData(int row, int column)<br/>get the table cell data by row and column. |
 |OnDrag()||public override void OnDrag(PointerEventData eventData)|
 |OnPointerClick()||public override void OnPointerClick(PointerEventData eventData)|
+|OnPointerEnter()||public override void OnPointerEnter(PointerEventData eventData)|
+|OnPointerExit()||public override void OnPointerExit(PointerEventData eventData)|
 |OnScroll()||public override void OnScroll(PointerEventData eventData)|
 |RefreshGraph()||public override void RefreshGraph()|
 |RefreshPosition()||public virtual void RefreshPosition()|

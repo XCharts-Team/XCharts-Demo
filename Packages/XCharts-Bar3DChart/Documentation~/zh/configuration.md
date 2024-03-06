@@ -43,6 +43,9 @@
 |topColor||v3.6.0|
 |bottomColor||v3.6.0|
 |sideColor||v3.6.0|
+|occludedAreaBorder||v3.10.0|是否显示遮挡区域的边框。
+|occludedAreaBorderDash||v3.10.0|是否显示遮挡区域的虚线边框。
+|borderDash||v3.10.0|是否显示虚线边框。
 
 ```mdx-code-block
 </APITable>

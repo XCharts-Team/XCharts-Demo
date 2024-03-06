@@ -179,8 +179,12 @@ namespace XChartsDemo
                     btn.transform.SetParent(btnPanel);
                     btn.transform.localPosition = Vector3.zero;
                 }
-                btn.SetActive(module.type == m_ChartType);
-                totalHeight += config.buttonHeight;
+                var active = module.type == m_ChartType;
+                btn.SetActive(active);
+                if (active)
+                {
+                    totalHeight += config.buttonHeight;
+                }
                 btn.transform.localScale = Vector3.one;
                 module.button = btn.GetComponent<Button>();
                 module.button.transform.Find("Text").GetComponent<Text>().text = module.name.Replace("\\n", "\n");
@@ -309,6 +313,7 @@ namespace XChartsDemo
             var thumb = module.GetThumb(m_SelectedThumb.index + 1);
             if (thumb != null)
             {
+                m_SelectedThumb = thumb;
                 thumb.Click();
                 CheckArrowButton(module, thumb);
             }

@@ -13,4 +13,9 @@
 
 > class in XCharts.Runtime.Funnels / Inherits from: [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
 
+Funnel chart. Suitable for flow analysis.
+
+|public method|since|description|
+|--|--|--|
+|DefaultHorizonalFunnelChart()||public void DefaultHorizonalFunnelChart()<br/>generate default horizontal funnel chart. |
 

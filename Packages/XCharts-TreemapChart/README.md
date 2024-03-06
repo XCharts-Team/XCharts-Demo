@@ -12,6 +12,10 @@ XCharts付费扩展图表 - 矩形树图。
 
 扩展图表，需付费购买后才获得使用许可。
 
+## 示例
+
+Demo仓库：[XCharts-TreemapChart-Demo](https://github.com/XCharts-Team/XCharts-TreemapChart-Demo)
+
 ## 教程
 
 [扩展图表如何导入Demo项目或导入自己项目](https://github.com/XCharts-Team/XCharts-Demo)

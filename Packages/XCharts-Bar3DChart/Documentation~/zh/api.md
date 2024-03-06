@@ -16,6 +16,12 @@
 > class in XCharts.Runtime.Bar3Ds / 继承自: [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
 
 
+|API|版本|描述|
+|--|--|--|
+|DefaultCylinderChart()||public void DefaultCylinderChart(){<br/>生成默认的圆柱体图。 |
+|DefaultGroupedCubeChart()||public void DefaultGroupedCubeChart()<br/>默认分组3D柱状图。 |
+|DefaultStackedCubeChart()||public void DefaultStackedCubeChart()<br/>默认堆叠分组3D柱状图。 |
+
 ## Bar3DStyle
 
 > class in XCharts.Runtime.Bar3Ds / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)

@@ -142,6 +142,12 @@
 |IsNeedDrawHorizontalSeparator()||public bool IsNeedDrawHorizontalSeparator()<br/>是否需要绘制水平分割线。 |
 |IsNeedDrawVerticalSeparator()||public bool IsNeedDrawVerticalSeparator()<br/>是否需要绘制垂直分割线。 |
 
+## UIImage
+
+> class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
+
+ui component of image. 图片UI组件。
+
 ## UIProgress
 
 > class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
@@ -156,6 +162,11 @@
 |API|版本|描述|
 |--|--|--|
 |GetCurrentValue()||public double GetCurrentValue(float animationDuration)<br/>获取当前时刻的数值。当有变更动画时，返回动画过程中的数值。 |
+
+## UISvgImage
+
+> class in XCharts.Runtime / 继承自: [MaskableGraphic](https://docs.unity3d.com/ScriptReference/30_search.html?q=maskablegraphic)
+
 
 ## UITable
 
@@ -179,6 +190,8 @@
 |GetData()||public TableCell GetData(int row, int column)<br/>获取指定行列的单元格数据。 |
 |OnDrag()||public override void OnDrag(PointerEventData eventData)|
 |OnPointerClick()||public override void OnPointerClick(PointerEventData eventData)|
+|OnPointerEnter()||public override void OnPointerEnter(PointerEventData eventData)|
+|OnPointerExit()||public override void OnPointerExit(PointerEventData eventData)|
 |OnScroll()||public override void OnScroll(PointerEventData eventData)|
 |RefreshGraph()||public override void RefreshGraph()|
 |RefreshPosition()||public virtual void RefreshPosition()|

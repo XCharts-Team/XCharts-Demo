@@ -13,6 +13,10 @@ XCharts的付费扩展图表 - 漏斗图。
 
 扩展图表，需付费购买后才获得使用许可。
 
+## 示例
+
+Demo仓库：[XCharts-FunnelChart-Demo](https://github.com/XCharts-Team/XCharts-FunnelChart-Demo)
+
 ## 教程
 
 [扩展图表如何导入Demo项目或导入自己项目](https://github.com/XCharts-Team/XCharts-Demo)

@@ -4,6 +4,8 @@
 
 > class in XCharts.Runtime.Gauges / Inherits from: [Serie](https://xcharts-team.github.io/docs/configuration#serie)
 
+serie of gauge chart.
+
 ```mdx-code-block
 <APITable name="Gauge">
 ```

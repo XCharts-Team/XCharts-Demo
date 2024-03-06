@@ -4,6 +4,7 @@
 
 > class in XCharts.Runtime.Pie3Ds / Inherits from: [Serie](https://xcharts-team.github.io/docs/api#serie)
 
+serie of 3D pie.
 
 |public method|since|description|
 |--|--|--|
@@ -15,6 +16,12 @@
 > class in XCharts.Runtime.Pie3Ds / Inherits from: [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
 
 3D pie.
+
+|public method|since|description|
+|--|--|--|
+|DefaultAutoHeightPie3DChart()||public void DefaultAutoHeightPie3DChart()<br/>generate default 3d auto height pie chart. |
+|DefaultDonutPie3DChart()||public void DefaultDonutPie3DChart()<br/>generate default 3d donut pie chart. |
+|DefaultEllipsePie3DChart()||public void DefaultEllipsePie3DChart()<br/>generate default 2d ellipse pie chart. |
 
 ## Pie3DSlice
 
