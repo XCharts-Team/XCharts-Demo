@@ -557,7 +557,7 @@ namespace XCharts.Runtime
             m_EndLabel.SetActive(active);
             if (active)
             {
-                var value = serie.context.lineEndValue;
+                var value = serie.context.lineEndValueY;
                 var content = SerieLabelHelper.GetFormatterContent(serie, null, value, 0,
                     endLabelStyle, Color.clear);
                 m_EndLabel.SetText(content);
@@ -741,6 +741,7 @@ namespace XCharts.Runtime
 
         public override void OnPointerClick(PointerEventData eventData)
         {
+            serie.context.clickTotalDataIndex = serie.context.totalDataIndex;
             if (serie.onClick == null && chart.onSerieClick == null) return;
             if (!serie.context.pointerEnter) return;
             var dataIndex = GetPointerItemDataIndex();

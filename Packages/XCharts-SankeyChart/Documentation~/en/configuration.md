@@ -18,6 +18,10 @@ Sankey diagram is a special flow diagram, which is mainly used to express how th
 |nodeGap|8||the gap of node.
 |draggable|||whether draggable.
 |curveness|0.5f||the curveness of line.
+|collapse|false|v3.11.0|whether collapse.
+|collapseMutex|true|v3.11.0|whether collapse mutex.
+|collapseLevel|-1|v3.11.0|the level of collapse. The level starts from 0, and -1 means no limit.
+|defaultExpandDataIndex|-1|v3.11.0|the default expand data index.
 |levelStyle|||the style of level.
 
 ```mdx-code-block

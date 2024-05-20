@@ -17,6 +17,10 @@
 |nodeGap|8||节点的间距。
 |draggable|||是否可拖拽。
 |curveness|0.5f||线条的弯曲程度。
+|collapse|false|v3.11.0|是否开启折叠。
+|collapseMutex|true|v3.11.0|是否开启折叠互斥。
+|collapseLevel|-1|v3.11.0|折叠限制的层级。层级从0开始，-1表示不限制。
+|defaultExpandDataIndex|-1|v3.11.0|默认展开的数据索引。
 |levelStyle|||层级样式。
 
 ```mdx-code-block
