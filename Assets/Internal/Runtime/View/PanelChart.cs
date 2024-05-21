@@ -261,13 +261,29 @@ namespace XChartsDemo
 
         private void InitChartThumb(ChartModule module, GameObject prefab, int index)
         {
-            if (prefab != null && module.panel != null)
+            if (module.panel != null)
             {
+                if (prefab == null)
+                {
+                    prefab = config.emptyChartPrefab;
+                    var name = module.GetPrefabName(index);
+                    if (string.IsNullOrEmpty(name))
+                        prefab.name = string.Format("ExtendedChart{0}_{1}_{2}", index, module.name, module.name);
+                    else
+                        prefab.name = name;
+                }
                 GameObject obj;
-                if (module.panel.transform.Find(prefab.name))
-                    obj = module.panel.transform.Find(prefab.name).gameObject;
+                if (prefab == null)
+                {
+                    obj = UIUtil.Instantiate(m_ThumbClone, module.panel.transform, module.name + "_" + index);
+                }
                 else
-                    obj = UIUtil.Instantiate(m_ThumbClone, module.panel.transform, prefab.name);
+                {
+                    if (module.panel.transform.Find(prefab.name))
+                        obj = module.panel.transform.Find(prefab.name).gameObject;
+                    else
+                        obj = UIUtil.Instantiate(m_ThumbClone, module.panel.transform, prefab.name);
+                }
                 obj.SetActive(true);
                 var thumb = ChartHelper.EnsureComponent<ChartThumb>(obj);
                 module.chartThumbs.Add(thumb);
@@ -277,6 +293,8 @@ namespace XChartsDemo
                 {
                     m_SelectedPanel = m_DetailChartRoot;
                     m_SelectedThumb = thumb;
+                    CheckArrowButton(module, thumb);
+                    if (prefab == null) return;
                     ChartHelper.DestroyAllChildren(m_DetailChartRoot.transform);
                     UIUtil.Instantiate(prefab, m_DetailChartRoot.transform, prefab.name);
                     var names = prefab.name.Split('_');
@@ -300,8 +318,11 @@ namespace XChartsDemo
                     UpdateChartTheme(m_SelectedTheme);
                     ResetChartAnimation();
                     CheckDetailBackgound();
-                    CheckArrowButton(module, thumb);
                 });
+            }
+            else
+            {
+                Debug.LogError("module.panel is null:" + module.name + "," + index);
             }
         }
 

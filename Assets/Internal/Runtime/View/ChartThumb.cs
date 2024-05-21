@@ -69,7 +69,8 @@ namespace XChartsDemo
             isBindPrefab = true;
         }
 
-        public void Click(){
+        public void Click()
+        {
             bindAction();
         }
 

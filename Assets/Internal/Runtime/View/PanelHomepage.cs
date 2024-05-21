@@ -6,7 +6,7 @@ using XCharts.Runtime;
 namespace XChartsDemo
 {
     [DisallowMultipleComponent]
-    [ExecuteInEditMode]
+    // [ExecuteInEditMode]
     public class PanelHomepage : MonoBehaviour
     {
         [SerializeField] private float m_GridGap = 20f;
@@ -15,6 +15,7 @@ namespace XChartsDemo
         void Awake()
         {
             InitChart();
+            HideMissingChart();
         }
 
         void Update()
@@ -70,6 +71,16 @@ namespace XChartsDemo
                         grid.bottom = m_GridGap;
                     }
                 }
+            }
+        }
+
+        void HideMissingChart()
+        {
+            var objects = gameObject.transform.Find("Chart").GetComponentsInChildren<Transform>();
+            foreach (var obj in objects)
+            {
+                if (obj.name.Contains("Missing"))
+                    obj.gameObject.SetActive(false);
             }
         }
     }

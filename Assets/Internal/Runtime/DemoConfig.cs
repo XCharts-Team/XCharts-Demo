@@ -22,12 +22,14 @@ namespace XChartsDemo
         [SerializeField] private bool m_Selected;
         [SerializeField] private bool m_Buildin;
         [SerializeField] private List<GameObject> m_ChartPrefabs = new List<GameObject>();
+        [SerializeField] private List<string> m_ChartPrefabNames = new List<string>();
 
         public string name { get { return m_Name; } }
         public string subName { get { return m_SubName; } }
         public bool select { get { return m_Selected; } set { m_Selected = value; } }
         public ChartType type { get { return m_Type; } }
         public List<GameObject> chartPrefabs { get { return m_ChartPrefabs; } }
+        public List<string> chartPrefabNames { get { return m_ChartPrefabNames; } }
         public List<ChartThumb> chartThumbs = new List<ChartThumb>();
 
         public GameObject panel { get; set; }
@@ -44,6 +46,29 @@ namespace XChartsDemo
             else
                 return null;
         }
+
+        public string GetPrefabName(int index)
+        {
+            if (index >= 0 && index < m_ChartPrefabNames.Count)
+                return m_ChartPrefabNames[index];
+            else
+                return "";
+        }
+
+        public void SyncPrefabNames()
+        {
+            m_ChartPrefabNames.Clear();
+            int count = 0;
+            foreach (var prefab in m_ChartPrefabs)
+            {
+                if (prefab != null)
+                {
+                    m_ChartPrefabNames.Add(prefab.name);
+                    count++;
+                }
+            }
+            Debug.Log("SyncPrefabNames count:" + name + " " + count);
+        }
     }
 
     [CreateAssetMenu(menuName = "CreateDemoConfig")]
@@ -58,6 +83,7 @@ namespace XChartsDemo
         [SerializeField] private bool m_DarkMode = false;
         [SerializeField] public int selectedModuleIndex = -1;
         [SerializeField] private int m_ExtendedChartImgColumn = 5;
+        [SerializeField] private GameObject m_EmptyChartPrefab;
         [SerializeField] private List<ChartModule> m_ChartModules = new List<ChartModule>();
 #pragma warning restore 0649
 
@@ -69,5 +95,14 @@ namespace XChartsDemo
         public bool darkMode { get { return m_DarkMode; } }
         public List<ChartModule> chartModules { get { return m_ChartModules; } }
         public int extendedChartImgColumn { get { return m_ExtendedChartImgColumn; } }
+        public GameObject emptyChartPrefab { get { return m_EmptyChartPrefab; } }
+
+        public void Init()
+        {
+            foreach (var module in m_ChartModules)
+            {
+                module.SyncPrefabNames();
+            }
+        }
     }
 }

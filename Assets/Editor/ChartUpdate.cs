@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEditor;
 using System.IO;
 using XCharts.Runtime;
+using XChartsDemo;
 
 public static class ChartUpdate
 {
@@ -93,6 +94,23 @@ public static class ChartUpdate
             var assetPath = AssetDatabase.GetAssetPath(obj);
             var newPath = assetPath.Replace(".prefab", "_copy.prefab");
             AssetDatabase.CopyAsset(assetPath, newPath);
+        }
+        AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
+    }
+
+    [MenuItem("Assets/XCharts/SyncDemoConfigPrefabNames")]
+    public static void SyncDemoConfigPrefabNames()
+    {
+        foreach (var obj in Selection.objects)
+        {
+            if (obj.name == "DemoConfig")
+            {
+                var assetPath = AssetDatabase.GetAssetPath(obj);
+                var config = AssetDatabase.LoadAssetAtPath<DemoConfig>(assetPath);
+                config.Init();
+                EditorUtility.SetDirty(config);
+            }
         }
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
