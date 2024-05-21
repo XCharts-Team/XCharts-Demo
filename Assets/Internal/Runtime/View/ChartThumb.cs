@@ -20,6 +20,7 @@ namespace XChartsDemo
         public bool isBindPrefab = false;
         public bool isBindAction = false;
         public GameObject bindPrefab;
+        public string bindPrefabName;
         public UnityAction bindAction;
 
         private void Awake()
@@ -32,7 +33,7 @@ namespace XChartsDemo
         {
             if (!isBindPrefab)
             {
-                BindPrefab(bindPrefab);
+                BindPrefab(bindPrefab, bindPrefabName);
             }
             if (!isBindAction)
             {
@@ -53,13 +54,13 @@ namespace XChartsDemo
             }
         }
 
-        public void BindPrefab(GameObject prefab)
+        public void BindPrefab(GameObject prefab, string prefabName)
         {
             if (prefab == null) return;
             bindPrefab = prefab;
+            bindPrefabName = prefabName;
             if (chartParent == null) return;
-            // ChartHelper.DestroyAllChildren(chartParent);
-            var names = prefab.name.Split('_');
+            var names = string.IsNullOrEmpty(prefabName) ? prefab.name.Split('_') : prefabName.Split('_');
             var chart = UIUtil.Instantiate(prefab, chartParent, prefab.name);
             if (names.Length >= 3)
             {

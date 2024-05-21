@@ -266,29 +266,28 @@ namespace XChartsDemo
                 if (prefab == null)
                 {
                     prefab = config.emptyChartPrefab;
-                    var name = module.GetPrefabName(index);
-                    if (string.IsNullOrEmpty(name))
-                        prefab.name = string.Format("ExtendedChart{0}_{1}_{2}", index, module.name, module.name);
-                    else
-                        prefab.name = name;
                 }
+                var prefabName = module.GetPrefabName(index);
+                if (string.IsNullOrEmpty(prefabName))
+                    prefabName = string.Format("{1}{0}_{1}_{2}", index, module.name, module.subName);
+
                 GameObject obj;
                 if (prefab == null)
                 {
-                    obj = UIUtil.Instantiate(m_ThumbClone, module.panel.transform, module.name + "_" + index);
+                    obj = UIUtil.Instantiate(m_ThumbClone, module.panel.transform, prefabName);
                 }
                 else
                 {
-                    if (module.panel.transform.Find(prefab.name))
-                        obj = module.panel.transform.Find(prefab.name).gameObject;
+                    if (module.panel.transform.Find(prefabName))
+                        obj = module.panel.transform.Find(prefabName).gameObject;
                     else
-                        obj = UIUtil.Instantiate(m_ThumbClone, module.panel.transform, prefab.name);
+                        obj = UIUtil.Instantiate(m_ThumbClone, module.panel.transform, prefabName);
                 }
                 obj.SetActive(true);
                 var thumb = ChartHelper.EnsureComponent<ChartThumb>(obj);
                 module.chartThumbs.Add(thumb);
                 thumb.index = index;
-                thumb.BindPrefab(prefab);
+                thumb.BindPrefab(prefab, prefabName);
                 thumb.AddBtnListener(delegate ()
                 {
                     m_SelectedPanel = m_DetailChartRoot;
@@ -296,8 +295,8 @@ namespace XChartsDemo
                     CheckArrowButton(module, thumb);
                     if (prefab == null) return;
                     ChartHelper.DestroyAllChildren(m_DetailChartRoot.transform);
-                    UIUtil.Instantiate(prefab, m_DetailChartRoot.transform, prefab.name);
-                    var names = prefab.name.Split('_');
+                    UIUtil.Instantiate(prefab, m_DetailChartRoot.transform, prefabName);
+                    var names = prefabName.Split('_');
                     UIUtil.SetActive(m_DetailRoot, m_SelectedTheme == ThemeType.Dark, "desc/dark");
                     UIUtil.SetActive(m_DetailRoot, m_SelectedTheme != ThemeType.Dark, "desc/default");
                     var showTitle = true;
