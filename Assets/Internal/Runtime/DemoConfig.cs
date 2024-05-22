@@ -20,17 +20,17 @@ namespace XChartsDemo
         [SerializeField] private string m_SubName = "SubName";
         [SerializeField] private ChartType m_Type = ChartType.Buildin;
         [SerializeField] private bool m_Selected;
-        [SerializeField] private bool m_Buildin;
         [SerializeField] private List<GameObject> m_ChartPrefabs = new List<GameObject>();
         [SerializeField] private List<string> m_ChartPrefabNames = new List<string>();
 
+        private List<ChartThumb> m_RuntimeChartThumbs = new List<ChartThumb>();
         public string name { get { return m_Name; } }
         public string subName { get { return m_SubName; } }
         public bool select { get { return m_Selected; } set { m_Selected = value; } }
         public ChartType type { get { return m_Type; } }
         public List<GameObject> chartPrefabs { get { return m_ChartPrefabs; } }
         public List<string> chartPrefabNames { get { return m_ChartPrefabNames; } }
-        public List<ChartThumb> chartThumbs = new List<ChartThumb>();
+        public List<ChartThumb> chartThumbs { get { return m_RuntimeChartThumbs; } }
 
         public GameObject panel { get; set; }
         public Button button { get; set; }
@@ -69,6 +69,18 @@ namespace XChartsDemo
             }
             Debug.Log("SyncPrefabNames count:" + name + " " + count);
         }
+
+        public void RemoveMissingPrefab()
+        {
+            for (int i = m_ChartPrefabs.Count - 1; i >= 0; i--)
+            {
+                if (m_ChartPrefabs[i] == null)
+                {
+                    m_ChartPrefabs.RemoveAt(i);
+                }
+            }
+            SyncPrefabNames();
+        }
     }
 
     [CreateAssetMenu(menuName = "CreateDemoConfig")]
@@ -102,6 +114,14 @@ namespace XChartsDemo
             foreach (var module in m_ChartModules)
             {
                 module.SyncPrefabNames();
+            }
+        }
+
+        public void RemoveMissingPrefab()
+        {
+            foreach (var module in m_ChartModules)
+            {
+                module.RemoveMissingPrefab();
             }
         }
     }

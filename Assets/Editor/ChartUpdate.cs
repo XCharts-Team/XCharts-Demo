@@ -116,6 +116,23 @@ public static class ChartUpdate
         AssetDatabase.Refresh();
     }
 
+    [MenuItem("Assets/XCharts/RemoveDemoConfigMissingPrefab")]
+    public static void RemoveDemoConfigMissingPrefab()
+    {
+        foreach (var obj in Selection.objects)
+        {
+            if (obj.name == "DemoConfig")
+            {
+                var assetPath = AssetDatabase.GetAssetPath(obj);
+                var config = AssetDatabase.LoadAssetAtPath<DemoConfig>(assetPath);
+                config.RemoveMissingPrefab();
+                EditorUtility.SetDirty(config);
+            }
+        }
+        AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
+    }
+
     private static void RebuildChartPrefab(Object obj)
     {
         var prefab = PrefabUtility.InstantiatePrefab(obj) as GameObject;
