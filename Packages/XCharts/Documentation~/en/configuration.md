@@ -422,6 +422,7 @@ The axis in rectangular coordinate.
 |inverse|false||Whether the axis are reversed or not. Invalid in `Category` axis.
 |clockwise|true||Whether the positive position of axis is in clockwise. True for clockwise by default.
 |insertDataToHead|||Whether to add new data at the head or at the end of the list.
+|minCategorySpacing|0|v3.11.0|The minimum spacing between categories.
 |icons|||类目数据对应的图标。
 |data|||Category data, available in type: 'Category' axis.
 |axisLine|||axis Line. [AxisLine](#axisline)|
@@ -2338,7 +2339,7 @@ Tooltip component.
 |field|default|since|comment|
 |--|--|--|--|
 |show|true||Whether to show the tooltip component.
-|type|||Indicator type.<br/>`Tooltip.Type`:<br/>- `Line`: line indicator.<br/>- `Shadow`: shadow crosshair indicator.<br/>- `None`: no indicator displayed.<br/>- `Corss`: crosshair indicator, which is actually the shortcut of enable two axisPointers of two orthometric axes.<br/>- `Auto`: Auto select indicator according to serie type.<br/>|
+|type|||Indicator type.<br/>`Tooltip.Type`:<br/>- `Line`: line indicator.<br/>- `Shadow`: shadow crosshair indicator.<br/>- `None`: no indicator displayed.<br/>- `Cross`: crosshair indicator, which is actually the shortcut of enable two axisPointers of two orthometric axes.<br/>- `Auto`: Auto select indicator according to serie type.<br/>|
 |trigger|||Type of triggering.<br/>`Tooltip.Trigger`:<br/>- `Item`: Triggered by data item, which is mainly used for charts that don't have a category axis like scatter charts or pie charts.<br/>- `Axis`: Triggered by axes, which is mainly used for charts that have category axes, like bar charts or line charts.<br/>- `None`: Trigger nothing.<br/>- `Auto`: Auto select trigger according to serie type.<br/>|
 |triggerOn||v3.11.0|Condition of trigger tooltip.<br/>`Tooltip.TriggerOn`:<br/>- `MouseMove`: Trigger when mouse move.<br/>- `Click`: Trigger when mouse click.<br/>|
 |position||v3.3.0|Type of position.<br/>`Tooltip.Position`:<br/>- `Auto`: Auto. The mobile platform is displayed at the top, and the non-mobile platform follows the mouse position.<br/>- `Custom`: Custom. Fully customize display position (x,y).<br/>- `FixedX`: Just fix the coordinate X. Y follows the mouse position.<br/>- `FixedY`: <br/>|

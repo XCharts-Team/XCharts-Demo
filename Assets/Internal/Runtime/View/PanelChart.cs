@@ -67,7 +67,7 @@ namespace XChartsDemo
             UIUtil.SetRectTransformWidth(transform, config.leftWidth, "chart_btn");
             UIUtil.SetRectTransformLeft(transform, config.leftWidth, "chart_list");
             UIUtil.SetRectTransformLeft(transform, config.leftWidth, "chart_title");
-            UIUtil.SetGridLayoutGroup(transform, new Vector2(config.leftWidth, config.buttonHeight), new Vector2(0, 0), "chart_btn/Viewport/content");
+            UIUtil.SetGridLayoutGroup(transform, new Vector2(config.leftWidth, config.buttonHeight), new Vector2(0, 2), "chart_btn/Viewport/content");
             foreach (var module in config.chartModules)
             {
                 SetChartRootInfo(module);

@@ -415,6 +415,7 @@ import APITable from '@site/src/components/APITable';
 |inverse|false||是否反向坐标轴。在类目轴中无效。
 |clockwise|true||刻度增长是否按顺时针，默认顺时针。
 |insertDataToHead|||添加新数据时是在列表的头部还是尾部加入。
+|minCategorySpacing|0|v3.11.0|类目之间的最小间距。
 |icons|||类目数据对应的图标。
 |data|||类目数据，在类目轴（type: 'category'）中有效。
 |axisLine|||坐标轴轴线。 [AxisLine](#axisline)|
@@ -2266,7 +2267,7 @@ Serie的状态样式。Serie的状态有正常，高亮，淡出，选中四种�
 |参数|默认|版本|描述|
 |--|--|--|--|
 |show|true||是否显示提示框组件。
-|type|||提示框指示器类型。<br/>`Tooltip.Type`:<br/>- `Line`: 直线指示器<br/>- `Shadow`: 阴影指示器<br/>- `None`: 无指示器<br/>- `Corss`: 十字准星指示器。坐标轴显示Label和交叉线。<br/>- `Auto`: 根据serie的类型自动选择显示指示器。<br/>|
+|type|||提示框指示器类型。<br/>`Tooltip.Type`:<br/>- `Line`: 直线指示器<br/>- `Shadow`: 阴影指示器<br/>- `None`: 无指示器<br/>- `Cross`: 十字准星指示器。坐标轴显示Label和交叉线。<br/>- `Auto`: 根据serie的类型自动选择显示指示器。<br/>|
 |trigger|||触发类型。<br/>`Tooltip.Trigger`:<br/>- `Item`: 数据项图形触发，主要在散点图，饼图等无类目轴的图表中使用。<br/>- `Axis`: 坐标轴触发，主要在柱状图，折线图等会使用类目轴的图表中使用。<br/>- `None`: 什么都不触发。<br/>- `Auto`: 根据serie的类型自动选择触发类型。<br/>|
 |triggerOn||v3.11.0|触发条件。<br/>`Tooltip.TriggerOn`:<br/>- `MouseMove`: 鼠标移动时触发。<br/>- `Click`: 鼠标点击时触发。<br/>|
 |position||v3.3.0|显示位置类型。<br/>`Tooltip.Position`:<br/>- `Auto`: 自适应。移动平台靠顶部显示，非移动平台跟随鼠标位置。<br/>- `Custom`: 自定义。完全自定义显示位置(x,y)。<br/>- `FixedX`: 只固定坐标X。Y跟随鼠标位置。<br/>- `FixedY`: <br/>|

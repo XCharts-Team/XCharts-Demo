@@ -443,6 +443,7 @@ slug: /api
 |Clone()||public Axis Clone()|
 |Copy()||public void Copy(Axis axis)|
 |GetAddedDataCount()||public int GetAddedDataCount()<br/>获得添加过的历史数据总数 |
+|GetCategoryPosition()||public Vector3 GetCategoryPosition(int categoryIndex, int dataCount = 0)|
 |GetData()||public string GetData(int index)<br/>获得指定索引的类目数据 |
 |GetData()||public string GetData(int index, DataZoom dataZoom)<br/>获得在dataZoom范围内指定索引的类目数据 |
 |GetDistance()||public float GetDistance(double value, float axisLength = 0)<br/>获得值在坐标轴上的距离 |
@@ -1467,6 +1468,7 @@ DataZoom 组件 用于区域缩放，从而能自由关注细节的数据信息�
 |GetNodesTotalValue()||public static double GetNodesTotalValue(List&lt;GraphNode&gt; nodes)|
 |GetRootNodes()||public List&lt;GraphNode&gt; GetRootNodes()|
 |GraphData()||public GraphData(bool directed)|
+|IsAllNodeInZeroPosition()||public bool IsAllNodeInZeroPosition()|
 |Refresh()||public void Refresh()|
 
 ## GraphEdge
