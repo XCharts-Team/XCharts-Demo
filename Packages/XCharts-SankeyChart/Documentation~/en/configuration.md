@@ -22,6 +22,7 @@ Sankey diagram is a special flow diagram, which is mainly used to express how th
 |collapseMutex|true|v3.11.0|whether collapse mutex.
 |collapseLevel|-1|v3.11.0|the level of collapse. The level starts from 0, and -1 means no limit.
 |defaultExpandDataIndex|-1|v3.11.0|the default expand data index.
+|lineGradient|true|v3.11.0|whether line gradient. If enabled, the color of lineStyle will not work.
 |levelStyle|||the style of level.
 
 ```mdx-code-block

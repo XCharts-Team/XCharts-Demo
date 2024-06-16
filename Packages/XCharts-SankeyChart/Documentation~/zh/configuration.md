@@ -21,6 +21,7 @@
 |collapseMutex|true|v3.11.0|是否开启折叠互斥。
 |collapseLevel|-1|v3.11.0|折叠限制的层级。层级从0开始，-1表示不限制。
 |defaultExpandDataIndex|-1|v3.11.0|默认展开的数据索引。
+|lineGradient|true|v3.11.0|是否开启线条渐变。开启后lineStyle的color将不生效。
 |levelStyle|||层级样式。
 
 ```mdx-code-block

@@ -28,6 +28,10 @@ Demo仓库：[XCharts-FunnelChart-Demo](https://github.com/XCharts-Team/XCharts-
 
 ## 日志
 
+### v3.11.0
+
+* (2024.06.16) 发布`v3.11.0`版本
+
 ### v3.9.0
 
 * (2023.12.01) 发布`v3.9.0`版本

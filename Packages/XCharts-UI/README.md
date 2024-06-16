@@ -18,6 +18,10 @@ Demo仓库：[XCharts-UI-Demo](https://github.com/XCharts-Team/XCharts-UI-Demo)
 
 ## 更新日志
 
+### v3.11.0
+
+* (2024.06.16) 发布`v3.11.0`版本
+
 ## v3.10.0
 
 * (2024.01.16) 增加`UIImage`图片组件

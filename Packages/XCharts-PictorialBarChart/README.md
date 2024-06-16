@@ -27,6 +27,10 @@ Demo仓库：[XCharts-PictorialBarChart-Demo](https://github.com/XCharts-Team/XC
 
 ## 日志
 
+### v3.11.0
+
+* (2024.06.16) 发布`v3.11.0`版本
+
 ### v3.10.0
 
 * (2023.12.19) 调整`Border`相关代码

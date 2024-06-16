@@ -27,6 +27,10 @@ Demo仓库：[XCharts-PyramidChart-Demo](https://github.com/XCharts-Team/XCharts
 
 ## 日志
 
+### v3.11.0
+
+* (2024.06.16) 发布`v3.11.0`版本
+
 ### v3.10.0
 
 * (2024.01.21) 增加`Pyramid`的更多创建默认图表的快捷方式和API

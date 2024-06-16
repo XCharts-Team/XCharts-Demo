@@ -28,6 +28,10 @@ Demo仓库：[XCharts-Bar3DChart-Demo](https://github.com/XCharts-Team/XCharts-B
 
 ## 日志
 
+### v3.11.0
+
+* (2024.06.16) 发布`v3.11.0`版本
+
 ### v3.10.0
 
 * (2023.12.16) 增加`Bar3D`的更多默认图表快捷方式和API

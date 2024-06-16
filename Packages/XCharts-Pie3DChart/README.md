@@ -28,6 +28,10 @@ Demo仓库：[XCharts-Pie3DChart-Demo](https://github.com/XCharts-Team/XCharts-P
 
 ## 日志
 
+### v3.11.0
+
+* (2024.06.16) 发布`v3.11.0`版本
+
 ### v3.10.1
 
 * (2024.02.28) 修复`Pie3D`在动画过程中可能出现绘制异常的问题
