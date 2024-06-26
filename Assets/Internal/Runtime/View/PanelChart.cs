@@ -230,14 +230,13 @@ namespace XChartsDemo
 
         public void InitChartList(ChartModule module, bool firstInit)
         {
-            module.chartThumbs.Clear();
             if (!Application.isPlaying)
             {
                 // if (firstInit) ChartHelper.DestroyAllChildren(module.panel.transform);
                 // else UIUtil.SetActiveAllChildren(module.panel, false);
                 UIUtil.SetActiveAllChildren(module.panel, false);
                 module.panel.SetActive(module.select);
-
+                module.chartThumbs.Clear();
                 for (int i = 0; i < module.chartPrefabs.Count; i++)
                     InitChartThumb(module, module.chartPrefabs[i], i);
             }
@@ -361,8 +360,10 @@ namespace XChartsDemo
             }
             else
             {
-                UIUtil.SetActive(gameObject, module.GetThumb(thumb.index + 1) != null, "chart_detail/btn_next");
-                UIUtil.SetActive(gameObject, module.GetThumb(thumb.index - 1) != null, "chart_detail/btn_last");
+                var nextThumb = module.GetThumb(thumb.index + 1);
+                var lastThumb = module.GetThumb(thumb.index - 1);
+                UIUtil.SetActive(gameObject, nextThumb != null, "chart_detail/btn_next");
+                UIUtil.SetActive(gameObject, lastThumb != null, "chart_detail/btn_last");
             }
 
         }
