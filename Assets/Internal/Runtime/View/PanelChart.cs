@@ -236,7 +236,6 @@ namespace XChartsDemo
                 // else UIUtil.SetActiveAllChildren(module.panel, false);
                 UIUtil.SetActiveAllChildren(module.panel, false);
                 module.panel.SetActive(module.select);
-                module.chartThumbs.Clear();
                 for (int i = 0; i < module.chartPrefabs.Count; i++)
                     InitChartThumb(module, module.chartPrefabs[i], i);
             }
@@ -284,7 +283,7 @@ namespace XChartsDemo
                 }
                 obj.SetActive(true);
                 var thumb = ChartHelper.EnsureComponent<ChartThumb>(obj);
-                module.chartThumbs.Add(thumb);
+                module.chartThumbs[index] = thumb;
                 thumb.index = index;
                 thumb.BindPrefab(prefab, prefabName);
                 thumb.AddBtnListener(delegate ()

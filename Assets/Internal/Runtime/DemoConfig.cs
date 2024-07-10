@@ -23,14 +23,14 @@ namespace XChartsDemo
         [SerializeField] private List<GameObject> m_ChartPrefabs = new List<GameObject>();
         [SerializeField] private List<string> m_ChartPrefabNames = new List<string>();
 
-        private List<ChartThumb> m_RuntimeChartThumbs = new List<ChartThumb>();
+        private Dictionary<int, ChartThumb> m_RuntimeChartThumbs = new Dictionary<int, ChartThumb>();
         public string name { get { return m_Name; } }
         public string subName { get { return m_SubName; } }
         public bool select { get { return m_Selected; } set { m_Selected = value; } }
         public ChartType type { get { return m_Type; } }
         public List<GameObject> chartPrefabs { get { return m_ChartPrefabs; } }
         public List<string> chartPrefabNames { get { return m_ChartPrefabNames; } }
-        public List<ChartThumb> chartThumbs { get { return m_RuntimeChartThumbs; } }
+        public Dictionary<int, ChartThumb> chartThumbs { get { return m_RuntimeChartThumbs; } }
 
         public GameObject panel { get; set; }
         public Button button { get; set; }
@@ -41,8 +41,10 @@ namespace XChartsDemo
 
         public ChartThumb GetThumb(int index)
         {
-            if (index >= 0 && index < chartThumbs.Count)
+            if (chartThumbs.ContainsKey(index))
+            {
                 return chartThumbs[index];
+            }
             else
                 return null;
         }
