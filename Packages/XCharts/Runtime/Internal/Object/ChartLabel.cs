@@ -56,7 +56,7 @@ namespace XCharts.Runtime
         protected override void Awake()
         {
             raycastTarget = false;
-            SetActive(false, true);
+            m_Active = ChartHelper.IsActiveByScale(gameObject);
         }
 
         public void SetTextPadding(TextPadding padding)
