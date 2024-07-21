@@ -41,22 +41,42 @@ public static class ChartUpdate
         var files = new DirectoryInfo(Application.dataPath).GetFiles("*.prefab", SearchOption.AllDirectories);
         foreach (var file in files)
         {
-            var index = file.FullName.IndexOf("Assets/");
-            var assetPath = file.FullName.Substring(index);
+            var path = file.FullName.Replace("\\", "/");
+            var index = path.IndexOf("Assets/");
+            var assetPath = path.Substring(index);
             var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(assetPath);
             RebuildChartPrefab(prefab);
         }
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
     }
+
+    
+    [MenuItem("Tools/ResetAllChartConfigurations")]
+    public static void ResetChartConfigurations()
+    {
+        var files = new DirectoryInfo(Application.dataPath).GetFiles("*.prefab", SearchOption.AllDirectories);
+        foreach (var file in files)
+        {
+            var path = file.FullName.Replace("\\", "/");
+            var index = path.IndexOf("Assets/");
+            var assetPath = path.Substring(index);
+            var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(assetPath);
+            ResetChartConfigurations(prefab);
+        }
+        AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
+    }
+    
     [MenuItem("Tools/SetAllBackgroundComponent")]
     public static void SetAllBackgroundComponent()
     {
         var files = new DirectoryInfo(Application.dataPath).GetFiles("*.prefab", SearchOption.AllDirectories);
         foreach (var file in files)
         {
-            var index = file.FullName.IndexOf("Assets/");
-            var assetPath = file.FullName.Substring(index);
+            var path = file.FullName.Replace("\\", "/");
+            var index = path.IndexOf("Assets/");
+            var assetPath = path.Substring(index);
             var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(assetPath);
             SetBackgroundComponent(prefab);
         }
@@ -148,8 +168,32 @@ public static class ChartUpdate
 #else
                 PrefabUtility.ReplacePrefab(prefab, obj, ReplacePrefabOptions.ConnectToPrefab);
 #endif
-                GameObject.DestroyImmediate(prefab);
             }
+            GameObject.DestroyImmediate(prefab);
+        }
+    }
+
+    private static void ResetChartConfigurations(Object obj)
+    {
+        var prefab = PrefabUtility.InstantiatePrefab(obj) as GameObject;
+        if (prefab != null)
+        {
+            var chart = prefab.GetComponent<BaseChart>();
+            if (chart != null)
+            {
+                var tooltip = chart.GetChartComponent<Tooltip>();
+                if (tooltip != null)
+                {
+                    tooltip.paddingLeftRight = 10;
+                    tooltip.paddingTopBottom = 10;
+                }
+#if UNITY_2018_3_OR_NEWER
+                PrefabUtility.SaveAsPrefabAsset(prefab, AssetDatabase.GetAssetPath(obj));
+#else
+                PrefabUtility.ReplacePrefab(prefab, obj, ReplacePrefabOptions.ConnectToPrefab);
+#endif
+            }
+            GameObject.DestroyImmediate(prefab);
         }
     }
 
@@ -173,8 +217,8 @@ public static class ChartUpdate
 #else
                 PrefabUtility.ReplacePrefab(prefab, obj, ReplacePrefabOptions.ConnectToPrefab);
 #endif
-                GameObject.DestroyImmediate(prefab);
             }
+            GameObject.DestroyImmediate(prefab);
         }
     }
 }
