@@ -2,54 +2,119 @@
 
 ## Bar3D
 
-> class in XCharts.Runtime.Bar3Ds / Inherits from: [Serie](https://xcharts-team.github.io/docs/configuration#serie), [INeedSerieContainer](https://xcharts-team.github.io/docs/configuration#ineedseriecontainer)
+class in XCharts.Runtime.Bar3Ds / Inherits from: [Serie](https://xcharts-team.github.io/docs/configuration#serie), [INeedSerieContainer](https://xcharts-team.github.io/docs/configuration#ineedseriecontainer)
 
 Bar3D.
 
-```mdx-code-block
-<APITable name="Bar3D">
-```
+### Bar3D.bar3DStyle
+
+[Bar3DStyle](#bar3dstyle)
+
+### Bar3D.bar3DType
+
+[Bar3DType](#bar3dtype) `v3.1.0`
 
 
-|field|default|since|comment|
-|--|--|--|--|
-|bar3DType||v3.1.0|<br/>`Bar3DType`:<br/>- `Cube`: Cube.<br/>- `Cylinder`: Cylinder.<br/>|
-|bar3DStyle||| [Bar3DStyle](#bar3dstyle)|
 
-```mdx-code-block
-</APITable>
-```
+Options:
+
+- `Cube`: Cube.
+- `Cylinder`: Cylinder.
 
 ## Bar3DStyle
 
-> class in XCharts.Runtime.Bar3Ds / Inherits from: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+class in XCharts.Runtime.Bar3Ds / Inherits from: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
 
-```mdx-code-block
-<APITable name="Bar3DStyle">
-```
+### Bar3DStyle.barOffset
 
+`Vector3` `Vector3.zero`
 
-|field|default|since|comment|
-|--|--|--|--|
-|show|true||
-|verticalArrange|false||Vertical arrange or not.
-|verticalArrangeDire|Vector3(-1, 1)||The direction vector of vertical.
-|verticalArrangeGap|0.5f||The gap of vertical arrange bar3d.
-|barOffset|Vector3.zero||The offset of bar.
-|widthRate|0.5f||The rate of side width.
-|topColorRate|0.8f||The color rate of top.
-|bottomColorRate|1f||The color rate of bottom.
-|sideColorRate|0.7f||The color rate of side.
-|cubeDire|Vector3(1, 1)||The direction vector of bar3d.
-|cylinderRate|0.5f|v3.1.0|The rate of top ellipse.
-|topColor||v3.6.0|
-|bottomColor||v3.6.0|
-|sideColor||v3.6.0|
-|occludedAreaBorder||v3.10.0|Whether to show the border of occluded area.
-|occludedAreaBorderDash||v3.10.0|Whether to show dash border of occluded area.
-|borderDash||v3.10.0|wherther to show dash border.
+The offset of bar.
 
-```mdx-code-block
-</APITable>
-```
+### Bar3DStyle.borderDash
 
+`bool` `v3.10.0`
+
+wherther to show dash border.
+
+### Bar3DStyle.bottomColor
+
+`Color32` `v3.6.0`
+
+### Bar3DStyle.bottomColorRate
+
+`float` `1f`
+
+The color rate of bottom.
+
+### Bar3DStyle.cubeDire
+
+`Vector3` `Vector3(1, 1)`
+
+The direction vector of bar3d.
+
+### Bar3DStyle.cylinderRate
+
+`float` `0.5f` `v3.1.0`
+
+The rate of top ellipse.
+
+### Bar3DStyle.occludedAreaBorder
+
+`bool` `v3.10.0`
+
+Whether to show the border of occluded area.
+
+### Bar3DStyle.occludedAreaBorderDash
+
+`bool` `v3.10.0`
+
+Whether to show dash border of occluded area.
+
+### Bar3DStyle.show
+
+`bool` `true`
+
+### Bar3DStyle.sideColor
+
+`Color32` `v3.6.0`
+
+### Bar3DStyle.sideColorRate
+
+`float` `0.7f`
+
+The color rate of side.
+
+### Bar3DStyle.topColor
+
+`Color32` `v3.6.0`
+
+### Bar3DStyle.topColorRate
+
+`float` `0.8f`
+
+The color rate of top.
+
+### Bar3DStyle.verticalArrange
+
+`bool` `false`
+
+Vertical arrange or not.
+
+### Bar3DStyle.verticalArrangeDire
+
+`Vector3` `Vector3(-1, 1)`
+
+The direction vector of vertical.
+
+### Bar3DStyle.verticalArrangeGap
+
+`float` `0.5f`
+
+The gap of vertical arrange bar3d.
+
+### Bar3DStyle.widthRate
+
+`float` `0.5f`
+
+The rate of side width.

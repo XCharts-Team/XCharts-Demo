@@ -27,6 +27,11 @@ Demo仓库：[XCharts-PyramidChart-Demo](https://github.com/XCharts-Team/XCharts
 
 ## 日志
 
+### v3.12.0
+
+* (2024.09.30) 发布`v3.12.0`版本
+* (2024.09.30) 更新文档
+
 ### v3.11.0
 
 * (2024.06.16) 发布`v3.11.0`版本
