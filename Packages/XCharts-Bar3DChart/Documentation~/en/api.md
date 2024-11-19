@@ -26,14 +26,9 @@ public static Bar3D ConvertSerie(Serie serie)
 
 class in XCharts.Runtime.Bar3Ds / Inherits from: [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
 
-### Bar3DChart.DefaultCylinderChart()
-
-public void DefaultCylinderChart()  
-generate default cylinder chart.
-
 ### Bar3DChart.DefaultCylinderChart
 
-public void DefaultCylinderChart(){  
+public void DefaultCylinderChart()  
 generate default cylinder chart.
 
 ### Bar3DChart.DefaultGroupedCubeChart

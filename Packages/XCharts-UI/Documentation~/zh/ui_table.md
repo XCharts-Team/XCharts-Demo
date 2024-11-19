@@ -1,7 +1,7 @@
 
 # UITable 表格
 
-![table](img/table.png)
+![table](../img/table.png)
 
 `表格`组件。可用于展示行列数据。
 

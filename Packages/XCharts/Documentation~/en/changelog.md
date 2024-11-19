@@ -1,5 +1,9 @@
+---
+sidebar_position: 61
+slug: /changelog
+---
 
-# 更新日志
+# Changelog
 
 [master](#master)  
 [v3.12.0](#v3120)  
@@ -153,7 +157,7 @@ Changelog Details:
 ## v3.10.2
 
 * (2024.03.11) Release `v3.10.2`
-* (2024.03.11) Fix to `Legend`'s `formatter` showing possible mismatches when setting {d} (#304)
+* (2024.03.11) Fix to `Legend`'s `formatter` showing possible mismatches when setting `{d}` (#304)
 * (2024.03.11) Fix to `Tooltip` still showing after moving out of coordinate system
 * (2024.03.08) Fixed an issue where `Tooltip`'s title might not appear after upgrading from an older version
 
@@ -171,7 +175,7 @@ Highlights:
 * Added chart border Settings to support rounded corner charts
 * Fixed several issues
 
-Extended features:
+Extension features:
 
 * Added `SankeyChart` Sankey chart
 * Added `border` Settings for `UITable`
@@ -212,7 +216,7 @@ Highlights:
 * Perfect code comments and documentation
 * Fixed several issues
 
-Extended features:
+Extension features:
 
 * `UITable` adds the carousel function
 * `UITable` adds data api and callback functions
@@ -377,7 +381,7 @@ Log details:
 
 Highlights:
 
-* Updated documentation structure, added [Official XCharts Homepage](https://xcharts-team.github.io)
+* Updated documentation structure, added [Official XCharts Homepage](https://xcharts-team.github.io/en)
 * Added support for the DataZoom box selected.
 * Added support for maximum width Settings for bars.
 * Other optimizations.
@@ -629,7 +633,7 @@ Details:
 * (2022.03.20) Release `v2.7.0` version
 * (2022.02.21) Fixed chart name repeat check error #183
 * (2022.02.17) Fixed bug where axis split line might be displayed outside the coordinate system #181
-* (2022.02.08) Fixed {d} formatter error when value is 0
+* (2022.02.08) Fixed `{d}` formatter error when value is 0
 * (2022.02.08) Fixed `YAxis` `AxisLabel`'s `onZero` does not work
 * (2022.01.06) Improved `Zebra` bar chart
 

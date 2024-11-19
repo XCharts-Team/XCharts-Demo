@@ -26,14 +26,9 @@ public static Bar3D ConvertSerie(Serie serie)
 
 class in XCharts.Runtime.Bar3Ds / 继承自: [BaseChart](https://xcharts-team.github.io/docs/api#basechart)
 
-### Bar3DChart.DefaultCylinderChart()
-
-public void DefaultCylinderChart()  
-生成默认的圆柱体图。
-
 ### Bar3DChart.DefaultCylinderChart
 
-public void DefaultCylinderChart(){  
+public void DefaultCylinderChart()  
 生成默认的圆柱体图。
 
 ### Bar3DChart.DefaultGroupedCubeChart

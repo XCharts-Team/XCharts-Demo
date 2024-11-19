@@ -1,6 +1,6 @@
 # UIStatistic 统计数值
 
-![statistic](img/statistic.png)
+![statistic](../img/statistic.png)
 
 `统计数值`组件。用于展示统计数值。
 

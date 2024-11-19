@@ -256,7 +256,7 @@ class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.g
 
 `string`
 
-行名称。可用于显示在行表头，用通配符{name}。
+行名称。可用于显示在行表头，用通配符\{name\}。
 
 ### TableRow.show
 

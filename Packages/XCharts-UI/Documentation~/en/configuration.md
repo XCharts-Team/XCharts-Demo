@@ -256,7 +256,7 @@ the height of the row. default 0, auto height.
 
 `string`
 
-the name of the row. can be used to display in the row header, use wildcard {name}.
+the name of the row. can be used to display in the row header, use wildcard \{name\}.
 
 ### TableRow.show
 

@@ -4,10 +4,19 @@ XCharts付费扩展图表 - 甘特图。
 
 ## 截图
 
-||||||
-| :--: | :--: | :--: | :--: | :--: |
-|![Gantt01](Documentation~/zh/img/Gantt01.png) |![Gantt02](Documentation~/zh/img/Gantt02.png) |![Gantt03](Documentation~/zh/img/Gantt03.png) |![Gantt04](Documentation~/zh/img/Gantt04.png) |![Gantt05](Documentation~/zh/img/Gantt05.png) |![Gantt06](Documentation~/zh/img/Gantt06.png) |
-|![Gantt07](Documentation~/zh/img/Gantt07.png) |
+<table>
+    <tr>
+        <td><img src="Documentation~/img/Gantt01.png" alt="Gantt01" /></td>
+        <td><img src="Documentation~/img/Gantt02.png" alt="Gantt02" /></td>
+        <td><img src="Documentation~/img/Gantt03.png" alt="Gantt03" /></td>
+        <td><img src="Documentation~/img/Gantt04.png" alt="Gantt04" /></td>
+    </tr>
+    <tr>
+        <td><img src="Documentation~/img/Gantt05.png" alt="Gantt05" /></td>
+        <td><img src="Documentation~/img/Gantt06.png" alt="Gantt06" /></td>
+        <td><img src="Documentation~/img/Gantt07.png" alt="Gantt07" /></td>
+    </tr>
+</table>
 
 ## 许可
 
@@ -25,47 +34,3 @@ Demo仓库：[XCharts-GanttChart-Demo](https://github.com/XCharts-Team/XCharts-G
 
 [API](Documentation~/zh/api.md)  
 [配置项手册](Documentation~/zh/configuration.md)  
-
-## 日志
-
-### v3.12.0
-
-* (2024.09.30) 发布`v3.12.0`版本
-* (2024.09.30) 更新文档
-
-### v3.11.0
-
-* (2024.06.16) 发布`v3.11.0`版本
-
-### v3.10.0
-
-* (2024.01.21) 增加`Gantt`的更多创建默认图表的快捷方式和API
-
-### v3.9.0
-
-* (2023.12.01) 发布`v3.9.0`版本
-* (2023.12.01) 更新文档
-
-### v3.8.0
-
-* (2023.08.11) 增加鼠标事件支持
-
-### v3.6.1
-
-* (2023.06.08) 发布`v3.6.1`版本
-* (2023.06.08) 更新文档
-
-### v3.6.0
-
-* (2023.04.01) 发布`v3.6.0`版本
-* (2023.02.14) 同步`XCharts v3.6.0`
-
-### v3.5.0
-
-* (2022.12.01) 发布`v3.5.0`版本
-* (2022.11.27) 调整`Documentation`文档结构
-
-### v3.2.0
-
-* (2022.08.22) 发布`v3.2.0`版本
-* (2022.08.19) 同步`XCharts v3.2.0`
