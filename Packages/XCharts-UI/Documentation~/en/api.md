@@ -487,9 +487,17 @@ get the table cell content by row and column.
 public TableCell GetData(int row, int column)  
 get the table cell data by row and column.
 
+### UITable.OnBeginDrag
+
+public override void OnBeginDrag(PointerEventData eventData)  
+
 ### UITable.OnDrag
 
 public override void OnDrag(PointerEventData eventData)  
+
+### UITable.OnEndDrag
+
+public override void OnEndDrag(PointerEventData eventData)  
 
 ### UITable.OnPointerClick
 

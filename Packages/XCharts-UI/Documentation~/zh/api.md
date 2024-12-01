@@ -487,9 +487,17 @@ public string GetContent(int row, int column)
 public TableCell GetData(int row, int column)  
 获取指定行列的单元格数据。
 
+### UITable.OnBeginDrag
+
+public override void OnBeginDrag(PointerEventData eventData)  
+
 ### UITable.OnDrag
 
 public override void OnDrag(PointerEventData eventData)  
+
+### UITable.OnEndDrag
+
+public override void OnEndDrag(PointerEventData eventData)  
 
 ### UITable.OnPointerClick
 
