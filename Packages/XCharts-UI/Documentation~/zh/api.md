@@ -1,5 +1,54 @@
 # API
 
+## Context
+
+class in XCharts.Runtime.UI
+
+### Context.fillStyle
+
+public FillStyle fillStyle  
+进度条填充样式。
+
+### Context.labelStyle
+
+public LabelStyle labelStyle  
+进度条标签样式。
+
+### Context.max
+
+public float max  
+
+### Context.min
+
+public float min  
+进度条最小值。
+
+### Context.step
+
+public float step  
+进度条步长。
+
+### Context.type
+
+public Type type  
+进度条类型。
+
+### Context.value
+
+public float value  
+进度条当前值。
+
+## Context.Type
+
+class in XCharts.Runtime.UI
+
+进度条类型。
+
+可选：
+
+- `Line`: 水平进度条。
+- `Circle`: 圆形进度条。
+
 ## DataType
 
 class in XCharts.Runtime.UI
@@ -12,9 +61,238 @@ class in XCharts.Runtime.UI
 - `Bool`: 
 - `Sprite`: 
 
+## FillStyle
+
+class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+
+填充样式。
+
+### FillStyle.autoOffset
+
+public bool autoOffset  
+是否自动偏移填充位置。当为true时，会自动根据显示的文本或滑块大小自动进行左右缩进。
+
+### FillStyle.background
+
+public Background background  
+背景样式。
+
+### FillStyle.color
+
+public Color32 color  
+填充颜色。
+
+### FillStyle.height
+
+public float height  
+填充高度。优先级比top和bottom高。在环形进度条中表示环的宽度。
+
+### FillStyle.location
+
+public Location location  
+填充位置。
+
+### FillStyle.radius
+
+public float radius  
+填充半径。只在环形进度条中有效。
+
+### FillStyle.roundCap
+
+public bool roundCap  
+是否使用圆角。只在环形进度条中有效。
+
+### FillStyle.show
+
+public bool show  
+是否显示填充。
+
+### FillStyle.toColor
+
+public Color32 toColor  
+渐变结束颜色。
+
+### FillStyle.width
+
+public float width  
+填充宽度。优先级比left和right高。
+
+## HandleStyle
+
+class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+
+滑块样式。
+
+### HandleStyle.gradientColor
+
+public bool gradientColor  
+是否使用渐变颜色。滑动条设置渐变颜色时才生效。
+
+### HandleStyle.show
+
+public bool show  
+是否显示滑块。
+
+### HandleStyle.symbol
+
+public SymbolStyle symbol  
+图形样式。
+
 ## ITableCell
 
 class in XCharts.Runtime.UI / 子类: [TableCell](#tablecell) 
+
+## MarkStyle
+
+class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+
+标记样式。
+
+### MarkStyle.fillStyle
+
+public FillStyle fillStyle  
+填充样式。
+
+### MarkStyle.handleStyle
+
+public HandleStyle handleStyle  
+滑块样式。
+
+### MarkStyle.included
+
+public bool included  
+是否包含在范围内。为true时，标记显示为进度条颜色，否则显示为背景颜色。
+
+### MarkStyle.interactable
+
+public bool interactable  
+是否可交互。
+
+### MarkStyle.label
+
+public LabelStyle label  
+文本样式。
+
+### MarkStyle.markNames
+
+public List&lt;string&gt; markNames  
+标志名称。当指定有标志名称时，标记的文本会尝试从这里取。
+
+### MarkStyle.markStyle
+
+public MarkStyle markStyle  
+标记样式。
+
+### MarkStyle.markValues
+
+public List&lt;float&gt; markValues  
+标记值。当指定有标志值时，会在指定位置显示标记和文本。
+
+### MarkStyle.max
+
+public float max  
+最大值。滑块值不能大于最大值。
+
+### MarkStyle.min
+
+public float min  
+最小值。滑块值不能小于最小值。
+
+### MarkStyle.onRangeChanged
+
+public Action&lt;float, float&gt; onRangeChanged  
+滑块范围改变时的回调。
+
+### MarkStyle.onRangeChangedComplete
+
+public Action&lt;float, float&gt; onRangeChangedComplete  
+滑块范围改变完成时的回调。
+
+### MarkStyle.onValueChanged
+
+public Action&lt;float&gt; onValueChanged  
+滑块值改变时的回调。
+
+### MarkStyle.onValueChangedComplete
+
+public Action&lt;float&gt; onValueChangedComplete  
+滑块值改变完成时的回调。
+
+### MarkStyle.show
+
+public bool show  
+是否显示标记。
+
+### MarkStyle.step
+
+public float step  
+步长。滑块值会按照步长变化。
+
+### MarkStyle.symbol
+
+public SymbolStyle symbol  
+图形样式。
+
+### MarkStyle.value
+
+public float[] value  
+滑块当前值。这是一个二维数组，当为范围值类型时，两个值分别表示最小值和最大值，其他类型时只用第二个值。
+
+### MarkStyle.OnBeginDrag
+
+public override void OnBeginDrag(PointerEventData eventData)  
+
+### MarkStyle.OnDrag
+
+public override void OnDrag(PointerEventData eventData)  
+
+### MarkStyle.OnEndDrag
+
+public override void OnEndDrag(PointerEventData eventData)  
+
+### MarkStyle.OnPointerClick
+
+public override void OnPointerClick(PointerEventData eventData)  
+
+### MarkStyle.SetValue
+
+public void SetValue(float rangeMin, float rangeMax)  
+设置当前范围值。
+
+public void SetValue(float rangeMin, float rangeMax, float min, float max)  
+设置当前范围值和最大最小值。
+
+public void SetValue(float value, float min, float max)  
+设置当前值和最大最小值。
+
+
+## MarkStyle.value and the enum type.
+
+class in XCharts.Runtime.UI
+
+可选：
+
+- `public void SetValue(float value`: 设置当前枚举值和枚举类型。
+- `if (!enumType.IsEnum) return;`: 设置当前枚举值和枚举类型。
+- `valueType = ValueType.Enum;`: 设置当前枚举值和枚举类型。
+- `value[0] = 0;`: 设置当前枚举值和枚举类型。
+- `value[1] = value;`: 设置当前枚举值和枚举类型。
+- `var fields = enumType.GetFields(BindingFlags.Public | BindingFlags.Static);`: 设置当前枚举值和枚举类型。
+- `markValues.Clear();`: 设置当前枚举值和枚举类型。
+- `markNames.Clear();`: 设置当前枚举值和枚举类型。
+- `foreach (var field in fields)`: 设置当前枚举值和枚举类型。
+- `var v = (int)field.GetValue(null);`: 设置当前枚举值和枚举类型。
+- `if (m_Min > v) m_Min = v;`: 设置当前枚举值和枚举类型。
+- `if (m_Max < v) m_Max = v;`: 设置当前枚举值和枚举类型。
+- `markValues.Add(v);`: 设置当前枚举值和枚举类型。
+- `markNames.Add(field.Name);`: 设置当前枚举值和枚举类型。
+
+## MarkStyle.value.
+
+class in XCharts.Runtime.UI
+
+可选：
+
 
 ## StatisticContext
 
@@ -318,25 +596,23 @@ ui component of image. 图片UI组件。
 
 class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
 
-### UIProgress.backgroundColor
+## UISlider
 
-public Color32 backgroundColor  
+class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
 
-### UIProgress.cornerRadius
+UI滑动型输入组件，展示当前值和可选范围。
 
-public float[] cornerRadius  
+## UISlider.ValueType
 
-### UIProgress.endColor
+class in XCharts.Runtime.UI
 
-public Color32 endColor  
+值类型。
 
-### UIProgress.startColor
+可选：
 
-public Color32 startColor  
-
-### UIProgress.value
-
-public float value  
+- `Default`: 默认值。
+- `Range`: 范围值。
+- `Enum`: 枚举值。
 
 ## UIStatistic
 
@@ -581,9 +857,73 @@ public void UpdateRow(int rowIndex, params string[] row)
 更新一行数据。
 
 
+## UIText
+
+class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
+
+ui component of text. UI文本组件。
+
 ## UITimePicker
 
 class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
 
 时间选择UI组件。 输入或选择时间的控件。当用户需要输入一个时间，可以点击标准输入框，弹出时间面板进行选择。
+
+## UIToggle
+
+class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
+
+ui component of toggle. UI开关组件。
+
+### UIToggle.borderStyle
+
+public BorderStyle borderStyle  
+边框样式。
+
+### UIToggle.interactable
+
+public bool interactable  
+是否可交互。
+
+### UIToggle.isOn
+
+public bool isOn  
+是否开启。
+
+### UIToggle.labelStyle
+
+public LabelStyle labelStyle  
+文本样式。
+
+### UIToggle.markColor
+
+public Color32 markColor  
+标记颜色。
+
+### UIToggle.markGap
+
+public float markGap  
+
+### UIToggle.offColor
+
+public Color32 offColor  
+
+### UIToggle.onColor
+
+public Color32 onColor  
+开启时的颜色。
+
+### UIToggle.onValueChanged
+
+public Action&lt;bool&gt; onValueChanged  
+开关值改变时的回调函数。
+
+### UIToggle.text
+
+public string text  
+开关文本。
+
+### UIToggle.OnPointerClick
+
+public override void OnPointerClick(PointerEventData eventData)  
 

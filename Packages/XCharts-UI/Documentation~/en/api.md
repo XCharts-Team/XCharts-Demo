@@ -1,5 +1,54 @@
 # API
 
+## Context
+
+class in XCharts.Runtime.UI
+
+### Context.fillStyle
+
+public FillStyle fillStyle  
+The style of progress bar fill.
+
+### Context.labelStyle
+
+public LabelStyle labelStyle  
+The style of progress bar label.
+
+### Context.max
+
+public float max  
+
+### Context.min
+
+public float min  
+The minimum value of progress.
+
+### Context.step
+
+public float step  
+The step of progress.
+
+### Context.type
+
+public Type type  
+The type of progress.
+
+### Context.value
+
+public float value  
+The value of progress.
+
+## Context.Type
+
+class in XCharts.Runtime.UI
+
+The type of progress.
+
+Options:
+
+- `Line`: Horizontal progress bar.
+- `Circle`: Circle progress bar.
+
 ## DataType
 
 class in XCharts.Runtime.UI
@@ -12,9 +61,238 @@ Options:
 - `Bool`: 
 - `Sprite`: 
 
+## FillStyle
+
+class in XCharts.Runtime.UI / Inherits from: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+
+Style of fill.
+
+### FillStyle.autoOffset
+
+public bool autoOffset  
+Whether to automatically offset the fill position. When true, it will automatically indent left and right according to the displayed text or slider size.
+
+### FillStyle.background
+
+public Background background  
+Background style.
+
+### FillStyle.color
+
+public Color32 color  
+Fill color.
+
+### FillStyle.height
+
+public float height  
+Height of fill. Higher priority than top and bottom. Represents the width of the ring in the circular progress bar.
+
+### FillStyle.location
+
+public Location location  
+Location of fill.
+
+### FillStyle.radius
+
+public float radius  
+Fill radius. Only valid in circular progress bar.
+
+### FillStyle.roundCap
+
+public bool roundCap  
+Whether to use round cap. Only valid in circular progress bar.
+
+### FillStyle.show
+
+public bool show  
+Whether to show fill.
+
+### FillStyle.toColor
+
+public Color32 toColor  
+To color.
+
+### FillStyle.width
+
+public float width  
+Width of fill.
+
+## HandleStyle
+
+class in XCharts.Runtime.UI / Inherits from: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+
+Style of handle.
+
+### HandleStyle.gradientColor
+
+public bool gradientColor  
+Whether to use gradient color.
+
+### HandleStyle.show
+
+public bool show  
+Whether to show handle.
+
+### HandleStyle.symbol
+
+public SymbolStyle symbol  
+Style of symbol.
+
 ## ITableCell
 
 class in XCharts.Runtime.UI / Subclasses: [TableCell](#tablecell) 
+
+## MarkStyle
+
+class in XCharts.Runtime.UI / Inherits from: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+
+Style of mark.
+
+### MarkStyle.fillStyle
+
+public FillStyle fillStyle  
+Style of fill.
+
+### MarkStyle.handleStyle
+
+public HandleStyle handleStyle  
+Style of handle.
+
+### MarkStyle.included
+
+public bool included  
+Whether to include in the range. When true, the mark is displayed as the progress bar color, otherwise it is displayed as the background color.
+
+### MarkStyle.interactable
+
+public bool interactable  
+Whether the slider is interactable.
+
+### MarkStyle.label
+
+public LabelStyle label  
+Style of label.
+
+### MarkStyle.markNames
+
+public List&lt;string&gt; markNames  
+Names of marks. When specified with mark values, the mark and text are displayed at the specified position.
+
+### MarkStyle.markStyle
+
+public MarkStyle markStyle  
+Style of mark.
+
+### MarkStyle.markValues
+
+public List&lt;float&gt; markValues  
+Values of marks. When specified with mark names, the mark and text are displayed at the specified position.
+
+### MarkStyle.max
+
+public float max  
+Maximum value. The slider value cannot be greater than the maximum value.
+
+### MarkStyle.min
+
+public float min  
+Minimum value. The slider value cannot be less than the minimum value.
+
+### MarkStyle.onRangeChanged
+
+public Action&lt;float, float&gt; onRangeChanged  
+Callback when the range of the slider changes.
+
+### MarkStyle.onRangeChangedComplete
+
+public Action&lt;float, float&gt; onRangeChangedComplete  
+Callback when the range of the slider changes is completed.
+
+### MarkStyle.onValueChanged
+
+public Action&lt;float&gt; onValueChanged  
+Callback when the value of the slider changes.
+
+### MarkStyle.onValueChangedComplete
+
+public Action&lt;float&gt; onValueChangedComplete  
+Callback when the value of the slider changes is completed.
+
+### MarkStyle.show
+
+public bool show  
+Whether to show mark.
+
+### MarkStyle.step
+
+public float step  
+Step size. The value of the slider will change by step size.
+
+### MarkStyle.symbol
+
+public SymbolStyle symbol  
+Style of symbol.
+
+### MarkStyle.value
+
+public float[] value  
+Current value of the slider. This is a two-dimensional array. When it is a range value type, the two values represent the minimum and maximum values respectively, and when it is other types, only the second value is used.
+
+### MarkStyle.OnBeginDrag
+
+public override void OnBeginDrag(PointerEventData eventData)  
+
+### MarkStyle.OnDrag
+
+public override void OnDrag(PointerEventData eventData)  
+
+### MarkStyle.OnEndDrag
+
+public override void OnEndDrag(PointerEventData eventData)  
+
+### MarkStyle.OnPointerClick
+
+public override void OnPointerClick(PointerEventData eventData)  
+
+### MarkStyle.SetValue
+
+public void SetValue(float rangeMin, float rangeMax)  
+Set the range value of the slider.
+
+public void SetValue(float rangeMin, float rangeMax, float min, float max)  
+Set the range value and the maximum and minimum values.
+
+public void SetValue(float value, float min, float max)  
+Set the value and the maximum and minimum values.
+
+
+## MarkStyle.value and the enum type.
+
+class in XCharts.Runtime.UI
+
+Options:
+
+- `public void SetValue(float value`: Set the current enum value and the enum type.
+- `if (!enumType.IsEnum) return;`: Set the current enum value and the enum type.
+- `valueType = ValueType.Enum;`: Set the current enum value and the enum type.
+- `value[0] = 0;`: Set the current enum value and the enum type.
+- `value[1] = value;`: Set the current enum value and the enum type.
+- `var fields = enumType.GetFields(BindingFlags.Public | BindingFlags.Static);`: Set the current enum value and the enum type.
+- `markValues.Clear();`: Set the current enum value and the enum type.
+- `markNames.Clear();`: Set the current enum value and the enum type.
+- `foreach (var field in fields)`: Set the current enum value and the enum type.
+- `var v = (int)field.GetValue(null);`: Set the current enum value and the enum type.
+- `if (m_Min > v) m_Min = v;`: Set the current enum value and the enum type.
+- `if (m_Max < v) m_Max = v;`: Set the current enum value and the enum type.
+- `markValues.Add(v);`: Set the current enum value and the enum type.
+- `markNames.Add(field.Name);`: Set the current enum value and the enum type.
+
+## MarkStyle.value.
+
+class in XCharts.Runtime.UI
+
+Options:
+
 
 ## StatisticContext
 
@@ -318,25 +596,23 @@ ui component of image. 图片UI组件。
 
 class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
 
-### UIProgress.backgroundColor
+## UISlider
 
-public Color32 backgroundColor  
+class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
 
-### UIProgress.cornerRadius
+ui component of slider.
 
-public float[] cornerRadius  
+## UISlider.ValueType
 
-### UIProgress.endColor
+class in XCharts.Runtime.UI
 
-public Color32 endColor  
+Type of value.
 
-### UIProgress.startColor
+Options:
 
-public Color32 startColor  
-
-### UIProgress.value
-
-public float value  
+- `Default`: Default value.
+- `Range`: Range value.
+- `Enum`: Enum value.
 
 ## UIStatistic
 
@@ -581,9 +857,73 @@ public void UpdateRow(int rowIndex, params string[] row)
 update a row data.
 
 
+## UIText
+
+class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
+
+ui component of text. UI文本组件。
+
 ## UITimePicker
 
 class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
 
 时间选择UI组件。 输入或选择时间的控件。当用户需要输入一个时间，可以点击标准输入框，弹出时间面板进行选择。
+
+## UIToggle
+
+class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
+
+ui component of toggle. UI开关组件。
+
+### UIToggle.borderStyle
+
+public BorderStyle borderStyle  
+The border style of toggle.
+
+### UIToggle.interactable
+
+public bool interactable  
+Whether the toggle is interactable.
+
+### UIToggle.isOn
+
+public bool isOn  
+Whether the toggle is on.
+
+### UIToggle.labelStyle
+
+public LabelStyle labelStyle  
+The text style of toggle.
+
+### UIToggle.markColor
+
+public Color32 markColor  
+The color of mark.
+
+### UIToggle.markGap
+
+public float markGap  
+
+### UIToggle.offColor
+
+public Color32 offColor  
+
+### UIToggle.onColor
+
+public Color32 onColor  
+The color of toggle when it is on.
+
+### UIToggle.onValueChanged
+
+public Action&lt;bool&gt; onValueChanged  
+The callback function when the value of toggle changed.
+
+### UIToggle.text
+
+public string text  
+The text of toggle.
+
+### UIToggle.OnPointerClick
+
+public override void OnPointerClick(PointerEventData eventData)  
 

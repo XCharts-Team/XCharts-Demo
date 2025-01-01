@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.13.0
+
+* (2024.12.27) Added support for the `size2` parameter of `SymbolStyle` to handle rectangular markers
+
 ## v3.12.0
 
 * (2024.09.30) Released version `v3.12.0`

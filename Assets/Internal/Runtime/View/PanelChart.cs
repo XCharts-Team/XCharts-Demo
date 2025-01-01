@@ -79,8 +79,11 @@ namespace XChartsDemo
             m_SelectedPanel = module.panel;
             if (m_SelectedPanel == null) return;
             var grid = m_SelectedPanel.GetComponent<GridLayoutGroup>();
-            var hig = Mathf.CeilToInt(m_SelectedPanel.transform.childCount * 1f / 5) * (grid.cellSize.y + grid.spacing.y);
-            UIUtil.SetRectTransformHeight(m_SelectedPanel.transform, hig);
+            if (grid != null)
+            {
+                var hig = Mathf.CeilToInt(m_SelectedPanel.transform.childCount * 1f / 5) * (grid.cellSize.y + grid.spacing.y);
+                UIUtil.SetRectTransformHeight(m_SelectedPanel.transform, hig);
+            }
         }
 
         void ResetParam()
@@ -232,17 +235,24 @@ namespace XChartsDemo
         {
             if (!Application.isPlaying)
             {
-                // if (firstInit) ChartHelper.DestroyAllChildren(module.panel.transform);
-                // else UIUtil.SetActiveAllChildren(module.panel, false);
                 UIUtil.SetActiveAllChildren(module.panel, false);
                 module.panel.SetActive(module.select);
-                for (int i = 0; i < module.chartPrefabs.Count; i++)
-                    InitChartThumb(module, module.chartPrefabs[i], i);
+                var count = module.chartPrefabs.Count;
+                if (count == 1)
+                {
+                    //ChartHelper.DestroyAllChildren(module.panel.transform);
+                    InitChartPrefab(module, module.chartPrefabs[0], 0);
+                }
+                else
+                {
+                    for (int i = 0; i < module.chartPrefabs.Count; i++)
+                    {
+                        InitChartThumb(module, module.chartPrefabs[i], i);
+                    }
+                }
             }
             else if (!module.inited)
             {
-                // if (firstInit) ChartHelper.DestroyAllChildren(module.panel.transform);
-                // else UIUtil.SetActiveAllChildren(module.panel, false);
                 UIUtil.SetActiveAllChildren(module.panel, false);
             }
         }
@@ -252,9 +262,63 @@ namespace XChartsDemo
             if (selectedModuleIndex != module.index) return;
             if (module.initedCount >= module.chartPrefabs.Count) return;
             var prefab = module.chartPrefabs[module.initedCount];
-            InitChartThumb(module, prefab, module.initedCount);
+            if (module.chartPrefabs.Count == 1)
+            {
+                m_ScrollRect.vertical = false;
+                InitChartPrefab(module, prefab, module.initedCount);
+            }
+            else
+            {
+                m_ScrollRect.vertical = true;
+                InitChartThumb(module, prefab, module.initedCount);
+            }
             module.initedCount++;
             SetChartRootInfo(module);
+        }
+
+        private void InitChartPrefab(ChartModule module, GameObject prefab, int index)
+        {
+            if (module.panel != null)
+            {
+                var gridLayout = module.panel.GetComponent<GridLayoutGroup>();
+                if (gridLayout != null)
+                {
+                    gridLayout.enabled = false;
+                    GameObject.Destroy(gridLayout);
+                }
+                var rectTran = module.panel.GetComponent<RectTransform>();
+                rectTran.pivot = new Vector2(0.5f, 0.5f);
+                rectTran.anchorMin = new Vector2(0.5f, 0.5f);
+                rectTran.anchorMax = new Vector2(0.5f, 0.5f);
+                rectTran.offsetMin = new Vector2(0.5f, 0.5f);
+                rectTran.offsetMax = new Vector2(0.5f, 0.5f);
+                rectTran.anchoredPosition = new Vector2(0, 0); // 可以显式设置位置，避免布局干扰
+                rectTran.sizeDelta = prefab.GetComponent<RectTransform>().sizeDelta;
+                if (prefab == null)
+                {
+                    prefab = config.emptyChartPrefab;
+                }
+                var prefabName = module.GetPrefabName(index);
+                if (string.IsNullOrEmpty(prefabName))
+                    prefabName = string.Format("{1}{0}_{1}_{2}", index, module.name, module.subName);
+
+                GameObject obj;
+                if (prefab == null)
+                {
+                    obj = UIUtil.Instantiate(m_ThumbClone, module.panel.transform, prefabName);
+                }
+                else
+                {
+                    if (module.panel.transform.Find(prefabName))
+                        obj = module.panel.transform.Find(prefabName).gameObject;
+                    else
+                        obj = UIUtil.Instantiate(prefab, module.panel.transform, prefabName);
+                }
+                obj.SetActive(true);
+                var objRect = obj.GetComponent<RectTransform>();
+                objRect.sizeDelta = prefab.GetComponent<RectTransform>().sizeDelta;
+                objRect.anchoredPosition3D = Vector3.zero;
+            }
         }
 
         private void InitChartThumb(ChartModule module, GameObject prefab, int index)

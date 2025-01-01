@@ -1,5 +1,12 @@
 # Update Log
 
+## v3.13.0
+
+* (2025.01.01) Released version `v3.13.0`
+* (2024.12.17) Added `UISlider` component
+* (2024.12.10) Added `UIToggle` component
+* (2024.12.05) Added `UIText` component
+
 ## v3.12.0
 
 * (2024.09.30) Released version `v3.12.0`

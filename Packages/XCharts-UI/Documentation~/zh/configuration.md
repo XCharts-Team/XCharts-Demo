@@ -1,8 +1,194 @@
 # 配置项手册
 
+## FillStyle
+
+class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+
+填充样式。
+
+### FillStyle.autoOffset
+
+`bool` `true`
+
+是否自动偏移填充位置。当为true时，会自动根据显示的文本或滑块大小自动进行左右缩进。
+
+### FillStyle.background
+
+`Background`
+
+背景样式。
+
+### FillStyle.color
+
+`Color32` `Color32(145, 202, 255, 255)`
+
+填充颜色。
+
+### FillStyle.height
+
+`float` `5f`
+
+填充高度。优先级比top和bottom高。在环形进度条中表示环的宽度。
+
+### FillStyle.location
+
+`Location`
+
+填充位置。
+
+### FillStyle.radius
+
+`float` `0f`
+
+填充半径。只在环形进度条中有效。
+
+### FillStyle.roundCap
+
+`bool` `true`
+
+是否使用圆角。只在环形进度条中有效。
+
+### FillStyle.show
+
+`bool` `true`
+
+是否显示填充。
+
+### FillStyle.toColor
+
+`Color32` `Color32(0, 0, 0, 0)`
+
+渐变结束颜色。
+
+### FillStyle.width
+
+`float`
+
+填充宽度。优先级比left和right高。
+
+## HandleStyle
+
+class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+
+滑块样式。
+
+### HandleStyle.gradientColor
+
+`bool` `false`
+
+是否使用渐变颜色。滑动条设置渐变颜色时才生效。
+
+### HandleStyle.show
+
+`bool` `true`
+
+是否显示滑块。
+
+### HandleStyle.symbol
+
+`SymbolStyle`
+
+图形样式。
+
 ## ITableCell
 
 class in XCharts.Runtime.UI / 子类: [TableCell](#tablecell)
+
+## MarkStyle
+
+class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+
+标记样式。
+
+### MarkStyle.fillStyle
+
+[FillStyle](#fillstyle)
+
+填充样式。
+
+### MarkStyle.handleStyle
+
+[HandleStyle](#handlestyle)
+
+滑块样式。
+
+### MarkStyle.included
+
+`bool` `true`
+
+是否包含在范围内。为true时，标记显示为进度条颜色，否则显示为背景颜色。
+
+### MarkStyle.interactable
+
+`bool` `true`
+
+是否可交互。
+
+### MarkStyle.label
+
+`LabelStyle`
+
+文本样式。
+
+### MarkStyle.markNames
+
+`List<string>`
+
+标志名称。当指定有标志名称时，标记的文本会尝试从这里取。
+
+### MarkStyle.markStyle
+
+[MarkStyle](#markstyle)
+
+标记样式。
+
+### MarkStyle.markValues
+
+`List<float>`
+
+标记值。当指定有标志值时，会在指定位置显示标记和文本。
+
+### MarkStyle.max
+
+`float` `100`
+
+最大值。滑块值不能大于最大值。
+
+### MarkStyle.min
+
+`float` `0`
+
+最小值。滑块值不能小于最小值。
+
+### MarkStyle.show
+
+`bool` `true`
+
+是否显示滑块。
+
+### MarkStyle.step
+
+`float` `1`
+
+步长。滑块值会按照步长变化。
+
+### MarkStyle.symbol
+
+`SymbolStyle`
+
+图形样式。
+
+### MarkStyle.value
+
+`float[]`
+
+滑块当前值。这是一个二维数组，当为范围值类型时，两个值分别表示最小值和最大值，其他类型时只用第二个值。
+
+### MarkStyle.valueType
+
+`ValueType`
+
+值类型。支持默认值、范围值、枚举值。
 
 ## TableCarouselStyle
 
@@ -450,6 +636,12 @@ class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.gith
 
 ui component of image. 图片UI组件。
 
+## UISlider
+
+class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/configuration#uicomponent)
+
+UI滑动型输入组件，展示当前值和可选范围。
+
 ## UIStatistic
 
 class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/configuration#uicomponent)
@@ -465,6 +657,8 @@ class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.gith
 ### UIStatistic.valueLabelStyle
 
 `LabelStyle`
+
+数值文本样式。
 
 ## UITable
 
@@ -568,8 +762,82 @@ class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.gith
 
 是否支持选中。选中行，列，单元格。
 
+## UIText
+
+class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/configuration#uicomponent)
+
+ui component of text. UI文本组件。
+
+### UIText.text
+
+`string`
+
+文本内容。
+
+### UIText.textStyle
+
+`TextStyle`
+
+文本样式。
+
 ## UITimePicker
 
 class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/configuration#uicomponent)
 
 时间选择UI组件。 输入或选择时间的控件。当用户需要输入一个时间，可以点击标准输入框，弹出时间面板进行选择。
+
+## UIToggle
+
+class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/configuration#uicomponent)
+
+ui component of toggle. UI开关组件。
+
+### UIToggle.borderStyle
+
+`BorderStyle`
+
+边框样式。
+
+### UIToggle.interactable
+
+`bool` `true`
+
+是否可交互。
+
+### UIToggle.isOn
+
+`bool` `false`
+
+是否开启。
+
+### UIToggle.labelStyle
+
+`LabelStyle`
+
+文本样式。
+
+### UIToggle.markColor
+
+`Color32` `Color32(255, 255, 255, 255)`
+
+标记颜色。
+
+### UIToggle.markGap
+
+`float` `5f`
+
+### UIToggle.offColor
+
+`Color32` `Color32(198, 198, 198, 255)`
+
+### UIToggle.onColor
+
+`Color32` `Color32(83, 158, 241, 255)`
+
+开启时的颜色。
+
+### UIToggle.text
+
+`string`
+
+开关文本。

@@ -1,8 +1,194 @@
 # Configuration
 
+## FillStyle
+
+class in XCharts.Runtime.UI / Inherits from: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+
+Style of fill.
+
+### FillStyle.autoOffset
+
+`bool` `true`
+
+Whether to automatically offset the fill position. When true, it will automatically indent left and right according to the displayed text or slider size.
+
+### FillStyle.background
+
+`Background`
+
+Background style.
+
+### FillStyle.color
+
+`Color32` `Color32(145, 202, 255, 255)`
+
+Fill color.
+
+### FillStyle.height
+
+`float` `5f`
+
+Height of fill. Higher priority than top and bottom. Represents the width of the ring in the circular progress bar.
+
+### FillStyle.location
+
+`Location`
+
+Location of fill.
+
+### FillStyle.radius
+
+`float` `0f`
+
+Fill radius. Only valid in circular progress bar.
+
+### FillStyle.roundCap
+
+`bool` `true`
+
+Whether to use round cap. Only valid in circular progress bar.
+
+### FillStyle.show
+
+`bool` `true`
+
+Whether to show fill.
+
+### FillStyle.toColor
+
+`Color32` `Color32(0, 0, 0, 0)`
+
+To color.
+
+### FillStyle.width
+
+`float`
+
+Width of fill.
+
+## HandleStyle
+
+class in XCharts.Runtime.UI / Inherits from: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+
+Style of handle.
+
+### HandleStyle.gradientColor
+
+`bool` `false`
+
+Whether to use gradient color.
+
+### HandleStyle.show
+
+`bool` `true`
+
+Whether to show handle.
+
+### HandleStyle.symbol
+
+`SymbolStyle`
+
+Style of symbol.
+
 ## ITableCell
 
 class in XCharts.Runtime.UI / Subclasses: [TableCell](#tablecell)
+
+## MarkStyle
+
+class in XCharts.Runtime.UI / Inherits from: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+
+Style of mark.
+
+### MarkStyle.fillStyle
+
+[FillStyle](#fillstyle)
+
+Style of fill.
+
+### MarkStyle.handleStyle
+
+[HandleStyle](#handlestyle)
+
+Style of handle.
+
+### MarkStyle.included
+
+`bool` `true`
+
+Whether to include in the range. When true, the mark is displayed as the progress bar color, otherwise it is displayed as the background color.
+
+### MarkStyle.interactable
+
+`bool` `true`
+
+Whether the slider is interactable.
+
+### MarkStyle.label
+
+`LabelStyle`
+
+Style of label.
+
+### MarkStyle.markNames
+
+`List<string>`
+
+Names of marks. When specified with mark values, the mark and text are displayed at the specified position.
+
+### MarkStyle.markStyle
+
+[MarkStyle](#markstyle)
+
+Style of mark.
+
+### MarkStyle.markValues
+
+`List<float>`
+
+Values of marks. When specified with mark names, the mark and text are displayed at the specified position.
+
+### MarkStyle.max
+
+`float` `100`
+
+Maximum value. The slider value cannot be greater than the maximum value.
+
+### MarkStyle.min
+
+`float` `0`
+
+Minimum value. The slider value cannot be less than the minimum value.
+
+### MarkStyle.show
+
+`bool` `true`
+
+Whether to show handle.
+
+### MarkStyle.step
+
+`float` `1`
+
+Step size. The value of the slider will change by step size.
+
+### MarkStyle.symbol
+
+`SymbolStyle`
+
+Style of symbol.
+
+### MarkStyle.value
+
+`float[]`
+
+Current value of the slider. This is a two-dimensional array. When it is a range value type, the two values represent the minimum and maximum values respectively, and when it is other types, only the second value is used.
+
+### MarkStyle.valueType
+
+`ValueType`
+
+Type of value. Support default value, range value, enum value.
 
 ## TableCarouselStyle
 
@@ -450,6 +636,12 @@ class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.
 
 ui component of image. 图片UI组件。
 
+## UISlider
+
+class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.github.io/docs/configuration#uicomponent)
+
+ui component of slider.
+
 ## UIStatistic
 
 class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.github.io/docs/configuration#uicomponent)
@@ -465,6 +657,8 @@ The start animation.
 ### UIStatistic.valueLabelStyle
 
 `LabelStyle`
+
+The style of value label.
 
 ## UITable
 
@@ -568,8 +762,82 @@ whether the table support scroll.
 
 whether the table support select. select row, column, cell.
 
+## UIText
+
+class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.github.io/docs/configuration#uicomponent)
+
+ui component of text. UI文本组件。
+
+### UIText.text
+
+`string`
+
+The text content.
+
+### UIText.textStyle
+
+`TextStyle`
+
+The text style.
+
 ## UITimePicker
 
 class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.github.io/docs/configuration#uicomponent)
 
 时间选择UI组件。 输入或选择时间的控件。当用户需要输入一个时间，可以点击标准输入框，弹出时间面板进行选择。
+
+## UIToggle
+
+class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.github.io/docs/configuration#uicomponent)
+
+ui component of toggle. UI开关组件。
+
+### UIToggle.borderStyle
+
+`BorderStyle`
+
+The border style of toggle.
+
+### UIToggle.interactable
+
+`bool` `true`
+
+Whether the toggle is interactable.
+
+### UIToggle.isOn
+
+`bool` `false`
+
+Whether the toggle is on.
+
+### UIToggle.labelStyle
+
+`LabelStyle`
+
+The text style of toggle.
+
+### UIToggle.markColor
+
+`Color32` `Color32(255, 255, 255, 255)`
+
+The color of mark.
+
+### UIToggle.markGap
+
+`float` `5f`
+
+### UIToggle.offColor
+
+`Color32` `Color32(198, 198, 198, 255)`
+
+### UIToggle.onColor
+
+`Color32` `Color32(83, 158, 241, 255)`
+
+The color of toggle when it is on.
+
+### UIToggle.text
+
+`string`
+
+The text of toggle.
