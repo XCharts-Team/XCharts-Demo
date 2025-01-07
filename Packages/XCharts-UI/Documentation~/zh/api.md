@@ -38,6 +38,10 @@ public Type type
 public float value  
 进度条当前值。
 
+### Context.DefaultCircle
+
+public void DefaultCircle()  
+
 ## Context.Type
 
 class in XCharts.Runtime.UI

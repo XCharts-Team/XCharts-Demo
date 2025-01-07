@@ -38,6 +38,10 @@ The type of progress.
 public float value  
 The value of progress.
 
+### Context.DefaultCircle
+
+public void DefaultCircle()  
+
 ## Context.Type
 
 class in XCharts.Runtime.UI
