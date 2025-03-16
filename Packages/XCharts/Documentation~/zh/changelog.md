@@ -6,6 +6,7 @@ slug: /changelog
 # 更新日志
 
 [master](#master)  
+[v3.14.0](#v3140)  
 [v3.13.0](#v3130)  
 [v3.12.1](#v3121)  
 [v3.12.0](#v3120)  
@@ -78,6 +79,36 @@ slug: /changelog
 [v0.1.0](#v010)  
 
 ## master
+
+## v3.14.0
+
+版本要点：
+
+* 新增`Bar`的实时排序功能
+* 新增`Tooltip`的`itemFormatter`支持`\n`换行
+* 新增`AxisLabel`的格式化支持`{index}`
+* 新增`Animation`的`speed`可指定动画速度
+* 优化`Tooltip`的列对齐方式
+
+日志详情：
+
+* (2025.03.15) 发布`v3.14.0`版本
+* (2025.03.09) 修复`Bar`在同一个`Chart`不同`Grid`里时绘制有些异常的问题
+* (2025.03.07) 增加`Animation`的`speed`可指定动画速度
+* (2025.03.06) 优化`Animation`的新增动画表现
+* (2025.03.04) 修复`Treemap`的`label`显示异常的问题
+* (2025.03.02) 增加`Tooltip`的`columnGapWidths`参数设置列文本间隙距离
+* (2025.03.01) 优化`Comment`的组件刷新
+* (2025.02.23) 增加`Axis`的`Label`的`formatter`支持`{index}``{index-1}``{-index}``{-index-1}`通配符
+* (2025.02.23) 增加`Bar`的`realtimeSort`支持实时排序
+* (2025.02.19) 增加`Tooltip`的`itemFormatter`对`\n`换行的支持
+* (2025.02.18) 优化`Tooltip`的对齐方式
+* (2025.02.09) 修复`SaveAsImage`保存图片时不支持透明度的问题 (#337)
+* (2025.02.05) 增加`GraphChart`可单独设置`data`样式的支持
+* (2025.02.05) 重构`SerieSymbol`的`sizeFunction`参数
+* (2025.01.23) 修复`Treemap`的`Label`不显示的问题
+* (2025.01.15) 修复`Chart`在运行时动态添加`Component`异常的问题 (#339)
+* (2025.01.08) 修复`TextMeshPro`关闭时残留组件影响`Text`初始化的问题
 
 ## v3.13.0
 

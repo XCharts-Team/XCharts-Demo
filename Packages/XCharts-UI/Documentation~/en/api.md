@@ -125,6 +125,8 @@ Width of fill.
 
 class in XCharts.Runtime.UI / Inherits from: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
 
+> Since `v3.13.0`
+
 Style of handle.
 
 ### HandleStyle.gradientColor
@@ -149,6 +151,8 @@ class in XCharts.Runtime.UI / Subclasses: [TableCell](#tablecell)
 ## MarkStyle
 
 class in XCharts.Runtime.UI / Inherits from: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+
+> Since `v3.13.0`
 
 Style of mark.
 
@@ -604,6 +608,8 @@ class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.
 
 class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
 
+> Since `v3.13.0`
+
 ui component of slider.
 
 ## UISlider.ValueType
@@ -865,6 +871,8 @@ update a row data.
 
 class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
 
+> Since `v3.13.0`
+
 ui component of text. UI文本组件。
 
 ## UITimePicker
@@ -876,6 +884,8 @@ class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.
 ## UIToggle
 
 class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
+
+> Since `v3.13.0`
 
 ui component of toggle. UI开关组件。
 

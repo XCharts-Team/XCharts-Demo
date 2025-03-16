@@ -59,6 +59,7 @@ namespace XCharts.Runtime
 
         public ChartLabel labelObject { get; set; }
         public ChartLabel titleObject { get; set; }
+        public int sortIndex { get; set; }
 
         private bool m_Show = true;
         /// <summary>
@@ -758,17 +759,18 @@ namespace XCharts.Runtime
             return 0;
         }
 
-        public void SetLabelActive(bool flag)
+        public void SetLabelActive(bool flag, bool force = false)
         {
-            if (labelObject != null) labelObject.SetActive(flag);
+            if (labelObject != null) labelObject.SetActive(flag, force);
             foreach (var labelObject in context.dataLabels)
             {
-                labelObject.SetActive(false);
+                labelObject.SetActive(flag, force);
             }
         }
+
         public void SetIconActive(bool flag)
         {
-            if (labelObject != null) labelObject.SetActive(flag);
+            if (labelObject != null) labelObject.SetIconActive(flag);
         }
 
         public void SetPolygon(params Vector2[] points)

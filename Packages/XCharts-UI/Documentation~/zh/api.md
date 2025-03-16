@@ -125,6 +125,8 @@ public float width
 
 class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
 
+> 从 `v3.13.0` 开始支持
+
 滑块样式。
 
 ### HandleStyle.gradientColor
@@ -149,6 +151,8 @@ class in XCharts.Runtime.UI / 子类: [TableCell](#tablecell)
 ## MarkStyle
 
 class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+
+> 从 `v3.13.0` 开始支持
 
 标记样式。
 
@@ -604,6 +608,8 @@ class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.gith
 
 class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
 
+> 从 `v3.13.0` 开始支持
+
 UI滑动型输入组件，展示当前值和可选范围。
 
 ## UISlider.ValueType
@@ -865,6 +871,8 @@ public void UpdateRow(int rowIndex, params string[] row)
 
 class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
 
+> 从 `v3.13.0` 开始支持
+
 ui component of text. UI文本组件。
 
 ## UITimePicker
@@ -876,6 +884,8 @@ class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.gith
 ## UIToggle
 
 class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
+
+> 从 `v3.13.0` 开始支持
 
 ui component of toggle. UI开关组件。
 

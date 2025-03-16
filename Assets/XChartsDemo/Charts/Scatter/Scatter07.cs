@@ -57,9 +57,9 @@ namespace XCharts.Demo
                 serie.itemStyle.borderWidth = 2;
                 serie.itemStyle.opacity = 0.35f;
                 serie.symbol.sizeType = SymbolSizeType.Function;
-                serie.symbol.sizeFunction = delegate(List<double> data)
+                serie.symbol.sizeFunction = delegate(float defaultSize, SerieData serieData)
                 {
-                    float size = (float) (data[2] * scale);
+                    float size = (float) (serieData.data[2] * scale);
                     if (size < 8) size = 8;
                     return size;
                 };

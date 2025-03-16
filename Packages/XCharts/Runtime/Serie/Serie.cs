@@ -305,6 +305,7 @@ namespace XCharts.Runtime
         [SerializeField] private float m_Top;
         [SerializeField] private float m_Bottom;
         [SerializeField] private bool m_InsertDataToHead;
+        [SerializeField][Since("v3.14.0")] private bool m_RealtimeSort = false;
 
         [SerializeField] private LineStyle m_LineStyle = new LineStyle();
         [SerializeField] private SerieSymbol m_Symbol = new SerieSymbol();
@@ -981,6 +982,15 @@ namespace XCharts.Runtime
         {
             get { return m_MinShowLabelValue; }
             set { if (PropertyUtil.SetStruct(ref m_MinShowLabelValue, value)) { SetVerticesDirty(); } }
+        }
+        /// <summary>
+        /// Whether to enable realtime sorting, which is used for bar-racing effect. Currently only available in Bar.
+        /// ||是否开启实时排序，用来实现动态排序图效果。目前仅在Bar中生效。
+        /// </summary>
+        public bool realtimeSort
+        {
+            get { return m_RealtimeSort; }
+            set { if (PropertyUtil.SetStruct(ref m_RealtimeSort, value)) SetVerticesDirty(); }
         }
         /// <summary>
         /// 系列中的数据内容数组。SerieData可以设置1到n维数据。
@@ -1740,7 +1750,7 @@ namespace XCharts.Runtime
         /// </summary>
         /// <param name="dataZoom"></param>
         /// <returns></returns>
-        public List<SerieData> GetDataList(DataZoom dataZoom = null)
+        public List<SerieData> GetDataList(DataZoom dataZoom = null, bool sorted = false)
         {
             if (dataZoom != null && dataZoom.enable &&
                 (dataZoom.IsContainsXAxis(xAxisIndex) || dataZoom.IsContainsYAxis(yAxisIndex)))
@@ -1750,7 +1760,7 @@ namespace XCharts.Runtime
             }
             else
             {
-                return useSortData && context.sortedData.Count > 0 ? context.sortedData : m_Data;
+                return useSortData && sorted && context.sortedData.Count > 0 ? context.sortedData : m_Data;
             }
         }
 
@@ -2019,6 +2029,7 @@ namespace XCharts.Runtime
         /// </summary>
         public void AnimationFadeIn()
         {
+            if (dataCount <= 0) return;
             ResetInteract();
             if (animation.enable) animation.FadeIn();
             SetVerticesDirty();
@@ -2029,6 +2040,7 @@ namespace XCharts.Runtime
         /// </summary>
         public void AnimationFadeOut()
         {
+            if (dataCount <= 0) return;
             ResetInteract();
             if (animation.enable) animation.FadeOut();
             SetVerticesDirty();
@@ -2039,6 +2051,7 @@ namespace XCharts.Runtime
         /// </summary>
         public void AnimationPause()
         {
+            if (dataCount <= 0) return;
             if (animation.enable) animation.Pause();
             SetVerticesDirty();
         }
@@ -2048,6 +2061,7 @@ namespace XCharts.Runtime
         /// </summary>
         public void AnimationResume()
         {
+            if (dataCount <= 0) return;
             if (animation.enable) animation.Resume();
             SetVerticesDirty();
         }
@@ -2057,6 +2071,7 @@ namespace XCharts.Runtime
         /// </summary>
         public void AnimationReset()
         {
+            if (dataCount <= 0) return;
             if (animation.enable) animation.Reset();
             SetVerticesDirty();
         }
@@ -2066,6 +2081,7 @@ namespace XCharts.Runtime
         /// </summary>
         public void AnimationRestart()
         {
+            if (dataCount <= 0) return;
             if (animation.enable) animation.Restart();
             SetVerticesDirty();
         }

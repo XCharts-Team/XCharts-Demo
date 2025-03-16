@@ -70,6 +70,8 @@ class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.g
 
 class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
 
+> 从 `v3.13.0` 开始支持
+
 滑块样式。
 
 ### HandleStyle.gradientColor
@@ -97,6 +99,8 @@ class in XCharts.Runtime.UI / 子类: [TableCell](#tablecell)
 ## MarkStyle
 
 class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+
+> 从 `v3.13.0` 开始支持
 
 标记样式。
 
@@ -640,6 +644,8 @@ ui component of image. 图片UI组件。
 
 class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/configuration#uicomponent)
 
+> 从 `v3.13.0` 开始支持
+
 UI滑动型输入组件，展示当前值和可选范围。
 
 ## UIStatistic
@@ -766,6 +772,8 @@ class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.gith
 
 class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/configuration#uicomponent)
 
+> 从 `v3.13.0` 开始支持
+
 ui component of text. UI文本组件。
 
 ### UIText.text
@@ -789,6 +797,8 @@ class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.gith
 ## UIToggle
 
 class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/configuration#uicomponent)
+
+> 从 `v3.13.0` 开始支持
 
 ui component of toggle. UI开关组件。
 

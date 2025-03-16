@@ -377,7 +377,7 @@ namespace XCharts.Runtime
                 serie.index = i;
                 SetPainterActive(i, true);
             }
-            if (transform.childCount - 3 != m_PainterTop.transform.GetSiblingIndex())
+            if (m_PainterTop != null && transform.childCount - 3 != m_PainterTop.transform.GetSiblingIndex())
             {
                 m_PainterTop.transform.SetSiblingIndex(transform.childCount - 3);
             }
@@ -724,7 +724,7 @@ namespace XCharts.Runtime
 
         private void InitListForFieldInfos()
         {
-            if (m_TypeListForSerie.Count != 0) return;
+            if (m_TypeListForSerie.Count != 0 || m_TypeListForComponent.Count != 0) return;
             m_TypeListForComponent.Clear();
             m_TypeListForSerie.Clear();
             var fileds1 = GetType().GetFields(BindingFlags.NonPublic | BindingFlags.Instance);
