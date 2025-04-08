@@ -66,133 +66,63 @@ To color.
 
 Width of fill.
 
-## HandleStyle
+## ITableCell
+
+class in XCharts.Runtime.UI / Subclasses: [TableCell](#tablecell)
+
+## SliderHandleStyle
 
 class in XCharts.Runtime.UI / Inherits from: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
 
-> Since `v3.13.0`
-
 Style of handle.
 
-### HandleStyle.gradientColor
+### SliderHandleStyle.gradientColor
 
 `bool` `false`
 
 Whether to use gradient color.
 
-### HandleStyle.show
+### SliderHandleStyle.show
 
 `bool` `true`
 
 Whether to show handle.
 
-### HandleStyle.symbol
+### SliderHandleStyle.symbol
 
 `SymbolStyle`
 
 Style of symbol.
 
-## ITableCell
-
-class in XCharts.Runtime.UI / Subclasses: [TableCell](#tablecell)
-
-## MarkStyle
+## SliderMarkStyle
 
 class in XCharts.Runtime.UI / Inherits from: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
 
-> Since `v3.13.0`
-
 Style of mark.
 
-### MarkStyle.fillStyle
-
-[FillStyle](#fillstyle)
-
-Style of fill.
-
-### MarkStyle.handleStyle
-
-[HandleStyle](#handlestyle)
-
-Style of handle.
-
-### MarkStyle.included
+### SliderMarkStyle.included
 
 `bool` `true`
 
 Whether to include in the range. When true, the mark is displayed as the progress bar color, otherwise it is displayed as the background color.
 
-### MarkStyle.interactable
-
-`bool` `true`
-
-Whether the slider is interactable.
-
-### MarkStyle.label
+### SliderMarkStyle.label
 
 `LabelStyle`
 
 Style of label.
 
-### MarkStyle.markNames
-
-`List<string>`
-
-Names of marks. When specified with mark values, the mark and text are displayed at the specified position.
-
-### MarkStyle.markStyle
-
-[MarkStyle](#markstyle)
-
-Style of mark.
-
-### MarkStyle.markValues
-
-`List<float>`
-
-Values of marks. When specified with mark names, the mark and text are displayed at the specified position.
-
-### MarkStyle.max
-
-`float` `100`
-
-Maximum value. The slider value cannot be greater than the maximum value.
-
-### MarkStyle.min
-
-`float` `0`
-
-Minimum value. The slider value cannot be less than the minimum value.
-
-### MarkStyle.show
+### SliderMarkStyle.show
 
 `bool` `true`
 
-Whether to show handle.
+Whether to show mark.
 
-### MarkStyle.step
-
-`float` `1`
-
-Step size. The value of the slider will change by step size.
-
-### MarkStyle.symbol
+### SliderMarkStyle.symbol
 
 `SymbolStyle`
 
 Style of symbol.
-
-### MarkStyle.value
-
-`float[]`
-
-Current value of the slider. This is a two-dimensional array. When it is a range value type, the two values represent the minimum and maximum values respectively, and when it is other types, only the second value is used.
-
-### MarkStyle.valueType
-
-`ValueType`
-
-Type of value. Support default value, range value, enum value.
 
 ## TableCarouselStyle
 
@@ -648,17 +578,130 @@ class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.
 
 ui component of slider.
 
+### UISlider.fillStyle
+
+[FillStyle](#fillstyle)
+
+Style of fill.
+
+### UISlider.handleStyle
+
+[SliderHandleStyle](#sliderhandlestyle)
+
+Style of handle.
+
+### UISlider.interactable
+
+`bool` `true`
+
+Whether the slider is interactable.
+
+### UISlider.markNames
+
+`List<string>`
+
+Names of marks. When specified with mark values, the mark and text are displayed at the specified position.
+
+### UISlider.markStyle
+
+[SliderMarkStyle](#slidermarkstyle)
+
+Style of mark.
+
+### UISlider.markValues
+
+`List<float>`
+
+Values of marks. When specified with mark names, the mark and text are displayed at the specified position.
+
+### UISlider.max
+
+`float` `100`
+
+Maximum value. The slider value cannot be greater than the maximum value.
+
+### UISlider.min
+
+`float` `0`
+
+Minimum value. The slider value cannot be less than the minimum value.
+
+### UISlider.step
+
+`float` `1`
+
+Step size. The value of the slider will change by step size.
+
+### UISlider.value
+
+`float[]`
+
+Current value of the slider. This is a two-dimensional array. When it is a range value type, the two values represent the minimum and maximum values respectively, and when it is other types, only the second value is used.
+
+### UISlider.valueType
+
+[UISlider.ValueType](#uislidervaluetype)
+
+Type of value. Support default value, range value, enum value.
+
+Options:
+
+- `Default`: Default value.
+- `Range`: Range value.
+- `Enum`: Enum value.
+
 ## UIStatistic
 
 class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.github.io/docs/configuration#uicomponent)
 
-统计数值UI组件。 用于展示统计数值。当需要突出某个或某组数字时，或展示带描述的统计类数据时使用。
+Statistical value UI component. Used to display statistical values. Suitable for highlighting specific numbers/groups of numbers or presenting statistical data with descriptions.
 
 ### UIStatistic.animationStyle
 
 `AnimationStyle`
 
 The start animation.
+
+### UIStatistic.itemGap
+
+`float` `5`
+
+The gap between the title and value.
+
+### UIStatistic.location
+
+`Location`
+
+The location of text.
+
+### UIStatistic.title
+
+`string`
+
+The title of statistic.
+
+### UIStatistic.titleLabelStyle
+
+`LabelStyle`
+
+The style of title label.
+
+### UIStatistic.type
+
+[UIStatistic.Type](#uistatistictype)
+
+The type of statistic.
+
+Options:
+
+- `Default`: default type. display text.
+- `Countdown`: countdown type. Automatic countdown. At this time, value is used as seconds.
+
+### UIStatistic.value
+
+`double`
+
+value of statistic.
 
 ### UIStatistic.valueLabelStyle
 

@@ -176,6 +176,7 @@ slug: /configuration
 
 - [AnimationAddition](#animationaddition)
 - [AnimationChange](#animationchange)
+- [AnimationExchange](#animationexchange)
 - [AnimationFadeIn](#animationfadein)
 - [AnimationFadeOut](#animationfadeout)
 - [AnimationHiding](#animationhiding)
@@ -234,6 +235,14 @@ class in XCharts.Runtime / Inherits from: [AnimationInfo](#animationinfo)
 
 Data change animation.
 
+## AnimationExchange
+
+class in XCharts.Runtime / Inherits from: [AnimationInfo](#animationinfo)
+
+> Since `v3.15.0`
+
+Data exchange animation. Generally used for animation of data sorting.
+
 ## AnimationFadeIn
 
 class in XCharts.Runtime / Inherits from: [AnimationInfo](#animationinfo)
@@ -260,7 +269,7 @@ Data hiding animation.
 
 ## AnimationInfo
 
-class in XCharts.Runtime / Subclasses: [AnimationFadeIn](#animationfadein), [AnimationFadeOut](#animationfadeout), [AnimationChange](#animationchange), [AnimationAddition](#animationaddition), [AnimationHiding](#animationhiding), [AnimationInteraction](#animationinteraction)
+class in XCharts.Runtime / Subclasses: [AnimationFadeIn](#animationfadein), [AnimationFadeOut](#animationfadeout), [AnimationChange](#animationchange), [AnimationAddition](#animationaddition), [AnimationHiding](#animationhiding), [AnimationInteraction](#animationinteraction), [AnimationExchange](#animationexchange)
 
 > Since `v3.8.0`
 
@@ -326,7 +335,7 @@ the mlvalue of width.
 
 class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent)
 
-the animation of serie. support animation type: fadeIn, fadeOut, change, addition.
+the animation of serie. support animation type: fadeIn, fadeOut, change, addition, exchange.
 
 ### AnimationStyle.addition
 
@@ -355,6 +364,12 @@ Options:
 `bool` `true`
 
 Whether to enable animation.
+
+### AnimationStyle.exchange
+
+[AnimationExchange](#animationexchange) `v3.15.0`
+
+Exchange animation configuration. Valid in sort bar chart.
 
 ### AnimationStyle.fadeIn
 
@@ -1247,7 +1262,9 @@ class in XCharts.Runtime / Subclasses: [AnimationStyle](#animationstyle), [AxisA
 
 class in XCharts.Runtime / Inherits from: [MainComponent](#maincomponent), [IPropertyChanged](#ipropertychanged)
 
-comment of chart.
+> Since `v3.15.0`
+
+comment of chart. Used to annotate special information in the chart.
 
 ### Comment.items
 
@@ -1260,6 +1277,17 @@ The items of comment.
 [LabelStyle](#labelstyle)
 
 The text style of all comments.
+
+### Comment.layer
+
+[CommentLayer](#commentlayer) `v3.15.0`
+
+The layer of comment.
+
+Options:
+
+- `Lower`: The comment is display under the serie.
+- `Upper`: The comment is display above the serie.
 
 ### Comment.markStyle
 
@@ -2238,6 +2266,12 @@ class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent), [IS
 
 数据项背景颜色。
 
+### ItemStyle.backgroundGap
+
+`float` `v3.15.0`
+
+the gap between background and data item.
+
 ### ItemStyle.backgroundWidth
 
 `float`
@@ -2464,6 +2498,18 @@ the sytle of background.
 
 the distance of label to axis line.
 
+### LabelStyle.fixedX
+
+`float` `0` `v3.15.0`
+
+the fixed x of label. When not 0, it will be fixed on the specified x value.
+
+### LabelStyle.fixedY
+
+`float` `0` `v3.15.0`
+
+the fixed y of label. When not 0, it will be fixed on the specified y value.
+
 ### LabelStyle.formatter
 
 `string`
@@ -2615,6 +2661,12 @@ The distance between each legend, horizontal distance in horizontal layout, and 
 
 Image height of legend symbol.
 
+### Legend.itemInactiveOpacity
+
+`float` `1` `v3.15.0`
+
+the opacity of item color when item is inactive.
+
 ### Legend.itemOpacity
 
 `float` `1`
@@ -2690,11 +2742,11 @@ the limit of text.
 
 class in XCharts.Runtime / Inherits from: [ComponentTheme](#componenttheme)
 
-### LegendTheme.unableColor
+### LegendTheme.inactiveColor
 
 `Color`
 
-the color of text.
+the color when the component is inactive.
 
 ## Level
 
@@ -3110,11 +3162,11 @@ Special label types, are used to label maximum value, minimum value and so on.
 
 Options:
 
-- `None`: 标线类型
-- `Min`: 最小值。
-- `Max`: 最大值。
-- `Average`: 平均值。
-- `Median`: 中位数。
+- `Custom`: Custom. You can customize the xy coordinates or values.
+- `Min`: Minimum value.
+- `Max`: Maximum value.
+- `Average`: Average value.
+- `Median`: Median.
 
 ### MarkLineData.xPosition
 

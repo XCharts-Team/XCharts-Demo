@@ -1,58 +1,5 @@
 # API
 
-## Context
-
-class in XCharts.Runtime.UI
-
-### Context.fillStyle
-
-public FillStyle fillStyle  
-进度条填充样式。
-
-### Context.labelStyle
-
-public LabelStyle labelStyle  
-进度条标签样式。
-
-### Context.max
-
-public float max  
-
-### Context.min
-
-public float min  
-进度条最小值。
-
-### Context.step
-
-public float step  
-进度条步长。
-
-### Context.type
-
-public Type type  
-进度条类型。
-
-### Context.value
-
-public float value  
-进度条当前值。
-
-### Context.DefaultCircle
-
-public void DefaultCircle()  
-
-## Context.Type
-
-class in XCharts.Runtime.UI
-
-进度条类型。
-
-可选：
-
-- `Line`: 水平进度条。
-- `Circle`: 圆形进度条。
-
 ## DataType
 
 class in XCharts.Runtime.UI
@@ -121,186 +68,64 @@ public Color32 toColor
 public float width  
 填充宽度。优先级比left和right高。
 
-## HandleStyle
-
-class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
-
-> 从 `v3.13.0` 开始支持
-
-滑块样式。
-
-### HandleStyle.gradientColor
-
-public bool gradientColor  
-是否使用渐变颜色。滑动条设置渐变颜色时才生效。
-
-### HandleStyle.show
-
-public bool show  
-是否显示滑块。
-
-### HandleStyle.symbol
-
-public SymbolStyle symbol  
-图形样式。
-
 ## ITableCell
 
 class in XCharts.Runtime.UI / 子类: [TableCell](#tablecell) 
 
-## MarkStyle
+## ProgressContext
+
+class in XCharts.Runtime.UI
+
+## SliderContext
+
+class in XCharts.Runtime.UI
+
+## SliderHandleStyle
 
 class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
 
-> 从 `v3.13.0` 开始支持
-
-标记样式。
-
-### MarkStyle.fillStyle
-
-public FillStyle fillStyle  
-填充样式。
-
-### MarkStyle.handleStyle
-
-public HandleStyle handleStyle  
 滑块样式。
 
-### MarkStyle.included
+### SliderHandleStyle.gradientColor
 
-public bool included  
-是否包含在范围内。为true时，标记显示为进度条颜色，否则显示为背景颜色。
+public bool gradientColor  
+是否使用渐变颜色。滑动条设置渐变颜色时才生效。
 
-### MarkStyle.interactable
-
-public bool interactable  
-是否可交互。
-
-### MarkStyle.label
-
-public LabelStyle label  
-文本样式。
-
-### MarkStyle.markNames
-
-public List&lt;string&gt; markNames  
-标志名称。当指定有标志名称时，标记的文本会尝试从这里取。
-
-### MarkStyle.markStyle
-
-public MarkStyle markStyle  
-标记样式。
-
-### MarkStyle.markValues
-
-public List&lt;float&gt; markValues  
-标记值。当指定有标志值时，会在指定位置显示标记和文本。
-
-### MarkStyle.max
-
-public float max  
-最大值。滑块值不能大于最大值。
-
-### MarkStyle.min
-
-public float min  
-最小值。滑块值不能小于最小值。
-
-### MarkStyle.onRangeChanged
-
-public Action&lt;float, float&gt; onRangeChanged  
-滑块范围改变时的回调。
-
-### MarkStyle.onRangeChangedComplete
-
-public Action&lt;float, float&gt; onRangeChangedComplete  
-滑块范围改变完成时的回调。
-
-### MarkStyle.onValueChanged
-
-public Action&lt;float&gt; onValueChanged  
-滑块值改变时的回调。
-
-### MarkStyle.onValueChangedComplete
-
-public Action&lt;float&gt; onValueChangedComplete  
-滑块值改变完成时的回调。
-
-### MarkStyle.show
+### SliderHandleStyle.show
 
 public bool show  
-是否显示标记。
+是否显示滑块。
 
-### MarkStyle.step
-
-public float step  
-步长。滑块值会按照步长变化。
-
-### MarkStyle.symbol
+### SliderHandleStyle.symbol
 
 public SymbolStyle symbol  
 图形样式。
 
-### MarkStyle.value
+## SliderMarkStyle
 
-public float[] value  
-滑块当前值。这是一个二维数组，当为范围值类型时，两个值分别表示最小值和最大值，其他类型时只用第二个值。
+class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
 
-### MarkStyle.OnBeginDrag
+标记样式。
 
-public override void OnBeginDrag(PointerEventData eventData)  
+### SliderMarkStyle.included
 
-### MarkStyle.OnDrag
+public bool included  
+是否包含在范围内。为true时，标记显示为进度条颜色，否则显示为背景颜色。
 
-public override void OnDrag(PointerEventData eventData)  
+### SliderMarkStyle.label
 
-### MarkStyle.OnEndDrag
+public LabelStyle label  
+文本样式。
 
-public override void OnEndDrag(PointerEventData eventData)  
+### SliderMarkStyle.show
 
-### MarkStyle.OnPointerClick
+public bool show  
+是否显示标记。
 
-public override void OnPointerClick(PointerEventData eventData)  
+### SliderMarkStyle.symbol
 
-### MarkStyle.SetValue
-
-public void SetValue(float rangeMin, float rangeMax)  
-设置当前范围值。
-
-public void SetValue(float rangeMin, float rangeMax, float min, float max)  
-设置当前范围值和最大最小值。
-
-public void SetValue(float value, float min, float max)  
-设置当前值和最大最小值。
-
-
-## MarkStyle.value and the enum type.
-
-class in XCharts.Runtime.UI
-
-可选：
-
-- `public void SetValue(float value`: 设置当前枚举值和枚举类型。
-- `if (!enumType.IsEnum) return;`: 设置当前枚举值和枚举类型。
-- `valueType = ValueType.Enum;`: 设置当前枚举值和枚举类型。
-- `value[0] = 0;`: 设置当前枚举值和枚举类型。
-- `value[1] = value;`: 设置当前枚举值和枚举类型。
-- `var fields = enumType.GetFields(BindingFlags.Public | BindingFlags.Static);`: 设置当前枚举值和枚举类型。
-- `markValues.Clear();`: 设置当前枚举值和枚举类型。
-- `markNames.Clear();`: 设置当前枚举值和枚举类型。
-- `foreach (var field in fields)`: 设置当前枚举值和枚举类型。
-- `var v = (int)field.GetValue(null);`: 设置当前枚举值和枚举类型。
-- `if (m_Min > v) m_Min = v;`: 设置当前枚举值和枚举类型。
-- `if (m_Max < v) m_Max = v;`: 设置当前枚举值和枚举类型。
-- `markValues.Add(v);`: 设置当前枚举值和枚举类型。
-- `markNames.Add(field.Name);`: 设置当前枚举值和枚举类型。
-
-## MarkStyle.value.
-
-class in XCharts.Runtime.UI
-
-可选：
-
+public SymbolStyle symbol  
+图形样式。
 
 ## StatisticContext
 
@@ -604,6 +429,55 @@ ui component of image. 图片UI组件。
 
 class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
 
+### UIProgress.fillStyle
+
+public FillStyle fillStyle  
+进度条填充样式。
+
+### UIProgress.labelStyle
+
+public LabelStyle labelStyle  
+进度条标签样式。
+
+### UIProgress.max
+
+public float max  
+
+### UIProgress.min
+
+public float min  
+进度条最小值。
+
+### UIProgress.step
+
+public float step  
+进度条步长。
+
+### UIProgress.type
+
+public Type type  
+进度条类型。
+
+### UIProgress.value
+
+public float value  
+进度条当前值。
+
+### UIProgress.DefaultCircle
+
+public void DefaultCircle()  
+
+## UIProgress.Type
+
+class in XCharts.Runtime.UI
+
+进度条类型。
+
+可选：
+
+- `Line`: 水平进度条。
+- `Circle`: 圆形进度条。
+
 ## UISlider
 
 class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
@@ -611,6 +485,132 @@ class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.gith
 > 从 `v3.13.0` 开始支持
 
 UI滑动型输入组件，展示当前值和可选范围。
+
+### UISlider.fillStyle
+
+public FillStyle fillStyle  
+填充样式。
+
+### UISlider.handleStyle
+
+public SliderHandleStyle handleStyle  
+滑块样式。
+
+### UISlider.interactable
+
+public bool interactable  
+是否可交互。
+
+### UISlider.markNames
+
+public List&lt;string&gt; markNames  
+标志名称。当指定有标志名称时，标记的文本会尝试从这里取。
+
+### UISlider.markStyle
+
+public SliderMarkStyle markStyle  
+标记样式。
+
+### UISlider.markValues
+
+public List&lt;float&gt; markValues  
+标记值。当指定有标志值时，会在指定位置显示标记和文本。
+
+### UISlider.max
+
+public float max  
+最大值。滑块值不能大于最大值。
+
+### UISlider.min
+
+public float min  
+最小值。滑块值不能小于最小值。
+
+### UISlider.onRangeChanged
+
+public Action&lt;float, float&gt; onRangeChanged  
+滑块范围改变时的回调。
+
+### UISlider.onRangeChangedComplete
+
+public Action&lt;float, float&gt; onRangeChangedComplete  
+滑块范围改变完成时的回调。
+
+### UISlider.onValueChanged
+
+public Action&lt;float&gt; onValueChanged  
+滑块值改变时的回调。
+
+### UISlider.onValueChangedComplete
+
+public Action&lt;float&gt; onValueChangedComplete  
+滑块值改变完成时的回调。
+
+### UISlider.step
+
+public float step  
+步长。滑块值会按照步长变化。
+
+### UISlider.value
+
+public float[] value  
+滑块当前值。这是一个二维数组，当为范围值类型时，两个值分别表示最小值和最大值，其他类型时只用第二个值。
+
+### UISlider.OnBeginDrag
+
+public override void OnBeginDrag(PointerEventData eventData)  
+
+### UISlider.OnDrag
+
+public override void OnDrag(PointerEventData eventData)  
+
+### UISlider.OnEndDrag
+
+public override void OnEndDrag(PointerEventData eventData)  
+
+### UISlider.OnPointerClick
+
+public override void OnPointerClick(PointerEventData eventData)  
+
+### UISlider.SetValue
+
+public void SetValue(float rangeMin, float rangeMax)  
+设置当前范围值。
+
+public void SetValue(float rangeMin, float rangeMax, float min, float max)  
+设置当前范围值和最大最小值。
+
+public void SetValue(float value, float min, float max)  
+设置当前值和最大最小值。
+
+
+## UISlider.value and the enum type.
+
+class in XCharts.Runtime.UI
+
+可选：
+
+- `public void SetValue(float value`: 设置当前枚举值和枚举类型。
+- `if (!enumType.IsEnum) return;`: 设置当前枚举值和枚举类型。
+- `valueType = ValueType.Enum;`: 设置当前枚举值和枚举类型。
+- `value[0] = 0;`: 设置当前枚举值和枚举类型。
+- `value[1] = value;`: 设置当前枚举值和枚举类型。
+- `var fields = enumType.GetFields(BindingFlags.Public | BindingFlags.Static);`: 设置当前枚举值和枚举类型。
+- `markValues.Clear();`: 设置当前枚举值和枚举类型。
+- `markNames.Clear();`: 设置当前枚举值和枚举类型。
+- `foreach (var field in fields)`: 设置当前枚举值和枚举类型。
+- `var v = (int)field.GetValue(null);`: 设置当前枚举值和枚举类型。
+- `if (m_Min > v) m_Min = v;`: 设置当前枚举值和枚举类型。
+- `if (m_Max < v) m_Max = v;`: 设置当前枚举值和枚举类型。
+- `markValues.Add(v);`: 设置当前枚举值和枚举类型。
+- `markNames.Add(field.Name);`: 设置当前枚举值和枚举类型。
+
+## UISlider.value.
+
+class in XCharts.Runtime.UI
+
+可选：
+
 
 ## UISlider.ValueType
 
@@ -630,26 +630,21 @@ class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.gith
 
 统计数值UI组件。 用于展示统计数值。当需要突出某个或某组数字时，或展示带描述的统计类数据时使用。
 
-### UIStatistic.Type
-
-public enum Type  
-
 ### UIStatistic.GetCurrentValue
 
 public double GetCurrentValue(float animationDuration)  
 获取当前时刻的数值。当有变更动画时，返回动画过程中的数值。
 
-## UIStatistic.Type { Default, Countdown }
+## UIStatistic.Type
 
 class in XCharts.Runtime.UI
 
+统计数值类型。
+
 可选：
 
-- `[SerializeField] private Type m_Type = Type.Default;`: 
-- `[SerializeField] private string m_Title = "";`: 
-- `[SerializeField] private double m_Value;`: 
-- `[SerializeField] private float m_ItemGap = 5;`: 
-- `[SerializeField] private Location m_Location = Location.defaultTop;`: 
+- `Default`: 默认类型。显示文本。
+- `Countdown`: 倒计时类型。自动倒计时。此时value作为秒数。
 
 ## UISvgImage
 
@@ -749,7 +744,24 @@ public void AddColumn(string title, params Sprite[] data)
 
 ### UITable.AddRow
 
+public void AddRow(List&lt;double&gt; row)  
+
+> 从 `3.15.0` 开始支持
+
+添加一行数据。
+
+public void AddRow(params double[] row)  
+
 public void AddRow(params string[] row)  
+
+> 从 `3.15.0` 开始支持
+
+添加一行数据。
+
+public void AddRow(TableRow row)  
+
+> 从 `3.15.0` 开始支持
+
 添加一行数据。
 
 
@@ -813,6 +825,14 @@ public virtual void RefreshPosition()
 
 public void RefreshTable()  
 刷新表格。
+
+### UITable.RemoveColumn
+
+public void RemoveColumn(int columnIndex)  
+
+> 从 `3.15.0` 开始支持
+
+删除一列数据。
 
 ### UITable.RemoveRow
 

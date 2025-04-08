@@ -13,6 +13,7 @@ slug: /api
 - [AnimationAddition](#animationaddition)
 - [AnimationChange](#animationchange)
 - [AnimationEasing](#animationeasing)
+- [AnimationExchange](#animationexchange)
 - [AnimationFadeIn](#animationfadein)
 - [AnimationFadeOut](#animationfadeout)
 - [AnimationHiding](#animationhiding)
@@ -70,6 +71,7 @@ slug: /api
 - [ColorUtil](#colorutil)
 - [Comment](#comment)
 - [CommentItem](#commentitem)
+- [CommentLayer](#commentlayer)
 - [CommentMarkStyle](#commentmarkstyle)
 - [ComponentHandlerAttribute](#componenthandlerattribute)
 - [ComponentHelper](#componenthelper)
@@ -360,6 +362,14 @@ Options:
 
 - `Linear`: 
 
+## AnimationExchange
+
+class in XCharts.Runtime / Inherits from: [AnimationInfo](#animationinfo)
+
+> Since `v3.15.0`
+
+Data exchange animation. Generally used for animation of data sorting.
+
 ## AnimationFadeIn
 
 class in XCharts.Runtime / Inherits from: [AnimationInfo](#animationinfo)
@@ -386,7 +396,7 @@ Data hiding animation.
 
 ## AnimationInfo
 
-class in XCharts.Runtime / Subclasses: [AnimationFadeIn](#animationfadein),[AnimationFadeOut](#animationfadeout),[AnimationChange](#animationchange),[AnimationAddition](#animationaddition),[AnimationHiding](#animationhiding),[AnimationInteraction](#animationinteraction) 
+class in XCharts.Runtime / Subclasses: [AnimationFadeIn](#animationfadein),[AnimationFadeOut](#animationfadeout),[AnimationChange](#animationchange),[AnimationAddition](#animationaddition),[AnimationHiding](#animationhiding),[AnimationInteraction](#animationinteraction),[AnimationExchange](#animationexchange) 
 
 > Since `v3.8.0`
 
@@ -531,7 +541,7 @@ public float GetWidth(float width)
 
 class in XCharts.Runtime / Inherits from: [ChildComponent](#childcomponent)
 
-the animation of serie. support animation type: fadeIn, fadeOut, change, addition.
+the animation of serie. support animation type: fadeIn, fadeOut, change, addition, exchange.
 
 ### AnimationStyle.addition
 
@@ -547,6 +557,11 @@ Update data animation configuration.
 
 public bool enable  
 Whether to enable animation.
+
+### AnimationStyle.exchange
+
+public AnimationExchange exchange  
+Exchange animation configuration. Valid in sort bar chart.
 
 ### AnimationStyle.fadeIn
 
@@ -638,6 +653,10 @@ public int GetCurrIndex()
 ### AnimationStyle.GetCurrRate
 
 public float GetCurrRate()  
+
+### AnimationStyle.GetExchangeDuration
+
+public float GetExchangeDuration()  
 
 ### AnimationStyle.GetInteractionDuration
 
@@ -788,6 +807,14 @@ public Color32 GetColor(Color32 defaultColor)
 class in XCharts.Runtime / Inherits from: [MainComponent](#maincomponent) / Subclasses: [AngleAxis](#angleaxis),[ParallelAxis](#parallelaxis),[RadiusAxis](#radiusaxis),[SingleAxis](#singleaxis),[XAxis](#xaxis),[XAxis3D](#xaxis3d),[YAxis](#yaxis),[YAxis3D](#yaxis3d),[ZAxis3D](#zaxis3d) 
 
 The axis in rectangular coordinate.
+
+### Axis.onLabelClick
+
+public Action&lt;int, string&gt; onLabelClick  
+
+> Since `v3.15.0`
+
+Callback function when click on the label. Parameters: labelIndex, labelName.
 
 ### Axis.AddData
 
@@ -1059,6 +1086,14 @@ class in XCharts / Inherits from: [MainComponentHandler](#maincomponenthandler)
 
 public T component  
 
+### AxisHandler&lt;T&gt;.DrawTop
+
+// public override void DrawTop(VertexHelper vh)  
+
+### AxisHandler&lt;T&gt;.OnPointerClick
+
+public override void OnPointerClick(PointerEventData eventData)  
+
 ## AxisHelper
 
 class in XCharts.Runtime
@@ -1097,7 +1132,7 @@ public static float GetAxisValueDistance(GridCoord grid, Axis axis, float scaleW
 
 ### AxisHelper.GetAxisValueLength
 
-public static float GetAxisValueLength(GridCoord grid, Axis axis, float scaleWidth, double value)  
+public static float GetAxisValueLength(GridCoord grid, Axis axis, float scaleWidth, double value, float gap = 0)  
 获得数值value在坐标轴上对应的长度
 
 ### AxisHelper.GetAxisValuePosition
@@ -1673,6 +1708,10 @@ Global parameter setting component.
 ### BaseChart.theme
 
 public ThemeStyle theme  
+
+### BaseChart.topPainter
+
+public Painter topPainter  
 
 ### BaseChart.typeListForComponent
 
@@ -3174,6 +3213,10 @@ public float GetTextWidth()
 
 public float GetWidth()  
 
+### ChartLabel.InRect
+
+public bool InRect(Vector2 local)  
+
 ### ChartLabel.IsActiveByScale
 
 public bool IsActiveByScale()  
@@ -3428,12 +3471,19 @@ Convert the html string to color.
 
 class in XCharts.Runtime / Inherits from: [MainComponent](#maincomponent),[IPropertyChanged](#ipropertychanged)
 
-comment of chart.
+> Since `v3.15.0`
+
+comment of chart. Used to annotate special information in the chart.
 
 ### Comment.items
 
 public List&lt;CommentItem&gt; items  
 The items of comment.
+
+### Comment.layer
+
+public CommentLayer layer  
+The layer of comment.
 
 ### Comment.show
 
@@ -3443,10 +3493,12 @@ Set this to false to prevent the comment from showing.
 ### Comment.GetLabelStyle
 
 public LabelStyle GetLabelStyle(int index)  
+Get the label style of comment item.
 
 ### Comment.GetMarkStyle
 
 public CommentMarkStyle GetMarkStyle(int index)  
+Get the mark style of comment item.
 
 ### Comment.OnChanged
 
@@ -3477,6 +3529,17 @@ the mark rect style.
 
 public bool show  
 Set this to false to prevent this comment item from showing.
+
+## CommentLayer
+
+class in XCharts.Runtime
+
+The layer of comment.
+
+Options:
+
+- `Lower`: The comment is display under the serie.
+- `Upper`: The comment is display above the serie.
 
 ## CommentMarkStyle
 
@@ -3767,13 +3830,13 @@ public static DateTime GetDateTime(double timestamp, bool local = true)
 
 ### DateTimeUtil.GetDefaultDateTimeString
 
-public static string GetDefaultDateTimeString(int timestamp, double range = 0)  
+public static string GetDefaultDateTimeString(double timestamp, double range = 0)  
 
 ### DateTimeUtil.GetTimestamp
 
-public static int GetTimestamp(DateTime time, bool local = false)  
+public static double GetTimestamp(DateTime time, bool local = false)  
 
-public static int GetTimestamp(string dateTime, bool local = false)  
+public static double GetTimestamp(string dateTime, bool local = false)  
 
 
 ### DateTimeUtil.IsDateOrTimeRegex
@@ -5781,15 +5844,15 @@ public double runtimeValue
 
 class in XCharts.Runtime
 
-标线类型
+Mark line type.
 
 Options:
 
-- `None`: 标线类型
-- `Min`: 最小值。
-- `Max`: 最大值。
-- `Average`: 平均值。
-- `Median`: 中位数。
+- `Custom`: Custom. You can customize the xy coordinates or values.
+- `Min`: Minimum value.
+- `Max`: Maximum value.
+- `Average`: Average value.
+- `Median`: Median.
 
 ## MarqueeStyle
 
@@ -7257,6 +7320,10 @@ class in XCharts.Runtime
 
 public void Reset()  
 
+### SerieDataContext.UpdateExchangePosition
+
+public void UpdateExchangePosition(ref float x, ref float y, float totalTime)  
+
 ## SerieDataExtraFieldAttribute
 
 class in XCharts.Runtime / Inherits from: [Attribute](https://docs.unity3d.com/ScriptReference/30_search.html?q=attribute)
@@ -7684,6 +7751,10 @@ public override void RefreshLabelInternal()
 ### SerieHandler&lt;T&gt;.RefreshLabelNextFrame
 
 public override void RefreshLabelNextFrame()  
+
+### SerieHandler&lt;T&gt;.RefreshTitleLabelInternal
+
+public void RefreshTitleLabelInternal()  
 
 ### SerieHandler&lt;T&gt;.RemoveComponent
 

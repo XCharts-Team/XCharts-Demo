@@ -80,6 +80,23 @@ slug: /changelog
 
 ## master
 
+* (2025.04.07) 修复`Gantt`甘特图在有多维数据时计算的时间区间不准确的问题
+* (2025.04.07) 优化`Axis`的`Time`时间轴支持设置Custom和ceilRate
+* (2025.04.07) 修复`GridCoord`在设置背景色且Serie开启Clip时会覆盖图表的问题
+* (2025.04.07) 修复`Gantt`甘特图年份大于2038时显示异常的问题
+* (2025.04.07) 修复`Axis`的`Time`时间轴无法显示大于2038的年份的问题
+* (2025.04.06) 修复`Axis`的`Time`时间轴在有`DataZoom`缩放时文本显示异常的问题
+* (2025.03.28) 修复`Pie3D`的`avoidLabelOverlap`不生效的问题
+* (2025.03.27) 增加`Legend`的`itemInactiveOpacity`可设置非激活状态时的颜色透明度 (#343)
+* (2025.03.27) 增加`Axis`的`onLabelClick`回调事件
+* (2025.03.26) 增加`Animation`的`Exchange`排序交换动画
+* (2025.03.22) 增加`Comment`的`layer`设置层级
+* (2025.03.21) 优化`Comment`的坐标刷新
+* (2025.03.19) 增加`Serie`的`Label`的`formatter`支持`{index}`通配符
+* (2025.03.18) 增加`Bar`可添加`TitleStyle`组件支持
+* (2025.03.18) 增加`LabelStyle`的`fixedX`和`fixedY`可固定label的坐标
+* (2025.03.17) 增加`ItemStyle`的`backgroundGap`可设置数据项背景间隙
+
 ## v3.14.0
 
 版本要点：

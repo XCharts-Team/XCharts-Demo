@@ -13,6 +13,7 @@ slug: /api
 - [AnimationAddition](#animationaddition)
 - [AnimationChange](#animationchange)
 - [AnimationEasing](#animationeasing)
+- [AnimationExchange](#animationexchange)
 - [AnimationFadeIn](#animationfadein)
 - [AnimationFadeOut](#animationfadeout)
 - [AnimationHiding](#animationhiding)
@@ -70,6 +71,7 @@ slug: /api
 - [ColorUtil](#colorutil)
 - [Comment](#comment)
 - [CommentItem](#commentitem)
+- [CommentLayer](#commentlayer)
 - [CommentMarkStyle](#commentmarkstyle)
 - [ComponentHandlerAttribute](#componenthandlerattribute)
 - [ComponentHelper](#componenthelper)
@@ -360,6 +362,14 @@ class in XCharts.Runtime
 
 - `Linear`: 
 
+## AnimationExchange
+
+class in XCharts.Runtime / 继承自: [AnimationInfo](#animationinfo)
+
+> 从 `v3.15.0` 开始支持
+
+数据交换动画。一般用于图表数据排序时顺序变化的动画。
+
 ## AnimationFadeIn
 
 class in XCharts.Runtime / 继承自: [AnimationInfo](#animationinfo)
@@ -386,7 +396,7 @@ class in XCharts.Runtime / 继承自: [AnimationInfo](#animationinfo)
 
 ## AnimationInfo
 
-class in XCharts.Runtime / 子类: [AnimationFadeIn](#animationfadein),[AnimationFadeOut](#animationfadeout),[AnimationChange](#animationchange),[AnimationAddition](#animationaddition),[AnimationHiding](#animationhiding),[AnimationInteraction](#animationinteraction) 
+class in XCharts.Runtime / 子类: [AnimationFadeIn](#animationfadein),[AnimationFadeOut](#animationfadeout),[AnimationChange](#animationchange),[AnimationAddition](#animationaddition),[AnimationHiding](#animationhiding),[AnimationInteraction](#animationinteraction),[AnimationExchange](#animationexchange) 
 
 > 从 `v3.8.0` 开始支持
 
@@ -531,7 +541,7 @@ public float GetWidth(float width)
 
 class in XCharts.Runtime / 继承自: [ChildComponent](#childcomponent)
 
-动画组件，用于控制图表的动画播放。支持配置五种动画表现：FadeIn（渐入动画），FadeOut（渐出动画），Change（变更动画），Addition（新增动画），Interaction（交互动画）。 按作用的对象可以分为两类：SerieAnimation（系列动画）和DataAnimation（数据动画）。
+动画组件，用于控制图表的动画播放。支持配置五种动画表现：FadeIn（渐入动画），FadeOut（渐出动画），Change（变更动画），Addition（新增动画），Interaction（交互动画），Exchange（交换动画）。 按作用的对象可以分为两类：SerieAnimation（系列动画）和DataAnimation（数据动画）。
 
 ### AnimationStyle.addition
 
@@ -547,6 +557,11 @@ public AnimationChange change
 
 public bool enable  
 是否开启动画效果。
+
+### AnimationStyle.exchange
+
+public AnimationExchange exchange  
+交换动画配置。如在排序柱图中有效。
 
 ### AnimationStyle.fadeIn
 
@@ -638,6 +653,10 @@ public int GetCurrIndex()
 ### AnimationStyle.GetCurrRate
 
 public float GetCurrRate()  
+
+### AnimationStyle.GetExchangeDuration
+
+public float GetExchangeDuration()  
 
 ### AnimationStyle.GetInteractionDuration
 
@@ -788,6 +807,14 @@ public Color32 GetColor(Color32 defaultColor)
 class in XCharts.Runtime / 继承自: [MainComponent](#maincomponent) / 子类: [AngleAxis](#angleaxis),[ParallelAxis](#parallelaxis),[RadiusAxis](#radiusaxis),[SingleAxis](#singleaxis),[XAxis](#xaxis),[XAxis3D](#xaxis3d),[YAxis](#yaxis),[YAxis3D](#yaxis3d),[ZAxis3D](#zaxis3d) 
 
 直角坐标系的坐标轴组件。
+
+### Axis.onLabelClick
+
+public Action&lt;int, string&gt; onLabelClick  
+
+> 从 `v3.15.0` 开始支持
+
+点击文本标签回调函数。参数：labelIndex, labelName。
 
 ### Axis.AddData
 
@@ -1059,6 +1086,14 @@ class in XCharts / 继承自: [MainComponentHandler](#maincomponenthandler)
 
 public T component  
 
+### AxisHandler&lt;T&gt;.DrawTop
+
+// public override void DrawTop(VertexHelper vh)  
+
+### AxisHandler&lt;T&gt;.OnPointerClick
+
+public override void OnPointerClick(PointerEventData eventData)  
+
 ## AxisHelper
 
 class in XCharts.Runtime
@@ -1097,7 +1132,7 @@ public static float GetAxisValueDistance(GridCoord grid, Axis axis, float scaleW
 
 ### AxisHelper.GetAxisValueLength
 
-public static float GetAxisValueLength(GridCoord grid, Axis axis, float scaleWidth, double value)  
+public static float GetAxisValueLength(GridCoord grid, Axis axis, float scaleWidth, double value, float gap = 0)  
 获得数值value在坐标轴上对应的长度
 
 ### AxisHelper.GetAxisValuePosition
@@ -1673,6 +1708,10 @@ public Settings settings
 ### BaseChart.theme
 
 public ThemeStyle theme  
+
+### BaseChart.topPainter
+
+public Painter topPainter  
 
 ### BaseChart.typeListForComponent
 
@@ -3174,6 +3213,10 @@ public float GetTextWidth()
 
 public float GetWidth()  
 
+### ChartLabel.InRect
+
+public bool InRect(Vector2 local)  
+
 ### ChartLabel.IsActiveByScale
 
 public bool IsActiveByScale()  
@@ -3428,12 +3471,19 @@ public static Color32 GetColor(string hexColorStr)
 
 class in XCharts.Runtime / 继承自: [MainComponent](#maincomponent),[IPropertyChanged](#ipropertychanged)
 
-图表注解组件。
+> 从 `v3.15.0` 开始支持
+
+图表注解组件。用于标注图表中的特殊信息。
 
 ### Comment.items
 
 public List&lt;CommentItem&gt; items  
 注解项。每个注解组件可以设置多个注解项。
+
+### Comment.layer
+
+public CommentLayer layer  
+注解的显示层级。
 
 ### Comment.show
 
@@ -3443,10 +3493,12 @@ public bool show
 ### Comment.GetLabelStyle
 
 public LabelStyle GetLabelStyle(int index)  
+获取注解项的文本样式。
 
 ### Comment.GetMarkStyle
 
 public CommentMarkStyle GetMarkStyle(int index)  
+获取注解项的标记样式。
 
 ### Comment.OnChanged
 
@@ -3477,6 +3529,17 @@ public CommentMarkStyle markStyle
 
 public bool show  
 是否显示当前注解项。
+
+## CommentLayer
+
+class in XCharts.Runtime
+
+注解的显示层级。
+
+可选：
+
+- `Lower`: 注解在系列下方。
+- `Upper`: 注解在系列上方。
 
 ## CommentMarkStyle
 
@@ -3767,13 +3830,13 @@ public static DateTime GetDateTime(double timestamp, bool local = true)
 
 ### DateTimeUtil.GetDefaultDateTimeString
 
-public static string GetDefaultDateTimeString(int timestamp, double range = 0)  
+public static string GetDefaultDateTimeString(double timestamp, double range = 0)  
 
 ### DateTimeUtil.GetTimestamp
 
-public static int GetTimestamp(DateTime time, bool local = false)  
+public static double GetTimestamp(DateTime time, bool local = false)  
 
-public static int GetTimestamp(string dateTime, bool local = false)  
+public static double GetTimestamp(string dateTime, bool local = false)  
 
 
 ### DateTimeUtil.IsDateOrTimeRegex
@@ -5785,7 +5848,7 @@ class in XCharts.Runtime
 
 可选：
 
-- `None`: 标线类型
+- `Custom`: 自定义。可自定义xy坐标或数值。
 - `Min`: 最小值。
 - `Max`: 最大值。
 - `Average`: 平均值。
@@ -7257,6 +7320,10 @@ class in XCharts.Runtime
 
 public void Reset()  
 
+### SerieDataContext.UpdateExchangePosition
+
+public void UpdateExchangePosition(ref float x, ref float y, float totalTime)  
+
 ## SerieDataExtraFieldAttribute
 
 class in XCharts.Runtime / 继承自: [Attribute](https://docs.unity3d.com/ScriptReference/30_search.html?q=attribute)
@@ -7684,6 +7751,10 @@ public override void RefreshLabelInternal()
 ### SerieHandler&lt;T&gt;.RefreshLabelNextFrame
 
 public override void RefreshLabelNextFrame()  
+
+### SerieHandler&lt;T&gt;.RefreshTitleLabelInternal
+
+public void RefreshTitleLabelInternal()  
 
 ### SerieHandler&lt;T&gt;.RemoveComponent
 

@@ -66,133 +66,63 @@ class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.g
 
 填充宽度。优先级比left和right高。
 
-## HandleStyle
+## ITableCell
+
+class in XCharts.Runtime.UI / 子类: [TableCell](#tablecell)
+
+## SliderHandleStyle
 
 class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
 
-> 从 `v3.13.0` 开始支持
-
 滑块样式。
 
-### HandleStyle.gradientColor
+### SliderHandleStyle.gradientColor
 
 `bool` `false`
 
 是否使用渐变颜色。滑动条设置渐变颜色时才生效。
 
-### HandleStyle.show
+### SliderHandleStyle.show
 
 `bool` `true`
 
 是否显示滑块。
 
-### HandleStyle.symbol
+### SliderHandleStyle.symbol
 
 `SymbolStyle`
 
 图形样式。
 
-## ITableCell
-
-class in XCharts.Runtime.UI / 子类: [TableCell](#tablecell)
-
-## MarkStyle
+## SliderMarkStyle
 
 class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
 
-> 从 `v3.13.0` 开始支持
-
 标记样式。
 
-### MarkStyle.fillStyle
-
-[FillStyle](#fillstyle)
-
-填充样式。
-
-### MarkStyle.handleStyle
-
-[HandleStyle](#handlestyle)
-
-滑块样式。
-
-### MarkStyle.included
+### SliderMarkStyle.included
 
 `bool` `true`
 
 是否包含在范围内。为true时，标记显示为进度条颜色，否则显示为背景颜色。
 
-### MarkStyle.interactable
-
-`bool` `true`
-
-是否可交互。
-
-### MarkStyle.label
+### SliderMarkStyle.label
 
 `LabelStyle`
 
 文本样式。
 
-### MarkStyle.markNames
-
-`List<string>`
-
-标志名称。当指定有标志名称时，标记的文本会尝试从这里取。
-
-### MarkStyle.markStyle
-
-[MarkStyle](#markstyle)
-
-标记样式。
-
-### MarkStyle.markValues
-
-`List<float>`
-
-标记值。当指定有标志值时，会在指定位置显示标记和文本。
-
-### MarkStyle.max
-
-`float` `100`
-
-最大值。滑块值不能大于最大值。
-
-### MarkStyle.min
-
-`float` `0`
-
-最小值。滑块值不能小于最小值。
-
-### MarkStyle.show
+### SliderMarkStyle.show
 
 `bool` `true`
 
-是否显示滑块。
+是否显示标记。
 
-### MarkStyle.step
-
-`float` `1`
-
-步长。滑块值会按照步长变化。
-
-### MarkStyle.symbol
+### SliderMarkStyle.symbol
 
 `SymbolStyle`
 
 图形样式。
-
-### MarkStyle.value
-
-`float[]`
-
-滑块当前值。这是一个二维数组，当为范围值类型时，两个值分别表示最小值和最大值，其他类型时只用第二个值。
-
-### MarkStyle.valueType
-
-`ValueType`
-
-值类型。支持默认值、范围值、枚举值。
 
 ## TableCarouselStyle
 
@@ -648,6 +578,78 @@ class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.gith
 
 UI滑动型输入组件，展示当前值和可选范围。
 
+### UISlider.fillStyle
+
+[FillStyle](#fillstyle)
+
+填充样式。
+
+### UISlider.handleStyle
+
+[SliderHandleStyle](#sliderhandlestyle)
+
+滑块样式。
+
+### UISlider.interactable
+
+`bool` `true`
+
+是否可交互。
+
+### UISlider.markNames
+
+`List<string>`
+
+标志名称。当指定有标志名称时，标记的文本会尝试从这里取。
+
+### UISlider.markStyle
+
+[SliderMarkStyle](#slidermarkstyle)
+
+标记样式。
+
+### UISlider.markValues
+
+`List<float>`
+
+标记值。当指定有标志值时，会在指定位置显示标记和文本。
+
+### UISlider.max
+
+`float` `100`
+
+最大值。滑块值不能大于最大值。
+
+### UISlider.min
+
+`float` `0`
+
+最小值。滑块值不能小于最小值。
+
+### UISlider.step
+
+`float` `1`
+
+步长。滑块值会按照步长变化。
+
+### UISlider.value
+
+`float[]`
+
+滑块当前值。这是一个二维数组，当为范围值类型时，两个值分别表示最小值和最大值，其他类型时只用第二个值。
+
+### UISlider.valueType
+
+[UISlider.ValueType](#uislidervaluetype)
+
+值类型。支持默认值、范围值、枚举值。
+
+可选：
+
+- `Default`: 默认值。
+- `Range`: 范围值。
+- `Enum`: 枚举值。
+
 ## UIStatistic
 
 class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/configuration#uicomponent)
@@ -659,6 +661,47 @@ class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.gith
 `AnimationStyle`
 
 起始动画。
+
+### UIStatistic.itemGap
+
+`float` `5`
+
+标题和数值文本之间的间距。
+
+### UIStatistic.location
+
+`Location`
+
+文本显示位置。
+
+### UIStatistic.title
+
+`string`
+
+统计数值标题。
+
+### UIStatistic.titleLabelStyle
+
+`LabelStyle`
+
+标题文本样式。
+
+### UIStatistic.type
+
+[UIStatistic.Type](#uistatistictype)
+
+统计数值类型。
+
+可选：
+
+- `Default`: 默认类型。显示文本。
+- `Countdown`: 倒计时类型。自动倒计时。此时value作为秒数。
+
+### UIStatistic.value
+
+`double`
+
+统计数值。或者秒数。
 
 ### UIStatistic.valueLabelStyle
 

@@ -1,58 +1,5 @@
 # API
 
-## Context
-
-class in XCharts.Runtime.UI
-
-### Context.fillStyle
-
-public FillStyle fillStyle  
-The style of progress bar fill.
-
-### Context.labelStyle
-
-public LabelStyle labelStyle  
-The style of progress bar label.
-
-### Context.max
-
-public float max  
-
-### Context.min
-
-public float min  
-The minimum value of progress.
-
-### Context.step
-
-public float step  
-The step of progress.
-
-### Context.type
-
-public Type type  
-The type of progress.
-
-### Context.value
-
-public float value  
-The value of progress.
-
-### Context.DefaultCircle
-
-public void DefaultCircle()  
-
-## Context.Type
-
-class in XCharts.Runtime.UI
-
-The type of progress.
-
-Options:
-
-- `Line`: Horizontal progress bar.
-- `Circle`: Circle progress bar.
-
 ## DataType
 
 class in XCharts.Runtime.UI
@@ -121,186 +68,64 @@ To color.
 public float width  
 Width of fill.
 
-## HandleStyle
-
-class in XCharts.Runtime.UI / Inherits from: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
-
-> Since `v3.13.0`
-
-Style of handle.
-
-### HandleStyle.gradientColor
-
-public bool gradientColor  
-Whether to use gradient color.
-
-### HandleStyle.show
-
-public bool show  
-Whether to show handle.
-
-### HandleStyle.symbol
-
-public SymbolStyle symbol  
-Style of symbol.
-
 ## ITableCell
 
 class in XCharts.Runtime.UI / Subclasses: [TableCell](#tablecell) 
 
-## MarkStyle
+## ProgressContext
+
+class in XCharts.Runtime.UI
+
+## SliderContext
+
+class in XCharts.Runtime.UI
+
+## SliderHandleStyle
 
 class in XCharts.Runtime.UI / Inherits from: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
 
-> Since `v3.13.0`
-
-Style of mark.
-
-### MarkStyle.fillStyle
-
-public FillStyle fillStyle  
-Style of fill.
-
-### MarkStyle.handleStyle
-
-public HandleStyle handleStyle  
 Style of handle.
 
-### MarkStyle.included
+### SliderHandleStyle.gradientColor
 
-public bool included  
-Whether to include in the range. When true, the mark is displayed as the progress bar color, otherwise it is displayed as the background color.
+public bool gradientColor  
+Whether to use gradient color.
 
-### MarkStyle.interactable
-
-public bool interactable  
-Whether the slider is interactable.
-
-### MarkStyle.label
-
-public LabelStyle label  
-Style of label.
-
-### MarkStyle.markNames
-
-public List&lt;string&gt; markNames  
-Names of marks. When specified with mark values, the mark and text are displayed at the specified position.
-
-### MarkStyle.markStyle
-
-public MarkStyle markStyle  
-Style of mark.
-
-### MarkStyle.markValues
-
-public List&lt;float&gt; markValues  
-Values of marks. When specified with mark names, the mark and text are displayed at the specified position.
-
-### MarkStyle.max
-
-public float max  
-Maximum value. The slider value cannot be greater than the maximum value.
-
-### MarkStyle.min
-
-public float min  
-Minimum value. The slider value cannot be less than the minimum value.
-
-### MarkStyle.onRangeChanged
-
-public Action&lt;float, float&gt; onRangeChanged  
-Callback when the range of the slider changes.
-
-### MarkStyle.onRangeChangedComplete
-
-public Action&lt;float, float&gt; onRangeChangedComplete  
-Callback when the range of the slider changes is completed.
-
-### MarkStyle.onValueChanged
-
-public Action&lt;float&gt; onValueChanged  
-Callback when the value of the slider changes.
-
-### MarkStyle.onValueChangedComplete
-
-public Action&lt;float&gt; onValueChangedComplete  
-Callback when the value of the slider changes is completed.
-
-### MarkStyle.show
+### SliderHandleStyle.show
 
 public bool show  
-Whether to show mark.
+Whether to show handle.
 
-### MarkStyle.step
-
-public float step  
-Step size. The value of the slider will change by step size.
-
-### MarkStyle.symbol
+### SliderHandleStyle.symbol
 
 public SymbolStyle symbol  
 Style of symbol.
 
-### MarkStyle.value
+## SliderMarkStyle
 
-public float[] value  
-Current value of the slider. This is a two-dimensional array. When it is a range value type, the two values represent the minimum and maximum values respectively, and when it is other types, only the second value is used.
+class in XCharts.Runtime.UI / Inherits from: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
 
-### MarkStyle.OnBeginDrag
+Style of mark.
 
-public override void OnBeginDrag(PointerEventData eventData)  
+### SliderMarkStyle.included
 
-### MarkStyle.OnDrag
+public bool included  
+Whether to include in the range. When true, the mark is displayed as the progress bar color, otherwise it is displayed as the background color.
 
-public override void OnDrag(PointerEventData eventData)  
+### SliderMarkStyle.label
 
-### MarkStyle.OnEndDrag
+public LabelStyle label  
+Style of label.
 
-public override void OnEndDrag(PointerEventData eventData)  
+### SliderMarkStyle.show
 
-### MarkStyle.OnPointerClick
+public bool show  
+Whether to show mark.
 
-public override void OnPointerClick(PointerEventData eventData)  
+### SliderMarkStyle.symbol
 
-### MarkStyle.SetValue
-
-public void SetValue(float rangeMin, float rangeMax)  
-Set the range value of the slider.
-
-public void SetValue(float rangeMin, float rangeMax, float min, float max)  
-Set the range value and the maximum and minimum values.
-
-public void SetValue(float value, float min, float max)  
-Set the value and the maximum and minimum values.
-
-
-## MarkStyle.value and the enum type.
-
-class in XCharts.Runtime.UI
-
-Options:
-
-- `public void SetValue(float value`: Set the current enum value and the enum type.
-- `if (!enumType.IsEnum) return;`: Set the current enum value and the enum type.
-- `valueType = ValueType.Enum;`: Set the current enum value and the enum type.
-- `value[0] = 0;`: Set the current enum value and the enum type.
-- `value[1] = value;`: Set the current enum value and the enum type.
-- `var fields = enumType.GetFields(BindingFlags.Public | BindingFlags.Static);`: Set the current enum value and the enum type.
-- `markValues.Clear();`: Set the current enum value and the enum type.
-- `markNames.Clear();`: Set the current enum value and the enum type.
-- `foreach (var field in fields)`: Set the current enum value and the enum type.
-- `var v = (int)field.GetValue(null);`: Set the current enum value and the enum type.
-- `if (m_Min > v) m_Min = v;`: Set the current enum value and the enum type.
-- `if (m_Max < v) m_Max = v;`: Set the current enum value and the enum type.
-- `markValues.Add(v);`: Set the current enum value and the enum type.
-- `markNames.Add(field.Name);`: Set the current enum value and the enum type.
-
-## MarkStyle.value.
-
-class in XCharts.Runtime.UI
-
-Options:
-
+public SymbolStyle symbol  
+Style of symbol.
 
 ## StatisticContext
 
@@ -604,6 +429,55 @@ ui component of image. 图片UI组件。
 
 class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
 
+### UIProgress.fillStyle
+
+public FillStyle fillStyle  
+The style of progress bar fill.
+
+### UIProgress.labelStyle
+
+public LabelStyle labelStyle  
+The style of progress bar label.
+
+### UIProgress.max
+
+public float max  
+
+### UIProgress.min
+
+public float min  
+The minimum value of progress.
+
+### UIProgress.step
+
+public float step  
+The step of progress.
+
+### UIProgress.type
+
+public Type type  
+The type of progress.
+
+### UIProgress.value
+
+public float value  
+The value of progress.
+
+### UIProgress.DefaultCircle
+
+public void DefaultCircle()  
+
+## UIProgress.Type
+
+class in XCharts.Runtime.UI
+
+The type of progress.
+
+Options:
+
+- `Line`: Horizontal progress bar.
+- `Circle`: Circle progress bar.
+
 ## UISlider
 
 class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
@@ -611,6 +485,132 @@ class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.
 > Since `v3.13.0`
 
 ui component of slider.
+
+### UISlider.fillStyle
+
+public FillStyle fillStyle  
+Style of fill.
+
+### UISlider.handleStyle
+
+public SliderHandleStyle handleStyle  
+Style of handle.
+
+### UISlider.interactable
+
+public bool interactable  
+Whether the slider is interactable.
+
+### UISlider.markNames
+
+public List&lt;string&gt; markNames  
+Names of marks. When specified with mark values, the mark and text are displayed at the specified position.
+
+### UISlider.markStyle
+
+public SliderMarkStyle markStyle  
+Style of mark.
+
+### UISlider.markValues
+
+public List&lt;float&gt; markValues  
+Values of marks. When specified with mark names, the mark and text are displayed at the specified position.
+
+### UISlider.max
+
+public float max  
+Maximum value. The slider value cannot be greater than the maximum value.
+
+### UISlider.min
+
+public float min  
+Minimum value. The slider value cannot be less than the minimum value.
+
+### UISlider.onRangeChanged
+
+public Action&lt;float, float&gt; onRangeChanged  
+Callback when the range of the slider changes.
+
+### UISlider.onRangeChangedComplete
+
+public Action&lt;float, float&gt; onRangeChangedComplete  
+Callback when the range of the slider changes is completed.
+
+### UISlider.onValueChanged
+
+public Action&lt;float&gt; onValueChanged  
+Callback when the value of the slider changes.
+
+### UISlider.onValueChangedComplete
+
+public Action&lt;float&gt; onValueChangedComplete  
+Callback when the value of the slider changes is completed.
+
+### UISlider.step
+
+public float step  
+Step size. The value of the slider will change by step size.
+
+### UISlider.value
+
+public float[] value  
+Current value of the slider. This is a two-dimensional array. When it is a range value type, the two values represent the minimum and maximum values respectively, and when it is other types, only the second value is used.
+
+### UISlider.OnBeginDrag
+
+public override void OnBeginDrag(PointerEventData eventData)  
+
+### UISlider.OnDrag
+
+public override void OnDrag(PointerEventData eventData)  
+
+### UISlider.OnEndDrag
+
+public override void OnEndDrag(PointerEventData eventData)  
+
+### UISlider.OnPointerClick
+
+public override void OnPointerClick(PointerEventData eventData)  
+
+### UISlider.SetValue
+
+public void SetValue(float rangeMin, float rangeMax)  
+Set the range value of the slider.
+
+public void SetValue(float rangeMin, float rangeMax, float min, float max)  
+Set the range value and the maximum and minimum values.
+
+public void SetValue(float value, float min, float max)  
+Set the value and the maximum and minimum values.
+
+
+## UISlider.value and the enum type.
+
+class in XCharts.Runtime.UI
+
+Options:
+
+- `public void SetValue(float value`: Set the current enum value and the enum type.
+- `if (!enumType.IsEnum) return;`: Set the current enum value and the enum type.
+- `valueType = ValueType.Enum;`: Set the current enum value and the enum type.
+- `value[0] = 0;`: Set the current enum value and the enum type.
+- `value[1] = value;`: Set the current enum value and the enum type.
+- `var fields = enumType.GetFields(BindingFlags.Public | BindingFlags.Static);`: Set the current enum value and the enum type.
+- `markValues.Clear();`: Set the current enum value and the enum type.
+- `markNames.Clear();`: Set the current enum value and the enum type.
+- `foreach (var field in fields)`: Set the current enum value and the enum type.
+- `var v = (int)field.GetValue(null);`: Set the current enum value and the enum type.
+- `if (m_Min > v) m_Min = v;`: Set the current enum value and the enum type.
+- `if (m_Max < v) m_Max = v;`: Set the current enum value and the enum type.
+- `markValues.Add(v);`: Set the current enum value and the enum type.
+- `markNames.Add(field.Name);`: Set the current enum value and the enum type.
+
+## UISlider.value.
+
+class in XCharts.Runtime.UI
+
+Options:
+
 
 ## UISlider.ValueType
 
@@ -628,28 +628,23 @@ Options:
 
 class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
 
-统计数值UI组件。 用于展示统计数值。当需要突出某个或某组数字时，或展示带描述的统计类数据时使用。
-
-### UIStatistic.Type
-
-public enum Type  
+Statistical value UI component. Used to display statistical values. Suitable for highlighting specific numbers/groups of numbers or presenting statistical data with descriptions.
 
 ### UIStatistic.GetCurrentValue
 
 public double GetCurrentValue(float animationDuration)  
 获取当前时刻的数值。当有变更动画时，返回动画过程中的数值。
 
-## UIStatistic.Type { Default, Countdown }
+## UIStatistic.Type
 
 class in XCharts.Runtime.UI
 
+The type of statistic.
+
 Options:
 
-- `[SerializeField] private Type m_Type = Type.Default;`: 
-- `[SerializeField] private string m_Title = "";`: 
-- `[SerializeField] private double m_Value;`: 
-- `[SerializeField] private float m_ItemGap = 5;`: 
-- `[SerializeField] private Location m_Location = Location.defaultTop;`: 
+- `Default`: default type. display text.
+- `Countdown`: countdown type. Automatic countdown. At this time, value is used as seconds.
 
 ## UISvgImage
 
@@ -749,7 +744,24 @@ add a column data.
 
 ### UITable.AddRow
 
+public void AddRow(List&lt;double&gt; row)  
+
+> Since `3.15.0`
+
+add a row data.
+
+public void AddRow(params double[] row)  
+
 public void AddRow(params string[] row)  
+
+> Since `3.15.0`
+
+add a row data.
+
+public void AddRow(TableRow row)  
+
+> Since `3.15.0`
+
 add a row data.
 
 
@@ -813,6 +825,14 @@ public virtual void RefreshPosition()
 
 public void RefreshTable()  
 refresh the table.
+
+### UITable.RemoveColumn
+
+public void RemoveColumn(int columnIndex)  
+
+> Since `3.15.0`
+
+remove a column data.
 
 ### UITable.RemoveRow
 
