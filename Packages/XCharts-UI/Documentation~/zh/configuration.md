@@ -564,6 +564,76 @@ class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.g
 
 垂直分割线的宽度。
 
+## TableTitle
+
+class in XCharts.Runtime.UI / 继承自: [Title](https://xcharts-team.github.io/docs/configuration#title)
+
+> 从 `3.15.0` 开始支持
+
+表格的标题区域。可设置标题文本、子标题文本、标题位置、标题样式等。
+
+## TableViewport
+
+class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+
+> 从 `3.15.0` 开始支持
+
+表格的视口区域。可设置区域边距、背景色、边框线等。
+
+### TableViewport.backgroundColor
+
+`Color32`
+
+网格背景色，默认透明。
+
+### TableViewport.borderColor
+
+`Color32`
+
+边框颜色。
+
+### TableViewport.borderWidth
+
+`float` `0f`
+
+边框宽。
+
+### TableViewport.bottom
+
+`float` `50f`
+
+视口区域下侧的距离。
+
+### TableViewport.left
+
+`float` `50f`
+
+视口区域左侧的距离。
+
+### TableViewport.right
+
+`float` `50f`
+
+视口区域右侧的距离。
+
+### TableViewport.show
+
+`bool` `true`
+
+视口区域是否生效。
+
+### TableViewport.showBorder
+
+`bool` `false`
+
+是否显示边框。
+
+### TableViewport.top
+
+`float` `60f`
+
+视口区域上侧的距离。
+
 ## UIImage
 
 class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/configuration#uicomponent)
@@ -662,11 +732,17 @@ class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.gith
 
 起始动画。
 
-### UIStatistic.itemGap
+### UIStatistic.desc
 
-`float` `5`
+`string` `v3.15.0`
 
-标题和数值文本之间的间距。
+统计数值描述。
+
+### UIStatistic.descLabelStyle
+
+`LabelStyle` `v3.15.0`
+
+描述文本样式。
 
 ### UIStatistic.location
 
@@ -686,6 +762,10 @@ class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.gith
 
 标题文本样式。
 
+### UIStatistic.titleValueGap
+
+`float` `20` `v3.15.0`
+
 ### UIStatistic.type
 
 [UIStatistic.Type](#uistatistictype)
@@ -703,6 +783,12 @@ class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.gith
 
 统计数值。或者秒数。
 
+### UIStatistic.valueDescGap
+
+`float` `10` `v3.15.0`
+
+数值和描述文本之间的间距。
+
 ### UIStatistic.valueLabelStyle
 
 `LabelStyle`
@@ -714,12 +800,6 @@ class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.gith
 class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/configuration#uicomponent)
 
 表格UI组件。 用于展示行列数据。
-
-### UITable.borderStyle
-
-`BorderStyle`
-
-表格边框样式。
 
 ### UITable.carouselStyle
 
@@ -810,6 +890,18 @@ class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.gith
 `bool` `true`
 
 是否支持选中。选中行，列，单元格。
+
+### UITable.title
+
+[TableTitle](#tabletitle) `v3.15.0`
+
+标题样式。
+
+### UITable.viewport
+
+[TableViewport](#tableviewport) `v3.15.0`
+
+表格网格区域样式。
 
 ## UIText
 

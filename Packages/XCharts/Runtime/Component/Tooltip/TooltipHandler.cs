@@ -255,6 +255,11 @@ namespace XCharts.Runtime
         {
             if (label == null) return;
             if (double.IsNaN(axis.context.pointerValue)) return;
+            if (!axis.show || !axis.indicatorLabel.show)
+            {
+                label.SetActive(false, false);
+                return;
+            }
             label.SetActive(true, true);
             label.SetTextActive(true);
             label.SetPosition(axis.context.pointerLabelPosition + axis.indicatorLabel.offset);
@@ -268,7 +273,7 @@ namespace XCharts.Runtime
             }
             else if (axis.IsTime())
             {
-                label.SetText(axis.indicatorLabel.GetFormatterDateTime(0, 0, axis.context.pointerValue, axis.context.minValue, axis.context.maxValue));
+                label.SetText(axis.indicatorLabel.GetFormatterDateTime(0, 0, axis.context.pointerValue, axis.context.minValue, axis.context.maxValue, !chart.useUtc));
             }
             else
             {
@@ -356,7 +361,7 @@ namespace XCharts.Runtime
                 if (isTriggerAxis)
                 {
                     var index = serie.context.dataZoomStartIndex + (int)yAxis.context.pointerValue;
-                    if(serie.useSortData) index = yAxis.context.sortedDataIndices[index];
+                    if (serie.useSortData) index = yAxis.context.sortedDataIndices[index];
                     serie.context.pointerEnter = true;
                     serie.context.pointerAxisDataIndexs.Add(index);
                     serie.context.pointerItemDataIndex = index;
@@ -376,7 +381,7 @@ namespace XCharts.Runtime
                 if (isTriggerAxis)
                 {
                     var index = serie.context.dataZoomStartIndex + (int)xAxis.context.pointerValue;
-                    if(serie.useSortData) index = xAxis.context.sortedDataIndices[index];
+                    if (serie.useSortData) index = xAxis.context.sortedDataIndices[index];
                     if (chart.isTriggerOnClick)
                     {
                         if (serie.insertDataToHead)
@@ -473,13 +478,25 @@ namespace XCharts.Runtime
             {
                 var serieData = data[i];
                 currValue = serieData.GetData(dimension);
-                if (i == 0 && i + 1 < dataCount)
+                if (i == 0)
                 {
-                    nextValue = data[i + 1].GetData(dimension);
-                    if (axisValue <= currValue + (nextValue - currValue) / 2)
+                    if (i + 1 < dataCount)
                     {
-                        serie.context.pointerAxisDataIndexs.Add(serieData.index);
-                        break;
+                        nextValue = data[i + 1].GetData(dimension);
+                        if (axisValue <= currValue + (nextValue - currValue) / 2)
+                        {
+                            serie.context.pointerAxisDataIndexs.Add(serieData.index);
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        var diff = axis.context.tickValue * 0.5f;
+                        if (axisValue >= currValue - diff && axisValue <= currValue + diff)
+                        {
+                            serie.context.pointerAxisDataIndexs.Add(serieData.index);
+                            break;
+                        }
                     }
                 }
                 else if (i == dataCount - 1)
@@ -616,7 +633,21 @@ namespace XCharts.Runtime
                     var serieData = serie.GetSerieData(serie.context.pointerItemDataIndex);
                     if (serieData != null)
                     {
-                        tooltip.context.data.title = DateTimeUtil.GetDefaultDateTimeString((int)serieData.GetData(0), axisRange);
+                        var value = (int)serieData.GetData(0);
+                        if (string.IsNullOrEmpty(tooltip.titleLabelStyle.numericFormatter))
+                            tooltip.context.data.title = DateTimeUtil.GetDefaultDateTimeString(value, axisRange, !chart.useUtc);
+                        else
+                        {
+                            var dateTime = DateTimeUtil.GetDateTime(value, !chart.useUtc);
+                            try
+                            {
+                                tooltip.context.data.title = dateTime.ToString(tooltip.titleLabelStyle.numericFormatter);
+                            }
+                            catch
+                            {
+                                tooltip.context.data.title = DateTimeUtil.GetDefaultDateTimeString(value, axisRange, !chart.useUtc);
+                            }
+                        }
                     }
                 }
                 serie.handler.UpdateTooltipSerieParams(dataIndex, showCategory, category,
@@ -706,6 +737,7 @@ namespace XCharts.Runtime
 
         private void DrawXAxisIndicator(VertexHelper vh, Tooltip tooltip, GridCoord grid)
         {
+            if (!tooltip.lineStyle.show) return;
             var xAxes = chart.GetChartComponents<XAxis>();
             var lineType = tooltip.lineStyle.GetType(chart.theme.tooltip.lineType);
             var lineWidth = tooltip.lineStyle.GetWidth(chart.theme.tooltip.lineWidth);

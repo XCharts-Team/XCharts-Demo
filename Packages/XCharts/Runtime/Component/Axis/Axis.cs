@@ -100,6 +100,7 @@ namespace XCharts.Runtime
         [SerializeField] private bool m_Clockwise = true;
         [SerializeField] private bool m_InsertDataToHead;
         [SerializeField][Since("v3.11.0")] private float m_MinCategorySpacing = 0;
+        [SerializeField][Since("v3.15.0")] private bool m_MainAxis = false;
         [SerializeField] protected List<Sprite> m_Icons = new List<Sprite>();
         [SerializeField] protected List<string> m_Data = new List<string>();
         [SerializeField] protected AxisLine m_AxisLine = AxisLine.defaultAxisLine;
@@ -299,6 +300,17 @@ namespace XCharts.Runtime
             set { if (PropertyUtil.SetStruct(ref m_Clockwise, value)) SetAllDirty(); }
         }
         /// <summary>
+        /// Whether it is the main axis. When both X and Y axes are of the same type, the axis set to main axis will determine the orientation, 
+        /// such as horizontal bar chart and vertical bar chart.
+        /// ||是否为主轴。当XY轴类型都相同时，设置为主轴的轴会决定朝向，如横向柱图和纵向柱图。
+        /// </summary>
+        [Since("v3.15.0")]
+        public bool mainAxis
+        {
+            get { return m_MainAxis; }
+            set { if (PropertyUtil.SetStruct(ref m_MainAxis, value)) SetAllDirty(); }
+        }
+        /// <summary>
         /// Category data, available in type: 'Category' axis.
         /// ||类目数据，在类目轴（type: 'category'）中有效。
         /// </summary>
@@ -485,6 +497,7 @@ namespace XCharts.Runtime
             context.maxValue = 0;
             context.destMinValue = 0;
             context.destMaxValue = 0;
+            context.labelValueList.Clear();
         }
 
         public Axis Clone()
@@ -616,13 +629,13 @@ namespace XCharts.Runtime
             return m_Position == AxisPosition.Bottom;
         }
 
-        public bool IsNeedShowLabel(int index, int total = 0)
+        public bool IsNeedShowLabel(int index, int total = 0, string content = null)
         {
             if (total == 0)
             {
                 total = context.labelValueList.Count;
             }
-            return axisLabel.IsNeedShowLabel(index, total);
+            return axisLabel.IsNeedShowLabel(index, total, content);
         }
 
         public void SetNeedUpdateFilterData()

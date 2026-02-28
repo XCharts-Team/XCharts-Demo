@@ -159,6 +159,7 @@ slug: /api
 - [MainComponentContext](#maincomponentcontext)
 - [MainComponentHandler](#maincomponenthandler)
 - [MainComponentHandler&lt;T&gt;](#maincomponenthandlert)
+- [MainComponentHandler&lt;Title&gt;](#maincomponenthandlertitle)
 - [MarkArea](#markarea)
 - [MarkAreaData](#markareadata)
 - [MarkAreaType](#markareatype)
@@ -181,6 +182,7 @@ slug: /api
 - [ParallelCoordContext](#parallelcoordcontext)
 - [Pie](#pie)
 - [PieChart](#piechart)
+- [PieType](#pietype)
 - [PolarAxisTheme](#polaraxistheme)
 - [PolarChart](#polarchart)
 - [PolarCoord](#polarcoord)
@@ -257,6 +259,7 @@ slug: /api
 - [ThemeStyle](#themestyle)
 - [ThemeType](#themetype)
 - [Title](#title)
+- [TitleHandler](#titlehandler)
 - [TitleStyle](#titlestyle)
 - [TitleTheme](#titletheme)
 - [Tooltip](#tooltip)
@@ -915,7 +918,7 @@ public bool IsLog()
 
 ### Axis.IsNeedShowLabel
 
-public bool IsNeedShowLabel(int index, int total = 0)  
+public bool IsNeedShowLabel(int index, int total = 0, string content = null)  
 
 ### Axis.IsRight
 
@@ -1219,7 +1222,7 @@ public override string GetFormatterContent(int labelIndex, int totalIndex, doubl
 
 ### AxisLabel.IsNeedShowLabel
 
-public bool IsNeedShowLabel(int index, int total)  
+public bool IsNeedShowLabel(int index, int total, string content = null)  
 
 ### AxisLabel.SetRelatedText
 
@@ -1721,6 +1724,11 @@ public Dictionary&lt;Type, FieldInfo&gt; typeListForComponent
 
 public Dictionary&lt;Type, FieldInfo&gt; typeListForSerie  
 
+### BaseChart.useUtc
+
+public bool useUtc  
+Whether to use UTC time for the chart.
+
 ### BaseChart.AddChartComponent
 
 public MainComponent AddChartComponent(Type type)  
@@ -1977,6 +1985,10 @@ public Color32 GetLegendRealShowNameColor(string name)
 
 public int GetLegendRealShowNameIndex(string name)  
 
+### BaseChart.GetMainAxis
+
+public Axis GetMainAxis()  
+
 ### BaseChart.GetMarkColor
 
 public Color32 GetMarkColor(Serie serie, SerieData serieData)  
@@ -2034,10 +2046,6 @@ public float GetSerieTotalGap&lt;T&gt;(float categoryWidth, float gap, int index
 ### BaseChart.GetSerieTotalWidth&lt;T&gt;
 
 public float GetSerieTotalWidth&lt;T&gt;(float categoryWidth, float gap, int realBarCount, int gridIndex) where T : Serie  
-
-### BaseChart.GetTitlePosition
-
-public Vector3 GetTitlePosition(Title title)  
 
 ### BaseChart.GetVisualMapOfSerie
 
@@ -2558,6 +2566,10 @@ public string warningInfo
 public string CheckWarning()  
 检测警告信息。
 
+### BaseGraph.GetTitlePosition
+
+public Vector3 GetTitlePosition(Title title)  
+
 ### BaseGraph.LocalPointToScreenPoint
 
 public Vector2 LocalPointToScreenPoint(Vector2 localPoint)  
@@ -2623,11 +2635,6 @@ public void RefreshAllComponent()
 
 public virtual void RefreshGraph()  
 Redraw graph in next frame.
-
-### BaseGraph.SaveAsImage
-
-public void SaveAsImage(string imageType = "png", string savePath = "")  
-保存图表为图片。
 
 ### BaseGraph.ScreenPointToChartPoint
 
@@ -2886,6 +2893,14 @@ public static string ColorToStr(Color color)
 
 public static string FloatToStr(double value, string numericFormatter = "F", int precision = 0)  
 
+### ChartCached.GetAxisLabelName
+
+public static string GetAxisLabelName(int index)  
+
+### ChartCached.GetComponentObjectName
+
+public static string GetComponentObjectName(MainComponent component)  
+
 ### ChartCached.GetSerieLabelName
 
 public static string GetSerieLabelName(string prefix, int i, int j)  
@@ -2894,17 +2909,25 @@ public static string GetSerieLabelName(string prefix, int i, int j)
 
 public static string GetString(string prefix, int suffix)  
 
+### ChartCached.GetTypeName
+
+public static string GetTypeName(Type type)  
+
+### ChartCached.GetTypeName&lt;T&gt;
+
+public static string GetTypeName&lt;T&gt;()  
+
 ### ChartCached.IntToStr
 
 public static string IntToStr(int value, string numericFormatter = "")  
 
 ### ChartCached.NumberToDateStr
 
-public static string NumberToDateStr(double timestamp, string formatter)  
+public static string NumberToDateStr(double timestamp, string formatter, bool local = false)  
 
 ### ChartCached.NumberToDateTime
 
-public static DateTime NumberToDateTime(double timestamp)  
+public static DateTime NumberToDateTime(double timestamp, bool local = false)  
 
 ### ChartCached.NumberToStr
 
@@ -3149,10 +3172,6 @@ public static void RemoveTMPComponents(GameObject gameObject)
 ### ChartHelper.RotateRound
 
 public static Vector3 RotateRound(Vector3 position, Vector3 center, Vector3 axis, float angle)  
-
-### ChartHelper.SaveAsImage
-
-public static Texture2D SaveAsImage(RectTransform rectTransform, Canvas canvas, string imageType = "png", string path = "")  
 
 ### ChartHelper.SetActive
 
@@ -3826,11 +3845,11 @@ class in XCharts.Runtime
 
 ### DateTimeUtil.GetDateTime
 
-public static DateTime GetDateTime(double timestamp, bool local = true)  
+public static DateTime GetDateTime(double timestamp, bool local = false)  
 
 ### DateTimeUtil.GetDefaultDateTimeString
 
-public static string GetDefaultDateTimeString(double timestamp, double range = 0)  
+public static string GetDefaultDateTimeString(double timestamp, double range = 0, bool local = false)  
 
 ### DateTimeUtil.GetTimestamp
 
@@ -4746,7 +4765,7 @@ public virtual string GetFormatterContent(int labelIndex, int totalIndex, double
 
 ### LabelStyle.GetFormatterDateTime
 
-public string GetFormatterDateTime(int labelIndex, int totalIndex, double value, double minValue, double maxValue)  
+public string GetFormatterDateTime(int labelIndex, int totalIndex, double value, double minValue, double maxValue, bool local)  
 
 ### LabelStyle.GetOffset
 
@@ -5750,6 +5769,10 @@ class in XCharts.Runtime / Inherits from: [MainComponentHandler](#maincomponenth
 
 public T component  
 
+## MainComponentHandler&lt;Title&gt;
+
+class in  / Subclasses: [TitleHandler](#titlehandler) 
+
 ## MarkArea
 
 class in XCharts.Runtime / Inherits from: [MainComponent](#maincomponent)
@@ -6045,10 +6068,6 @@ class in XCharts.Runtime / Inherits from: [MaskableGraphic](https://docs.unity3d
 
 public int index  
 
-### Painter.onPopulateMesh
-
-public Action&lt;VertexHelper, Painter&gt; onPopulateMesh  
-
 ### Painter.type
 
 public Type type  
@@ -6182,6 +6201,15 @@ default label pie chart.
 
 public void DefaultRadiusRosePieChart()  
 default rose pie chart.
+
+## PieType
+
+class in XCharts.Runtime
+
+Options:
+
+- `Solid`: solid pie chart - default fill style.
+- `Wireframe`: wireframe pie chart - only show the outline wireframe.
 
 ## PolarAxisTheme
 
@@ -7204,12 +7232,12 @@ public double GetLastData()
 
 ### SerieData.GetMaxData
 
-public double GetMaxData(bool inverse = false)  
+public double GetMaxData(bool inverse = false, int startDimensionIndex = 0)  
 the maxinum value.
 
 ### SerieData.GetMinData
 
-public double GetMinData(bool inverse = false)  
+public double GetMinData(bool inverse = false, int startDimensionIndex = 0)  
 the mininum value.
 
 ### SerieData.GetMinMaxData
@@ -8675,6 +8703,30 @@ public override void ClearComponentDirty()
 ### Title.OnChanged
 
 public void OnChanged()  
+
+## TitleHandler
+
+class in XCharts.Runtime / Inherits from: [MainComponentHandler&lt;Title&gt;](#maincomponenthandlertitle)
+
+### TitleHandler.AddSubTitleLabel
+
+public static ChartLabel AddSubTitleLabel(Transform parent, Title title, ComponentTheme componentTheme, BaseChart chart = null)  
+
+### TitleHandler.AddTitleLabel
+
+public static ChartLabel AddTitleLabel(Transform parent, Title title, ComponentTheme componentTheme, BaseChart chart = null)  
+
+### TitleHandler.AddTitleObject
+
+public static GameObject AddTitleObject(BaseGraph graph, Title title, ComponentTheme componentTheme, int titleSiblingIndex, string objectName = null)  
+
+### TitleHandler.InitComponent
+
+public override void InitComponent()  
+
+### TitleHandler.OnSerieDataUpdate
+
+public override void OnSerieDataUpdate(int serieIndex)  
 
 ## TitleStyle
 

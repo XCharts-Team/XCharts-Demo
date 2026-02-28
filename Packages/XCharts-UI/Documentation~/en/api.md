@@ -139,6 +139,10 @@ class in XCharts.Runtime.UI
 
 public static Vector3 GetContentPosition(UIStatistic statistic)  
 
+### StatisticHelper.GetDescContent
+
+public static string GetDescContent(UIStatistic statistic, double value)  
+
 ### StatisticHelper.GetTitleContent
 
 public static string GetTitleContent(UIStatistic statistic, double value)  
@@ -419,6 +423,22 @@ whether to need to draw the horizontal separator.
 public bool IsNeedDrawVerticalSeparator()  
 whether to need to draw the vertical separator.
 
+## TableTitle
+
+class in XCharts.Runtime.UI / Inherits from: [Title](https://xcharts-team.github.io/docs/api#title)
+
+> Since `3.15.0`
+
+the title of table.
+
+## TableViewport
+
+class in XCharts.Runtime.UI / Inherits from: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+
+> Since `3.15.0`
+
+the viewport of table.
+
 ## UIImage
 
 class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
@@ -664,11 +684,6 @@ class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.
 
 表格UI组件。 用于展示行列数据。
 
-### UITable.borderStyle
-
-public BorderStyle borderStyle  
-the border style of table.
-
 ### UITable.carouselStyle
 
 public TableCarouselStyle carouselStyle  
@@ -724,21 +739,34 @@ the style of scrollbar.
 public TableSeparatorStyle separatorStyle  
 the style of separator.
 
+### UITable.title
+
+public TableTitle title  
+the style of title.
+
+### UITable.viewport
+
+public TableViewport viewport  
+the style of table grid.
+
 ### UITable.AddColumn
 
-public void AddColumn(string title, List&lt;double&gt; data)  
+public void AddColumn(string columnName, List&lt;double&gt; columnData)  
 add a column data.
 
-public void AddColumn(string title, List&lt;Sprite&gt; data)  
+public void AddColumn(string columnName, List&lt;Sprite&gt; columnData)  
 add a column data.
 
-public void AddColumn(string title, List&lt;string&gt; data)  
+public void AddColumn(string columnName, List&lt;string&gt; columnData)  
 add a column data.
 
-public void AddColumn(string title, params double[] data)  
+public void AddColumn(string columnName, params double[] colummnData)  
 add a column data.
 
-public void AddColumn(string title, params Sprite[] data)  
+public void AddColumn(string columnName, params Sprite[] columnData)  
+add a column data.
+
+public void AddColumn(string columnName, params string[] columnData)  
 add a column data.
 
 

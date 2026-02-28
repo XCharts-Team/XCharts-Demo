@@ -564,6 +564,76 @@ whether to show the vertical separator of the header.
 
 the width of vertical separator.
 
+## TableTitle
+
+class in XCharts.Runtime.UI / Inherits from: [Title](https://xcharts-team.github.io/docs/configuration#title)
+
+> Since `3.15.0`
+
+the title of table.
+
+## TableViewport
+
+class in XCharts.Runtime.UI / Inherits from: [ChildComponent](https://xcharts-team.github.io/docs/configuration#childcomponent)
+
+> Since `3.15.0`
+
+the viewport of table.
+
+### TableViewport.backgroundColor
+
+`Color32`
+
+Background color of viewport, which is transparent by default.
+
+### TableViewport.borderColor
+
+`Color32`
+
+The color of border.
+
+### TableViewport.borderWidth
+
+`float` `0f`
+
+Border width of border.
+
+### TableViewport.bottom
+
+`float` `50f`
+
+Distance between viewport and the bottom side of the container.
+
+### TableViewport.left
+
+`float` `50f`
+
+Distance between viewport and the left side of the container.
+
+### TableViewport.right
+
+`float` `50f`
+
+Distance between viewport and the right side of the container.
+
+### TableViewport.show
+
+`bool` `true`
+
+Whether the viewport area is effective.
+
+### TableViewport.showBorder
+
+`bool` `false`
+
+Whether to show the border.
+
+### TableViewport.top
+
+`float` `60f`
+
+Distance between viewport and the top side of the container.
+
 ## UIImage
 
 class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.github.io/docs/configuration#uicomponent)
@@ -662,11 +732,17 @@ Statistical value UI component. Used to display statistical values. Suitable for
 
 The start animation.
 
-### UIStatistic.itemGap
+### UIStatistic.desc
 
-`float` `5`
+`string` `v3.15.0`
 
-The gap between the title and value.
+The description of statistic.
+
+### UIStatistic.descLabelStyle
+
+`LabelStyle` `v3.15.0`
+
+The style of description label.
 
 ### UIStatistic.location
 
@@ -686,6 +762,10 @@ The title of statistic.
 
 The style of title label.
 
+### UIStatistic.titleValueGap
+
+`float` `20` `v3.15.0`
+
 ### UIStatistic.type
 
 [UIStatistic.Type](#uistatistictype)
@@ -703,6 +783,12 @@ Options:
 
 value of statistic.
 
+### UIStatistic.valueDescGap
+
+`float` `10` `v3.15.0`
+
+The gap between the value and description.
+
 ### UIStatistic.valueLabelStyle
 
 `LabelStyle`
@@ -714,12 +800,6 @@ The style of value label.
 class in XCharts.Runtime.UI / Inherits from: [UIComponent](https://xcharts-team.github.io/docs/configuration#uicomponent)
 
 表格UI组件。 用于展示行列数据。
-
-### UITable.borderStyle
-
-`BorderStyle`
-
-the border style of table.
 
 ### UITable.carouselStyle
 
@@ -810,6 +890,18 @@ whether the table support scroll.
 `bool` `true`
 
 whether the table support select. select row, column, cell.
+
+### UITable.title
+
+[TableTitle](#tabletitle) `v3.15.0`
+
+the style of title.
+
+### UITable.viewport
+
+[TableViewport](#tableviewport) `v3.15.0`
+
+the style of table grid.
 
 ## UIText
 

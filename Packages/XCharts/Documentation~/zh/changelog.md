@@ -6,6 +6,7 @@ slug: /changelog
 # 更新日志
 
 [master](#master)  
+[v3.15.0](#v3150)  
 [v3.14.0](#v3140)  
 [v3.13.0](#v3130)  
 [v3.12.1](#v3121)  
@@ -80,6 +81,42 @@ slug: /changelog
 
 ## master
 
+## v3.15.0
+
+版本要点：
+
+* __时间轴与缩放能力增强__：新增 `DataZoom.minZoomRatio`（替代 `minShowNum`）、`Chart.useUtc`，并持续优化 `Axis Time` 在缩放与大年份场景下的表现。
+* __柱图与坐标轴配置更灵活__：新增 `Axis.mainAxis` 控制柱图朝向、`Serie.ignoreZeroOccupy` 控制 0 值柱是否占位、`AxisLine` 延长线配置等。
+* __图表样式与交互能力提升__：新增 `Pie.pieType`、`Legend.itemInactiveOpacity`、`Axis.onLabelClick`、`Animation.Exchange`、`LabelStyle.fixedX/fixedY` 等。
+* __扩展 UI 组件持续完善__：`UITable` 新增 `Title` 与 `Viewport` 配置，`UIStatistic.desc` 增强，`Comment.layer` 与坐标刷新体验优化。
+* __稳定性与兼容性修复集中推进__：修复 `SaveAsImage` 遮挡保存、`Pie` 点击失效、`TMP` 兼容、`Gantt` 时间区间与 2038 年问题、`MarkArea/GridCoord/Axis` 等多项关键问题。
+
+日志详情：
+
+* (2026.03.01) 发布`v3.15.0`版本
+* (2026.02.26) 增加`Serie`的`ignoreZeroOccupy`可设置0数据的Bar是否占位 (#286)
+* (2026.02.26) 修复`SaveAsImage`被其他组件遮挡时无法正常保存的问题 (#337)
+* (2026.02.26) 增加`Axis`的`mainAxis`参数设置主轴可控制柱图的朝向 (#331)
+* (2026.02.03) 修复`UITable`的`viewport`在不同的锚点下可能会绘制异常的问题
+* (2026.01.15) 修复`Pie`的点击有时候不响应的问题 (#357)
+* (2026.01.08) 增加`DataZoom`的`minZoomRatio`替换旧的`minShowNum` (#350)
+* (2025.11.05) 修复`Axis`的`indicatorLabel`无法隐藏的问题
+* (2025.11.03) 增加`Tooltip`的`Title`可通过`TitleLabelStyle`的`numericFormatter`格式化时间显示 (#353)
+* (2025.10.30) 增加`Chart`的`useUtc`参数设置显示时间是否用UTC时间
+* (2025.10.30) 优化`Candlestick`对时间轴的支持
+* (2025.10.30) 增加`Scatter`的`ignore`支持设置忽略数据
+* (2025.10.24) 优化`Sankey`的线条绘制排序
+* (2025.10.22) 增加`Pie`的`pieType`支持实心饼图和线框柄图 (#349)
+* (2025.09.05) 优化`MarkLine`的表现
+* (2025.09.01) 增加`AxisLine`的`startExtendLength`和`endExtendLength`设置轴线的延长线
+* (2025.08.27) 修复`Serie`的`TitleStyle`在数据变更时不及时刷新的问题
+* (2025.05.19) 修复`TMP`开启时`Axis`运行报错
+* (2025.04.25) 修复`MarkArea`指定`yValue`或`xValue`时绘制区域不准确的问题
+* (2025.04.17) 增加`UITable`的`Title`支持设置标题
+* (2025.04.17) 增加`UITable`的`Viewport`支持设置表格视口边距边框
+* (2025.04.15) 增加`Bar`支持通过`VisualMap`设置颜色
+* (2025.04.14) 增加`AxisLabel`的`showZeroLabel`设置是否显示0刻度
+* (2025.04.08) 增加`UIStatistic`的`desc`描述文本设置支持
 * (2025.04.07) 修复`Gantt`甘特图在有多维数据时计算的时间区间不准确的问题
 * (2025.04.07) 优化`Axis`的`Time`时间轴支持设置Custom和ceilRate
 * (2025.04.07) 修复`GridCoord`在设置背景色且Serie开启Clip时会覆盖图表的问题

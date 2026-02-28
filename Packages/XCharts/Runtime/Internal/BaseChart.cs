@@ -16,6 +16,7 @@ namespace XCharts.Runtime
     public partial class BaseChart : BaseGraph, ISerializationCallbackReceiver
     {
         [SerializeField] protected string m_ChartName;
+        [SerializeField] protected bool m_UseUtc = true;
         [SerializeField] protected ThemeStyle m_Theme = new ThemeStyle();
         [SerializeField] protected Settings m_Settings;
         [SerializeField] protected DebugInfo m_DebugInfo = new DebugInfo();
@@ -204,7 +205,7 @@ namespace XCharts.Runtime
         protected override void OnValidate()
         {
             base.OnValidate();
-            foreach (var handler in m_SerieHandlers) handler.ForceUpdateSerieContext();
+            ResetChartStatus();
         }
 #endif
 
@@ -626,6 +627,8 @@ namespace XCharts.Runtime
             vh.Clear();
             var maxPainter = settings.maxPainter;
             var maxSeries = m_Series.Count;
+            if (painter == null || painter.index < 0 || painter.index >= maxPainter)
+                return;
             var rate = Mathf.CeilToInt(maxSeries * 1.0f / maxPainter);
             m_PainterUpper.Refresh();
             m_PainterTop.Refresh();

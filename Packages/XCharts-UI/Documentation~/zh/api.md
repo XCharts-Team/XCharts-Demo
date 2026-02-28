@@ -139,6 +139,10 @@ class in XCharts.Runtime.UI
 
 public static Vector3 GetContentPosition(UIStatistic statistic)  
 
+### StatisticHelper.GetDescContent
+
+public static string GetDescContent(UIStatistic statistic, double value)  
+
 ### StatisticHelper.GetTitleContent
 
 public static string GetTitleContent(UIStatistic statistic, double value)  
@@ -419,6 +423,22 @@ public bool IsNeedDrawHorizontalSeparator()
 public bool IsNeedDrawVerticalSeparator()  
 是否需要绘制垂直分割线。
 
+## TableTitle
+
+class in XCharts.Runtime.UI / 继承自: [Title](https://xcharts-team.github.io/docs/api#title)
+
+> 从 `3.15.0` 开始支持
+
+表格的标题区域。可设置标题文本、子标题文本、标题位置、标题样式等。
+
+## TableViewport
+
+class in XCharts.Runtime.UI / 继承自: [ChildComponent](https://xcharts-team.github.io/docs/api#childcomponent)
+
+> 从 `3.15.0` 开始支持
+
+表格的视口区域。可设置区域边距、背景色、边框线等。
+
 ## UIImage
 
 class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.github.io/docs/api#uicomponent)
@@ -664,11 +684,6 @@ class in XCharts.Runtime.UI / 继承自: [UIComponent](https://xcharts-team.gith
 
 表格UI组件。 用于展示行列数据。
 
-### UITable.borderStyle
-
-public BorderStyle borderStyle  
-表格边框样式。
-
 ### UITable.carouselStyle
 
 public TableCarouselStyle carouselStyle  
@@ -724,22 +739,35 @@ public TableScrollbarStyle scrollbarStyle
 public TableSeparatorStyle separatorStyle  
 分割线样式。
 
+### UITable.title
+
+public TableTitle title  
+标题样式。
+
+### UITable.viewport
+
+public TableViewport viewport  
+表格网格区域样式。
+
 ### UITable.AddColumn
 
-public void AddColumn(string title, List&lt;double&gt; data)  
+public void AddColumn(string columnName, List&lt;double&gt; columnData)  
 添加一列double类型数据。
 
-public void AddColumn(string title, List&lt;Sprite&gt; data)  
+public void AddColumn(string columnName, List&lt;Sprite&gt; columnData)  
 添加一列Sprite类型数据。
 
-public void AddColumn(string title, List&lt;string&gt; data)  
+public void AddColumn(string columnName, List&lt;string&gt; columnData)  
 添加一列string类型数据。
 
-public void AddColumn(string title, params double[] data)  
+public void AddColumn(string columnName, params double[] colummnData)  
 添加一列double类型数据。
 
-public void AddColumn(string title, params Sprite[] data)  
+public void AddColumn(string columnName, params Sprite[] columnData)  
 添加一列Sprite类型数据。
+
+public void AddColumn(string columnName, params string[] columnData)  
+添加一列string类型数据。
 
 
 ### UITable.AddRow
